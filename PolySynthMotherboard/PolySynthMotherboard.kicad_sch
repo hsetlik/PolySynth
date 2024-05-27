@@ -1,0 +1,31 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid 22649217-9810-470f-bc7b-6f743ad2b90e)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 17.272 17.272) (size 40.386 29.845) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 30ed774f-a7f6-4caf-bf27-d83abb3db248)
+    (property "Sheetname" "MCU" (at 17.272 16.5604 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "MCU.kicad_sch" (at 17.272 47.7016 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "PolySynthMotherboard"
+        (path "/22649217-9810-470f-bc7b-6f743ad2b90e" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

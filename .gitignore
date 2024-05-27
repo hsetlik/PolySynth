@@ -1,0 +1,7 @@
+Datasheets
+DCOVoiceBoard/DCOVoiceBoard-backups
+PolySynthMotherboard/PolySynthMotherboard-backups
+PolySynthNucleo/.cproject
+PolySynthNucleo/Debug
+PolySynthNucleo/Drivers/CMSIS
+PolySynthNucleo/Drivers/STM32F4xx_HAL_Driver
