@@ -44,6 +44,7 @@
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c1;
 I2C_HandleTypeDef hi2c3;
+DMA_HandleTypeDef hdma_i2c3_tx;
 
 SPI_HandleTypeDef hspi2;
 SPI_HandleTypeDef hspi3;
@@ -139,7 +140,13 @@ int main(void)
 	  if(needsClockData)
 	  {
 		  send_bits(voiceClk, clockBuffer, outputIdx, outputIdx + (BUFFER_SIZE / 2));
-		  //TODO: call the relevant HAL function to pass 'clockBuffer' off to the DMA here (I think?)
+		  uint8_t* dmaPtr = (uint8_t*)&clockBuffer[outputIdx];
+		  // move the bits we just calculated into DMA
+		  HAL_StatusTypeDef dmaStatus = HAL_SPI_Transmit_DMA(&hspi2, dmaPtr, BUFFER_SIZE);
+		  if(dmaStatus != HAL_OK)
+		  {
+			  Error_Handler();
+		  }
 		  needsClockData = 0;
 	  }
     /* USER CODE END WHILE */
@@ -386,6 +393,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream4_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
+  /* DMA1_Stream5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
 
 }
 
@@ -407,7 +417,11 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LD2_Pin|DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin
+                          |EXP_SS_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LDAC_GPIO_Port, LDAC_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -415,12 +429,31 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
+  /*Configure GPIO pins : LD2_Pin DAC_A0_Pin DAC_A1_Pin DAC_A2_Pin
+                           EXP_SS_Pin */
+  GPIO_InitStruct.Pin = LD2_Pin|DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin
+                          |EXP_SS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : LDAC_Pin */
+  GPIO_InitStruct.Pin = LDAC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LDAC_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : EXP_INTR_Pin */
+  GPIO_InitStruct.Pin = EXP_INTR_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(EXP_INTR_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

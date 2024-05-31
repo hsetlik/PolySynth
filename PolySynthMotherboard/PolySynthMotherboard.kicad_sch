@@ -25,6 +25,40 @@
     )
   )
 
+  (sheet (at 59.944 17.272) (size 36.068 29.972) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid de3a0e63-5262-4eb9-b189-cca2b77e46b4)
+    (property "Sheetname" "CV Outputs" (at 59.944 16.5604 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "CVOutputs.kicad_sch" (at 59.944 47.8286 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "PolySynthMotherboard"
+        (path "/22649217-9810-470f-bc7b-6f743ad2b90e" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 17.272 52.578) (size 40.64 27.686) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid fc92dbed-713e-417a-a377-59389e33b851)
+    (property "Sheetname" "VoiceBoards" (at 17.272 51.8664 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Voices.kicad_sch" (at 17.272 80.8486 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "PolySynthMotherboard"
+        (path "/22649217-9810-470f-bc7b-6f743ad2b90e" (page "4"))
+      )
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )

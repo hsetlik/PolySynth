@@ -330,6 +330,14 @@
     [
       "30ed774f-a7f6-4caf-bf27-d83abb3db248",
       "MCU"
+    ],
+    [
+      "de3a0e63-5262-4eb9-b189-cca2b77e46b4",
+      "CV Outputs"
+    ],
+    [
+      "fc92dbed-713e-417a-a377-59389e33b851",
+      "VoiceBoards"
     ]
   ],
   "text_variables": {}
