@@ -93,6 +93,10 @@ void Error_Handler(void);
 #define DISP_MISO_GPIO_Port GPIOC
 #define DISP_MOSI_Pin GPIO_PIN_12
 #define DISP_MOSI_GPIO_Port GPIOC
+#define DISP_DC_Pin GPIO_PIN_4
+#define DISP_DC_GPIO_Port GPIOB
+#define DISP_RES_Pin GPIO_PIN_5
+#define DISP_RES_GPIO_Port GPIOB
 #define POT_SCL_Pin GPIO_PIN_6
 #define POT_SCL_GPIO_Port GPIOB
 #define POT_SDA_Pin GPIO_PIN_7
