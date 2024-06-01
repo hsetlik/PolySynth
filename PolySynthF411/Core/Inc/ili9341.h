@@ -1,4 +1,8 @@
-/* vim: set ai et ts=4 sw=4: */
+/*
+ * This code is originally from: https://github.com/afiskon/stm32-ili9341
+ * */
+
+
 #ifndef __ILI9341_H__
 #define __ILI9341_H__
 
@@ -16,6 +20,8 @@
 /*** Redefine if necessary ***/
 #define ILI9341_SPI_PORT hspi3
 extern SPI_HandleTypeDef ILI9341_SPI_PORT;
+
+//IMPORTANT: these need to match the pins in the IOC file
 
 #define ILI9341_RES_Pin       GPIO_PIN_5
 #define ILI9341_RES_GPIO_Port GPIOB

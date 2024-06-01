@@ -1,3 +1,6 @@
+/*
+ * This code is originally from: https://github.com/afiskon/stm32-ili9341
+ * */
 #include "fonts.h"
 
 static const uint16_t Font7x10 [] = {

@@ -56,7 +56,8 @@ void VoiceClock::tick()
 
 uint16_t VoiceClock::getNext(){
 	tick();
-	return oscState;
+	// shift left bc the last 4 bits are unused
+	return oscState << 4;
 }
 
 //=========================================================================

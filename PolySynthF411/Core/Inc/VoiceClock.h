@@ -12,7 +12,7 @@
 #define NUM_OSCS 12
 #define MASTER_CLK 2625000
 
-#define BUFFER_SIZE 256
+#define VOICE_CLOCK_BUF_SIZE 256
 
 #include "stm32f4xx_hal.h"
 #include "main.h"

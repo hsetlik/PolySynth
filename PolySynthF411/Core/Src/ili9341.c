@@ -1,4 +1,6 @@
-/* vim: set ai et ts=4 sw=4: */
+/*
+ * This code is originally from: https://github.com/afiskon/stm32-ili9341
+ * */
 #include "stm32f4xx_hal.h"
 #include "ili9341.h"
 

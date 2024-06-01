@@ -31,6 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "ili9341.h"
 
 /* USER CODE END Includes */
 
@@ -49,6 +50,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -63,6 +66,8 @@ void Error_Handler(void);
 #define PITCH_SCK_GPIO_Port GPIOA
 #define PITCH_MOSI_Pin GPIO_PIN_7
 #define PITCH_MOSI_GPIO_Port GPIOA
+#define PIXELS_Pin GPIO_PIN_1
+#define PIXELS_GPIO_Port GPIOB
 #define EXP_CS_Pin GPIO_PIN_12
 #define EXP_CS_GPIO_Port GPIOB
 #define EXP_SCK_Pin GPIO_PIN_13
@@ -71,8 +76,10 @@ void Error_Handler(void);
 #define EXP_MISO_GPIO_Port GPIOB
 #define EXP_MOSI_Pin GPIO_PIN_15
 #define EXP_MOSI_GPIO_Port GPIOB
-#define EXP_INTR_Pin GPIO_PIN_6
-#define EXP_INTR_GPIO_Port GPIOC
+#define EXP_INTR_A_Pin GPIO_PIN_6
+#define EXP_INTR_A_GPIO_Port GPIOC
+#define EXP_INTR_B_Pin GPIO_PIN_7
+#define EXP_INTR_B_GPIO_Port GPIOC
 #define LDAC_Pin GPIO_PIN_8
 #define LDAC_GPIO_Port GPIOC
 #define DAC_SDA_Pin GPIO_PIN_9

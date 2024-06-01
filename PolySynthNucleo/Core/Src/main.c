@@ -56,6 +56,13 @@ uint16_t clockBuffer[BUFFER_SIZE];
 static volatile uint16_t outputIdx = 0;
 uint8_t needsClockData;
 
+
+uint16_t vBuf1[BUFFER_SIZE];
+uint16_t vBuf2[BUFFER_SIZE];
+uint16_t* currentBuffer = vBuf1;
+uint16_t* nextBuffer = vBuf2;
+volatile uint8_t nextBufNeeded = 0;
+
 voice_clock_t voiceClk;
 
 
@@ -79,16 +86,17 @@ static void MX_SPI3_Init(void);
 
 // HAL callbacks to request the next chunk for DMA
 void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi){
-	outputIdx = BUFFER_SIZE / 2;
-	needsClockData = 1;
-
+	uint16_t* justFinished = currentBuffer;
+	currentBuffer = nextBuffer;
+	nextBuffer = justFinished;
+	if(HAL_SPI_Transmit_DMA(&hspi2, (uint8_t*)currentBuffer, BUFFER_SIZE * 2) != HAL_OK){
+		Error_Handler();
+	}
 }
 
 
 void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi){
-	outputIdx = 0;
-	needsClockData = 1;
-
+	nextBufNeeded = 1;
 }
 /* USER CODE END 0 */
 
@@ -128,6 +136,11 @@ int main(void)
   MX_I2C3_Init();
   MX_SPI3_Init();
   /* USER CODE BEGIN 2 */
+  // initialize the first voice buffer
+  send_bits(voiceClock, currentBuffer, 0, BUFFER_SIZE);
+  if(HAL_SPI_Transmit_DMA(&hspi2, (uint8_t*)currentBuffer, BUFFER_SIZE * 2) != HAL_OK){
+	  Error_Handler();
+  }
 
   /* USER CODE END 2 */
 
@@ -136,18 +149,11 @@ int main(void)
   while (1)
   {
 	  // update DMA for the waves if needed
-	  if(needsClockData)
-	  {
-		  send_bits(voiceClk, clockBuffer, outputIdx, outputIdx + (BUFFER_SIZE / 2));
-		  uint8_t* dmaPtr = (uint8_t*)&clockBuffer[outputIdx];
-		  // move the bits we just calculated into DMA
-		  HAL_StatusTypeDef dmaStatus = HAL_SPI_Transmit_DMA(&hspi2, dmaPtr, BUFFER_SIZE);
-		  if(dmaStatus != HAL_OK)
-		  {
-			  Error_Handler();
-		  }
-		  needsClockData = 0;
-	  }
+	 if(nextBufNeeded){
+		 send_bits(voiceClock, nextBuffer, 0, BUFFER_SIZE);
+		 nextBufNeeded = 0;
+	 }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

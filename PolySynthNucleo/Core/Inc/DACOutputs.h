@@ -31,8 +31,8 @@ void DAC_MUX_writeValue(GPIO_TypeDef* port, uint8_t voice, uint16_t value);
 
 
 #ifdef __cplusplus
-#endif
 }
+#endif
 
 
 
