@@ -5,3 +5,7 @@ PolySynthNucleo/.cproject
 PolySynthNucleo/Debug
 PolySynthNucleo/Drivers/CMSIS
 PolySynthNucleo/Drivers/STM32F4xx_HAL_Driver
+PolySynthF411/.cproject
+PolySynthF411/Debug
+PolySynthF411/Drivers/CMSIS
+PolySynthF411/Drivers/STM32F4xx_HAL_Driver

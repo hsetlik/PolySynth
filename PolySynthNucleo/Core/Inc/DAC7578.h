@@ -16,6 +16,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "main.h"
 
 uint8_t DAC7578_getAddress(uint8_t addr0Hi);
 uint8_t DAC7578_getWriteCmdByte(uint8_t dac);

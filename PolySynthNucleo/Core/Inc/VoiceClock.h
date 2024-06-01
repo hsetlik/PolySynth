@@ -15,6 +15,7 @@
 #define BUFFER_SIZE 256
 
 #include "stm32f4xx_hal.h"
+#include "main.h"
 
 // protect the C++ stuff
 #ifdef __cplusplus
