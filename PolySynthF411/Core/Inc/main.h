@@ -60,14 +60,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BATT_REF_Pin GPIO_PIN_1
+#define BATT_REF_GPIO_Port GPIOC
+#define PIXELS_MAIN_Pin GPIO_PIN_1
+#define PIXELS_MAIN_GPIO_Port GPIOA
+#define PIXELS_MATRIX_Pin GPIO_PIN_2
+#define PIXELS_MATRIX_GPIO_Port GPIOA
 #define PITCH_CS_Pin GPIO_PIN_4
 #define PITCH_CS_GPIO_Port GPIOA
 #define PITCH_SCK_Pin GPIO_PIN_5
 #define PITCH_SCK_GPIO_Port GPIOA
 #define PITCH_MOSI_Pin GPIO_PIN_7
 #define PITCH_MOSI_GPIO_Port GPIOA
-#define PIXELS_Pin GPIO_PIN_1
-#define PIXELS_GPIO_Port GPIOB
+#define DAC_A0_Pin GPIO_PIN_1
+#define DAC_A0_GPIO_Port GPIOB
+#define DAC_A1_Pin GPIO_PIN_2
+#define DAC_A1_GPIO_Port GPIOB
+#define DAC_A2_Pin GPIO_PIN_10
+#define DAC_A2_GPIO_Port GPIOB
 #define EXP_CS_Pin GPIO_PIN_12
 #define EXP_CS_GPIO_Port GPIOB
 #define EXP_SCK_Pin GPIO_PIN_13
@@ -86,12 +96,8 @@ void Error_Handler(void);
 #define DAC_SDA_GPIO_Port GPIOC
 #define DAC_SCL_Pin GPIO_PIN_8
 #define DAC_SCL_GPIO_Port GPIOA
-#define DAC_A0_Pin GPIO_PIN_9
-#define DAC_A0_GPIO_Port GPIOA
-#define DAC_A1_Pin GPIO_PIN_10
-#define DAC_A1_GPIO_Port GPIOA
-#define DAC_A2_Pin GPIO_PIN_11
-#define DAC_A2_GPIO_Port GPIOA
+#define EXP_INTR_C_Pin GPIO_PIN_9
+#define EXP_INTR_C_GPIO_Port GPIOA
 #define DISP_CS_Pin GPIO_PIN_15
 #define DISP_CS_GPIO_Port GPIOA
 #define DISP_SCK_Pin GPIO_PIN_10
@@ -100,13 +106,19 @@ void Error_Handler(void);
 #define DISP_MISO_GPIO_Port GPIOC
 #define DISP_MOSI_Pin GPIO_PIN_12
 #define DISP_MOSI_GPIO_Port GPIOC
+#define SD_CS_Pin GPIO_PIN_2
+#define SD_CS_GPIO_Port GPIOD
 #define DISP_DC_Pin GPIO_PIN_4
 #define DISP_DC_GPIO_Port GPIOB
 #define DISP_RES_Pin GPIO_PIN_5
 #define DISP_RES_GPIO_Port GPIOB
-#define POT_SCL_Pin GPIO_PIN_6
+#define MIDI_TX_Pin GPIO_PIN_6
+#define MIDI_TX_GPIO_Port GPIOB
+#define MIDI_RX_Pin GPIO_PIN_7
+#define MIDI_RX_GPIO_Port GPIOB
+#define POT_SCL_Pin GPIO_PIN_8
 #define POT_SCL_GPIO_Port GPIOB
-#define POT_SDA_Pin GPIO_PIN_7
+#define POT_SDA_Pin GPIO_PIN_9
 #define POT_SDA_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
