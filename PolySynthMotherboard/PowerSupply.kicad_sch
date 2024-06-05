@@ -3479,7 +3479,7 @@
     (property "Value" "CS5173" (at 218.1606 74.6252 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "PCM_4ms_Package_SOIC:SOIC-8_5.28x4.9mm_Pitch1.27mm" (at 216.535 86.106 0)
+    (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 216.535 86.106 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 216.535 86.106 0)
