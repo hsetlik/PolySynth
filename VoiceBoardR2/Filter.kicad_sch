@@ -1674,7 +1674,7 @@
     (property "Reference" "R310" (at 74.93 116.586 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "220" (at 74.93 119.126 0)
+    (property "Value" "470" (at 74.93 119.126 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "PCM_Resistor_SMD_AKL:R_0805_2012Metric" (at 71.247 117.602 90)
@@ -1789,7 +1789,7 @@
     (property "Reference" "R309" (at 66.04 110.363 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "220" (at 66.04 112.903 0)
+    (property "Value" "470" (at 66.04 112.903 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "PCM_Resistor_SMD_AKL:R_0805_2012Metric" (at 63.373 111.379 90)
@@ -1915,8 +1915,8 @@
     (property "Datasheet" "~" (at 75.946 55.372 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d9b8a52c-9d42-471b-be76-f9565b8d435e))
-    (pin "2" (uuid f0b5c131-1940-416a-a4d5-b4cd0b1e86e1))
+    (pin "1" (uuid 40894ff1-6769-44ac-be93-1ab8b9777d69))
+    (pin "2" (uuid c9e9f43e-8414-4953-9c99-deb23fe282a2))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -1992,7 +1992,7 @@
     (property "Datasheet" "" (at 102.87 43.053 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a7148965-197b-4f6c-b94a-7506a569aaea))
+    (pin "1" (uuid 2b35aa6f-a433-4fa1-bef7-cf604442b52e))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2034,7 +2034,7 @@
     (property "Reference" "R313" (at 131.826 105.283 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "220" (at 131.826 107.823 0)
+    (property "Value" "470" (at 131.826 107.823 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "PCM_Resistor_SMD_AKL:R_0805_2012Metric" (at 137.414 106.68 90)
@@ -2134,8 +2134,8 @@
     (property "Datasheet" "~" (at 113.919 41.021 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0299199b-ac72-4dc9-ad3c-f7b18eaed340))
-    (pin "2" (uuid afbb7e2b-86bb-4ab8-967c-b6edece38c48))
+    (pin "1" (uuid aaeef3c5-9050-47fb-af10-b5419574960e))
+    (pin "2" (uuid d1b1fd98-95db-4f32-86c1-7e6e410d789e))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2211,9 +2211,9 @@
     (property "Datasheet" "https://www.tme.eu/Document/c382caaa0cc481743f0c0197b727e2d1/BC856A.pdf" (at 97.79 41.402 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ef488908-dd71-4a9e-aa22-d9902a859c2f))
-    (pin "2" (uuid ed9b7328-615e-4ad7-b7b6-cad457cc790c))
-    (pin "3" (uuid b9804eab-6e07-446f-b749-4fcfde3a5b0e))
+    (pin "1" (uuid 1088e912-8f77-4965-b470-b9b1870a1001))
+    (pin "2" (uuid 578f6de2-30d2-4721-84c5-6d84e54e18fa))
+    (pin "3" (uuid afb4405f-65a1-4589-b90c-2ee0a795146d))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2368,9 +2368,9 @@
     (property "Datasheet" "https://www.tme.eu/Document/c382caaa0cc481743f0c0197b727e2d1/BC856A.pdf" (at 73.406 41.275 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dedbdc72-28a7-4c05-8a29-b28f3391603d))
-    (pin "2" (uuid 661f5940-baef-4f29-9c8c-2455b6410602))
-    (pin "3" (uuid c59a78cd-8ac3-4141-bf55-5428e06c0c62))
+    (pin "1" (uuid 924a3e51-0d09-48f0-a9c4-f8df63ed1d96))
+    (pin "2" (uuid 1aec523e-f190-491e-932f-075b63e85f93))
+    (pin "3" (uuid 1b431247-bccb-40bd-8729-eb38786eaaae))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2395,7 +2395,7 @@
     (property "Datasheet" "" (at 75.946 61.468 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0ba11e91-4320-4ba4-ad9a-7c83cc8b9f6f))
+    (pin "1" (uuid 7df9cca8-45b0-49b0-b990-c6cec0e2fff3))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2420,20 +2420,20 @@
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf" (at 125.476 29.972 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f6be7841-9e17-4977-932f-0b9d7bfc7cce))
-    (pin "2" (uuid a1025629-4dba-474e-ad66-54908d78c99f))
-    (pin "3" (uuid b7e99586-6cf3-4326-80f1-add7edbcfe75))
-    (pin "5" (uuid 5cbaf977-8b1f-40e2-af39-5ce4ce9f2ba7))
-    (pin "6" (uuid a8700b13-6097-4707-931b-19d6407cea47))
-    (pin "7" (uuid 9bf6181b-ad21-4cfd-9a39-a8134e5a5a57))
-    (pin "10" (uuid 6a03bdb1-1398-4e76-b6bc-4838916ef1cf))
-    (pin "8" (uuid b4b1fd74-2d12-4ee7-b92d-5329a21d27fd))
-    (pin "9" (uuid 28e50073-9614-436c-927f-a005945e3044))
-    (pin "12" (uuid e6c1c546-f3df-497a-8ed2-598cadfd2713))
-    (pin "13" (uuid 64b7c7e6-5c97-4867-9a23-9992b381858b))
-    (pin "14" (uuid f245f616-1ecd-4c86-b50c-a1a6ec234474))
-    (pin "11" (uuid 28d7cf82-001f-49a4-818e-236de8c1cead))
-    (pin "4" (uuid 87a4f3c1-fc85-452a-a1de-a6f50dba4f62))
+    (pin "1" (uuid 6a0346e5-9c66-44a7-bab8-884fb0711eb4))
+    (pin "2" (uuid 3623ed4c-b1c3-4fa3-91fb-c506ab8519ff))
+    (pin "3" (uuid 48bd2251-0dd0-405f-942b-d005e079639a))
+    (pin "5" (uuid ecd7e209-bc6c-4322-abb4-4393377df6a9))
+    (pin "6" (uuid b365ad4e-6b28-4f21-a3bc-66df160f82a9))
+    (pin "7" (uuid c39c9106-d36c-478b-adbd-d75d8a57c415))
+    (pin "10" (uuid 4e775239-9116-40d5-ad05-c7e8f6b77efb))
+    (pin "8" (uuid f3e4878e-67dc-4daa-a98f-53ae79f2eb5b))
+    (pin "9" (uuid 335b16cc-f29a-4ca2-9fcb-e1a7c41f970b))
+    (pin "12" (uuid 941c294b-a250-4515-9d73-bd5374a68564))
+    (pin "13" (uuid ba2b367a-e261-4b22-b980-3611724380ca))
+    (pin "14" (uuid cfb3bcb3-592e-48c1-8c1c-66af65048a9b))
+    (pin "11" (uuid 55db962d-1118-44bf-929e-e24ee30e3039))
+    (pin "4" (uuid 5e48deae-bfae-4b81-9f10-91ebf6a78726))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2458,7 +2458,7 @@
     (property "Datasheet" "" (at 66.802 54.864 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 182ce73a-aa0c-4335-80c2-95e6ab19c5be))
+    (pin "1" (uuid 2e9d9fb0-2691-40f6-92bd-2cf2cecd075c))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2822,7 +2822,7 @@
     (property "Datasheet" "" (at 136.271 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 98b33ede-4fcb-4e6d-8949-bbd04fddcec3))
+    (pin "1" (uuid 6e096f53-ef76-4d8d-8c7b-717328c7c5ba))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2873,8 +2873,8 @@
     (property "Datasheet" "~" (at 60.452 41.275 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 22a1f80e-808c-4828-a711-2258fe4758fa))
-    (pin "2" (uuid 2898be6a-0ccb-4862-a62b-77e7e8db89da))
+    (pin "1" (uuid d2c8214f-58d1-4240-8bb9-a935c7e1b39d))
+    (pin "2" (uuid adac3154-faad-492c-b2fc-8bb143b0971d))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -2887,10 +2887,10 @@
   (symbol (lib_id "Device:R_US") (at 142.367 109.855 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9e049163-f614-4865-8f28-84f2250785d1)
-    (property "Reference" "R314" (at 145.034 108.585 0)
+    (property "Reference" "R314" (at 144.78 108.585 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "220" (at 145.034 111.125 0)
+    (property "Value" "470" (at 144.78 111.125 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "PCM_Resistor_SMD_AKL:R_0805_2012Metric" (at 141.351 109.601 90)
@@ -2925,8 +2925,8 @@
     (property "Datasheet" "~" (at 66.802 49.657 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 09866270-e387-459e-82a6-82fa038ad4be))
-    (pin "2" (uuid 86448a82-d2e2-48cc-8781-d7bee6ae73c4))
+    (pin "1" (uuid 19cdb330-819e-403e-9f3d-fd0032341bbf))
+    (pin "2" (uuid 06d13b2a-1372-43c4-b535-efd4798c0fbb))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
@@ -3155,8 +3155,8 @@
     (property "Datasheet" "~" (at 105.664 35.052 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b450b412-9bb8-4a4b-985c-ada616a116b0))
-    (pin "2" (uuid 5d53fac6-020a-463b-a5c1-02c0a26bb1c7))
+    (pin "1" (uuid b739b236-9ea3-420d-8dc1-0b921c6478b9))
+    (pin "2" (uuid dbfded12-f2fa-4184-a088-1887b139be9b))
     (instances
       (project "VoiceBoardR2"
         (path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
