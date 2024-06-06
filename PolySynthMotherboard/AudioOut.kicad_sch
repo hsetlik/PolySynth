@@ -949,7 +949,7 @@
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
   )
-  (global_label "AUDIO_OUT_R" (shape output) (at 154.305 108.077 0) (fields_autoplaced)
+  (global_label "AUDIO_OUT_L" (shape output) (at 154.305 108.077 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 1694f401-66c0-4964-a91e-2a26b5126a56)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 169.7484 108.077 0)

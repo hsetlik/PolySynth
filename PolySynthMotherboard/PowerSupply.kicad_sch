@@ -2273,7 +2273,7 @@
     (effects (font (size 3.81 3.81) (thickness 0.762) bold) (justify left bottom))
     (uuid 7390ce48-4718-4edb-bf85-fc1b93e80eee)
   )
-  (text "The MAX1898 will charge the\nbattery to 4.1v, which means \nthe max voltage at BATT_REF \nis about 3.083v"
+  (text "The MAX1898 will charge the\nbattery to 4.1v, which means \nthe max voltage at BATT_LEF \nis about 3.083v"
     (at 69.85 104.8004 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7c83a7e6-839d-4913-997f-34dcb34c87cf)
@@ -2308,7 +2308,7 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "BATT_REF" (shape input) (at 157.988 97.663 0) (fields_autoplaced)
+  (global_label "BATT_LEF" (shape input) (at 157.988 97.663 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid a150d6fa-9810-4d15-a224-32a97bf7a33f)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 169.7422 97.663 0)
