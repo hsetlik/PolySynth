@@ -8,6 +8,12 @@
   )
 
 
+  (text "TODO:\n-Control pins for filter mode and folder/filter order"
+    (at 140.081 32.004 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid bbc1004e-75e0-4054-8f97-a5fffc90cbb0)
+  )
+
   (sheet (at 97.7392 53.1368) (size 38.2016 27.7368) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))

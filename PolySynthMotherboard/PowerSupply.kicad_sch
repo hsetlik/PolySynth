@@ -2248,7 +2248,7 @@
   )
 
   (text "Parallel charge pumps share this output\ncap as shown in fig. 5 of the datasheet"
-    (at 366.903 108.458 0)
+    (at 367.284 108.204 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 09b49391-b69d-4fae-85b4-2054ff6b6733)
   )
@@ -2308,7 +2308,7 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "BATT_LEF" (shape input) (at 157.988 97.663 0) (fields_autoplaced)
+  (global_label "BATT_REF" (shape input) (at 157.988 97.663 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid a150d6fa-9810-4d15-a224-32a97bf7a33f)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 169.7422 97.663 0)
