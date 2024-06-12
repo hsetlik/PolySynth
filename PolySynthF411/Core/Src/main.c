@@ -287,7 +287,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.
   */
-  sConfig.Channel = ADC_CHANNEL_8;
+  sConfig.Channel = ADC_CHANNEL_0;
   sConfig.Rank = 1;
   sConfig.SamplingTime = ADC_SAMPLETIME_3CYCLES;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -691,8 +691,8 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, HP_MODE_Pin|FOLD_FIRST_Pin|LDAC_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin|DISP_DC_Pin
-                          |DISP_RES_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin|DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin
+                          |DISP_DC_Pin|DISP_RES_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SD_CS_GPIO_Port, SD_CS_Pin, GPIO_PIN_RESET);
@@ -704,10 +704,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : DAC_A0_Pin DAC_A1_Pin DAC_A2_Pin DISP_DC_Pin
-                           DISP_RES_Pin */
-  GPIO_InitStruct.Pin = DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin|DISP_DC_Pin
-                          |DISP_RES_Pin;
+  /*Configure GPIO pins : DAC_INH_Pin DAC_A0_Pin DAC_A1_Pin DAC_A2_Pin
+                           DISP_DC_Pin DISP_RES_Pin */
+  GPIO_InitStruct.Pin = DAC_INH_Pin|DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin
+                          |DISP_DC_Pin|DISP_RES_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

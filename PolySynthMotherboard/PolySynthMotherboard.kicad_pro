@@ -1077,6 +1077,10 @@
       {
         "netclass": "Signal",
         "pattern": "SDA_V6"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "DAC_INH"
       }
     ]
   },

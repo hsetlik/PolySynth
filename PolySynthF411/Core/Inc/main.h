@@ -64,6 +64,8 @@ void Error_Handler(void);
 #define HP_MODE_GPIO_Port GPIOC
 #define FOLD_FIRST_Pin GPIO_PIN_2
 #define FOLD_FIRST_GPIO_Port GPIOC
+#define BATT_REF_Pin GPIO_PIN_0
+#define BATT_REF_GPIO_Port GPIOA
 #define PIXELS_MAIN_Pin GPIO_PIN_1
 #define PIXELS_MAIN_GPIO_Port GPIOA
 #define PIXELS_MATRIX_Pin GPIO_PIN_2
@@ -74,8 +76,8 @@ void Error_Handler(void);
 #define PITCH_SCK_GPIO_Port GPIOA
 #define PITCH_MOSI_Pin GPIO_PIN_7
 #define PITCH_MOSI_GPIO_Port GPIOA
-#define BATT_REF_Pin GPIO_PIN_0
-#define BATT_REF_GPIO_Port GPIOB
+#define DAC_INH_Pin GPIO_PIN_0
+#define DAC_INH_GPIO_Port GPIOB
 #define DAC_A0_Pin GPIO_PIN_1
 #define DAC_A0_GPIO_Port GPIOB
 #define DAC_A1_Pin GPIO_PIN_2
