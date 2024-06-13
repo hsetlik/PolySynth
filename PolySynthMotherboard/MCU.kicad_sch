@@ -2707,6 +2707,10 @@
     (stroke (width 0) (type default))
     (uuid 3d4d6802-adf4-4de5-a47f-dd80bea3085f)
   )
+  (wire (pts (xy 284.226 40.513) (xy 284.226 58.039))
+    (stroke (width 0) (type default))
+    (uuid 3fd89c83-b541-4286-a1df-137ed71e587c)
+  )
   (wire (pts (xy 200.914 81.026) (xy 204.724 81.026))
     (stroke (width 0) (type default))
     (uuid 3fec6959-bc4b-4e54-87a9-bae39cbc0f67)
@@ -2722,6 +2726,10 @@
   (wire (pts (xy 121.158 77.978) (xy 123.952 77.978))
     (stroke (width 0) (type default))
     (uuid 454e34ec-127e-4780-974e-afef5e0a9960)
+  )
+  (wire (pts (xy 284.226 58.039) (xy 279.654 58.039))
+    (stroke (width 0) (type default))
+    (uuid 484b607d-6ec9-4ca3-b856-cf5dd606a541)
   )
   (wire (pts (xy 200.914 86.106) (xy 205.486 86.106))
     (stroke (width 0) (type default))
@@ -3291,10 +3299,6 @@
     (stroke (width 0) (type default))
     (uuid e9816159-1540-4c66-8995-5c914958682d)
   )
-  (wire (pts (xy 279.654 58.039) (xy 284.734 58.039))
-    (stroke (width 0) (type default))
-    (uuid eadafc3c-6fd6-47f8-bc5e-96b63e2dbb58)
-  )
   (wire (pts (xy 121.158 100.838) (xy 124.206 100.838))
     (stroke (width 0) (type default))
     (uuid eb6a315d-921a-4e82-ade0-156087f20a2a)
@@ -3464,7 +3468,7 @@
     (effects (font (size 3 3) (thickness 0.6) bold) (justify left bottom))
     (uuid ecbc3aa3-bc16-4505-8573-654111ad3221)
   )
-  (text "This SD card shares its SPI bus with the display" (at 312.166 34.417 0)
+  (text "This SD card shares its SPI bus with the display" (at 311.404 30.734 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid fb0474da-2635-4054-bb03-51302198d3e2)
   )
@@ -3490,7 +3494,7 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "MIDI_LX" (shape input) (at 124.206 108.458 0) (fields_autoplaced)
+  (global_label "MIDI_RX" (shape input) (at 124.206 108.458 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 05270930-0c77-4c46-8cc7-c9b1df07ac9b)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 134.5693 108.458 0)
@@ -3735,7 +3739,7 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "MIDI_LX" (shape output) (at 384.937 47.244 0) (fields_autoplaced)
+  (global_label "MIDI_RX" (shape output) (at 384.937 47.244 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7c4cb2d1-ae3d-4c53-9e36-b1f26236441d)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 395.3003 47.244 0)
@@ -3805,7 +3809,7 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "DISP_LST" (shape output) (at 124.206 103.378 0) (fields_autoplaced)
+  (global_label "DISP_RST" (shape output) (at 124.206 103.378 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid b321c6f6-3bf0-4743-ab00-05ca00a463c7)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 135.9602 103.378 0)
@@ -5294,6 +5298,46 @@
     )
   )
 
+  (symbol (lib_id "power:+3.3V") (at 284.226 40.513 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 633af44b-9c58-4c8d-b786-d75afc9705ae)
+    (property "Reference" "#PWR0425" (at 284.226 44.323 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 284.226 35.433 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 284.226 40.513 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 284.226 40.513 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid ffa8b40a-f3f3-43ba-9533-d523a761d010))
+    (instances
+      (project "ESP808_mk3"
+        (path "/1b0f4827-7224-4696-9105-e83073878432/12afefba-537f-4d88-bb0b-d3898664142d"
+          (reference "#PWR0425") (unit 1)
+        )
+      )
+      (project "PolySynthMotherboard"
+        (path "/22649217-9810-470f-bc7b-6f743ad2b90e/30ed774f-a7f6-4caf-bf27-d83abb3db248"
+          (reference "#PWR0249") (unit 1)
+        )
+      )
+      (project "Quadriscope"
+        (path "/b6082534-8496-42f5-914d-c32eba9832ab"
+          (reference "#PWR0164") (unit 1)
+        )
+      )
+      (project "MCU"
+        (path "/dbce208f-32c5-4e57-807b-6eb4ab6aa944"
+          (reference "#PWR0425") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Connector:Micro_SD_Card_Det2") (at 256.794 55.499 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 633b6f40-16b5-46b1-90b1-a2d0a541e0f2)
@@ -5931,54 +5975,6 @@
       (project "MCU"
         (path "/dbce208f-32c5-4e57-807b-6eb4ab6aa944"
           (reference "#PWR0410") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+3.3V") (at 284.734 58.039 270) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ae15a911-663f-463e-8e5b-3348ab30c756)
-    (property "Reference" "#PWR0411" (at 280.924 58.039 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+3.3V" (at 287.909 58.039 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 284.734 58.039 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 284.734 58.039 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 185319d1-5f2e-45cd-b414-5c5dd82325bd))
-    (instances
-      (project "ESP808_mk3"
-        (path "/1b0f4827-7224-4696-9105-e83073878432/12afefba-537f-4d88-bb0b-d3898664142d"
-          (reference "#PWR0411") (unit 1)
-        )
-      )
-      (project "PolySynthMotherboard"
-        (path "/22649217-9810-470f-bc7b-6f743ad2b90e/30ed774f-a7f6-4caf-bf27-d83abb3db248"
-          (reference "#PWR0249") (unit 1)
-        )
-      )
-      (project "Quadriscope"
-        (path "/b6082534-8496-42f5-914d-c32eba9832ab"
-          (reference "#PWR0161") (unit 1)
-        )
-      )
-      (project "DualDigitalVCO"
-        (path "/c34b0bf2-bf4f-4f09-a49d-1acd5b47c7ca"
-          (reference "#PWR0132") (unit 1)
-        )
-        (path "/c34b0bf2-bf4f-4f09-a49d-1acd5b47c7ca/b7b70d81-d74b-4739-995e-589a97e00ba9"
-          (reference "#PWR0340") (unit 1)
-        )
-      )
-      (project "MCU"
-        (path "/dbce208f-32c5-4e57-807b-6eb4ab6aa944"
-          (reference "#PWR0411") (unit 1)
         )
       )
     )
