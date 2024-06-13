@@ -1659,7 +1659,11 @@
     (uuid 9dbb3e61-267a-40a3-a30b-9cf682a0a5f4)
   )
 
-  (text "Dual Wave folder" (at 193.548 47.752 0)
+  (text "NOTE: POWER PINS BACKWARD!!!" (at 208.788 86.487 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 1a923ee2-751d-40d7-bf84-3f6177b4d3f1)
+  )
+  (text "Dual Wave folder" (at 168.275 46.863 0)
     (effects (font (face "KiCad Font") (size 3.5 3.5) (thickness 0.7) bold) (justify left bottom))
     (uuid 3bd6ea38-d882-452d-88ec-ec8e868cac54)
   )

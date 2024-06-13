@@ -1081,6 +1081,22 @@
       {
         "netclass": "Signal",
         "pattern": "DAC_INH"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "ENCMENU_L"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "ENCMENU_R"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "ALT_B"
+      },
+      {
+        "netclass": "Signal",
+        "pattern": "MENU_B"
       }
     ]
   },
