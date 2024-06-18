@@ -688,17 +688,20 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3|LDAC_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin|DAC_A0_Pin|DAC_A1_Pin|DAC_A2_Pin
                           |DISP_DC_Pin|DISP_RES_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LDAC_GPIO_Port, LDAC_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SD_CS_GPIO_Port, SD_CS_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : HP_MODE_Pin FOLD_FIRST_Pin PC3 LDAC_Pin */
-  GPIO_InitStruct.Pin = HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3|LDAC_Pin;
+  /*Configure GPIO pins : HP_MODE_Pin FOLD_FIRST_Pin PC3 */
+  GPIO_InitStruct.Pin = HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -713,17 +716,18 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : EXP_INTR_A_Pin EXP_INTR_B_Pin */
-  GPIO_InitStruct.Pin = EXP_INTR_A_Pin|EXP_INTR_B_Pin;
+  /*Configure GPIO pins : EXP_INTR_A_Pin EXP_INTR_B_Pin EXP_INTR_C_Pin */
+  GPIO_InitStruct.Pin = EXP_INTR_A_Pin|EXP_INTR_B_Pin|EXP_INTR_C_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : EXP_INTR_C_Pin */
-  GPIO_InitStruct.Pin = EXP_INTR_C_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  /*Configure GPIO pin : LDAC_Pin */
+  GPIO_InitStruct.Pin = LDAC_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(EXP_INTR_C_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LDAC_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : SD_CS_Pin */
   GPIO_InitStruct.Pin = SD_CS_Pin;
