@@ -2509,7 +2509,7 @@
     (uuid ffa3efeb-9b5d-4ae5-b6ec-bd91b9af5ce3)
   )
 
-  (rectangle (start 14.859 16.383) (end 303.53 123.19)
+  (rectangle (start 14.859 16.383) (end 303.53 121.285)
     (stroke (width 0) (type default))
     (fill (type none))
     (uuid 0013270b-36c8-4406-bb40-50ee8ab70399)

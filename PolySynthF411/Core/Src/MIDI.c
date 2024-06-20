@@ -8,8 +8,8 @@
 
 enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte){
 	// right 4 bits store the channel so we clear them
-	uint8_t mask = 0xFF;
-	uint8_t left4 = cmdByte & (mask << 4);
+	uint8_t mask = 0xF0;
+	uint8_t left4 = cmdByte & mask;
 
 	if(left4 != 0xF0){
 		switch(left4){
