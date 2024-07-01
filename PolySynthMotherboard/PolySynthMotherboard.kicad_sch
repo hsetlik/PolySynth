@@ -6,44 +6,6 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 97.7392 53.1368)
-		(size 38.2016 27.7368)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "058e4961-ce8a-43c8-9b59-7c0ad9355122")
-		(property "Sheetname" "PowerSupply"
-			(at 97.7392 52.4252 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "PowerSupply.kicad_sch"
-			(at 97.7392 81.4582 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "PolySynthMotherboard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e"
-					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
 		(at 17.272 17.272)
 		(size 40.386 29.845)
 		(fields_autoplaced yes)
@@ -120,8 +82,8 @@
 		)
 	)
 	(sheet
-		(at 17.399 85.09)
-		(size 40.894 27.432)
+		(at 97.663 53.086)
+		(size 37.973 27.432)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -132,7 +94,7 @@
 		)
 		(uuid "7d099353-6a3e-4b84-9d4d-b9636e29dea6")
 		(property "Sheetname" "AudioOut"
-			(at 17.399 84.3784 0)
+			(at 97.663 52.3744 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -141,7 +103,7 @@
 			)
 		)
 		(property "Sheetfile" "AudioOut.kicad_sch"
-			(at 17.399 113.1066 0)
+			(at 97.663 81.1026 0)
 			(effects
 				(font
 					(size 1.27 1.27)
