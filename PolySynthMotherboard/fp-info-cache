@@ -1,4 +1,4 @@
-24178374664804491
+24185254048328715
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63294,6 +63294,13 @@ THT
 4
 2
 Jumper
+SolderJumper-2_Open_TrianglePad_0805
+SMD Solder Jumper, 1x1.5mm Triangular Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+Jumper
 SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 2 copper strips
 net tie solder jumper bridged
@@ -83433,6 +83440,13 @@ Texas_S-PVSON-N10_ThermalVias
 39
 11
 Package_SON
+Texas_S-PVSON-N14
+
+
+0
+21
+15
+Package_SON
 Texas_S-PWSON-N8_EP1.2x2mm
 WSON, 8 Pin (http://www.ti.com/lit/ds/symlink/lp2951.pdf#page=27), generated with kicad-footprint-generator ipc_noLead_generator.py
 WSON NoLead
@@ -96817,6 +96831,13 @@ test point SMD pad
 1
 1
 TestPoint
+TestPoint_Pad_D1.0mm_Value
+SMD pad as test Point, diameter 1.0mm
+test point SMD pad
+0
+1
+1
+TestPoint
 TestPoint_Pad_D1.5mm
 SMD pad as test Point, diameter 1.5mm
 test point SMD pad
@@ -96923,6 +96944,13 @@ test point THT pad rectangle square
 1
 TestPoint
 TestPoint_THTPad_D1.0mm_Drill0.5mm
+THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm
+test point THT pad
+0
+1
+1
+TestPoint
+TestPoint_THTPad_D1.0mm_Drill0.5mm_1
 THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm
 test point THT pad
 0

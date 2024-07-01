@@ -1525,6 +1525,12 @@
 		(uuid "2532d741-9729-4ab4-b7fd-e3bfcbdc464c")
 	)
 	(junction
+		(at 101.6 106.553)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "25a94bb2-bc82-4987-80fe-bba12e5426f1")
+	)
+	(junction
 		(at 155.956 40.386)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1641,10 +1647,6 @@
 	(no_connect
 		(at 67.818 95.758)
 		(uuid "29232654-ee3c-41b7-a153-ea8694f63683")
-	)
-	(no_connect
-		(at 67.818 93.218)
-		(uuid "616c8478-e74b-4110-b6e7-c3e205eb37f4")
 	)
 	(no_connect
 		(at 32.258 72.898)
@@ -1957,6 +1959,16 @@
 			(type default)
 		)
 		(uuid "1d50713a-a2c6-4a1c-b832-7d131a7a4c66")
+	)
+	(wire
+		(pts
+			(xy 98.552 106.553) (xy 101.6 106.553)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d714e41-1499-4dfe-9b2b-b6677e661cda")
 	)
 	(wire
 		(pts
@@ -2720,6 +2732,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.818 93.218) (xy 73.66 93.218)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "658f2c73-c7a3-4175-82a9-d61dae703ef6")
+	)
+	(wire
+		(pts
 			(xy 199.39 251.333) (xy 199.39 252.222)
 		)
 		(stroke
@@ -3130,6 +3152,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 105.41) (xy 101.6 106.553)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b2cf089-3367-4f2b-b503-d5075af367c1")
+	)
+	(wire
+		(pts
 			(xy 228.473 30.226) (xy 228.473 31.496)
 		)
 		(stroke
@@ -3520,6 +3552,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 117.602) (xy 101.6 118.364)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af317d2b-41b5-453d-bec7-6c5b33d4b583")
+	)
+	(wire
+		(pts
 			(xy 212.471 206.375) (xy 32.639 206.375)
 		)
 		(stroke
@@ -3617,6 +3659,16 @@
 			(type default)
 		)
 		(uuid "b8515de9-7a87-40f0-8750-2c8f84b8cf23")
+	)
+	(wire
+		(pts
+			(xy 101.6 106.553) (xy 101.6 107.442)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8575666-d397-4f7e-a03d-5f39c2377736")
 	)
 	(wire
 		(pts
@@ -4340,6 +4392,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 96.52) (xy 101.6 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb0ddcf8-038d-4420-a1dc-bc5dd1c50fc2")
+	)
+	(wire
+		(pts
 			(xy 113.157 275.971) (xy 113.157 276.86)
 		)
 		(stroke
@@ -4858,6 +4920,28 @@
 			)
 		)
 	)
+	(global_label "SRC_BANK"
+		(shape input)
+		(at 73.66 93.218 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9ca398b2-3f47-425f-a9ee-1f36379bda81")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.3214 93.218 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MD_4"
 		(shape input)
 		(at 71.628 62.738 0)
@@ -5135,6 +5219,28 @@
 		(uuid "f41c08dd-2ca6-46e5-9a0b-d0e9eb5e12a0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 109.5913 40.386 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SRC_BANK"
+		(shape output)
+		(at 98.552 106.553 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fb1bec67-b3f6-49e1-b70c-69684c59ed20")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85.8906 106.553 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11295,6 +11401,73 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 101.6 118.364 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "76a3f091-421f-4d5b-840c-1873831f402a")
+		(property "Reference" "#PWR0696"
+			(at 101.6 124.714 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 101.6 122.174 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "16e7702c-da37-4409-81ff-d134cfef9581")
+		)
+		(instances
+			(project "PolySynthMotherboard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/5fd738af-0df8-40ac-b17b-9293a2a4c108"
+					(reference "#PWR0696")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 90.805 252.222 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13311,6 +13484,76 @@
 			(project "PolySynthMotherboard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/5fd738af-0df8-40ac-b17b-9293a2a4c108"
 					(reference "SW502")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPST")
+		(at 101.6 112.522 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "93d1e10d-8bd1-424f-a9e6-53950638f99e")
+		(property "Reference" "SW515"
+			(at 102.87 111.2519 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SB"
+			(at 102.87 113.7919 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 101.6 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 112.522 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59a7dad2-6e6a-4b0a-9a95-2c651180e910")
+		)
+		(pin "2"
+			(uuid "687e14a4-8b2a-43e5-ade7-1859e3789217")
+		)
+		(instances
+			(project "PolySynthMotherboard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/5fd738af-0df8-40ac-b17b-9293a2a4c108"
+					(reference "SW515")
 					(unit 1)
 				)
 			)
@@ -16431,6 +16674,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 101.6 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8d7f97c-a480-4b6d-aa64-fb89958f9ca7")
+		(property "Reference" "R515"
+			(at 103.886 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47k"
+			(at 103.886 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 102.616 101.854 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf1f54f4-69f9-43c6-9812-a19b1826d28e")
+		)
+		(pin "2"
+			(uuid "8ae4b50c-105c-456e-ac22-65d71d873965")
+		)
+		(instances
+			(project "PolySynthMotherboard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/5fd738af-0df8-40ac-b17b-9293a2a4c108"
+					(reference "R515")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 69.088 178.054 0)
 		(unit 1)
@@ -19263,6 +19576,72 @@
 			(project "PolySynthMotherboard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/5fd738af-0df8-40ac-b17b-9293a2a4c108"
 					(reference "#PWR0736")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 101.6 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec347220-f67f-4dae-8973-e4ea8c6be6a3")
+		(property "Reference" "#PWR0695"
+			(at 101.6 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 101.6 92.075 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57701c07-ad76-4ed5-8d8f-3568a1e24af0")
+		)
+		(instances
+			(project "PolySynthMotherboard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/5fd738af-0df8-40ac-b17b-9293a2a4c108"
+					(reference "#PWR0695")
 					(unit 1)
 				)
 			)
