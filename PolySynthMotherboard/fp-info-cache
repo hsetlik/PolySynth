@@ -1,4 +1,4 @@
-24185254048328715
+24188698773397280
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -56259,6 +56259,13 @@ LCD 16x2 Alphanumeric 16pin
 22
 18
 Display
+TFTBreakout_ILI9341_340x320
+
+
+0
+9
+9
+Display
 WC1602A
 LCD 16x2 http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf
 LCD 16x2 Alphanumeric 16pin
@@ -81271,8 +81278,8 @@ MSOP SO
 11
 Package_SO
 MSOP-10_3x3mm_P0.5mm
-MSOP, 10 Pin (https://www.jedec.org/system/files/docs/mo-187F.pdf variant BA), generated with kicad-footprint-generator ipc_gullwing_generator.py
-MSOP SO
+10-Lead Plastic Micro Small Outline Package (MS) [MSOP] (see Microchip Packaging Specification 00000049BS.pdf), Alternate KiCad Library
+SSOP 0.5
 0
 10
 10
@@ -90691,6 +90698,13 @@ rotary encoder
 0
 7
 6
+Rotary_Encoder
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_5Pin
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+5
 Rotary_Encoder
 RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles
 Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html

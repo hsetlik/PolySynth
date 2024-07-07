@@ -2539,7 +2539,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "PCM_Potentiometer_THT_AKL_Double:Potentiometer_Alps_RK09K_Single_Vertical"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_PTV09A-1_Single_Vertical"
 			(at 104.521 65.405 0)
 			(effects
 				(font
