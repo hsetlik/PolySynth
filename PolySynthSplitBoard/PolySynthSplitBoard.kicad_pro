@@ -553,119 +553,47 @@
     "netclass_patterns": [
       {
         "netclass": "Signal",
-        "pattern": "ENV1_B"
+        "pattern": "EXP_SCK*"
       },
       {
         "netclass": "Signal",
-        "pattern": "ENV2_B"
+        "pattern": "EXP_MISO*"
       },
       {
         "netclass": "Signal",
-        "pattern": "LFO1_B"
+        "pattern": "EXP_MOSI*"
       },
       {
         "netclass": "Signal",
-        "pattern": "LFO2_B"
+        "pattern": "EXP_CS*"
       },
       {
         "netclass": "Signal",
-        "pattern": "LFO3_B"
+        "pattern": "EXP_INTR*"
       },
       {
         "netclass": "Signal",
-        "pattern": "MIX1_B"
+        "pattern": "DISP_MOSI*"
       },
       {
         "netclass": "Signal",
-        "pattern": "MIX2_B"
+        "pattern": "DISP_MISO*"
       },
       {
         "netclass": "Signal",
-        "pattern": "MENU_B"
+        "pattern": "DISP_SCK*"
       },
       {
         "netclass": "Signal",
-        "pattern": "ENCA_L"
+        "pattern": "DISP_CS*"
       },
       {
         "netclass": "Signal",
-        "pattern": "ENCA_R"
+        "pattern": "DISP_DC*"
       },
       {
         "netclass": "Signal",
-        "pattern": "ENCB_L"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "ENCB_R"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "ENCC_L"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "ENCC_R"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "ENCD_L"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "ENCD_R"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_SCK"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_MISO"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_MOSI"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_CS"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_INTR_A"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_INTR_B"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "EXP_INTR_C"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "DISP_MOSI"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "DISP_MISO"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "DISP_SCK"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "DISP_CS"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "DISP_DC"
-      },
-      {
-        "netclass": "Signal",
-        "pattern": "DISP_RST"
+        "pattern": "DISP_RST*"
       },
       {
         "netclass": "Signal",
@@ -705,7 +633,7 @@
       },
       {
         "netclass": "Signal",
-        "pattern": "PIXELS_MAIN"
+        "pattern": "PIXELS_MAIN*"
       },
       {
         "netclass": "Signal",
@@ -765,7 +693,7 @@
       },
       {
         "netclass": "Signal",
-        "pattern": "PIXELS_MATRIX"
+        "pattern": "PIXELS_MATRIX*"
       },
       {
         "netclass": "Signal",
@@ -809,11 +737,7 @@
       },
       {
         "netclass": "DPWR",
-        "pattern": "+3.3V"
-      },
-      {
-        "netclass": "DPWR",
-        "pattern": "+3.3VA"
+        "pattern": "+3.3V*"
       },
       {
         "netclass": "APWR",
