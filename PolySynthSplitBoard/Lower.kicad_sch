@@ -5,6 +5,207 @@
 	(uuid "fba8bcc8-f772-408b-a84b-989392f8ee64")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:Conn_01x03_Pin"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03_Pin"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x03_Pin_1_1"
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector:Conn_01x04_Pin"
 			(pin_names
 				(offset 1.016) hide)
@@ -1480,6 +1681,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.59 127.508) (xy 145.542 127.508)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a74f235-1e65-4048-86a6-24bd741c3f86")
+	)
+	(wire
+		(pts
 			(xy 118.872 137.16) (xy 120.142 137.16)
 		)
 		(stroke
@@ -1517,6 +1728,26 @@
 			(type default)
 		)
 		(uuid "b03f887c-7d54-4b1b-b15d-0d00e1393289")
+	)
+	(wire
+		(pts
+			(xy 148.59 128.524) (xy 148.59 127.508)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1b7db59-7d51-4c3a-ab4d-bf897276e452")
+	)
+	(wire
+		(pts
+			(xy 145.034 131.064) (xy 148.59 131.064)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc83990f-61b0-4edf-8ee4-b0173d486af1")
 	)
 	(wire
 		(pts
@@ -1560,6 +1791,16 @@
 	)
 	(wire
 		(pts
+			(xy 145.034 133.604) (xy 148.59 133.604)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db587a49-3be1-4a62-8474-0cf83c278ac6")
+	)
+	(wire
+		(pts
 			(xy 84.582 141.224) (xy 85.852 141.224)
 		)
 		(stroke
@@ -1590,7 +1831,7 @@
 	)
 	(rectangle
 		(start 24.384 113.538)
-		(end 137.414 159.258)
+		(end 163.322 159.258)
 		(stroke
 			(width 0)
 			(type default)
@@ -1700,6 +1941,28 @@
 			)
 		)
 	)
+	(global_label "VOL_A"
+		(shape input)
+		(at 145.034 131.064 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2610ee91-cd06-40be-9024-70b161007a27")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 136.5454 131.064 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "EXP_MOSI"
 		(shape input)
 		(at 118.872 137.16 180)
@@ -1757,6 +2020,28 @@
 		(uuid "4eed6311-265b-41f7-91e5-26d73d1e20a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 71.4368 146.304 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VOL_W"
+		(shape input)
+		(at 145.034 133.604 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "611fad2d-9305-4e46-865c-a97aed5b8a14")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 136.1826 133.604 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2004,6 +2289,77 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(reference "#PWR0902")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 153.67 131.064 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "363e896b-bc71-4fa5-9c84-5dd75327ca08")
+		(property "Reference" "J904"
+			(at 153.035 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_LOWER"
+			(at 153.035 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+			(at 153.67 131.064 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 131.064 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 153.67 131.064 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "49cc2172-2151-4c3f-b42b-f01d0fd11b3f")
+		)
+		(pin "1"
+			(uuid "b95ee7a1-647b-47b2-8f6d-ebfc93a2fa46")
+		)
+		(pin "3"
+			(uuid "5c921a7c-504d-421a-9d57-4a2afd4702d5")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
+					(reference "J904")
 					(unit 1)
 				)
 			)
@@ -2528,6 +2884,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(reference "J901")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 145.542 127.508 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e0bda6de-9c93-41b7-97d2-9478f8ad132d")
+		(property "Reference" "#PWR0907"
+			(at 145.542 133.858 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 145.542 131.318 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 145.542 127.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 145.542 127.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 145.542 127.508 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "267b0982-739e-4742-a55c-51dc518d6b63")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
+					(reference "#PWR0907")
 					(unit 1)
 				)
 			)

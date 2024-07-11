@@ -6855,7 +6855,7 @@
 	)
 	(wire
 		(pts
-			(xy 76.2 71.628) (xy 79.756 71.628)
+			(xy 76.2 71.628) (xy 80.518 71.628)
 		)
 		(stroke
 			(width 0)
@@ -7182,6 +7182,16 @@
 			(type default)
 		)
 		(uuid "78273d84-7890-4664-807a-1e87ec236a5d")
+	)
+	(wire
+		(pts
+			(xy 76.2 69.088) (xy 80.518 69.088)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "784378f1-1150-4054-8be7-f750a60e87b7")
 	)
 	(wire
 		(pts
@@ -9732,16 +9742,6 @@
 			(type default)
 		)
 		(uuid "d0bf1479-548d-4862-9e26-ad592c214f4c")
-	)
-	(wire
-		(pts
-			(xy 76.2 69.088) (xy 79.756 69.088)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0cb29b7-6223-43a5-a483-f754d8b34cfc")
 	)
 	(wire
 		(pts
@@ -13222,7 +13222,7 @@
 	)
 	(global_label "PWM2_DAC"
 		(shape output)
-		(at 79.756 71.628 0)
+		(at 80.518 69.088 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13232,7 +13232,7 @@
 		)
 		(uuid "b5f8aeb9-8fe9-4d1e-bc8b-7ad48ce8fc4e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.7197 71.628 0)
+			(at 93.4817 69.088 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13244,7 +13244,7 @@
 	)
 	(global_label "VCA_DAC"
 		(shape output)
-		(at 80.518 76.708 0)
+		(at 80.518 71.628 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13254,7 +13254,7 @@
 		)
 		(uuid "b9836be4-d51b-44c7-bb99-9d902d511da6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 91.5466 76.708 0)
+			(at 91.5466 71.628 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13354,7 +13354,7 @@
 	)
 	(global_label "PWM1_DAC"
 		(shape output)
-		(at 79.756 69.088 0)
+		(at 80.518 74.168 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13364,7 +13364,7 @@
 		)
 		(uuid "c8debf8e-8607-461d-b54c-4f8959033d63")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.7197 69.088 0)
+			(at 93.4817 74.168 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13530,7 +13530,7 @@
 	)
 	(global_label "FOLD_DAC"
 		(shape output)
-		(at 80.518 74.168 0)
+		(at 80.518 76.708 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13540,7 +13540,7 @@
 		)
 		(uuid "db3beffa-34e7-474a-b7f1-d3558c3c555b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 92.8166 74.168 0)
+			(at 92.8166 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
