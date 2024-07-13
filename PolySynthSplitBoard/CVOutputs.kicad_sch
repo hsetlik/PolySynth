@@ -2343,11 +2343,11 @@
 				)
 			)
 		)
-		(symbol "power:+3.3V"
+		(symbol "power:+3.3VA"
 			(power)
+			(pin_numbers hide)
 			(pin_names
-				(offset 0)
-			)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2360,7 +2360,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+3.3V"
+			(property "Value" "+3.3VA"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -2386,7 +2386,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -2404,7 +2404,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+3.3V_0_1"
+			(symbol "+3.3VA_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -2442,11 +2442,11 @@
 					)
 				)
 			)
-			(symbol "+3.3V_1_1"
+			(symbol "+3.3VA_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "+3.3V"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -14513,73 +14513,6 @@
 		)
 	)
 	(symbol
-		(lib_name "+3.3V_1")
-		(lib_id "power:+3.3V")
-		(at 66.04 43.688 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "07150726-a728-474a-a8ce-b28a061b8d10")
-		(property "Reference" "#PWR0308"
-			(at 66.04 47.498 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 66.04 38.354 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 43.688 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 43.688 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 66.04 43.688 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5dc4c80d-5984-4df7-b08c-e0e9f4177801")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
-					(reference "#PWR0308")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 469.9 199.644 270)
 		(mirror x)
@@ -22428,71 +22361,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 41.656 128.016 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "68116ad5-85e4-4016-8fbc-340f703e754a")
-		(property "Reference" "#PWR0303"
-			(at 41.656 131.826 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 37.719 126.365 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 41.656 128.016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.656 128.016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 41.656 128.016 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c7891dca-886b-4ca0-89f1-dd12c14bf259")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
-					(reference "#PWR0303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 227.33 107.188 0)
 		(mirror y)
@@ -26734,71 +26602,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 49.53 68.326 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "949968ae-6925-495f-b7d5-8d69a5ea1c90")
-		(property "Reference" "#PWR0305"
-			(at 49.53 72.136 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 45.593 66.675 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 49.53 68.326 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b44fff27-ea56-4d20-8856-1a98ae8fd7fe")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
-					(reference "#PWR0305")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:TL072")
 		(at 477.012 232.918 0)
 		(mirror y)
@@ -28619,6 +28422,72 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
 					(reference "U316")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3VA")
+		(at 66.04 43.688 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a773ca45-4bf1-46c1-b275-78aa1d3fd8d8")
+		(property "Reference" "#PWR0308"
+			(at 66.04 47.498 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 66.04 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 43.688 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 43.688 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
+			(at 66.04 43.688 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6739bbba-1faf-4eb0-8d07-fdbd34735119")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
+					(reference "#PWR0308")
+					(unit 1)
 				)
 			)
 		)
@@ -33037,6 +32906,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3VA")
+		(at 49.53 68.326 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "db91a0db-e0bd-4ebd-b808-148570b5a824")
+		(property "Reference" "#PWR0305"
+			(at 49.53 72.136 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 49.53 64.008 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
+			(at 49.53 68.326 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "503d4940-699f-4315-a607-d63c18d39ad8")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
+					(reference "#PWR0305")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 407.924 69.088 0)
 		(mirror y)
@@ -35023,6 +34958,72 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
 					(reference "#PWR0323")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3VA")
+		(at 41.656 128.016 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea457e2c-2be2-4b17-bfda-ad04306bfd6e")
+		(property "Reference" "#PWR0303"
+			(at 41.656 131.826 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3VA"
+			(at 41.656 123.698 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.656 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.656 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3VA\""
+			(at 41.656 128.016 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6cab8c3a-9374-48f6-856b-f9899d9a9d0a")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/21390c27-a24b-4358-ba76-7238fda06c1e"
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
