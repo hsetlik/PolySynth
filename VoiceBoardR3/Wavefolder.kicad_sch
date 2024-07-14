@@ -4819,15 +4819,15 @@
 		(fields_autoplaced yes)
 		(uuid "181c4264-3d60-4ab2-b1f7-eafc18a9a597")
 		(property "Reference" "R402"
-			(at 269.24 53.721 90)
+			(at 269.24 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "92k"
-			(at 269.24 56.261 90)
+		(property "Value" "100k"
+			(at 269.24 55.88 90)
 			(effects
 				(font
 					(size 1.27 1.27)
