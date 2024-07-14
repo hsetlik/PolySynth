@@ -6877,7 +6877,7 @@
 	)
 	(wire
 		(pts
-			(xy 355.6 183.896) (xy 382.27 183.896)
+			(xy 355.346 183.896) (xy 382.27 183.896)
 		)
 		(stroke
 			(width 0)
@@ -7027,7 +7027,7 @@
 	)
 	(wire
 		(pts
-			(xy 344.17 183.896) (xy 347.98 183.896)
+			(xy 344.17 183.896) (xy 347.726 183.896)
 		)
 		(stroke
 			(width 0)
@@ -19982,7 +19982,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 351.79 183.896 270)
+		(at 351.536 183.896 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19990,7 +19990,7 @@
 		(dnp no)
 		(uuid "ad3262e4-dd5c-4fc9-ae7d-8fbbbfacba6f")
 		(property "Reference" "R437"
-			(at 351.79 187.071 90)
+			(at 351.536 187.071 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19998,7 +19998,7 @@
 			)
 		)
 		(property "Value" "220"
-			(at 351.79 189.611 90)
+			(at 351.536 189.611 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20006,7 +20006,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 351.536 184.912 90)
+			(at 351.282 184.912 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20015,7 +20015,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 351.79 183.896 0)
+			(at 351.536 183.896 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20024,7 +20024,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 351.79 183.896 0)
+			(at 351.536 183.896 0)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -7545,7 +7545,7 @@
 		(descr "SOT-143 https://www.nxp.com/docs/en/package-information/SOT143B.pdf")
 		(tags "SOT-143")
 		(property "Reference" "D109"
-			(at 0.02 -2.7 360)
+			(at 0.02 -2.7 0)
 			(layer "F.SilkS")
 			(uuid "7d21fe4e-a377-460f-87ce-8cb1bc9f335e")
 			(effects
@@ -7556,7 +7556,7 @@
 			)
 		)
 		(property "Value" "SP0503BAHT"
-			(at -0.28 2.48 360)
+			(at -0.28 2.48 0)
 			(layer "F.Fab")
 			(uuid "4bc93b94-d4f2-4f0d-aa84-bb0467a4abef")
 			(effects
@@ -16722,7 +16722,7 @@
 		(descr "SMD pad as test Point, diameter 1.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP107"
-			(at 0 -1.448001 360)
+			(at 0 -1.448001 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "008f3190-5d05-4cd5-b18e-8c65c08f9068")
@@ -16734,7 +16734,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 0.04 -1.9 360)
+			(at 0.04 -1.9 0)
 			(layer "F.SilkS")
 			(uuid "d9864a2c-813c-47cb-877a-ad12096e2bfe")
 			(effects
@@ -16745,7 +16745,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm_Value"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "23ee0edb-6e05-4e0b-a8a7-be98ee819d45")
@@ -16757,7 +16757,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c142af65-2b21-4570-8487-1f0e00abc4ba")
@@ -16769,7 +16769,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "41e15115-f8a3-4ab1-af99-d42e2a047b8b")
@@ -16808,7 +16808,7 @@
 			(uuid "4875a234-daa9-4d2f-ad51-47ef7512b44d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -1.45 360)
+			(at 0 -1.45 0)
 			(layer "F.Fab")
 			(uuid "8d1629cd-033d-4caa-a4ab-662ba510d548")
 			(effects
