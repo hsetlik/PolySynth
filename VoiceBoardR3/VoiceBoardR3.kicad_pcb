@@ -2353,7 +2353,7 @@
 			)
 		)
 		(property ki_fp_filters "TSSOP*4.4x6.5mm*P0.65mm*")
-		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/9ae1c3f2-3084-42e4-8e9f-2ba79481243b")
+		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/e05bc29d-c3d1-4ae2-9c81-b27fa8e22321")
 		(sheetname "DCO")
 		(sheetfile "DCO.kicad_sch")
 		(attr smd)
@@ -9957,7 +9957,7 @@
 			)
 		)
 		(property ki_fp_filters "TSSOP*4.4x6.5mm*P0.65mm*")
-		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/69871757-0926-4b52-93e3-c88a1c548bb9")
+		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/6983a40d-f726-48ed-a060-fa97cc682c86")
 		(sheetname "DCO")
 		(sheetfile "DCO.kicad_sch")
 		(attr smd)
@@ -12166,7 +12166,7 @@
 			)
 		)
 		(property ki_fp_filters "SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*")
-		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/5deb9796-c35a-498f-9576-d50747ef561d")
+		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/bf472231-3c66-4553-85bd-0d132e1c561f")
 		(sheetname "DCO")
 		(sheetfile "DCO.kicad_sch")
 		(attr smd)
@@ -23102,7 +23102,7 @@
 				)
 			)
 		)
-		(property "Value" "92k"
+		(property "Value" "100k"
 			(at 0 1.65 90)
 			(layer "F.Fab")
 			(uuid "6b20dc85-d59e-4c01-b6f8-72af1aabb34b")
@@ -32333,7 +32333,7 @@
 				)
 			)
 		)
-		(property "Value" "39k"
+		(property "Value" "47k"
 			(at 0 1.65 90)
 			(layer "F.Fab")
 			(uuid "b1c77a95-1e28-4fe7-b38a-440c17e059db")
@@ -36272,7 +36272,7 @@
 			)
 		)
 		(property ki_fp_filters "SOIC*3.9x8.7mm*P1.27mm* DIP*W7.62mm* TSSOP*4.4x5mm*P0.65mm* SSOP*5.3x6.2mm*P0.65mm* MSOP*3x3mm*P0.5mm*")
-		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/9726b440-3faf-4516-8e16-4ab14a65438d")
+		(path "/ea9cab0e-7e43-4516-bb48-768d75439087/7c17f54a-9082-482c-8bd1-12cd20966cd8")
 		(sheetname "DCO")
 		(sheetfile "DCO.kicad_sch")
 		(attr smd)
@@ -37659,7 +37659,7 @@
 				)
 			)
 		)
-		(property "Value" "39k"
+		(property "Value" "100k"
 			(at 0 1.65 90)
 			(layer "F.Fab")
 			(uuid "b8e92b6e-32b7-4fb7-b7a2-23a8d0651304")

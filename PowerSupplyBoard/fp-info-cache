@@ -1,4 +1,4 @@
-24185256472161462
+24200745780786178
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2064,6 +2064,13 @@ switch normally-open pushbutton push-button
 0
 4
 2
+Button_Switch_THT
+SW_NKK_B12JH_SPDT
+
+
+0
+5
+3
 Button_Switch_THT
 SW_NKK_BB15AH
 https://www.nkkswitches.com/pdf/Bpushbuttons-1.pdf
@@ -56259,6 +56266,13 @@ LCD 16x2 Alphanumeric 16pin
 22
 18
 Display
+TFTBreakout_ILI9341_340x320
+
+
+0
+9
+9
+Display
 WC1602A
 LCD 16x2 http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf
 LCD 16x2 Alphanumeric 16pin
@@ -67234,6 +67248,27 @@ Mounting 4.5mm 9774100982
 0
 8
 1
+Mousebites
+MouseBite_triple_2mm
+
+
+0
+0
+0
+Mousebites
+MouseBites_0.01x0.25
+
+
+0
+0
+0
+Mousebites
+Mousebite_1_5_mm
+
+
+0
+0
+0
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -90692,6 +90727,13 @@ rotary encoder
 7
 6
 Rotary_Encoder
+RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_5Pin
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
+rotary encoder
+0
+7
+5
+Rotary_Encoder
 RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm_CircularMountingHoles
 Alps rotary encoder, EC12E... with switch, vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
 rotary encoder
@@ -90734,12 +90776,26 @@ rotary encoder
 5
 4
 Rotary_Encoder
+RotaryEncoder_Alps_EC12E_Vertical_H20mm_1
+Alps rotary encoder, EC12E..., vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
+rotary encoder
+0
+5
+4
+Rotary_Encoder
 RotaryEncoder_Alps_EC12E_Vertical_H20mm_CircularMountingHoles
 Alps rotary encoder, EC12E..., vertical shaft, mounting holes with circular drills, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
 rotary encoder
 0
 5
 4
+Rotary_Encoder
+RotaryEncoder_Alps_EC12E_Vertical_H20mm_NOMP
+Alps rotary encoder, EC12E..., vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html
+rotary encoder
+0
+5
+3
 Rotary_Encoder
 RotaryEncoder_Bourns_Horizontal_PEC09-2xxxF-Nxxxx
 Bourns rotary encoder, PEC09, without switch, horizontal shaft, https://www.bourns.com/products/encoders/contacting-encoders/product/PEC09
@@ -96950,7 +97006,7 @@ test point THT pad
 1
 1
 TestPoint
-TestPoint_THTPad_D1.0mm_Drill0.5mm_1
+TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL
 THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm
 test point THT pad
 0
@@ -96958,6 +97014,13 @@ test point THT pad
 1
 TestPoint
 TestPoint_THTPad_D1.5mm_Drill0.7mm
+THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm
+test point THT pad
+0
+1
+1
+TestPoint
+TestPoint_THTPad_D1.5mm_Drill0.7mm_VAL
 THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm
 test point THT pad
 0
