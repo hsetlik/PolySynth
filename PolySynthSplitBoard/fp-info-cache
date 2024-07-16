@@ -1,4 +1,4 @@
-24199023688644066
+24200745780786178
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2064,6 +2064,13 @@ switch normally-open pushbutton push-button
 0
 4
 2
+Button_Switch_THT
+SW_NKK_B12JH_SPDT
+
+
+0
+5
+3
 Button_Switch_THT
 SW_NKK_BB15AH
 https://www.nkkswitches.com/pdf/Bpushbuttons-1.pdf
