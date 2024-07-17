@@ -6310,6 +6310,12 @@
 		(uuid "3bf42427-a1cc-42ca-a733-fd43f8e596bd")
 	)
 	(junction
+		(at 420.624 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3dc806ee-fba6-4628-bd54-6fe09e5e3973")
+	)
+	(junction
 		(at 87.376 65.278)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6424,6 +6430,12 @@
 		(uuid "8d720c8b-88fb-42bb-b4d3-cd1cd634b246")
 	)
 	(junction
+		(at 351.028 91.186)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9449ae9f-d627-4584-b6bb-03e348816aa8")
+	)
+	(junction
 		(at 320.802 178.562)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6446,12 +6458,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b409b0b6-df22-48fb-9ed6-3026db327990")
-	)
-	(junction
-		(at 351.028 91.186)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b64f7832-4020-4a3f-a4a6-7ad66c892c8d")
 	)
 	(junction
 		(at 347.98 165.608)
@@ -6897,7 +6903,7 @@
 	)
 	(wire
 		(pts
-			(xy 356.108 90.17) (xy 356.108 91.186)
+			(xy 359.918 90.17) (xy 359.918 91.186)
 		)
 		(stroke
 			(width 0)
@@ -7217,16 +7223,6 @@
 	)
 	(wire
 		(pts
-			(xy 351.028 91.186) (xy 346.71 91.186)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "311e5946-80e1-4ed4-8770-369b389bdc53")
-	)
-	(wire
-		(pts
 			(xy 97.79 194.818) (xy 92.964 194.818)
 		)
 		(stroke
@@ -7277,7 +7273,7 @@
 	)
 	(wire
 		(pts
-			(xy 365.252 97.282) (xy 370.84 97.282)
+			(xy 369.062 97.282) (xy 374.65 97.282)
 		)
 		(stroke
 			(width 0)
@@ -7377,6 +7373,16 @@
 	)
 	(wire
 		(pts
+			(xy 374.396 181.61) (xy 376.682 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44758a20-a4f5-4eaf-8a22-bcb60b5155a1")
+	)
+	(wire
+		(pts
 			(xy 120.904 194.818) (xy 133.35 194.818)
 		)
 		(stroke
@@ -7417,7 +7423,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.568 90.17) (xy 353.568 97.282)
+			(xy 357.378 90.17) (xy 357.378 97.282)
 		)
 		(stroke
 			(width 0)
@@ -7537,7 +7543,7 @@
 	)
 	(wire
 		(pts
-			(xy 353.568 97.282) (xy 357.632 97.282)
+			(xy 357.378 97.282) (xy 361.442 97.282)
 		)
 		(stroke
 			(width 0)
@@ -7717,6 +7723,16 @@
 	)
 	(wire
 		(pts
+			(xy 420.624 120.65) (xy 422.402 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "622d19e0-8c40-4122-a957-582b42a06fbb")
+	)
+	(wire
+		(pts
 			(xy 157.226 105.156) (xy 166.624 105.156)
 		)
 		(stroke
@@ -7834,6 +7850,16 @@
 			(type default)
 		)
 		(uuid "6aac6d4c-80b2-4b39-a5e3-b6d1ffc9426c")
+	)
+	(wire
+		(pts
+			(xy 420.624 116.586) (xy 420.624 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c25fa7e-785c-4467-bc94-17b35c3eca27")
 	)
 	(wire
 		(pts
@@ -8087,6 +8113,16 @@
 	)
 	(wire
 		(pts
+			(xy 351.028 91.186) (xy 354.838 91.186)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80e162f4-b4f2-461d-812e-48a7a56a1da1")
+	)
+	(wire
+		(pts
 			(xy 83.312 101.346) (xy 83.312 101.854)
 		)
 		(stroke
@@ -8197,7 +8233,7 @@
 	)
 	(wire
 		(pts
-			(xy 418.846 120.65) (xy 422.402 120.65)
+			(xy 418.846 120.65) (xy 420.624 120.65)
 		)
 		(stroke
 			(width 0)
@@ -8297,7 +8333,7 @@
 	)
 	(wire
 		(pts
-			(xy 351.028 90.17) (xy 351.028 91.186)
+			(xy 354.838 90.17) (xy 354.838 91.186)
 		)
 		(stroke
 			(width 0)
@@ -8347,13 +8383,23 @@
 	)
 	(wire
 		(pts
-			(xy 370.84 97.282) (xy 370.84 118.11)
+			(xy 374.65 97.282) (xy 374.65 118.11)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "94eb619f-56b0-43e4-8b7a-85e761322b68")
+	)
+	(wire
+		(pts
+			(xy 346.71 91.186) (xy 351.028 91.186)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95be46db-ca6a-449e-92a4-f66012edcc50")
 	)
 	(wire
 		(pts
@@ -8717,7 +8763,7 @@
 	)
 	(wire
 		(pts
-			(xy 370.84 118.11) (xy 375.412 118.11)
+			(xy 374.65 118.11) (xy 375.412 118.11)
 		)
 		(stroke
 			(width 0)
@@ -9387,6 +9433,16 @@
 	)
 	(wire
 		(pts
+			(xy 376.682 77.216) (xy 378.206 77.216)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb69241b-aeac-468e-b381-9a129cf57ca7")
+	)
+	(wire
+		(pts
 			(xy 382.778 132.08) (xy 386.842 132.08)
 		)
 		(stroke
@@ -9679,17 +9735,6 @@
 		)
 		(uuid "5da8a601-7203-4bad-86b8-f11a0e30ecf2")
 	)
-	(text "The decouplig caps and \ninverting amp here give us a\n6Vpp AC signal"
-		(exclude_from_sim no)
-		(at 384.81 141.224 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6666d249-bf86-4606-b47b-1c3eff450549")
-	)
 	(text "These inputs should be in the 0-4.191v range"
 		(exclude_from_sim no)
 		(at 18.796 78.486 0)
@@ -9726,6 +9771,50 @@
 			(justify left bottom)
 		)
 		(uuid "c6f30af6-1050-450d-aae0-277d2f706046")
+	)
+	(label "O1_MIXF"
+		(at 351.028 105.918 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "03b4ec2d-2cee-42c1-b413-526e0d3220f8")
+	)
+	(label "O2_MIXF"
+		(at 347.98 181.102 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "458bd2f2-b6a4-42c6-93e3-b1757e370e7d")
+	)
+	(label "O2_MIXF"
+		(at 376.682 181.61 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d063d4c0-d1f7-499d-8b40-5cae25bfaee2")
+	)
+	(label "O1_MIXF"
+		(at 378.206 77.216 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e486d26e-72d2-4411-b515-279c8b34ede5")
 	)
 	(global_label "TRI2_FULL"
 		(shape input)
@@ -10235,7 +10324,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 361.442 97.282 90)
+		(at 365.252 97.282 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10244,7 +10333,7 @@
 		(fields_autoplaced yes)
 		(uuid "02a9aca7-dee9-4d80-bfde-346fa4b7c017")
 		(property "Reference" "C211"
-			(at 361.442 90.424 90)
+			(at 365.252 90.424 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10252,7 +10341,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 361.442 92.964 90)
+			(at 365.252 92.964 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10260,7 +10349,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 365.252 96.3168 0)
+			(at 369.062 96.3168 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10269,7 +10358,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 361.442 97.282 0)
+			(at 365.252 97.282 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10278,7 +10367,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 361.442 97.282 0)
+			(at 365.252 97.282 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11221,7 +11310,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 122.682 255.27 0)
+		(at 399.288 120.65 0)
 		(mirror x)
 		(unit 3)
 		(exclude_from_sim no)
@@ -11230,7 +11319,7 @@
 		(dnp no)
 		(uuid "23c79bb6-91ab-4c33-abf3-388c44066869")
 		(property "Reference" "U206"
-			(at 122.682 264.922 0)
+			(at 399.288 130.302 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11238,7 +11327,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 122.682 262.382 0)
+			(at 399.288 127.762 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11246,7 +11335,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 121.412 257.81 0)
+			(at 398.018 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11255,7 +11344,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 123.952 260.35 0)
+			(at 400.558 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11264,7 +11353,7 @@
 			)
 		)
 		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
-			(at 122.682 255.27 0)
+			(at 399.288 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12322,6 +12411,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 376.682 77.216 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "33e82e8f-9720-45ce-82b9-80e5a0944982")
+		(property "Reference" "OSC1"
+			(at 374.396 72.6439 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OSC1"
+			(at 374.396 75.1839 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 381.762 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 381.762 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 376.682 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "606ef552-35b8-473e-850a-32b7fa91d30d")
+		)
+		(instances
+			(project "VoiceBoardR4"
+				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ea9cab0e-7e43-4516-bb48-768d75439087"
+					(reference "OSC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 282.956 80.772 0)
 		(unit 1)
@@ -12581,7 +12737,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 399.288 120.65 0)
+		(at 125.73 144.272 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -12590,7 +12746,7 @@
 		(dnp no)
 		(uuid "37a65c84-dc58-4387-901d-0db16ef4f9d5")
 		(property "Reference" "U206"
-			(at 399.288 130.81 0)
+			(at 125.73 154.432 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12598,7 +12754,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 399.288 128.27 0)
+			(at 125.73 151.892 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12606,7 +12762,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 398.018 123.19 0)
+			(at 124.46 146.812 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12615,7 +12771,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 400.558 125.73 0)
+			(at 127 149.352 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12624,7 +12780,7 @@
 			)
 		)
 		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
-			(at 399.288 120.65 0)
+			(at 125.73 144.272 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15060,7 +15216,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 356.108 91.186 0)
+		(at 359.918 91.186 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15069,7 +15225,7 @@
 		(fields_autoplaced yes)
 		(uuid "66b6d43b-c490-4dd1-b2f6-4a16c1be1a82")
 		(property "Reference" "#PWR0247"
-			(at 356.108 97.536 0)
+			(at 359.918 97.536 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15078,7 +15234,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 356.108 94.996 0)
+			(at 359.918 94.996 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15087,7 +15243,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 356.108 91.186 0)
+			(at 359.918 91.186 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15096,7 +15252,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 356.108 91.186 0)
+			(at 359.918 91.186 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15105,7 +15261,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 356.108 91.186 0)
+			(at 359.918 91.186 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15136,7 +15292,7 @@
 		(fields_autoplaced yes)
 		(uuid "6762176e-40a4-4cbd-8cad-715846e11ab2")
 		(property "Reference" "R225"
-			(at 152.4 148.082 0)
+			(at 152.4 148.0819 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15144,8 +15300,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "92k"
-			(at 152.4 150.622 0)
+		(property "Value" "100k"
+			(at 152.4 150.6219 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16274,6 +16430,73 @@
 				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ea9cab0e-7e43-4516-bb48-768d75439087"
 					(reference "U202")
 					(unit 5)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 420.624 116.586 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "7c89c11e-4297-4e7a-a155-849763b7dc21")
+		(property "Reference" "OSCMIX1"
+			(at 418.338 112.0139 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OSC2"
+			(at 418.338 114.5539 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 425.704 116.586 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 425.704 116.586 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 420.624 116.586 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a964325-231d-43af-a897-294596ee6190")
+		)
+		(instances
+			(project "VoiceBoardR4"
+				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ea9cab0e-7e43-4516-bb48-768d75439087"
+					(reference "OSCMIX1")
+					(unit 1)
 				)
 			)
 		)
@@ -17548,6 +17771,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 374.396 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "914f8f78-9742-4c73-a304-e4671d1bbf37")
+		(property "Reference" "OSC2"
+			(at 372.11 177.0379 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "OSC2"
+			(at 372.11 179.5779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
+			(at 379.476 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 379.476 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 374.396 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "28d02fde-0dd9-4145-990c-a8586b08ce42")
+		)
+		(instances
+			(project "VoiceBoardR4"
+				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ea9cab0e-7e43-4516-bb48-768d75439087"
+					(reference "OSC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 149.86 163.322 0)
 		(unit 1)
@@ -17926,7 +18216,7 @@
 	(symbol
 		(lib_name "MCP4451-xxxx-ST_4")
 		(lib_id "Potentiometer_Digital:MCP4451-xxxx-ST")
-		(at 353.568 82.55 90)
+		(at 357.378 82.55 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17934,7 +18224,7 @@
 		(dnp no)
 		(uuid "9ae1c3f2-3084-42e4-8e9f-2ba79481243b")
 		(property "Reference" "U205"
-			(at 347.472 81.28 90)
+			(at 351.282 81.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17943,7 +18233,7 @@
 			)
 		)
 		(property "Value" "MCP4451-104E-ST"
-			(at 347.472 83.82 90)
+			(at 351.282 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17952,7 +18242,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
-			(at 358.4956 79.0702 0)
+			(at 362.3056 79.0702 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17961,7 +18251,7 @@
 			)
 		)
 		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/22267A_MCP4431.pdf"
-			(at 361.0356 79.0702 0)
+			(at 364.8456 79.0702 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17970,7 +18260,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 353.568 82.55 0)
+			(at 357.378 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19902,7 +20192,7 @@
 				)
 			)
 		)
-		(property "Value" "56k"
+		(property "Value" "33k"
 			(at 398.78 107.696 90)
 			(effects
 				(font
@@ -21112,7 +21402,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 125.73 144.272 0)
+		(at 122.682 255.27 0)
 		(mirror x)
 		(unit 2)
 		(exclude_from_sim no)
@@ -21121,7 +21411,7 @@
 		(dnp no)
 		(uuid "dd7bab2f-6340-41de-822e-e7955ac2009a")
 		(property "Reference" "U206"
-			(at 125.73 154.432 0)
+			(at 122.682 265.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21129,7 +21419,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 125.73 151.892 0)
+			(at 122.682 262.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21137,7 +21427,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 124.46 146.812 0)
+			(at 121.412 257.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21146,7 +21436,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 127 149.352 0)
+			(at 123.952 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21155,7 +21445,7 @@
 			)
 		)
 		(property "Description" "Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"
-			(at 125.73 144.272 0)
+			(at 122.682 255.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21760,7 +22050,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "47k"
 			(at 152.4 159.5119 0)
 			(effects
 				(font

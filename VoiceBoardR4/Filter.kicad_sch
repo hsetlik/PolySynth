@@ -3236,6 +3236,12 @@
 		(uuid "2b8e8633-b4d8-4b80-a516-ab11cf2bee90")
 	)
 	(junction
+		(at 122.174 143.256)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2f38a4f3-4733-44b6-b1a0-b509fda44f73")
+	)
+	(junction
 		(at 244.094 38.354)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3272,10 +3278,22 @@
 		(uuid "4fd626c5-da82-4994-b3ac-3c3dad490116")
 	)
 	(junction
+		(at 227.076 109.982)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "544e3c64-2a13-4c4c-ad0e-cd3a5ea966a2")
+	)
+	(junction
 		(at 233.934 30.226)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5fd313b9-7efa-4151-91a5-bf72bff19dc9")
+	)
+	(junction
+		(at 184.404 84.328)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60fba099-63d2-4c42-a192-6a477a459016")
 	)
 	(junction
 		(at 253.746 54.356)
@@ -3308,12 +3326,6 @@
 		(uuid "976d54b0-e881-426f-8aeb-fa5994446925")
 	)
 	(junction
-		(at 122.174 143.256)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "aeabe166-a067-43ef-bb5d-d8c61835a25b")
-	)
-	(junction
 		(at 122.174 127.762)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3344,12 +3356,6 @@
 		(uuid "d616826c-9a0f-46f6-8e16-52f414c3c15b")
 	)
 	(junction
-		(at 106.934 145.796)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ddfdfe60-2ac9-4ebe-86ea-ba1fe04e8366")
-	)
-	(junction
 		(at 77.216 27.686)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3368,10 +3374,10 @@
 		(uuid "e9a3835e-7a4f-4040-b377-7b818d72baef")
 	)
 	(junction
-		(at 184.404 84.328)
+		(at 106.934 145.796)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ee164125-7cd3-4a54-83f1-d74c53d8aed9")
+		(uuid "eca09088-aea9-482e-acb3-09823be502fa")
 	)
 	(junction
 		(at 96.012 27.686)
@@ -3685,7 +3691,7 @@
 	)
 	(wire
 		(pts
-			(xy 230.124 122.174) (xy 231.648 122.174)
+			(xy 227.076 109.982) (xy 231.648 109.982)
 		)
 		(stroke
 			(width 0)
@@ -3975,6 +3981,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.076 109.982) (xy 227.076 110.744)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60560edf-5749-4b7f-ba5b-5cb0c759c8b2")
+	)
+	(wire
+		(pts
 			(xy 122.174 119.38) (xy 122.174 127.762)
 		)
 		(stroke
@@ -4115,6 +4131,16 @@
 	)
 	(wire
 		(pts
+			(xy 227.076 118.364) (xy 227.076 119.126)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c2574b7-6206-429e-8f25-12e23e66ec8b")
+	)
+	(wire
+		(pts
 			(xy 244.094 62.484) (xy 244.094 62.738)
 		)
 		(stroke
@@ -4152,6 +4178,16 @@
 			(type default)
 		)
 		(uuid "7a2953a9-b980-4b1a-86e2-932ff23b6e59")
+	)
+	(wire
+		(pts
+			(xy 184.404 84.328) (xy 184.404 91.694)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c0bb4b4-3f3b-4801-afc1-7cb31266144e")
 	)
 	(wire
 		(pts
@@ -4765,16 +4801,6 @@
 	)
 	(wire
 		(pts
-			(xy 184.404 84.328) (xy 184.404 91.694)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec8850c8-71fd-49d2-8350-035c032df090")
-	)
-	(wire
-		(pts
 			(xy 168.91 23.876) (xy 168.91 24.892)
 		)
 		(stroke
@@ -4795,7 +4821,7 @@
 	)
 	(wire
 		(pts
-			(xy 231.648 122.174) (xy 231.648 124.206)
+			(xy 231.648 109.982) (xy 231.648 124.206)
 		)
 		(stroke
 			(width 0)
@@ -7055,6 +7081,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 227.076 114.554 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "362e2c80-8430-4472-b604-781156006918")
+		(property "Reference" "C315"
+			(at 223.901 113.284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 223.901 115.824 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 226.1108 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 227.076 114.554 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 227.076 114.554 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9ae049be-b90b-4da4-9fbf-8634350f54ff")
+		)
+		(pin "2"
+			(uuid "04d526e2-8c91-4bd8-8118-a9e48e9db3fa")
+		)
+		(instances
+			(project "VoiceBoardR4"
+				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
+					(reference "C315")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "+12V_1")
 		(lib_id "power:+12V")
 		(at 233.934 53.086 0)
@@ -7653,8 +7749,8 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 94.488 89.408 0)
-		(mirror x)
+		(at 108.712 27.686 0)
+		(mirror y)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7663,7 +7759,7 @@
 		(fields_autoplaced yes)
 		(uuid "4de533cd-2998-4ab0-8eaa-b6e4e71bbaab")
 		(property "Reference" "U301"
-			(at 94.488 79.629 0)
+			(at 108.712 18.034 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7671,7 +7767,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 94.488 82.169 0)
+			(at 108.712 20.574 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7679,7 +7775,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 93.218 91.948 0)
+			(at 109.982 25.146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7688,7 +7784,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 95.758 94.488 0)
+			(at 107.442 22.606 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7697,7 +7793,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 94.488 89.408 0)
+			(at 108.712 27.686 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8031,8 +8127,8 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 108.712 27.686 0)
-		(mirror y)
+		(at 94.488 89.408 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8041,7 +8137,7 @@
 		(fields_autoplaced yes)
 		(uuid "5d81893e-dc52-4947-a431-9c459e113dbd")
 		(property "Reference" "U301"
-			(at 108.712 17.272 0)
+			(at 94.488 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8049,7 +8145,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 108.712 19.812 0)
+			(at 94.488 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8057,7 +8153,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 109.982 25.146 0)
+			(at 93.218 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8066,7 +8162,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 107.442 22.606 0)
+			(at 95.758 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8075,7 +8171,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 108.712 27.686 0)
+			(at 94.488 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9891,7 +9987,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 230.124 122.174 0)
+		(at 227.076 109.982 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9900,7 +9996,7 @@
 		(fields_autoplaced yes)
 		(uuid "b6838eea-6a7a-4d78-911c-4d2b9a4617ca")
 		(property "Reference" "#PWR0329"
-			(at 230.124 125.984 0)
+			(at 227.076 113.792 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9909,7 +10005,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 230.124 116.84 0)
+			(at 227.076 104.648 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9917,7 +10013,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 230.124 122.174 0)
+			(at 227.076 109.982 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9926,7 +10022,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 230.124 122.174 0)
+			(at 227.076 109.982 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9935,7 +10031,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 230.124 122.174 0)
+			(at 227.076 109.982 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10221,6 +10317,74 @@
 			(project "VoiceBoardR3"
 				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
 					(reference "#PWR0325")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 227.076 119.126 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c7355f64-235a-4d78-acb7-a9f55d911894")
+		(property "Reference" "#PWR0334"
+			(at 227.076 125.476 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 227.076 122.936 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 227.076 119.126 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 227.076 119.126 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 227.076 119.126 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c607d54-799b-4c71-9dbb-eae456f0283e")
+		)
+		(instances
+			(project "VoiceBoardR4"
+				(path "/9f036f02-a399-4ad2-b0d4-ee03d3bd2656/ff038903-6f02-4da2-a0a7-af9628bca3e7"
+					(reference "#PWR0334")
 					(unit 1)
 				)
 			)
@@ -10569,7 +10733,8 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 114.554 145.796 180)
+		(at 176.784 84.328 0)
+		(mirror x)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10577,7 +10742,7 @@
 		(dnp no)
 		(uuid "f089b0cb-fe5a-4559-bc51-89a8a6c60158")
 		(property "Reference" "U301"
-			(at 114.554 156.21 0)
+			(at 176.784 94.742 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10585,7 +10750,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 114.554 153.67 0)
+			(at 176.784 92.202 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10593,7 +10758,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 115.824 148.336 0)
+			(at 175.514 86.868 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10602,7 +10767,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 113.284 150.876 0)
+			(at 178.054 89.408 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10611,7 +10776,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 114.554 145.796 0)
+			(at 176.784 84.328 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10740,17 +10905,15 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL074")
-		(at 176.784 84.328 0)
-		(mirror x)
+		(at 114.554 145.796 180)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f4ee8e0e-2b15-4ef8-9ae0-b3ce60a7c6f6")
 		(property "Reference" "U301"
-			(at 176.784 74.168 0)
+			(at 114.554 151.892 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10758,7 +10921,7 @@
 			)
 		)
 		(property "Value" "TL074"
-			(at 176.784 76.708 0)
+			(at 114.554 154.432 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10766,7 +10929,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 175.514 86.868 0)
+			(at 115.824 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10775,7 +10938,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl071.pdf"
-			(at 178.054 89.408 0)
+			(at 113.284 150.876 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10784,7 +10947,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 176.784 84.328 0)
+			(at 114.554 145.796 0)
 			(effects
 				(font
 					(size 1.27 1.27)
