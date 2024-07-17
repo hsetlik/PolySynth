@@ -3733,7 +3733,7 @@
 		)
 		(uuid d3ed20a4-31c4-437a-9890-1229fc2bf8b8)
 	)
-	(text "Osc. 1 I2C address = 0x58\nOsc. 1 I2C address = 0x5C"
+	(text "Osc. 1 I2C address = 0x58\nOsc. 2 I2C address = 0x5C"
 		(exclude_from_sim no)
 		(at 158.496 200.787 0)
 		(effects
@@ -3769,6 +3769,17 @@
 			(justify left bottom)
 		)
 		(uuid "2dd09171-49a2-4153-937a-93712d1df8eb")
+	)
+	(text "Resonance I2C address = 0x5A*"
+		(exclude_from_sim no)
+		(at 158.496 202.946 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9168ab92-e343-48cb-b6ce-2c8ea72ddeac")
 	)
 	(text "Mux I2C address = 0xE0"
 		(exclude_from_sim no)
@@ -10739,6 +10750,11 @@
 					(unit 1)
 				)
 			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
 		)
 	)
 )
