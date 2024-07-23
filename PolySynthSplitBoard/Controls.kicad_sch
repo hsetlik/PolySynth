@@ -2418,12 +2418,6 @@
 		(uuid "18c4454c-1e9c-4864-aa12-122ac5086dbd")
 	)
 	(junction
-		(at 363.728 27.178)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1c2584d2-a44b-4978-abbc-0477d01ea72c")
-	)
-	(junction
 		(at 88.519 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2478,6 +2472,12 @@
 		(uuid "40aa369a-c18b-4860-abf5-2acfd4a829b3")
 	)
 	(junction
+		(at 374.396 27.432)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4957a221-c65b-46c7-b2e2-51eef774929e")
+	)
+	(junction
 		(at 318.77 57.658)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2488,6 +2488,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5660d809-08d8-458f-a1d7-a48284106ef5")
+	)
+	(junction
+		(at 363.728 27.432)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60b81bd3-b46b-43b7-8c22-82b63dfcdb4d")
 	)
 	(junction
 		(at 95.123 167.894)
@@ -3525,7 +3531,7 @@
 	)
 	(wire
 		(pts
-			(xy 363.728 27.178) (xy 363.728 38.608)
+			(xy 363.728 26.416) (xy 363.728 27.432)
 		)
 		(stroke
 			(width 0)
@@ -3645,6 +3651,16 @@
 	)
 	(wire
 		(pts
+			(xy 363.728 27.432) (xy 363.728 38.608)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4810eab7-17e5-4138-824b-f4eab62cf676")
+	)
+	(wire
+		(pts
 			(xy 227.076 60.452) (xy 229.108 60.452)
 		)
 		(stroke
@@ -3682,6 +3698,16 @@
 			(type default)
 		)
 		(uuid "4991f2e0-544a-43e0-a94e-ded9a89d6087")
+	)
+	(wire
+		(pts
+			(xy 385.572 27.432) (xy 374.396 27.432)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b2ec00d-54f6-4cca-868f-b321515963ee")
 	)
 	(wire
 		(pts
@@ -4505,6 +4531,16 @@
 	)
 	(wire
 		(pts
+			(xy 385.572 36.83) (xy 385.572 37.592)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ed44bf7-e97b-4a02-a822-eed0b827f61e")
+	)
+	(wire
+		(pts
 			(xy 201.168 116.586) (xy 201.168 117.856)
 		)
 		(stroke
@@ -4652,16 +4688,6 @@
 			(type default)
 		)
 		(uuid "879cd3ca-927c-46c1-92ad-8989cbe7c73d")
-	)
-	(wire
-		(pts
-			(xy 359.41 27.178) (xy 363.728 27.178)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "893d9839-d6df-4ab1-b380-125dc51338d1")
 	)
 	(wire
 		(pts
@@ -4845,6 +4871,16 @@
 	)
 	(wire
 		(pts
+			(xy 374.396 27.432) (xy 374.396 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94630990-936b-4212-8019-58a450d048a3")
+	)
+	(wire
+		(pts
 			(xy 180.721 177.038) (xy 180.721 178.308)
 		)
 		(stroke
@@ -4922,6 +4958,16 @@
 			(type default)
 		)
 		(uuid "9b4271de-692a-467c-b87f-501ef44ebe32")
+	)
+	(wire
+		(pts
+			(xy 374.396 27.432) (xy 363.728 27.432)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bbb4e9b-4be3-434a-a1ab-ffbaf7438174")
 	)
 	(wire
 		(pts
@@ -5285,7 +5331,7 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 36.068) (xy 359.41 36.83)
+			(xy 374.396 36.83) (xy 374.396 37.592)
 		)
 		(stroke
 			(width 0)
@@ -5402,6 +5448,16 @@
 			(type default)
 		)
 		(uuid "bca92184-1eda-4318-8d09-8dc0b53f507a")
+	)
+	(wire
+		(pts
+			(xy 385.572 29.21) (xy 385.572 27.432)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcd8d5fb-8928-4c17-9a91-5882ab3836c6")
 	)
 	(wire
 		(pts
@@ -6025,16 +6081,6 @@
 	)
 	(wire
 		(pts
-			(xy 359.41 28.448) (xy 359.41 27.178)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea561981-0599-4889-82c4-1139f2c9da1d")
-	)
-	(wire
-		(pts
 			(xy 127.254 74.803) (xy 127.254 75.946)
 		)
 		(stroke
@@ -6072,16 +6118,6 @@
 			(type default)
 		)
 		(uuid "ee7bf9dc-0ab6-4885-b9b4-b16de9598e21")
-	)
-	(wire
-		(pts
-			(xy 363.728 26.416) (xy 363.728 27.178)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef0dc14b-a669-4d0b-a7ad-dfd08e1f969c")
 	)
 	(wire
 		(pts
@@ -8431,7 +8467,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 359.41 32.258 0)
+		(at 374.396 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8439,7 +8475,7 @@
 		(dnp no)
 		(uuid "069fefa5-4572-4184-94ad-c5fa61a5bf9c")
 		(property "Reference" "C626"
-			(at 356.108 30.988 0)
+			(at 371.094 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8448,7 +8484,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 356.108 33.528 0)
+			(at 371.094 34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8457,7 +8493,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 360.3752 36.068 0)
+			(at 375.3612 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8466,7 +8502,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 359.41 32.258 0)
+			(at 374.396 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8475,7 +8511,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 359.41 32.258 0)
+			(at 374.396 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10502,7 +10538,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 359.41 36.83 0)
+		(at 374.396 37.592 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10511,7 +10547,7 @@
 		(fields_autoplaced yes)
 		(uuid "276b2531-bfaa-4822-95b8-187fe5c8e27f")
 		(property "Reference" "#PWR0765"
-			(at 359.41 43.18 0)
+			(at 374.396 43.942 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10520,7 +10556,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 359.41 40.64 0)
+			(at 374.396 41.402 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10529,7 +10565,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 359.41 36.83 0)
+			(at 374.396 37.592 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10538,7 +10574,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 359.41 36.83 0)
+			(at 374.396 37.592 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10547,7 +10583,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 359.41 36.83 0)
+			(at 374.396 37.592 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11441,6 +11477,75 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476/f9611335-018a-4682-8f39-2088bfa85de9"
 					(reference "#PWR0735")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 385.572 33.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "361d5bca-7310-4e77-9465-b605685d0f87")
+		(property "Reference" "C627"
+			(at 382.27 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10u"
+			(at 382.27 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 386.5372 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 385.572 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 385.572 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "090975d1-69be-4337-b1ce-8f7d905c8b30")
+		)
+		(pin "2"
+			(uuid "12a5d9b5-b1bb-48c6-a88e-e378c08751b3")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476/f9611335-018a-4682-8f39-2088bfa85de9"
+					(reference "C627")
 					(unit 1)
 				)
 			)
@@ -14366,6 +14471,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476/f9611335-018a-4682-8f39-2088bfa85de9"
 					(reference "#PWR0668")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 385.572 37.592 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b6de91f-5789-4b82-8e8f-ce74fa324f2b")
+		(property "Reference" "#PWR0839"
+			(at 385.572 43.942 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 385.572 41.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 385.572 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 385.572 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 385.572 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf3faee1-11cf-488d-8a60-ad17b7a3f464")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476/f9611335-018a-4682-8f39-2088bfa85de9"
+					(reference "#PWR0839")
 					(unit 1)
 				)
 			)
