@@ -18,10 +18,10 @@ extern "C" {
 #include "stm32f4xx_hal.h"
 #include "main.h"
 
-uint8_t DAC7578_getAddress(uint8_t addr0Hi);
-uint8_t DAC7578_getWriteCmdByte(uint8_t dac);
+#define ADDR_0_HI 0
 
-void DAC7578_setLevel(I2C_HandleTypeDef* i2c, uint8_t addr0hi, uint8_t dac, uint16_t value);
+
+void DAC7578_setLevel(I2C_HandleTypeDef* i2c, uint8_t dac, uint16_t value);
 
 
 #ifdef __cplusplus

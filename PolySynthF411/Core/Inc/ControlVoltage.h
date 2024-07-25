@@ -1,0 +1,52 @@
+/*
+ * ControlVoltage.h
+ *
+ *  Created on: Jul 25, 2024
+ *      Author: hayden
+ */
+
+#ifndef INC_CONTROLVOLTAGE_H_
+#define INC_CONTROLVOLTAGE_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "DAC7578.h"
+#include "stm32f4xx_hal.h"
+
+// our 7 control voltages in order of DAC channel
+enum DACChannel{
+	AC1,
+	AC2,
+	PWM2,
+	VCA,
+	PWM1,
+	FOLD,
+	CUTOFF
+};
+
+// convert output voltages and parameter values to 12-bit DAC levels
+
+// voltage in the range -10.0 - 10.0
+uint16_t dacValueForFilterVoltage(float voltage);
+// for floats in the range 0-1
+uint16_t dacValueForNorm(float value);
+// the needed value to compensate for a given frequency
+uint16_t dacValueForDCO(float hz);
+
+// 7 12-bit values for our 7 control voltages
+typedef struct{
+	uint16_t data[7];
+} dacLevels_t;
+
+void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint8_t voice);
+void updateVoicePrev(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels, uint8_t voice);
+
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_CONTROLVOLTAGE_H_ */

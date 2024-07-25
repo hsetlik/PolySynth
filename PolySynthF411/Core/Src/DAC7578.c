@@ -20,10 +20,8 @@ uint8_t DAC7578_getWriteCmdByte(uint8_t dac){
 	return 0x30 | dac;
 }
 
-
-
-void DAC7578_setLevel(I2C_HandleTypeDef* i2c, uint8_t addr0hi, uint8_t dac, uint16_t value){
-	uint16_t addr16 = (uint16_t)DAC7578_getAddress(addr0hi) << 8;
+void DAC7578_setLevel(I2C_HandleTypeDef* i2c, uint8_t dac, uint16_t value){
+	uint16_t addr16 = ((uint16_t)DAC7578_getAddress(ADDR_0_HI)) << 8;
 	uint8_t data[3];
 	// command byte
 	data[0] = DAC7578_getWriteCmdByte(dac);
