@@ -38,7 +38,6 @@ void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint8_t voice){
 		DAC7578_setLevel(i2c, i, levels[i]);
 	}
 	// switch the muxes to the correct voice
-
 	switchMuxToVoice(voice);
 	// and finally pull the inhibit pin low
 	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_RESET);
@@ -57,17 +56,12 @@ void updateVoicePrev(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLev
 		}
 	}
 	// switch the muxes to the correct voice
-
 	switchMuxToVoice(voice);
 	// and finally pull the inhibit pin low
 	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_RESET);
 
 }
 
-uint16_t dacValueForFilterVoltage(float voltage){
-	float fVoltage = (voltage + 10.0f) / 20.0f;
-	return (uint16_t)fVoltage * 4095.0f;
-}
 
 uint16_t dacValueForNorm(float value){
 	return (uint16_t) value * 4095.0f;

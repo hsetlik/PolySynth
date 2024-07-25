@@ -28,8 +28,6 @@ enum DACChannel{
 
 // convert output voltages and parameter values to 12-bit DAC levels
 
-// voltage in the range -10.0 - 10.0
-uint16_t dacValueForFilterVoltage(float voltage);
 // for floats in the range 0-1
 uint16_t dacValueForNorm(float value);
 // the needed value to compensate for a given frequency

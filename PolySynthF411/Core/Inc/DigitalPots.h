@@ -12,7 +12,7 @@ extern "C" {
 #endif
 
 
-#include "stm32f4xx_hal.h"
+#include "main.h"
 
 //========================================================================
 // Two MCP4451 quad digital pots handle mixing the oscillators

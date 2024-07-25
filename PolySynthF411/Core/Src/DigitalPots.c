@@ -30,7 +30,7 @@ void MCP44x1_setLevel(I2C_HandleTypeDef* i2c, uint8_t addr, uint8_t channel, uin
 	data[1] = value;
 	uint16_t addr16 = ((uint16_t)addr) << 8;
 	if(HAL_I2C_Master_Transmit(i2c, addr16, data, 2, HAL_MAX_DELAY)!= HAL_OK){
-		// uh oh
+		Error_Handler();
 	}
 }
 
@@ -66,6 +66,6 @@ void AD5280_setLevel(I2C_HandleTypeDef* i2c, uint8_t addr, uint8_t value) {
 	data[0] = 0x00;
 	data[1] = value;
 	if(HAL_I2C_Master_Transmit(i2c, addr16, data, 2, HAL_MAX_DELAY)!= HAL_OK){
-		// uh oh
+		Error_Handler();
 	}
 }
