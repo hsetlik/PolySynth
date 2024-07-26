@@ -35,11 +35,12 @@ uint16_t dacValueForDCO(float hz);
 
 // 7 12-bit values for our 7 control voltages
 typedef struct{
-	uint16_t data[7];
+	uint16_t prevData[7];
+	uint16_t currentData[7];
 } dacLevels_t;
 
-void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint8_t voice);
-void updateVoicePrev(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels, uint8_t voice);
+void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels, uint8_t voice);
+void updateVoiceCV_DMA(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels, uint8_t voice);
 
 
 

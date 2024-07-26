@@ -29,22 +29,8 @@ void switchMuxToVoice(uint8_t voice){
  *
  */
 
-void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint8_t voice){
 
-	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_SET); // disconnect the DAC from the mux outputs
-	// update the DAC
-	for(uint8_t i = 0; i < 7; i++){
-		// we don't have a reference to the previous levels so we need to update everything
-		DAC7578_setLevel(i2c, i, levels[i]);
-	}
-	// switch the muxes to the correct voice
-	switchMuxToVoice(voice);
-	// and finally pull the inhibit pin low
-	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_RESET);
-
-}
-
-void updateVoicePrev(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLevels, uint8_t voice){
+void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLevels, uint8_t voice){
 
 	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_SET); // disconnect the DAC from the mux outputs
 	// update the DAC
@@ -61,7 +47,12 @@ void updateVoicePrev(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLev
 	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_RESET);
 
 }
+//
 
+void updateVoiceCV_DMA(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLevels, uint8_t voice){
+	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_SET); // disconnect the DAC from the mux outputs
+
+}
 
 uint16_t dacValueForNorm(float value){
 	return (uint16_t) value * 4095.0f;

@@ -19,9 +19,15 @@ extern "C" {
 #include "main.h"
 
 #define ADDR_0_HI 0
+// structure to hold a queue of level changes that we can send in one big DMA chunk
+typedef struct{
+	uint16_t data[7];
+	uint8_t numChanges;
+} dacUpdateQueue_t;
 
 
 void DAC7578_setLevel(I2C_HandleTypeDef* i2c, uint8_t dac, uint16_t value);
+
 
 
 #ifdef __cplusplus

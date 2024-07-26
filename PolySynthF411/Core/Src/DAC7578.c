@@ -30,7 +30,7 @@ void DAC7578_setLevel(I2C_HandleTypeDef* i2c, uint8_t dac, uint16_t value){
 	data[1] = (uint8_t)value;
 	data[2] = (uint8_t)(value >> 8);
 
-	if(HAL_I2C_Master_Transmit(i2c, addr16, data, 3, HAL_MAX_DELAY)!= HAL_OK){
+	if(HAL_I2C_Master_Transmit_DMA(i2c, addr16, data, 3, HAL_MAX_DELAY)!= HAL_OK){
 		Error_Handler();
 	}
 }

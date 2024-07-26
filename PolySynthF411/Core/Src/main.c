@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "VoiceClock.h"
+#include "ControlVoltage.h"
 
 /* USER CODE END Includes */
 
@@ -45,6 +46,7 @@ ADC_HandleTypeDef hadc1;
 
 I2C_HandleTypeDef hi2c1;
 I2C_HandleTypeDef hi2c3;
+DMA_HandleTypeDef hdma_i2c3_tx;
 
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
@@ -70,6 +72,15 @@ uint16_t* currentVBuf = vBufA; // buffer currently being transmitted in DMA
 uint16_t* nextVBuf = vBufB;
 volatile uint8_t nextVBufNeeded = 0;
 
+// DAC Stuff----------------------------------
+dacLevels_t voiceLevels[6];
+volatile uint8_t dacLevelsNeeded = 0;
+
+volatile uint8_t dacTransmissionFinished = 0;
+volatile uint8_t currentDacVoice = 0;
+
+
+
 //MIDI stuff-------------------------
 uint8_t midiMsg[8];
 volatile uint8_t midiMsgReady = 0;
@@ -93,12 +104,24 @@ static void MX_TIM5_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
-
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+uint8_t nextVoiceToUpdate(){
+	uint8_t voice = currentDacVoice;
+	for(uint8_t i = 0; i < 6; i++){
+		voice = (voice + 1) % 6;
+		for(uint8_t cv = 0; cv < 7; cv++){
+			voiceLevels[v].currentData[cv] != voiceLevels[v].prevData[cv];
+			return voice;
+		}
+	}
+	return 6;
+}
+
+//===================================================================================
 //SPI DMA Callbacks and helpers ------------------
 
 void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi){
@@ -118,6 +141,20 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi){
 	  }
 }
 
+void HAL_I2C_TxCpltCallback(I2C_HandleTypeDef *i2c){
+
+	if(i2c == &hi2c3){
+		uint8_t v = nextVoiceToUpdate();
+		if(v < 6){
+
+		} else {
+
+		}
+
+
+	}
+}
+
 int __io_putchar(int ch)
 {
  // Write character to ITM ch.0
@@ -134,6 +171,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	if(midiMsg[0])
 		midiMsgReady = 1;
 	HAL_UART_Receive_IT(huart, midiMsg, 3); // standard MIDI messages are either 2 or 3 bytes long
+}
+
+
+//===========================================================
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* timer){ //callback for the CV updates
+
+
+
 }
 /* USER CODE END 0 */
 
@@ -184,6 +229,11 @@ int main(void)
   if(!HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)currentVBuf,VOICE_CLOCK_BUF_SIZE * 2)){
 	  Error_Handler();
   }
+  // start the timer to update the CVs
+  if (HAL_TIM_Base_Start_IT(&htim4) != HAL_OK){
+    Error_Handler();
+  }
+
 
   // start the first interrupt receive for MIDI
   HAL_UART_Receive_IT(&huart1, midiMsg, 3);
@@ -203,6 +253,10 @@ int main(void)
 	  if(midiMsgReady){
 		  //TODO: actually process the midi message nah mean
 		  midiMsgReady = 0;
+	  }
+
+	  if(dacLevelsNeeded){
+		  //TODO: the processing code should calculate the new DAC values here
 	  }
     /* USER CODE END WHILE */
 
@@ -228,15 +282,13 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 16;
-  RCC_OscInitStruct.PLL.PLLN = 192;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLN = 96;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV6;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -247,12 +299,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -360,7 +412,7 @@ static void MX_I2C3_Init(void)
 
   /* USER CODE END I2C3_Init 1 */
   hi2c3.Instance = I2C3;
-  hi2c3.Init.ClockSpeed = 100000;
+  hi2c3.Init.ClockSpeed = 400000;
   hi2c3.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c3.Init.OwnAddress1 = 0;
   hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
@@ -562,9 +614,9 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 0;
+  htim4.Init.Prescaler = 8;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 65535;
+  htim4.Init.Period = 40000;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
@@ -718,6 +770,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
+  /* DMA1_Stream4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
   /* DMA1_Stream6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
@@ -796,6 +851,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
 
 /* USER CODE END 4 */
 

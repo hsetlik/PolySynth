@@ -54,10 +54,10 @@ enum ModSource{
 #define RELEASE_DEFAULT 200.0f
 
 typedef struct{
-	float attack = ATTACK_DEFAULT;
-	float decay = DECAY_DEFAULT;
-	float sustain = SUSTAIN_DEFAULT;
-	float release = RELEASE_DEFAULT;
+	float attack;
+	float decay;
+	float sustain;
+	float release;
 } adsr_t;
 
 // params for the DCOs
@@ -74,15 +74,15 @@ typedef struct{
 #define LEVEL_DEFAULT 120
 
 typedef struct{
-	int8_t coarseTune = 0;
-	int8_t fineTune = 0;
+	int8_t coarseTune;
+	int8_t fineTune;
 
-	uint16_t pulseWidth = PWM_DEFAULT;
+	uint16_t pulseWidth;
 
-	uint8_t pulseLevel = LEVEL_DEFAULT;
-	uint8_t sawLevel = LEVEL_DEFAULT;
-	uint8_t triLevel = LEVEL_DEFAULT;
-	uint8_t oscLevel = LEVEL_DEFAULT;
+	uint8_t pulseLevel;
+	uint8_t sawLevel;
+	uint8_t triLevel;
+	uint8_t oscLevel;
 
 } dco_t;
 
