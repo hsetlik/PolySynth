@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "VoiceClock.h"
+#include "DigitalPots.h"
 
 /* USER CODE END Includes */
 
@@ -33,6 +34,19 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+// Digital Pot settings
+#define SAW1_LVL 255
+#define TRI1_LVL 0
+#define PULSE1_LVL 0
+#define OSC1_LVL 128
+
+#define SAW2_LVL 0
+#define TRI2_LVL 0
+#define PULSE2_LVL 255
+#define OSC2_LVL 128
+
+#define RESONANCE_LEVEL 128
 
 /* USER CODE END PD */
 
@@ -73,7 +87,9 @@ static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_I2C1_Init(void);
+
 /* USER CODE BEGIN PFP */
+void setMixers();
 
 /* USER CODE END PFP */
 
@@ -131,11 +147,12 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   // initialize the first voice buffer
-  send_bits(voiceClock, currentBuffer, 0, BUFFER_SIZE);
+  send_bits(voiceClk, currentBuffer, 0, BUFFER_SIZE);
   if(HAL_SPI_Transmit_DMA(&hspi2, (uint8_t*)currentBuffer, BUFFER_SIZE * 2) != HAL_OK){
 	  Error_Handler();
   }
 
+  setMixers();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -144,7 +161,7 @@ int main(void)
   {
 	  // update DMA for the waves if needed
 	 if(nextBufNeeded){
-		 send_bits(voiceClock, nextBuffer, 0, BUFFER_SIZE);
+		 send_bits(voiceClk, nextBuffer, 0, BUFFER_SIZE);
 		 nextBufNeeded = 0;
 	 }
 
@@ -371,6 +388,22 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void setMixers(){
+
+	MCP44x1_setLevel(&hi2c1, MCP44X1_1_ADDR, 0, OSC1_LVL); // osc 1 level
+	MCP44x1_setLevel(&hi2c1, MCP44X1_1_ADDR, 1, PULSE1_LVL); // osc 1 pulse
+	MCP44x1_setLevel(&hi2c1, MCP44X1_1_ADDR, 2, SAW1_LVL); // osc 1 saw
+	MCP44x1_setLevel(&hi2c1, MCP44X1_1_ADDR, 0, TRI1_LVL); // osc 1 tri
+
+	MCP44x1_setLevel(&hi2c1, MCP44X1_2_ADDR, 0, OSC2_LVL); // osc 1 level
+	MCP44x1_setLevel(&hi2c1, MCP44X1_2_ADDR, 1, PULSE2_LVL); // osc 1 pulse
+	MCP44x1_setLevel(&hi2c1, MCP44X1_2_ADDR, 2, SAW2_LVL); // osc 1 saw
+	MCP44x1_setLevel(&hi2c1, MCP44X1_2_ADDR, 0, TRI2_LVL); // osc 1 tri
+
+	// set resonance
+	AD5280_setLevel(&hi2c1, AD5280_ADDR, RESONANCE_LEVEL);
+}
 
 /* USER CODE END 4 */
 

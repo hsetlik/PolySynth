@@ -19,9 +19,9 @@ void DAC_MUX_selectVoice(GPIO_TypeDef* port, uint8_t v){
 	if(v & (1 << 2))
 		a2 = GPIO_PIN_SET;
 	//write pins
-	HAL_GPIO_WritePin(port, DAC_A0_Pin, a0);
-	HAL_GPIO_WritePin(port, DAC_A1_Pin, a1);
-	HAL_GPIO_WritePin(port, DAC_A2_Pin, a2);
+	//HAL_GPIO_WritePin(port, DAC_A0_Pin, a0);
+	//HAL_GPIO_WritePin(port, DAC_A1_Pin, a1);
+	//HAL_GPIO_WritePin(port, DAC_A2_Pin, a2);
 }
 
 
