@@ -41,6 +41,8 @@ typedef struct{
 
 void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels, uint8_t voice);
 void updateVoiceCV_DMA(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels, uint8_t voice);
+void startVoiceUpdate_DMA(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels);
+void finishVoiceUpdate_DMA(uint8_t voice);
 
 
 

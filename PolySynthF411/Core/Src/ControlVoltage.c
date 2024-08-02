@@ -20,15 +20,6 @@ void switchMuxToVoice(uint8_t voice){
 	HAL_GPIO_WritePin(GPIOB, DAC_A2_Pin, (GPIO_PinState)c);
 }
 
-/*
- * Process for updating a voice's CVs:
- * 1. Pull the mux inhibit pin HIGH
- * 2. Update DAC via I2C as needed
- * 3. Set mux switching GPIOs to the correct voice
- * 4. Pull the mux inhibit pin LOW
- *
- */
-
 
 void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLevels, uint8_t voice){
 
@@ -52,6 +43,27 @@ void updateVoiceCV(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLevel
 void updateVoiceCV_DMA(I2C_HandleTypeDef* i2c, uint16_t* levels, uint16_t* prevLevels, uint8_t voice){
 	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_SET); // disconnect the DAC from the mux outputs
 
+}
+
+
+void startVoiceUpdate_DMA(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t* prevLevels){
+	// 1. inhibit the muxes
+	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_SET); // disconnect the DAC from the mux outputs
+
+	for(uint8_t i = 0; i < 7; i++){
+		// only update if the levels have changed
+		if(levels[i] != prevLevels[i]){
+			prevLevels[i] = levels[i];
+			DAC7578_setLevel(i2c, i, levels[i]);
+		}
+	}
+
+}
+
+
+void finishVoiceUpdate_DMA(uint8_t voice){
+	switchMuxToVoice(voice);
+	HAL_GPIO_WritePin(GPIOB, DAC_INH_Pin, GPIO_PIN_RESET);
 }
 
 uint16_t dacValueForNorm(float value){

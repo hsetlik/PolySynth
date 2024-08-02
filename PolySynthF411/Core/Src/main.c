@@ -114,8 +114,8 @@ uint8_t nextVoiceToUpdate(){
 	for(uint8_t i = 0; i < 6; i++){
 		voice = (voice + 1) % 6;
 		for(uint8_t cv = 0; cv < 7; cv++){
-			voiceLevels[v].currentData[cv] != voiceLevels[v].prevData[cv];
-			return voice;
+			if(voiceLevels[voice].currentData[cv] != voiceLevels[voice].prevData[cv])
+				return voice;
 		}
 	}
 	return 6;
@@ -143,15 +143,21 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi){
 
 void HAL_I2C_TxCpltCallback(I2C_HandleTypeDef *i2c){
 
-	if(i2c == &hi2c3){
+	if(i2c == &hi2c3){ // our DAC is done updating to the current channel
+		//1. set the mux to charge the capacitors appropriately
+		finishVoiceUpdate_DMA(currentDacVoice);
+		// 2. check if we have another voice to update
 		uint8_t v = nextVoiceToUpdate();
-		if(v < 6){
+		// 3. Update the voice if needed, set the flag to indicate we're finished otherwise
+		if(v < 6){ // we have another update to do
+			currentDacVoice = v;
+			startVoiceUpdate_DMA(i2c, &voiceLevels[v].currentData[0], &voiceLevels[v].prevData[0]);
 
-		} else {
+		} else { // we're finished
+			currentDacVoice = 0;
+			dacTransmissionFinished = 1;
 
 		}
-
-
 	}
 }
 
@@ -176,8 +182,14 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 //===========================================================
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* timer){ //callback for the CV updates
-
-
+	if(dacTransmissionFinished){
+		uint8_t v = nextVoiceToUpdate();
+		if(v < 6){
+			dacTransmissionFinished = 0;
+			currentDacVoice = v;
+			startVoiceUpdate_DMA(i2c, &voiceLevels[v].currentData[0], &voiceLevels[v].prevData[0]);
+		}
+	}
 
 }
 /* USER CODE END 0 */
