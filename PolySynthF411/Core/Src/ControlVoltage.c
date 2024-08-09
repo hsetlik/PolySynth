@@ -52,9 +52,9 @@ void startVoiceUpdate_DMA(I2C_HandleTypeDef* i2c, uint16_t* newLevels, uint16_t*
 
 	for(uint8_t i = 0; i < 7; i++){
 		// only update if the levels have changed
-		if(levels[i] != prevLevels[i]){
-			prevLevels[i] = levels[i];
-			DAC7578_setLevel(i2c, i, levels[i]);
+		if(newLevels[i] != prevLevels[i]){
+			prevLevels[i] = newLevels[i];
+			DAC7578_setLevel(i2c, i, newLevels[i]);
 		}
 	}
 

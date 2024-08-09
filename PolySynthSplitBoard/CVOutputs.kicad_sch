@@ -1922,7 +1922,7 @@
 			(pin_names
 				(offset 0.762) hide)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
 			(property "Reference" "TP"
 				(at 0 6.858 0)
@@ -14941,7 +14941,7 @@
 		(at 93.218 216.408 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -14955,7 +14955,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "FOLD_DAC"
+		(property "Value" "TestPoint"
 			(at 95.25 214.3759 0)
 			(effects
 				(font
@@ -18684,7 +18684,7 @@
 		(at 90.678 174.752 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -18698,7 +18698,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "L1_DAC"
+		(property "Value" "TestPoint"
 			(at 92.71 172.7199 0)
 			(effects
 				(font
@@ -19312,7 +19312,7 @@
 		(at 67.818 215.392 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -19326,7 +19326,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "L2_RAW"
+		(property "Value" "TestPoint"
 			(at 69.85 213.3599 0)
 			(effects
 				(font
@@ -21360,7 +21360,7 @@
 		(at 68.58 198.628 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -21374,7 +21374,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CTF_RAW"
+		(property "Value" "TestPoint"
 			(at 71.12 196.5959 0)
 			(effects
 				(font
@@ -23640,7 +23640,7 @@
 		(at 93.218 226.06 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -23654,7 +23654,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CTF_DAC"
+		(property "Value" "TestPoint"
 			(at 95.25 224.0279 0)
 			(effects
 				(font
@@ -24060,13 +24060,13 @@
 		(at 91.186 183.896 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6c9b9fc5-7abe-4b56-b4bd-362455da0b7a")
 		(property "Reference" "TP302"
-			(at 92.964 179.3239 0)
+			(at 92.71 179.3239 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24074,8 +24074,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "L2_DAC"
-			(at 92.964 181.8639 0)
+		(property "Value" "TestPoint"
+			(at 92.71 181.8639 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31498,13 +31498,13 @@
 		(at 91.948 200.406 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bd367a63-0a86-47eb-a6aa-8b3df8779b45")
 		(property "Reference" "TP304"
-			(at 93.472 195.8339 0)
+			(at 93.98 195.8339 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31512,8 +31512,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "VCA_DAC"
-			(at 93.472 198.3739 0)
+		(property "Value" "TestPoint"
+			(at 93.98 198.3739 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33234,13 +33234,13 @@
 		(at 91.44 191.516 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d054936e-35c1-468b-b30f-10189c3e4797")
 		(property "Reference" "TP303"
-			(at 92.964 186.9439 0)
+			(at 93.98 186.9439 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33248,8 +33248,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PWM2_DAC"
-			(at 92.964 189.4839 0)
+		(property "Value" "TestPoint"
+			(at 93.98 189.4839 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36574,7 +36574,7 @@
 		(at 67.818 206.756 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -36588,7 +36588,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "L1_RAW"
+		(property "Value" "TestPoint"
 			(at 69.85 204.7239 0)
 			(effects
 				(font
@@ -38160,7 +38160,7 @@
 		(at 92.964 208.28 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -38174,7 +38174,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PWM1_DAC"
+		(property "Value" "TestPoint"
 			(at 95.25 206.2479 0)
 			(effects
 				(font

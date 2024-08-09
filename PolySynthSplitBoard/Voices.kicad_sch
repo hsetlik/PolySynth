@@ -10,7 +10,7 @@
 			(pin_names
 				(offset 0.762) hide)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
 			(property "Reference" "TP"
 				(at 0 6.858 0)
@@ -6799,7 +6799,7 @@
 		(at 51.054 218.186 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6813,7 +6813,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDAV3"
+		(property "Value" "TestPoint"
 			(at 53.34 216.1539 0)
 			(effects
 				(font
@@ -6879,7 +6879,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 66.802 112.268 0)
 			(effects
 				(font
@@ -6948,7 +6948,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 311.658 145.923 0)
 			(effects
 				(font
@@ -7149,7 +7149,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 55.88 112.268 0)
 			(effects
 				(font
@@ -7589,7 +7589,7 @@
 		(at 73.406 179.832 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -7603,7 +7603,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCLV4"
+		(property "Value" "TestPoint"
 			(at 74.93 177.7999 0)
 			(effects
 				(font
@@ -7669,7 +7669,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 320.294 145.923 0)
 			(effects
 				(font
@@ -7725,7 +7725,7 @@
 		(at 74.168 210.82 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -7739,7 +7739,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCLV6"
+		(property "Value" "TestPoint"
 			(at 76.2 208.7879 0)
 			(effects
 				(font
@@ -8831,7 +8831,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 172.974 146.431 0)
 			(effects
 				(font
@@ -9021,7 +9021,7 @@
 		(at 50.8 211.074 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9035,7 +9035,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCLV3"
+		(property "Value" "TestPoint"
 			(at 53.34 209.0419 0)
 			(effects
 				(font
@@ -9088,7 +9088,7 @@
 		(at 50.038 179.578 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -9102,7 +9102,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCLV1"
+		(property "Value" "TestPoint"
 			(at 52.07 177.5459 0)
 			(effects
 				(font
@@ -10027,7 +10027,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 170.815 84.963 0)
 			(effects
 				(font
@@ -10083,7 +10083,7 @@
 		(at 50.8 202.438 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10097,7 +10097,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDAV2"
+		(property "Value" "TestPoint"
 			(at 53.34 200.4059 0)
 			(effects
 				(font
@@ -10163,7 +10163,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 243.205 146.177 0)
 			(effects
 				(font
@@ -10414,7 +10414,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 318.135 84.455 0)
 			(effects
 				(font
@@ -10601,7 +10601,7 @@
 		(at 73.914 202.438 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10615,7 +10615,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDAV5"
+		(property "Value" "TestPoint"
 			(at 76.2 200.4059 0)
 			(effects
 				(font
@@ -10681,7 +10681,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 309.499 84.455 0)
 			(effects
 				(font
@@ -10803,7 +10803,7 @@
 		(at 50.546 195.326 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -10817,7 +10817,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCLV2"
+		(property "Value" "TestPoint"
 			(at 52.07 193.2939 0)
 			(effects
 				(font
@@ -10951,7 +10951,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 249.682 84.709 0)
 			(effects
 				(font
@@ -11085,7 +11085,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 241.046 84.709 0)
 			(effects
 				(font
@@ -11154,7 +11154,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 181.61 146.431 0)
 			(effects
 				(font
@@ -11524,7 +11524,7 @@
 		(at 74.422 217.932 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11538,7 +11538,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDAV6"
+		(property "Value" "TestPoint"
 			(at 76.2 215.8999 0)
 			(effects
 				(font
@@ -11591,7 +11591,7 @@
 		(at 73.66 186.944 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11605,7 +11605,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDAV4"
+		(property "Value" "TestPoint"
 			(at 76.2 184.9119 0)
 			(effects
 				(font
@@ -11671,7 +11671,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 179.451 84.963 0)
 			(effects
 				(font
@@ -11727,7 +11727,7 @@
 		(at 50.292 186.69 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -11741,7 +11741,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDAV1"
+		(property "Value" "TestPoint"
 			(at 52.07 184.6579 0)
 			(effects
 				(font
@@ -11993,7 +11993,7 @@
 		(at 73.66 195.326 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -12007,7 +12007,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCLV5"
+		(property "Value" "TestPoint"
 			(at 76.2 193.2939 0)
 			(effects
 				(font
@@ -12073,7 +12073,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "12k"
+		(property "Value" "4k7"
 			(at 251.841 146.177 0)
 			(effects
 				(font

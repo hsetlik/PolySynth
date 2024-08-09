@@ -2154,7 +2154,7 @@
 			(pin_names
 				(offset 0.762) hide)
 			(exclude_from_sim no)
-			(in_bom yes)
+			(in_bom no)
 			(on_board yes)
 			(property "Reference" "TP"
 				(at 0 6.858 0)
@@ -12991,13 +12991,13 @@
 		(at 81.026 241.046 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03a74263-953f-4f5b-a64c-3c5bffd5d86c")
 		(property "Reference" "TP403"
-			(at 83.058 236.4739 0)
+			(at 82.55 236.4739 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13005,8 +13005,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MUX_A1"
-			(at 83.058 239.0139 0)
+		(property "Value" "TestPoint"
+			(at 82.55 239.0139 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13463,13 +13463,13 @@
 		(at 186.182 251.968 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08e09a68-060f-4f6b-859d-e5fbb8347fd8")
 		(property "Reference" "TP423"
-			(at 188.722 247.3959 0)
+			(at 187.96 247.3959 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13477,8 +13477,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "INTR_C"
-			(at 188.722 249.9359 0)
+		(property "Value" "TestPoint"
+			(at 187.96 249.9359 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13530,13 +13530,13 @@
 		(at 81.28 233.426 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1152b235-52e3-4c6a-9bfc-b70e2bd643c5")
 		(property "Reference" "TP402"
-			(at 83.058 228.8539 0)
+			(at 83.82 228.8539 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13544,8 +13544,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MUX_A0"
-			(at 83.058 231.3939 0)
+		(property "Value" "TestPoint"
+			(at 83.82 231.3939 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14289,7 +14289,7 @@
 		(at 116.332 244.602 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -14303,7 +14303,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EXP_SCK"
+		(property "Value" "TestPoint"
 			(at 118.11 242.5699 0)
 			(effects
 				(font
@@ -14624,13 +14624,13 @@
 		(at 170.434 231.394 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "218b1c09-42ca-44bc-b227-1d75b92745a8")
 		(property "Reference" "TP420"
-			(at 172.466 226.8219 0)
+			(at 172.72 226.8219 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14638,8 +14638,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LDAC"
-			(at 172.466 229.3619 0)
+		(property "Value" "TestPoint"
+			(at 172.72 229.3619 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15127,13 +15127,13 @@
 		(at 81.28 266.954 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2735fe20-a147-4dad-8ded-6272b138c841")
 		(property "Reference" "TP406"
-			(at 83.058 262.3819 0)
+			(at 83.82 262.3819 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15141,8 +15141,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "FOLD_FIRST"
-			(at 83.058 264.9219 0)
+		(property "Value" "TestPoint"
+			(at 83.82 264.9219 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16324,13 +16324,13 @@
 		(at 185.928 240.03 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "455ea197-f0a9-4b21-afd2-b70738aafdde")
 		(property "Reference" "TP422"
-			(at 187.452 235.4579 0)
+			(at 187.96 235.4579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16338,8 +16338,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "INTR_B"
-			(at 187.452 237.9979 0)
+		(property "Value" "TestPoint"
+			(at 187.96 237.9979 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16525,13 +16525,13 @@
 		(at 81.28 225.806 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d004b3c-a49e-49a8-9e33-aa7fe9604b2b")
 		(property "Reference" "TP401"
-			(at 83.058 221.2339 0)
+			(at 83.82 221.2339 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16539,8 +16539,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MUX_INH"
-			(at 83.058 223.7739 0)
+		(property "Value" "TestPoint"
+			(at 83.82 223.7739 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16592,13 +16592,13 @@
 		(at 81.788 258.318 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d7bdedb-0e5b-42ff-b238-6f1a9d35f03d")
 		(property "Reference" "TP405"
-			(at 84.328 253.7459 0)
+			(at 83.82 253.7459 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16606,8 +16606,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "HP_MODE"
-			(at 84.328 256.2859 0)
+		(property "Value" "TestPoint"
+			(at 83.82 256.2859 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16659,7 +16659,7 @@
 		(at 152.654 229.616 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -16673,7 +16673,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "POTS_SDA"
+		(property "Value" "TestPoint"
 			(at 154.94 227.5839 0)
 			(effects
 				(font
@@ -17138,7 +17138,7 @@
 		(at 116.332 254.508 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -17152,7 +17152,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EXP_MISO"
+		(property "Value" "TestPoint"
 			(at 118.11 252.4759 0)
 			(effects
 				(font
@@ -19115,13 +19115,13 @@
 		(at 170.942 252.73 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8296482d-7f83-4eb1-8770-050493cc5184")
 		(property "Reference" "TP419"
-			(at 172.466 248.1579 0)
+			(at 172.72 248.1579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19129,8 +19129,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DAC_SDA"
-			(at 172.466 250.6979 0)
+		(property "Value" "TestPoint"
+			(at 172.72 250.6979 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19657,13 +19657,13 @@
 		(at 135.89 262.128 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b77c7fb-9558-4c00-93ef-57229f0f91d2")
 		(property "Reference" "TP413"
-			(at 137.922 257.5559 0)
+			(at 138.43 257.5559 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19671,8 +19671,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CLK_MOSI"
-			(at 137.922 260.0959 0)
+		(property "Value" "TestPoint"
+			(at 138.43 260.0959 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19928,13 +19928,13 @@
 		(at 185.674 224.536 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5fd0686-68d2-4a17-865f-2c10dcd70101")
 		(property "Reference" "TP421"
-			(at 187.452 219.9639 0)
+			(at 187.96 219.9639 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19942,8 +19942,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "INTR_A"
-			(at 187.452 222.5039 0)
+		(property "Value" "TestPoint"
+			(at 187.96 222.5039 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20894,13 +20894,13 @@
 		(at 135.89 250.444 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b712c697-d224-457b-9d38-da74e5b63833")
 		(property "Reference" "TP412"
-			(at 137.922 245.8719 0)
+			(at 138.43 245.8719 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20908,8 +20908,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CLK_SCK"
-			(at 137.922 248.4119 0)
+		(property "Value" "TestPoint"
+			(at 138.43 248.4119 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21439,7 +21439,7 @@
 		(at 116.078 234.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -21453,7 +21453,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EXP_CS"
+		(property "Value" "TestPoint"
 			(at 118.11 232.9179 0)
 			(effects
 				(font
@@ -21844,13 +21844,13 @@
 		(at 81.28 249.174 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf8986dd-a7a9-4c9e-89f3-12f1d6bc832f")
 		(property "Reference" "TP404"
-			(at 83.058 244.6019 0)
+			(at 83.82 244.6019 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21858,8 +21858,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MUX_A2"
-			(at 83.058 247.1419 0)
+		(property "Value" "TestPoint"
+			(at 83.82 247.1419 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21979,13 +21979,13 @@
 		(at 135.636 241.046 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3d44de0-5719-40c9-ab0e-58f9c2213360")
 		(property "Reference" "TP411"
-			(at 137.922 236.4739 0)
+			(at 137.16 236.4739 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21993,8 +21993,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CLK_CS"
-			(at 137.922 239.0139 0)
+		(property "Value" "TestPoint"
+			(at 137.16 239.0139 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22508,7 +22508,7 @@
 		(at 116.332 264.414 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -22522,7 +22522,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EXP_MOSI"
+		(property "Value" "TestPoint"
 			(at 118.11 262.3819 0)
 			(effects
 				(font
@@ -22575,7 +22575,7 @@
 		(at 135.382 229.87 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -22589,7 +22589,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MIDI_TX"
+		(property "Value" "TestPoint"
 			(at 137.16 227.8379 0)
 			(effects
 				(font
@@ -23150,7 +23150,7 @@
 		(at 152.146 219.964 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -23164,7 +23164,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "POTS_SCL"
+		(property "Value" "TestPoint"
 			(at 153.67 217.9319 0)
 			(effects
 				(font
@@ -23554,13 +23554,13 @@
 		(at 170.688 242.062 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dfdbaef7-a3bf-4dd9-acd3-a9d4d5d7843f")
 		(property "Reference" "TP418"
-			(at 172.466 237.4899 0)
+			(at 172.72 237.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23568,8 +23568,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DAC_SCL"
-			(at 172.466 240.0299 0)
+		(property "Value" "TestPoint"
+			(at 172.72 240.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24160,7 +24160,7 @@
 		(at 135.128 219.71 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -24174,7 +24174,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MIDI_RX"
+		(property "Value" "TestPoint"
 			(at 137.16 217.6779 0)
 			(effects
 				(font

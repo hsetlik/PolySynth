@@ -14,6 +14,7 @@ extern "C" {
 
 #include "main.h"
 
+//==============================================================================================================
 // modulation matrix storage/logic
 enum ModDestination{
 	CUTOFF,
@@ -27,15 +28,48 @@ enum ModDestination{
 };
 
 enum ModSource{
+	NONE,
 	ENV1,
 	ENV2,
 	LFO1,
 	LFO2,
 	LFO3,
 	MODWHL,
-
+	PITCHWHL,
+	VEL
 };
 
+/**
+ * We have eight sources (not counting NONE) and eight destinations,
+ * which means we need to be able to store a maximum of 64 modulations.
+ * Each modulation can be represented in two bytes, which works like:
+ *
+ * MOST SIGNUFiCANT BYTE:
+ * Since we only have 8-9 possible values for the source and destination,
+ * we can represent each in four bits, where the most significant four bits are
+ * the source index and the least significant four bits are the destination ID
+ *
+ * LEAST SIGNIFICANT BYTE:
+ * Just an 8-bit SIGNED integer to represent depth
+ *
+ */
+#define MAX_MODULATIONS 64
+
+typedef uint16_t mod_t;
+
+typedef struct {
+	mod_t mods[MAX_MODULATIONS];
+	uint8_t modsInUse;
+} modmatrix_t;
+
+// helper functions for the data packing described above ^^
+uint8_t getModSource(mod_t mod);
+uint8_t getModDest(mod_t mod);
+int8_t getModDepth(mod_t mod);
+
+mod_t createMod(uint8_t source, uint8_t dest, int8_t depth);
+
+//============================================================================
 // params for our ADSR envelopes. these are float values in milliseconds
 #define ATTACK_MIN 2.5f
 #define ATTACK_MAX 250.0f
