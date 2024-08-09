@@ -13,11 +13,28 @@ SynthProcessor::SynthProcessor(voice_clock_t vc) :
 
 void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	// remember, the argument pointer is an array of dacLevels arranged PER VOICE
+	for(uint8_t v = 0; v < 6; v++){
+		if(isVoiceActive(v)){
+			// now grip each of the 7 DAC voltages
+		}
+	}
 
 }
 
-void SynthProcessor::processMidiMessage(midiMsg) {
-	//TODO
+void SynthProcessor::processMidiMessage(midiMsg msg) {
+	MIDIMsgType msgType = (MIDIMsgType)msg.msgType;
+	switch(msgType){
+	case NoteOn:
+		break;
+	case NoteOff:
+		break;
+	case ControlChange:
+		break;
+	case PitchBend:
+		break;
+	default:
+		break;
+	}
 }
 //======================================================================
 bool SynthProcessor::isVoiceActive(uint8_t voice) {
