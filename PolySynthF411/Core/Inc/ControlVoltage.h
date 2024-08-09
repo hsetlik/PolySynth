@@ -17,13 +17,13 @@ extern "C" {
 
 // our 7 control voltages in order of DAC channel
 enum DACChannel{
-	AC1,
-	AC2,
-	PWM2,
-	VCA,
-	PWM1,
-	FOLD,
-	CUTOFF
+	AC1_CH,
+	AC2_CH,
+	PWM2_CH,
+	VCA_CH,
+	PWM1_CH,
+	FOLD_CH,
+	CUTOFF_CH
 };
 
 // convert output voltages and parameter values to 12-bit DAC levels

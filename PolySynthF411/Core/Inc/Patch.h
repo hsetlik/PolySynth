@@ -60,7 +60,7 @@ typedef uint16_t mod_t;
 typedef struct {
 	mod_t mods[MAX_MODULATIONS];
 	uint8_t modsInUse;
-} modmatrix_t;
+} modmatrix_t; // takes 129 bytes to store all this
 
 // helper functions for the data packing described above ^^
 uint8_t getModSource(mod_t mod);
@@ -92,7 +92,7 @@ typedef struct{
 	float decay;
 	float sustain;
 	float release;
-} adsr_t;
+} adsr_t; // these take 16 bytes each
 
 // params for the DCOs
 #define COARSE_MIN -24
@@ -118,16 +118,35 @@ typedef struct{
 	uint8_t triLevel;
 	uint8_t oscLevel;
 
-} dco_t;
+} dco_t; // 8 bytes each
 
+//TODO: LFO state and default values and stuff should eventually go here
 
+#define CUTOFF_MAX 4096
+#define CUTOFF_MIN 0
+#define CUTOFF_DEFAULT 3100
 
+#define FOLD_MAX 4096
+#define FOLD_MIN 0
+#define FOLD_DEFAULT 0
 
+#define PATCH_SIZE_BYTES 183 //NOTE: this number will change when we add LFOs and stuff
 
+typedef struct {
+	uint16_t cutoffBase;
+	uint16_t foldBase;
+	uint8_t foldFirst;
+	uint8_t highPassMode;
 
+	modmatrix_t modMatrix;
 
+	dco_t oscillators[2];
+	adsr_t envelopes[2];
 
+} patch_t;
 
+patch_t getDefaultPatch();
+//TODO: functions to encode/decode the patch struct in bytes here
 
 
 #ifdef __cplusplus

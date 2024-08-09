@@ -7,11 +7,53 @@
 #include "SynthProcessor.h"
 
 SynthProcessor::SynthProcessor(voice_clock_t vc) :
-voiceClock(static_cast<VoiceClock*>(vc))
-{
+		voiceClock(static_cast<VoiceClock*>(vc)), voicesInUse(0) {
 
 }
 
+void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
+	// remember, the argument pointer is an array of dacLevels arranged PER VOICE
 
+}
+
+void SynthProcessor::processMidiMessage(midiMsg) {
+	//TODO
+}
+//======================================================================
+bool SynthProcessor::isVoiceActive(uint8_t voice) {
+	return voicesInUse & (1 << voice);
+}
+
+void SynthProcessor::startVoice(uint8_t voice) {
+	voicesInUse = voicesInUse | (1 << voice);
+}
+
+void SynthProcessor::endVoice(uint8_t voice) {
+	voicesInUse = voicesInUse & ~(1 << voice);
+}
+
+int8_t SynthProcessor::getFreeVoice() {
+	for (int8_t v = 0; v < 6; v++) {
+		if (!isVoiceActive(v))
+			return v;
+	}
+	return -1;
+}
+
+
+//==================================================================================
+synth_proc_t createSynthProc(voice_clock_t clk){
+	return new SynthProcessor(clk);
+}
+
+void updateDacLevels(synth_proc_t proc, dacLevels_t* levels){
+	SynthProcessor* ptr = static_cast<SynthProcessor*>(proc);
+	ptr->updateDacLevels(levels);
+}
+
+void processMidiMessage(synth_proc_t proc, midiMsg msg){
+	SynthProcessor* ptr = static_cast<SynthProcessor*>(proc);
+	ptr->processMidiMessage(msg);
+}
 
 
