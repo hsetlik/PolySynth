@@ -20,8 +20,11 @@ class SynthProcessor
 {
 private:
 	VoiceClock* const voiceClock;
+	patch_t currentPatch;
 	//---STATE STUFF----
 	uint8_t voicesInUse; //bits represent a voice in use
+	uint8_t voiceVelocity[6];
+	uint8_t voiceNotes[6];
 public:
 	SynthProcessor(voice_clock_t vc);
 	/**
@@ -39,6 +42,8 @@ private:
 	void endVoice(uint8_t voice);
 	// returns index of the first free voice, or -1 if we're out of voices
 	int8_t getFreeVoice();
+	int8_t getVoiceForNote(uint8_t note);
+	void startNote(uint8_t note, uint8_t vel);
 };
 
 #endif

@@ -43,6 +43,15 @@ enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte);
 uint8_t MIDI_getMsgChannel(uint8_t cmdByte);
 midiMsg MIDI_decodeMsg(uint8_t* ptr);
 
+// TUNING STUFF =======================================================================
+#define MAX_MIDI_NUM 120
+#define SEMITONE_RATIO 1.05946309436f
+
+// the heavy lifting of tuning
+float hzForTuning(uint8_t note, int8_t semitones, int8_t cents);
+uint16_t dacValueForHz(float hz);
+
+
 #ifdef __cplusplus
 }
 #endif

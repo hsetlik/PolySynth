@@ -63,6 +63,7 @@ EXTERNC uint16_t get_next_bits(voice_clock_t clk);
 EXTERNC void send_bits(voice_clock_t clk, uint16_t *dest, uint16_t startIdx,
                        uint16_t endIdx);
 
+
 #undef EXTERNC
 
 #endif /* INC_VOICECLOCK_H_ */

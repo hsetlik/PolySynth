@@ -5,14 +5,15 @@
  *      Author: hayden
  */
 #include "MIDI.h"
+#include <math.h>
 
-enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte){
+enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte) {
 	// right 4 bits store the channel so we clear them
 	uint8_t mask = 0xF0;
 	uint8_t left4 = cmdByte & mask;
 
-	if(left4 != 0xF0){
-		switch(left4){
+	if (left4 != 0xF0) {
+		switch (left4) {
 		case 0x80:
 			return NoteOff;
 		case 0x90:
@@ -31,7 +32,7 @@ enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte){
 			return ControlChange;
 		}
 	} else {
-		switch(cmdByte){
+		switch (cmdByte) {
 		case 0xF2:
 			return SongPosition;
 		case 0xF3:
@@ -59,16 +60,16 @@ enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte){
 	}
 }
 
-uint8_t MIDI_getMsgChannel(uint8_t cmdByte){
+uint8_t MIDI_getMsgChannel(uint8_t cmdByte) {
 	uint8_t mask = 255 >> 4;
 	return cmdByte & mask;
 }
 
-midiMsg MIDI_decodeMsg(uint8_t* ptr){
+midiMsg MIDI_decodeMsg(uint8_t *ptr) {
 	midiMsg output;
-	output.msgType = (uint8_t)MIDI_getMsgType(ptr[0]);
+	output.msgType = (uint8_t) MIDI_getMsgType(ptr[0]);
 	// if the message applies to a specific channel
-	if(output.msgType < 0xF2){
+	if (output.msgType < 0xF2) {
 		output.channel = MIDI_getMsgChannel(ptr[0]);
 	}
 	output.data[0] = ptr[1];
@@ -77,4 +78,20 @@ midiMsg MIDI_decodeMsg(uint8_t* ptr){
 	return output;
 }
 
+//=========================================================
+
+float hzForTuning(uint8_t note, int8_t semitones, int8_t cents) {
+	float fNote = (float) note - 69.0f;
+	fNote += (float) semitones + ((float) cents / 100.0f);
+	return 440.0f * powf(SEMITONE_RATIO, fNote);
+}
+
+
+uint16_t dacValueForHz(float hz){
+	// the hz value for which our DAC should be set to 4096
+	static const maxHz = 8123.0f;
+	float fDacVal = (hz / maxHz) * 4096.0f;
+	return (uint16_t)fDacVal;
+
+}
 

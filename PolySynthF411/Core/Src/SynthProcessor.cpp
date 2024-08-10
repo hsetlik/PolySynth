@@ -7,7 +7,7 @@
 #include "SynthProcessor.h"
 
 SynthProcessor::SynthProcessor(voice_clock_t vc) :
-		voiceClock(static_cast<VoiceClock*>(vc)), voicesInUse(0) {
+		voiceClock(static_cast<VoiceClock*>(vc)), currentPatch(getDefaultPatch()), voicesInUse(0) {
 
 }
 
@@ -41,6 +41,8 @@ bool SynthProcessor::isVoiceActive(uint8_t voice) {
 	return voicesInUse & (1 << voice);
 }
 
+
+
 void SynthProcessor::startVoice(uint8_t voice) {
 	voicesInUse = voicesInUse | (1 << voice);
 }
@@ -55,6 +57,35 @@ int8_t SynthProcessor::getFreeVoice() {
 			return v;
 	}
 	return -1;
+}
+
+
+int8_t SynthProcessor::getVoiceForNote(uint8_t note){
+
+	// first check if we're already playing the note
+	for(int8_t v = 0; v < 6; v++){
+		if(isVoiceActive(v) && voiceNotes[v] == note)
+			return v;
+	}
+	return getFreeVoice();
+}
+
+void SynthProcessor::startNote(uint8_t note, uint8_t vel){
+	int8_t v = getVoiceForNote(note);
+	if(v != -1){
+		// 1. set our state
+		startVoice(v);
+		voiceNotes[v] = note;
+		voiceVelocity[v] = vel;
+		// consult patch data for tuning of each osc
+		float hz1 = hzForTuning(note, currentPatch.oscillators[0].coarseTune, currentPatch.oscillators[0].fineTune);
+		float hz2 = hzForTuning(note, currentPatch.oscillators[1].coarseTune, currentPatch.oscillators[1].fineTune);
+		// set the VoiceClock object to the resulting value in hz
+		voiceClock->setFrequency(2 * v, hz1);
+		voiceClock->setFrequency((2 * v) + 1, hz2);
+
+		// start envelopes
+	}
 }
 
 
