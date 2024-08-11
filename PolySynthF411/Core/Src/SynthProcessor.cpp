@@ -80,9 +80,12 @@ void SynthProcessor::startNote(uint8_t note, uint8_t vel){
 		// consult patch data for tuning of each osc
 		float hz1 = hzForTuning(note, currentPatch.oscillators[0].coarseTune, currentPatch.oscillators[0].fineTune);
 		float hz2 = hzForTuning(note, currentPatch.oscillators[1].coarseTune, currentPatch.oscillators[1].fineTune);
+		ampComp1[v] = dacValueForHz(hz1);
+		ampComp2[v] = dacValueForHz(hz2);
 		// set the VoiceClock object to the resulting value in hz
 		voiceClock->setFrequency(2 * v, hz1);
 		voiceClock->setFrequency((2 * v) + 1, hz2);
+
 
 		// start envelopes
 	}

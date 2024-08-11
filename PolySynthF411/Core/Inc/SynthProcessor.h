@@ -25,6 +25,8 @@ private:
 	uint8_t voicesInUse; //bits represent a voice in use
 	uint8_t voiceVelocity[6];
 	uint8_t voiceNotes[6];
+	uint16_t ampComp1[6];
+	uint16_t ampComp2[6];
 public:
 	SynthProcessor(voice_clock_t vc);
 	/**

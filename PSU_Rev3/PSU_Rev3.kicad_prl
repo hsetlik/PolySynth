@@ -19,7 +19,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": false,
+      "lockedItems": true,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -72,7 +72,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "PowerSupplyBoard.kicad_prl",
+    "filename": "PSU_Rev3.kicad_prl",
     "version": 3
   },
   "project": {
