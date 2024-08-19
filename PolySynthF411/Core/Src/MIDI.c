@@ -89,7 +89,7 @@ float hzForTuning(uint8_t note, int8_t semitones, int8_t cents) {
 
 uint16_t dacValueForHz(float hz){
 	// the hz value for which our DAC should be set to 4096
-	static const maxHz = 8123.0f;
+	static const float maxHz = 8123.0f;
 	float fDacVal = (hz / maxHz) * 4096.0f;
 	return (uint16_t)fDacVal;
 
