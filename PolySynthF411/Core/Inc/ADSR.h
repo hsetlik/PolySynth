@@ -13,27 +13,27 @@
 
 #ifdef __cplusplus
 
-
 enum EnvState {
-	Idle,
-	Attack,
-	Decay,
-	Sustain,
-	Release
+	Idle, Attack, Decay, Sustain, Release
 };
 
-class ADSRProcessor
-{
+class ADSRProcessor {
 private:
-	adsr_t* const params;
+	adsr_t *params;
 	EnvState state;
 	tick_t lastUpdateTick;
 	float msSinceStateChange;
 	float level;
 	float releaseStartLevel;
 public:
-	ADSRProcessor(adsr_t* env);
-	bool busy() {return state != Idle;}
+	ADSRProcessor(adsr_t *env);
+	ADSRProcessor();
+	void setParams(adsr_t *p) {
+		params = p;
+	}
+	bool busy() {
+		return state != Idle;
+	}
 	void gateOn();
 	void gateOff();
 	uint16_t nextDACCode();

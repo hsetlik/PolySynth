@@ -38,6 +38,7 @@ patch_t getDefaultPatch(){
 	patch.foldBase = FOLD_DEFAULT;
 	patch.foldFirst = 0;
 	patch.highPassMode = 0;
+	patch.useSustainPedal = 1;
 
 	patch.oscillators[0].coarseTune = 0;
 	patch.oscillators[0].fineTune = 0;

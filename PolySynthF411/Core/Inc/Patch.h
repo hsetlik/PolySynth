@@ -143,6 +143,8 @@ typedef struct {
 	dco_t oscillators[2];
 	adsr_t envelopes[2];
 
+	uint8_t useSustainPedal;
+
 } patch_t;
 
 patch_t getDefaultPatch();

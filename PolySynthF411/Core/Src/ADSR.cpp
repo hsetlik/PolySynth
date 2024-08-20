@@ -6,6 +6,11 @@
  */
 
 #include "ADSR.h"
+ADSRProcessor::ADSRProcessor() :
+		params(nullptr), state(Idle), lastUpdateTick(0), msSinceStateChange(
+				0.0f), level(0.0f), releaseStartLevel(0.0f) {
+
+}
 
 ADSRProcessor::ADSRProcessor(adsr_t *env) :
 		params(env), state(Idle), lastUpdateTick(0), msSinceStateChange(0.0f), level(
@@ -14,9 +19,17 @@ ADSRProcessor::ADSRProcessor(adsr_t *env) :
 }
 
 void ADSRProcessor::gateOn() {
-	state = Attack;
-	msSinceStateChange = 0.0f;
-	lastUpdateTick = TickTimer_get();
+	if (!busy()){ // normal envelope starting from level = 0
+		state = Attack;
+		msSinceStateChange = 0.0f;
+		lastUpdateTick = TickTimer_get();
+	} else { // otherwise, deal with retriggering
+		// find the point on the attack slope that matches our current level
+		// ms / atttack = level
+		state = Attack;
+		msSinceStateChange = level * params->attack;
+		lastUpdateTick = TickTimer_get();
+	}
 }
 
 void ADSRProcessor::gateOff() {
@@ -62,7 +75,7 @@ uint16_t ADSRProcessor::nextDACCode() {
 			state = Idle;
 			msSinceStateChange = 0.0f;
 		} else {
-			level = params->sustain
+			level = releaseStartLevel
 					* (1.0f - (msSinceStateChange / params->release));
 		}
 		break;

@@ -28,13 +28,18 @@ private:
 	uint8_t voiceNotes[6];
 	uint16_t ampComp1[6];
 	uint16_t ampComp2[6];
+	ADSRProcessor env1Voices[6];
+	ADSRProcessor env2Voices[6];
+	bool sustainPedalDown;
+
 public:
 	SynthProcessor(voice_clock_t vc);
+
 	/**
 	 * This needs to:
 	 * - Calculate and update CVs when asked by main
 	 * - Process MIDI events passed in by main
-	 * - Process button/encoder inputs and update patch data
+	 * - Update patch data based on button/encoder events
 	 * - Send updates to the display and the neopixels as I see fit
 	 */
 	void updateDacLevels(dacLevels_t* levels);
@@ -47,6 +52,7 @@ private:
 	int8_t getFreeVoice();
 	int8_t getVoiceForNote(uint8_t note);
 	void startNote(uint8_t note, uint8_t vel);
+	void endNote(uint8_t note);
 };
 
 #endif
