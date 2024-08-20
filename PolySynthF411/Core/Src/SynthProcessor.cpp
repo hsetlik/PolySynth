@@ -37,6 +37,7 @@ void SynthProcessor::processMidiMessage(midiMsg msg) {
 		startNote(msg.data[0], msg.data[1]);
 		break;
 	case NoteOff:
+		endNote(msg.data[0]);
 		break;
 	case ControlChange:
 		break;
@@ -109,7 +110,6 @@ void SynthProcessor::endNote(uint8_t note) {
 			return;
 		}
 	}
-
 }
 
 //==================================================================================
