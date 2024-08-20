@@ -19,7 +19,7 @@
 // protect the C++ stuff
 #ifdef __cplusplus
 
-typedef uint16_t tick_t;
+typedef uint16_t voice_tick_t;
 // helpers
 namespace Timing {
 float getActualUpdateHz(uint32_t masterClk, uint32_t updateHz);
@@ -32,9 +32,9 @@ private:
   const float tickHz;
 
   // oscillator state stuff
-  tick_t fullTicks[NUM_OSCS];
-  tick_t halfTicks[NUM_OSCS];
-  tick_t currentTicks[NUM_OSCS];
+  voice_tick_t fullTicks[NUM_OSCS];
+  voice_tick_t halfTicks[NUM_OSCS];
+  voice_tick_t currentTicks[NUM_OSCS];
   uint16_t oscState;
 
   // the heavy lifting

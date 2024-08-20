@@ -33,14 +33,14 @@ oscState(0)
 
 void VoiceClock::setFrequency(uint8_t osc, float hz)
 {
-	fullTicks[osc] = (tick_t)(tickHz / hz);
+	fullTicks[osc] = (voice_tick_t)(tickHz / hz);
 	halfTicks[osc] = fullTicks[osc] / 2;
 }
 
 void VoiceClock::tick()
 {
 	for(uint8_t o = 0; o < NUM_OSCS; o++){
-		tick_t& current = currentTicks[o];
+		voice_tick_t& current = currentTicks[o];
 		current = (current + 1) % fullTicks[o];
 		bool prevState = oscState & (1 << o);
 		if(prevState && current < halfTicks[o]){

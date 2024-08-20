@@ -750,6 +750,8 @@ static void MX_TIM9_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM9_Init 2 */
+  // set up our TickTimer
+  TickTimer_setTickTime(&htim9.Init);
 
   /* USER CODE END TIM9_Init 2 */
 

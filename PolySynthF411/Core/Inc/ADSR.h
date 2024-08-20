@@ -11,18 +11,33 @@
 #include "main.h"
 #include "Patch.h"
 
-float tickLengthForTimer(TIM_Base_InitTypeDef* timebase);
-
-
 #ifdef __cplusplus
+
+
+enum EnvState {
+	Idle,
+	Attack,
+	Decay,
+	Sustain,
+	Release
+};
 
 class ADSRProcessor
 {
 private:
 	adsr_t* const params;
-	const float tickLengthMs;
+	EnvState state;
+	tick_t lastUpdateTick;
+	float msSinceStateChange;
+	float level;
+	float releaseStartLevel;
 public:
 	ADSRProcessor(adsr_t* env);
+	bool busy() {return state != Idle;}
+	void gateOn();
+	void gateOff();
+	uint16_t nextDACCode();
+
 };
 
 #endif

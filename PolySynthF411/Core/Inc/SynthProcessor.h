@@ -15,6 +15,7 @@
 #include "VoiceClock.h"
 #include "MIDI.h"
 #include "ControlVoltage.h"
+#include "ADSR.h"
 
 class SynthProcessor
 {
