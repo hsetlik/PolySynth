@@ -35,10 +35,12 @@ int8_t writeRegister(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 	msg[0] = addr;
 	msg[1] = reg;
 	msg[2] = data;
+	setCSPin(0);
 	if (HAL_SPI_Transmit(spi, msg, 2, 100) != HAL_OK) {
 		Error_Handler();
 		return -1;
 	}
+	setCSPin(1);
 	return 1;
 
 }
@@ -49,9 +51,12 @@ void writeRegisterv(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 	msg[0] = addr;
 	msg[1] = reg;
 	msg[2] = data;
+	setCSPin(0);
 	if (HAL_SPI_Transmit(spi, msg, 3, 100) != HAL_OK) {
 		Error_Handler();
 	}
+	setCSPin(1);
+
 }
 
 void setPinDefval(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t port,
@@ -101,7 +106,9 @@ void MCP23S17_setInterruptOnPin(SPI_HandleTypeDef *spi, uint8_t addr,
 		writeRegisterv(spi, addr, MCP23S17_GPINTENB, gpinten);
 	else
 		writeRegisterv(spi, addr, MCP23S17_GPINTENA, gpinten);
+
 	// 5: do a similar thing for the INTCON register
+
 	// this sets it such that the interrupt generator compares to the
 	// defval rather than the pin's previous level.
 	// in practice this should mean that we only generate interrupts on falling edges
@@ -110,11 +117,42 @@ void MCP23S17_setInterruptOnPin(SPI_HandleTypeDef *spi, uint8_t addr,
 		intcon = readRegister(spi, MCP23S17_INTCONB, addr);
 	else
 		intcon = readRegister(spi, MCP23S17_INTCONA, addr);
-	// 3: set the appropriate bit
 	intcon = intcon | (1 << pin);
-	// 4: write back to the same register
 	if (port)
 		writeRegisterv(spi, addr, MCP23S17_INTCONB, intcon);
 	else
 		writeRegisterv(spi, addr, MCP23S17_INTCONA, intcon);
+}
+
+
+void MCP23S17_setInputOnPin(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port, uint8_t pin, uint8_t activeLow){
+	setPinDefval(spi, addr, port, pin, activeLow);
+}
+
+
+uint8_t MCP23S17_getGPIOBits(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port){
+	if(port)
+		return readRegister(spi, MCP23S17_GPIOB, addr);
+	return readRegister(spi, MCP23S17_GPIOA, addr);
+}
+
+
+uint8_t MCP23S17_getLatchBits(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port){
+	if(port)
+		return readRegister(spi, MCP23S17_OLATB, addr);
+	return readRegister(spi, MCP23S17_OLATA, addr);
+}
+
+
+uint8_t MCP23S17_getLastInterruptPin(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port){
+	uint8_t intf = 0;
+	if(port)
+		intf = readRegister(spi, MCP23S17_INTFB, addr);
+	else
+		intf = readRegister(spi, MCP23S17_INTFA, addr);
+	for(uint8_t i = 0; i < 8; i ++){
+		if(intf & (1 << i))
+			return i;
+	}
+	return 0;
 }

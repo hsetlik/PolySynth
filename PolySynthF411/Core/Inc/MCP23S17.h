@@ -53,6 +53,10 @@ extern "C" {
 int8_t MCP32S17_init(SPI_HandleTypeDef* spi, uint8_t addr);
 
 void MCP23S17_setInterruptOnPin(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port, uint8_t pin, uint8_t activeLow);
+void MCP23S17_setInputOnPin(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port, uint8_t pin, uint8_t activeLow);
+uint8_t MCP23S17_getGPIOBits(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port);
+uint8_t MCP23S17_getLatchBits(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port);
+uint8_t MCP23S17_getLastInterruptPin(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port);
 
 
 #ifdef __cplusplus
