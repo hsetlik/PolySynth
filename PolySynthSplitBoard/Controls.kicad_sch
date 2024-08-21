@@ -6338,6 +6338,26 @@
 		)
 		(uuid "5951ea2b-4735-4aab-b7dd-d702bbe2f30f")
 	)
+	(text "Device Address = 0x4E\n(expander 2)"
+		(exclude_from_sim no)
+		(at 295.656 219.964 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7560d341-7f26-41ca-be85-bec8db1f2c61")
+	)
+	(text "Device Address = 0x4C\n(expander 3)"
+		(exclude_from_sim no)
+		(at 265.43 95.504 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8930c63e-db15-4896-ac78-9caa3a1b641c")
+	)
 	(text "TFT Display (ILI9341)"
 		(exclude_from_sim no)
 		(at 305.943 127.381 0)

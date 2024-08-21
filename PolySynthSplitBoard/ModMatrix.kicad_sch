@@ -4852,6 +4852,16 @@
 		)
 		(uuid "fff208a4-524c-4b27-bb26-7c31e6a0a0ce")
 	)
+	(text "Device Address = 0x48"
+		(exclude_from_sim no)
+		(at 335.788 223.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7f9e9be2-4d3e-48c2-afd7-33e1d755e378")
+	)
 	(global_label "EXP_MOSI_U"
 		(shape input)
 		(at 302.514 181.356 180)
