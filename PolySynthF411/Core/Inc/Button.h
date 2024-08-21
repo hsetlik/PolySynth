@@ -10,6 +10,12 @@
 #include "MCP23S17.h"
 
 #ifdef __cplusplus
+#define DEBOUNCE_MS 10.0f
+#define CLICK_MS 100.0f
+#define PRESS_MS 250.0f
+#define IDLE_MS 1500.0f
+#define PRESS_INTERVAL 300.0f
+
 
 //enum for the button IDs
 enum ButtonID{
@@ -44,6 +50,7 @@ enum ButtonID{
 
 
 // button mapping to MCP23S17 wiring
+
 // Expander 3
 #define B_ALT_ADDR EXP_3_ADDR
 #define B_ALT_PORT 0
@@ -137,6 +144,43 @@ typedef struct {
 
 
 #define NUM_BUTTONS 27
+
+//====================================================================
+
+enum BtnState{
+	INIT,
+	DOWN,
+	UP,
+	COUNT,
+	PRESS,
+	PRESSEND
+};
+
+class Btn{
+private:
+	const bool activeLevel;
+	BtnState state;
+	bool debouncedLevel = !activeLevel;
+	bool lastDebounceLevel = !activeLevel;
+
+	tick_t lastDebounceTime = 0;
+	tick_t now = 0;
+	tick_t startTime = 0;
+	tick_t lastDuringPressTime = 0;
+
+	uint8_t numClicks = 0;
+	uint8_t maxClicks = 1;
+	// helpers
+	void reset();
+	bool debounce(bool input);
+	void fsm(bool level);
+
+	//TODO: callback function pointers here
+
+public:
+	Btn();
+	 void tick(bool level);
+};
 
 
 #endif

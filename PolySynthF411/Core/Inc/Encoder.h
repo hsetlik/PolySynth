@@ -88,7 +88,6 @@ typedef struct {
 
 } encoder_t;
 
-
 //===================================================================
 class EncoderProcessor
 {
