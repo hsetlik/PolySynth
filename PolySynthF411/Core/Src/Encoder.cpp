@@ -141,7 +141,6 @@ EncoderProcessor::EncoderProcessor() {
 	for (uint8_t e = 0; e < NUM_ENCODERS; e++) {
 		// grip the data for each encoder
 		encoders[e] = encoderForID(e);
-
 	}
 }
 
@@ -160,8 +159,35 @@ void EncoderProcessor::interruptSent(uint8_t addr, uint8_t port) {
 	if(!isMoving[encIdx]){ // the turn is starting
 		isMoving[encIdx] = 1;
 	} else { // the turn is ending
-		//TODO: run the function pointer callback here
+		isMoving[encIdx] = 0;
+		uint8_t dir = pin == encoders[encIdx].pinL;
+		callback(encIdx, dir); // Call the function pointer
 	}
 
 }
+
+//======================================================================
+enc_processor_t create_enc_processor(){
+	return new EncoderProcessor();
+}
+
+void enc_interrupt_sent(enc_processor_t proc, uint8_t addr, uint8_t port) {
+	EncoderProcessor* p = static_cast<EncoderProcessor*>(proc);
+	p->interruptSent(addr, port);
+}
+
+
+void enc_init_interrupts(enc_processor_t proc){
+	EncoderProcessor* p = static_cast<EncoderProcessor*>(proc);
+	p->initEncoderInterrupts();
+}
+
+
+void enc_register_callback(enc_processor_t proc, enc_func_t func){
+	EncoderProcessor* p = static_cast<EncoderProcessor*>(proc);
+	p->registerCallback(func);
+}
+
+
+
 

@@ -11,6 +11,9 @@
 
 #ifdef __cplusplus
 
+
+typedef void (*enc_func_t)(uint8_t, uint8_t); // < (encoderID, clockwise)
+
 #define NUM_ENCODERS 10
 
 // an enum of hardware rotary encoders
@@ -85,20 +88,22 @@ typedef struct {
 
 } encoder_t;
 
+
 //===================================================================
 class EncoderProcessor
 {
 private:
 	encoder_t encoders[NUM_ENCODERS];
 	uint8_t isMoving[NUM_ENCODERS];
+	enc_func_t callback;
 public:
 	EncoderProcessor();
 	// set the port expander's registers up for handling interrupts on the encoder pins
 	void initEncoderInterrupts();
-	// call this from main.c in the ISRs
+	// call this from main.c in the relevant ISR
 	void interruptSent(uint8_t addr, uint8_t port);
-
-
+	// assign the function pointer
+	void registerCallback(enc_func_t cb) {callback = cb;}
 };
 
 
@@ -112,6 +117,13 @@ public:
 #endif
 
 /* ----C-FRIENDLY BINDINGS GO HERE------*/
+typedef void* enc_processor_t;
+
+enc_processor_t create_enc_processor();
+void enc_interrupt_sent(enc_processor_t proc, uint8_t addr, uint8_t port);
+void enc_init_interrupts(enc_processor_t proc);
+void enc_register_callback(enc_processor_t proc, enc_func_t func);
+
 
 #undef EXTERNC
 

@@ -8,24 +8,25 @@
 
 // some helpers just for this file
 
-void setCSPin(uint8_t high) {
-	if (high)
-		HAL_GPIO_WritePin(EXP_CS_GPIO_Port, EXP_CS_Pin, GPIO_PIN_SET);
-	else
-		HAL_GPIO_WritePin(EXP_CS_GPIO_Port, EXP_CS_Pin, GPIO_PIN_RESET);
-}
+// We shouldn't need this anymore bc the CS pin is hardware-defined now (I think)
+//void setCSPin(uint8_t high) {
+//	if (high)
+//		HAL_GPIO_WritePin(EXP_CS_GPIO_Port, EXP_CS_Pin, GPIO_PIN_SET);
+//	else
+//		HAL_GPIO_WritePin(EXP_CS_GPIO_Port, EXP_CS_Pin, GPIO_PIN_RESET);
+//}
 
 uint8_t readRegister(SPI_HandleTypeDef *spi, uint8_t reg, uint8_t addr) {
 	uint8_t dest[2];
 	uint8_t msg[2];
 	msg[0] = addr | 0x01; // set the read bit
 	msg[1] = reg;
-	setCSPin(0);
+	//setCSPin(0);
 	if (HAL_SPI_TransmitReceive(spi, msg, dest, 2, 100) != HAL_OK) {
 		Error_Handler();
 	}
 	// do stuff
-	setCSPin(1);
+	//setCSPin(1);
 	return dest[0];
 }
 
@@ -35,12 +36,12 @@ int8_t writeRegister(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 	msg[0] = addr;
 	msg[1] = reg;
 	msg[2] = data;
-	setCSPin(0);
+	//setCSPin(0);
 	if (HAL_SPI_Transmit(spi, msg, 2, 100) != HAL_OK) {
 		Error_Handler();
 		return -1;
 	}
-	setCSPin(1);
+	//setCSPin(1);
 	return 1;
 
 }
@@ -51,11 +52,11 @@ void writeRegisterv(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 	msg[0] = addr;
 	msg[1] = reg;
 	msg[2] = data;
-	setCSPin(0);
+	//setCSPin(0);
 	if (HAL_SPI_Transmit(spi, msg, 3, 100) != HAL_OK) {
 		Error_Handler();
 	}
-	setCSPin(1);
+	//setCSPin(1);
 
 }
 
