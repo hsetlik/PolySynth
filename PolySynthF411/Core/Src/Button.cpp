@@ -269,21 +269,22 @@ bool Btn::debounce(bool lvl) {
 }
 
 void Btn::fsm(bool lvl) {
-	tick_t waitTime = now - startTime;
+	float waitTime = TickTimer_tickDistanceMs(startTime, now);
 	switch (state) {
 	case INIT:
-		if(lvl){
+		if (lvl) {
 			state = BtnState::DOWN;
 			startTime = now;
 			numClicks = 0;
 		}
 		break;
 	case DOWN:
-		if(!lvl){
+		if (!lvl) {
 			state = BtnState::UP;
 			startTime = now;
-		} else if (waitTime >= PRESS_MS){
-			//TODO: the onPressStart callback needs to run here
+		} else if (waitTime >= PRESS_MS) {
+			if (hasOnPressStart)
+				onPressStart();
 			state = BtnState::PRESS;
 		}
 		break;
@@ -292,30 +293,33 @@ void Btn::fsm(bool lvl) {
 		state = BtnState::COUNT;
 		break;
 	case COUNT:
-		if(lvl){
+		if (lvl) {
 			state = BtnState::DOWN;
 			startTime = now;
-		} else if ((waitTime >= CLICK_MS) || numClicks == maxClicks){
-			if(numClicks == 1){
-				//TODO: onClick runs here
-			} else if (numClicks == 1){
+		} else if ((waitTime >= CLICK_MS) || numClicks == maxClicks) {
+			if (numClicks == 1) {
+				if (hasOnClick)
+					onClick();
+			} else if (numClicks == 1) {
 				//TODO: onDoubleClick runs here
 			}
 			reset();
 		}
 		break;
 	case PRESS:
-		if(!lvl){
+		if (!lvl) {
 			state = BtnState::PRESSEND;
 		} else {
-			if((now - lastDuringPressTime) >= PRESS_INTERVAL){
-				//TODO: dutingPress runs here
+			if ((now - lastDuringPressTime) >= PRESS_INTERVAL) {
+				if (hasDuringPress)
+					duringPress();
 				lastDuringPressTime = now;
 			}
 		}
 		break;
 	case PRESSEND:
-		//TODO: onPressEnd runs here
+		if (hasOnPressEnd)
+			onPressEnd();
 		reset();
 		break;
 	default:
@@ -324,3 +328,63 @@ void Btn::fsm(bool lvl) {
 	}
 }
 
+//===========================================================
+
+ButtonProcessor::ButtonProcessor() {
+
+	for (uint8_t i = 0; i < NUM_BUTTONS; i++) {
+		// 1. initialize locations
+		// 2. set up function pointers
+		locations[i] = buttonForID(i);
+
+		BtnCallback onClick = [this, i]() {
+			if (this->onClickHandler != nullptr)
+				onClickHandler(i);
+		};
+		buttons[i].setOnClick(onClick);
+
+		BtnCallback onPressStart = [this, i]() {
+			if (this->onPressStartHandler != nullptr)
+				onPressStartHandler(i);
+		};
+		buttons[i].setOnPressStart(onPressStart);
+
+		BtnCallback duringPress = [this, i]() {
+			if (this->duringPressHandler != nullptr)
+				duringPressHandler(i);
+		};
+		buttons[i].setDuringPress(duringPress);
+
+		BtnCallback onPressEnd = [this, i]() {
+			if (this->onPressEndHandler != nullptr)
+				onPressEndHandler(i);
+		};
+		buttons[i].setOnPressEnd(onPressEnd);
+	}
+}
+
+void ButtonProcessor::checkButtons(){
+	// step 1: grip the 4 bytes of data we need via SPI
+	uint8_t exp1A = MCP23S17_getGPIOBits(&hspi2, EXP_1_ADDR, 0);
+	uint8_t exp1B = MCP23S17_getGPIOBits(&hspi2, EXP_1_ADDR, 1);
+	uint8_t exp2B = MCP23S17_getGPIOBits(&hspi2, EXP_2_ADDR, 1);
+	uint8_t exp3B = MCP23S17_getGPIOBits(&hspi2, EXP_3_ADDR, 1);
+
+	// step 2: find the correct bit for each button
+	for(uint8_t b = 0; b < NUM_BUTTONS; b++){
+		switch(locations[b].addr){
+		case EXP_1_ADDR:
+			if(locations[b].port)
+				buttons[b].tick(exp1B & (1 << locations[b].pin));
+			else
+				buttons[b].tick(exp1A & (1 << locations[b].pin));
+			break;
+		case EXP_2_ADDR:
+			buttons[b].tick(exp2B & (1 << locations[b].pin));
+		case EXP_3_ADDR:
+			buttons[b].tick(exp3B & (1 << locations[b].pin));
+		default:
+			break;
+		}
+	}
+}

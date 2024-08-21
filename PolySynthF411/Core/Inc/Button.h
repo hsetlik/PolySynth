@@ -10,15 +10,16 @@
 #include "MCP23S17.h"
 
 #ifdef __cplusplus
+#include <functional>
+
 #define DEBOUNCE_MS 10.0f
 #define CLICK_MS 100.0f
 #define PRESS_MS 250.0f
 #define IDLE_MS 1500.0f
 #define PRESS_INTERVAL 300.0f
 
-
 //enum for the button IDs
-enum ButtonID{
+enum ButtonID {
 	Alt,
 	Env1,
 	Env2,
@@ -48,6 +49,7 @@ enum ButtonID{
 	MD8
 };
 
+#define NUM_BUTTONS 27
 
 // button mapping to MCP23S17 wiring
 
@@ -143,20 +145,16 @@ typedef struct {
 } button_t;
 
 
-#define NUM_BUTTONS 27
+typedef void (*btn_func_t)(uint8_t); // the main C-friendly function pointer typedef
+typedef std::function<void()> BtnCallback;
 
 //====================================================================
 
-enum BtnState{
-	INIT,
-	DOWN,
-	UP,
-	COUNT,
-	PRESS,
-	PRESSEND
+enum BtnState {
+	INIT, DOWN, UP, COUNT, PRESS, PRESSEND
 };
 
-class Btn{
+class Btn {
 private:
 	const bool activeLevel;
 	BtnState state;
@@ -175,12 +173,54 @@ private:
 	bool debounce(bool input);
 	void fsm(bool level);
 
-	//TODO: callback function pointers here
+	BtnCallback onClick;
+	bool hasOnClick = false;
+	BtnCallback onPressStart;
+	bool hasOnPressStart = false;
+	BtnCallback onPressEnd;
+	bool hasOnPressEnd = false;
+	BtnCallback duringPress;
+	bool hasDuringPress = false;
 
 public:
 	Btn();
-	 void tick(bool level);
+	void tick(bool level);
+	// callback setters
+	void setOnClick(BtnCallback func) {
+		onClick = func;
+		hasOnClick = true;
+	}
+	void setOnPressStart(BtnCallback func) {
+		onPressStart = func;
+		hasOnPressStart = true;
+	}
+	void setOnPressEnd(BtnCallback func) {
+		onPressEnd = func;
+		hasOnPressEnd = true;
+	}
+	void setDuringPress(BtnCallback func) {
+		duringPress = func;
+		hasDuringPress = true;
+	}
 };
+
+
+class ButtonProcessor{
+private:
+	Btn buttons[NUM_BUTTONS];
+	button_t locations[NUM_BUTTONS];
+	// callback setters with c-friendly function pointers
+	btn_func_t onClickHandler = nullptr;
+	btn_func_t onPressStartHandler = nullptr;
+	btn_func_t onPressEndHandler = nullptr;
+	btn_func_t duringPressHandler = nullptr;
+
+public:
+	ButtonProcessor();
+	void checkButtons(); // heavy lifting happens here
+
+};
+
 
 
 #endif
@@ -190,11 +230,6 @@ public:
 #else
 #define EXTERNC
 #endif
-
-
-
-
-
 
 /* ----C-FRIENDLY BINDINGS GO HERE------*/
 
