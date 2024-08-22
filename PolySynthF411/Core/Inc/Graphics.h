@@ -15,9 +15,26 @@
  * 2. convert those events to a set of pixels to draw
  * 3. send that pixel data over SPI DMA
  *
- *	so each pixel is 16 bits
- */
+ * each pixel is 16 bits so to redraw the whole screen,
+ * we need to transmit a total of:
+ * - 153,600 bytes
+ * - 1,228,800 bits (SPI clock cycles)
+ *
+ * With a prescaler of 2 (lowest option),
+ * our SPI bit clock is at 48 MHz,
+ * which means that drawing the entire frame
+ * takes ~19.5ms
+ *
+ *
+ *
+ *	 */
+
 #ifdef __cplusplus
+
+/**
+ *
+ *
+ */
 
 
 

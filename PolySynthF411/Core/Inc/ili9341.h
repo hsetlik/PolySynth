@@ -76,7 +76,7 @@ extern SPI_HandleTypeDef ILI9341_SPI_PORT;
 #define ILI9341_COLOR565(r, g, b) (((r & 0xF8) << 8) | ((g & 0xFC) << 3) | ((b & 0xF8) >> 3))
 
 // call before initializing any SPI devices
-void ILI9341_Unselect();
+//void ILI9341_Unselect();
 
 void ILI9341_Init(void);
 void ILI9341_DrawPixel(uint16_t x, uint16_t y, uint16_t color);

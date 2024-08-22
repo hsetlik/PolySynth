@@ -26,6 +26,8 @@
 /* USER CODE END Includes */
 extern DMA_HandleTypeDef hdma_i2c3_tx;
 
+extern DMA_HandleTypeDef hdma_spi3_tx;
+
 extern DMA_HandleTypeDef hdma_tim2_ch2_ch4;
 
 extern DMA_HandleTypeDef hdma_tim5_ch3_up;
@@ -356,18 +358,46 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
     /* Peripheral clock enable */
     __HAL_RCC_SPI3_CLK_ENABLE();
 
+    __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOC_CLK_ENABLE();
     /**SPI3 GPIO Configuration
+    PA15     ------> SPI3_NSS
     PC10     ------> SPI3_SCK
     PC11     ------> SPI3_MISO
     PC12     ------> SPI3_MOSI
     */
+    GPIO_InitStruct.Pin = DISP_CS_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+    GPIO_InitStruct.Alternate = GPIO_AF6_SPI3;
+    HAL_GPIO_Init(DISP_CS_GPIO_Port, &GPIO_InitStruct);
+
     GPIO_InitStruct.Pin = DISP_SCK_Pin|DISP_MISO_Pin|DISP_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF6_SPI3;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+    /* SPI3 DMA Init */
+    /* SPI3_TX Init */
+    hdma_spi3_tx.Instance = DMA1_Stream5;
+    hdma_spi3_tx.Init.Channel = DMA_CHANNEL_0;
+    hdma_spi3_tx.Init.Direction = DMA_MEMORY_TO_PERIPH;
+    hdma_spi3_tx.Init.PeriphInc = DMA_PINC_DISABLE;
+    hdma_spi3_tx.Init.MemInc = DMA_MINC_ENABLE;
+    hdma_spi3_tx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
+    hdma_spi3_tx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
+    hdma_spi3_tx.Init.Mode = DMA_NORMAL;
+    hdma_spi3_tx.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_spi3_tx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
+    if (HAL_DMA_Init(&hdma_spi3_tx) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_LINKDMA(hspi,hdmatx,hdma_spi3_tx);
 
   /* USER CODE BEGIN SPI3_MspInit 1 */
 
@@ -432,12 +462,17 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
     __HAL_RCC_SPI3_CLK_DISABLE();
 
     /**SPI3 GPIO Configuration
+    PA15     ------> SPI3_NSS
     PC10     ------> SPI3_SCK
     PC11     ------> SPI3_MISO
     PC12     ------> SPI3_MOSI
     */
+    HAL_GPIO_DeInit(DISP_CS_GPIO_Port, DISP_CS_Pin);
+
     HAL_GPIO_DeInit(GPIOC, DISP_SCK_Pin|DISP_MISO_Pin|DISP_MOSI_Pin);
 
+    /* SPI3 DMA DeInit */
+    HAL_DMA_DeInit(hspi->hdmatx);
   /* USER CODE BEGIN SPI3_MspDeInit 1 */
 
   /* USER CODE END SPI3_MspDeInit 1 */
