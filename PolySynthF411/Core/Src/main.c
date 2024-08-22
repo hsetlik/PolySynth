@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "VoiceClock.h"
 #include "ControlVoltage.h"
+#include "SynthProcessor.h"
 
 /* USER CODE END Includes */
 
@@ -81,8 +82,14 @@ volatile uint8_t dacTransmissionFinished = 0;
 volatile uint8_t currentDacVoice = 0;
 
 //MIDI stuff-------------------------
-uint8_t midiMsg[8];
+uint8_t midiBuf[8];
 volatile uint8_t midiMsgReady = 0;
+
+// Processor stuff-----------
+button_processor_t buttonProc;
+enc_processor_t encoderProc;
+synth_processor_t synthProc;
+
 
 //------------------------------------
 /* USER CODE END PV */
@@ -201,9 +208,9 @@ int __io_putchar(int ch) {
 // UART callbacks for MIDI stuff
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 	// if we have a valid byte then we set the MIDI processing flag
-	if (midiMsg[0])
+	if (midiBuf[0])
 		midiMsgReady = 1;
-	HAL_UART_Receive_IT(huart, midiMsg, 3); // standard MIDI messages are either 2 or 3 bytes long
+	HAL_UART_Receive_IT(huart, midiBuf, 3); // standard MIDI messages are either 2 or 3 bytes long
 }
 
 
@@ -252,6 +259,9 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM9_Init();
   /* USER CODE BEGIN 2 */
+  // allocate the processors
+  buttonProc = create_button_processor();
+  encoderProc = create_enc_processor();
 	// do the first DMA transmission outside the while loop to start
 	send_bits(vClk, currentVBuf, 0, VOICE_CLOCK_BUF_SIZE);
 	if (!HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*) currentVBuf,
@@ -264,7 +274,7 @@ int main(void)
 	}
 
 	// start the first interrupt receive for MIDI
-	HAL_UART_Receive_IT(&huart1, midiMsg, 3);
+	HAL_UART_Receive_IT(&huart1, midiBuf, 3);
 
   /* USER CODE END 2 */
 

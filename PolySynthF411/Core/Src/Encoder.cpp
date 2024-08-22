@@ -46,7 +46,7 @@ encoder_t encoderForID(uint8_t idx) {
 		enc.pinL = ENC_RES_PINL;
 		enc.pinR = ENC_RES_PINR;
 		break;
-	case Menu:
+	case MenuEnc:
 		enc.addr = ENC_MENU_ADDR;
 		enc.port = ENC_MENU_PORT;
 		enc.pinL = ENC_MENU_PINL;
@@ -82,9 +82,9 @@ uint8_t encoderForPin(uint8_t addr, uint8_t port, uint8_t pin) {
 		if(port) {
 			switch(pin){
 			case ENC_MENU_PINR:
-				return (uint8_t)EncID::Menu;
+				return (uint8_t)EncID::MenuEnc;
 			case ENC_MENU_PINL:
-				return (uint8_t)EncID::Menu;
+				return (uint8_t)EncID::MenuEnc;
 			case ENC_DEPTH_PINR:
 				return (uint8_t)EncID::Depth;
 			case ENC_DEPTH_PINL:

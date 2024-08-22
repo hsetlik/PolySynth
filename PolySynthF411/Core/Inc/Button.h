@@ -9,6 +9,8 @@
 #define INC_BUTTON_H_
 #include "MCP23S17.h"
 
+typedef void (*btn_func_t)(uint8_t); // the main C-friendly function pointer typedef
+
 #ifdef __cplusplus
 #include <functional>
 
@@ -23,12 +25,12 @@ enum ButtonID {
 	Alt,
 	Env1,
 	Env2,
-	LFO1,
-	LFO2,
-	LFO3,
+	LFO1B,
+	LFO2B,
+	LFO3B,
 	Osc1,
 	Osc2,
-	PWM,
+	PWMB,
 	FilterMode,
 	FoldFirst,
 	Menu,
@@ -144,8 +146,6 @@ typedef struct {
 	uint8_t pin;
 } button_t;
 
-
-typedef void (*btn_func_t)(uint8_t); // the main C-friendly function pointer typedef
 typedef std::function<void()> BtnCallback;
 
 //====================================================================
@@ -204,8 +204,7 @@ public:
 	}
 };
 
-
-class ButtonProcessor{
+class ButtonProcessor {
 private:
 	Btn buttons[NUM_BUTTONS];
 	button_t locations[NUM_BUTTONS];
@@ -219,19 +218,39 @@ public:
 	ButtonProcessor();
 	void checkButtons(); // heavy lifting happens here
 
+	// callback setters
+	void setOnClick(btn_func_t oc) {
+		onClickHandler = oc;
+	}
+	void setOnPressStart(btn_func_t oc) {
+		onPressStartHandler = oc;
+	}
+	void setOnPressEnd(btn_func_t oc) {
+		onPressEndHandler = oc;
+	}
+	void setDuringPress(btn_func_t oc) {
+		duringPressHandler = oc;
+	}
+
 };
-
-
 
 #endif
 
 #ifdef __cplusplus
-#define EXTERNC extern "c"
+#define EXTERNC extern "C"
 #else
 #define EXTERNC
 #endif
 
 /* ----C-FRIENDLY BINDINGS GO HERE------*/
+typedef void *button_processor_t;
+
+EXTERNC button_processor_t create_button_processor();
+
+EXTERNC void set_on_click(button_processor_t proc, btn_func_t func);
+EXTERNC void set_on_press_start(button_processor_t proc, btn_func_t func);
+EXTERNC void set_on_press_end(button_processor_t proc, btn_func_t func);
+EXTERNC void set_during_press(button_processor_t proc, btn_func_t func);
 
 #undef EXTERNC
 

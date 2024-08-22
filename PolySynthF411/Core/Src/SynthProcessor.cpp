@@ -6,8 +6,11 @@
  */
 #include "SynthProcessor.h"
 
-SynthProcessor::SynthProcessor(voice_clock_t vc) :
-		voiceClock(static_cast<VoiceClock*>(vc)), currentPatch(
+SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
+		button_processor_t bp) :
+		voiceClock(static_cast<VoiceClock*>(vc)), encoderProc(
+				static_cast<EncoderProcessor*>(ep)), buttonProc(
+				static_cast<ButtonProcessor*>(bp)), currentPatch(
 				getDefaultPatch()), voicesInUse(0), sustainPedalDown(false) {
 	// give all the envelopes the correct pointer to the patch data
 	for (uint8_t v = 0; v < 6; v++) {
@@ -22,7 +25,8 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	for (uint8_t v = 0; v < 6; v++) {
 		if (isVoiceActive(v)) {
 			// TODO: grip each of the 7 DAC voltages
-			levels->currentData[DACChannel::VCA_CH] = env1Voices[v].nextDACCode();
+			levels->currentData[DACChannel::VCA_CH] =
+					env1Voices[v].nextDACCode();
 			levels->currentData[DACChannel::AC1_CH] = ampComp1[v];
 			levels->currentData[DACChannel::AC2_CH] = ampComp2[v];
 		}
@@ -113,16 +117,17 @@ void SynthProcessor::endNote(uint8_t note) {
 }
 
 //==================================================================================
-synth_proc_t createSynthProc(voice_clock_t clk) {
-	return new SynthProcessor(clk);
+synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep,
+		button_processor_t bp) {
+	return new SynthProcessor(clk, ep, bp);
 }
 
-void updateDacLevels(synth_proc_t proc, dacLevels_t *levels) {
+void update_dac_levels(synth_processor_t proc, dacLevels_t *levels) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
 	ptr->updateDacLevels(levels);
 }
 
-void processMidiMessage(synth_proc_t proc, midiMsg msg) {
+void process_midi_msg(synth_processor_t proc, midiMsg msg) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
 	ptr->processMidiMessage(msg);
 }

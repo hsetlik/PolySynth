@@ -26,17 +26,17 @@ button_t buttonForID(uint8_t idx) {
 		b.port = B_ENV2_PORT;
 		b.pin = B_ENV2_PIN;
 		break;
-	case LFO1:
+	case LFO1B:
 		b.addr = B_LFO1_ADDR;
 		b.port = B_LFO1_PORT;
 		b.pin = B_LFO1_PIN;
 		break;
-	case LFO2:
+	case LFO2B:
 		b.addr = B_LFO2_ADDR;
 		b.port = B_LFO2_PORT;
 		b.pin = B_LFO2_PIN;
 		break;
-	case LFO3:
+	case LFO3B:
 		b.addr = B_LFO3_ADDR;
 		b.port = B_LFO3_PORT;
 		b.pin = B_LFO3_PIN;
@@ -51,7 +51,7 @@ button_t buttonForID(uint8_t idx) {
 		b.port = B_OSC2_PORT;
 		b.pin = B_OSC2_PIN;
 		break;
-	case PWM:
+	case PWMB:
 		b.addr = B_PWM_ADDR;
 		b.port = B_PWM_PORT;
 		b.pin = B_PWM_PIN;
@@ -202,7 +202,7 @@ uint8_t buttonForPin(uint8_t addr, uint8_t port, uint8_t pin) {
 		case B_MENU_PIN:
 			return (uint8_t) ButtonID::Menu;
 		case B_PWM_PIN:
-			return (uint8_t) ButtonID::PWM;
+			return (uint8_t) ButtonID::PWMB;
 		case B_FILTERMODE_PIN:
 			return (uint8_t) ButtonID::FilterMode;
 		case B_FOLDFIRST_PIN:
@@ -220,11 +220,11 @@ uint8_t buttonForPin(uint8_t addr, uint8_t port, uint8_t pin) {
 		case B_ENV2_PIN:
 			return (uint8_t) ButtonID::Env2;
 		case B_LFO1_PIN:
-			return (uint8_t) ButtonID::LFO1;
+			return (uint8_t) ButtonID::LFO1B;
 		case B_LFO2_PIN:
-			return (uint8_t) ButtonID::LFO2;
+			return (uint8_t) ButtonID::LFO2B;
 		case B_LFO3_PIN:
-			return (uint8_t) ButtonID::LFO3;
+			return (uint8_t) ButtonID::LFO3B;
 		case B_OSC1_PIN:
 			return (uint8_t) ButtonID::Osc1;
 		case B_OSC2_PIN:
@@ -310,7 +310,7 @@ void Btn::fsm(bool lvl) {
 		if (!lvl) {
 			state = BtnState::PRESSEND;
 		} else {
-			if ((now - lastDuringPressTime) >= PRESS_INTERVAL) {
+			if (TickTimer_tickDistanceMs(lastDuringPressTime, now) >= PRESS_INTERVAL) {
 				if (hasDuringPress)
 					duringPress();
 				lastDuringPressTime = now;
@@ -387,4 +387,30 @@ void ButtonProcessor::checkButtons(){
 			break;
 		}
 	}
+}
+
+//==============================================================
+
+button_processor_t create_button_processor(){
+	return new ButtonProcessor();
+}
+
+void set_on_click(button_processor_t proc, btn_func_t func){
+	ButtonProcessor* p = static_cast<ButtonProcessor*>(proc);
+	p->setOnClick(func);
+}
+
+void set_on_press_start(button_processor_t proc, btn_func_t func){
+	ButtonProcessor* p = static_cast<ButtonProcessor*>(proc);
+	p->setOnPressStart(func);
+}
+
+void set_on_press_end(button_processor_t proc, btn_func_t func){
+	ButtonProcessor* p = static_cast<ButtonProcessor*>(proc);
+	p->setOnPressEnd(func);
+}
+
+void set_during_press(button_processor_t proc, btn_func_t func){
+	ButtonProcessor* p = static_cast<ButtonProcessor*>(proc);
+	p->setDuringPress(func);
 }

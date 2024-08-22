@@ -8,12 +8,12 @@
 #ifndef INC_ENCODER_H_
 #define INC_ENCODER_H_
 #include "MCP23S17.h"
-
-#ifdef __cplusplus
-
+#include "stm32f4xx_hal.h"
 
 typedef void (*enc_func_t)(uint8_t, uint8_t); // < (encoderID, clockwise)
 
+
+#ifdef __cplusplus
 #define NUM_ENCODERS 10
 
 // an enum of hardware rotary encoders
@@ -22,7 +22,7 @@ enum EncID{
 	B,
 	C,
 	D,
-	Menu,
+	MenuEnc,
 	Depth,
 	Cutoff,
 	Res,
@@ -105,12 +105,10 @@ public:
 	void registerCallback(enc_func_t cb) {callback = cb;}
 };
 
-
-
-#endif
+#endif //__cplusplus
 
 #ifdef __cplusplus
-#define EXTERNC extern "c"
+#define EXTERNC extern "C"
 #else
 #define EXTERNC
 #endif
@@ -118,10 +116,10 @@ public:
 /* ----C-FRIENDLY BINDINGS GO HERE------*/
 typedef void* enc_processor_t;
 
-enc_processor_t create_enc_processor();
-void enc_interrupt_sent(enc_processor_t proc, uint8_t addr, uint8_t port);
-void enc_init_interrupts(enc_processor_t proc);
-void enc_register_callback(enc_processor_t proc, enc_func_t func);
+EXTERNC enc_processor_t create_enc_processor();
+EXTERNC void enc_interrupt_sent(enc_processor_t proc, uint8_t addr, uint8_t port);
+EXTERNC void enc_init_interrupts(enc_processor_t proc);
+EXTERNC void enc_register_callback(enc_processor_t proc, enc_func_t func);
 
 
 #undef EXTERNC

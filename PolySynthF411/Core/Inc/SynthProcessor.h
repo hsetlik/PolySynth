@@ -10,17 +10,22 @@
 
 
 
-#ifdef __cplusplus
 #include "Patch.h"
 #include "VoiceClock.h"
 #include "MIDI.h"
 #include "ControlVoltage.h"
 #include "ADSR.h"
+#include "Button.h"
+#include "Encoder.h"
+
+#ifdef __cplusplus
 
 class SynthProcessor
 {
 private:
 	VoiceClock* const voiceClock;
+	EncoderProcessor* const encoderProc;
+	ButtonProcessor* const buttonProc;
 	patch_t currentPatch;
 	//---STATE STUFF----
 	uint8_t voicesInUse; //bits represent a voice in use
@@ -33,7 +38,7 @@ private:
 	bool sustainPedalDown;
 
 public:
-	SynthProcessor(voice_clock_t vc);
+	SynthProcessor(voice_clock_t vc, enc_processor_t ep, button_processor_t bp);
 
 	/**
 	 * This needs to:
@@ -64,11 +69,11 @@ private:
 #endif
 
 /* ----C-FRIENDLY BINDINGS GO HERE------*/
-typedef void* synth_proc_t;
+typedef void* synth_processor_t;
 
-EXTERNC synth_proc_t createSynthProc(voice_clock_t clk);
-EXTERNC void updateDacLevels(synth_proc_t proc, dacLevels_t* levels);
-EXTERNC void processMidiMessage(synth_proc_t proc, midiMsg msg);
+EXTERNC synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep, button_processor_t bp);
+EXTERNC void update_dac_levels(synth_processor_t proc, dacLevels_t* levels);
+EXTERNC void process_midi_msg(synth_processor_t proc, midiMsg msg);
 
 #undef EXTERNC
 
