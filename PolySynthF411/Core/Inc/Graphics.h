@@ -20,23 +20,17 @@
  * - 153,600 bytes
  * - 1,228,800 bits (SPI clock cycles)
  *
- * With a prescaler of 2 (lowest option),
- * our SPI bit clock is at 48 MHz,
- * which means that drawing the entire frame
- * takes ~19.5ms
+ * With a prescaler of 2 (lowest option)
+ * our SPI bit clock is at 24 MHz, so
+ * drawing the entire frame should
+ * take ~19.5ms
  *
  *
  *
  *	 */
 
+
 #ifdef __cplusplus
-
-/**
- *
- *
- */
-
-
 
 class GraphicsProcessor{
 private:

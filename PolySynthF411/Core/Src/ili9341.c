@@ -4,15 +4,14 @@
 #include "stm32f4xx_hal.h"
 #include "ili9341.h"
 
-// NOTE: these are commented out bc we're using a hardware NSS pin
-//static void ILI9341_Select() {
-//    HAL_GPIO_WritePin(ILI9341_CS_GPIO_Port, ILI9341_CS_Pin, GPIO_PIN_RESET);
-//}
-//
-//void ILI9341_Unselect() {
-//    HAL_GPIO_WritePin(ILI9341_CS_GPIO_Port, ILI9341_CS_Pin, GPIO_PIN_SET);
-//}
-//
+static void ILI9341_Select() {
+    HAL_GPIO_WritePin(ILI9341_CS_GPIO_Port, ILI9341_CS_Pin, GPIO_PIN_RESET);
+}
+
+void ILI9341_Unselect() {
+    HAL_GPIO_WritePin(ILI9341_CS_GPIO_Port, ILI9341_CS_Pin, GPIO_PIN_SET);
+}
+
 static void ILI9341_Reset() {
     HAL_GPIO_WritePin(ILI9341_RES_GPIO_Port, ILI9341_RES_Pin, GPIO_PIN_RESET);
     HAL_Delay(5);
@@ -56,7 +55,7 @@ static void ILI9341_SetAddressWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint
 }
 
 void ILI9341_Init() {
-    //ILI9341_Select();
+    ILI9341_Select();
     ILI9341_Reset();
 
     // command list is based on https://github.com/martnak/STM32-ILI9341
@@ -214,13 +213,13 @@ void ILI9341_DrawPixel(uint16_t x, uint16_t y, uint16_t color) {
     if((x >= ILI9341_WIDTH) || (y >= ILI9341_HEIGHT))
         return;
 
-    //ILI9341_Select();
+    ILI9341_Select();
 
     ILI9341_SetAddressWindow(x, y, x+1, y+1);
     uint8_t data[] = { color >> 8, color & 0xFF };
     ILI9341_WriteData(data, sizeof(data));
 
-    //ILI9341_Unselect();
+    ILI9341_Unselect();
 }
 
 static void ILI9341_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font, uint16_t color, uint16_t bgcolor) {
@@ -243,7 +242,7 @@ static void ILI9341_WriteChar(uint16_t x, uint16_t y, char ch, FontDef font, uin
 }
 
 void ILI9341_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor) {
-    //ILI9341_Select();
+    ILI9341_Select();
 
     while(*str) {
         if(x + font.width >= ILI9341_WIDTH) {
@@ -265,7 +264,7 @@ void ILI9341_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, 
         str++;
     }
 
-    //ILI9341_Unselect();
+    ILI9341_Unselect();
 }
 
 void ILI9341_FillRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color) {
@@ -274,7 +273,7 @@ void ILI9341_FillRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint1
     if((x + w - 1) >= ILI9341_WIDTH) w = ILI9341_WIDTH - x;
     if((y + h - 1) >= ILI9341_HEIGHT) h = ILI9341_HEIGHT - y;
 
-    //ILI9341_Select();
+    ILI9341_Select();
     ILI9341_SetAddressWindow(x, y, x+w-1, y+h-1);
 
     uint8_t data[] = { color >> 8, color & 0xFF };
@@ -285,7 +284,7 @@ void ILI9341_FillRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint1
         }
     }
 
-    //ILI9341_Unselect();
+    ILI9341_Unselect();
 }
 
 void ILI9341_FillScreen(uint16_t color) {
@@ -297,14 +296,14 @@ void ILI9341_DrawImage(uint16_t x, uint16_t y, uint16_t w, uint16_t h, const uin
     if((x + w - 1) >= ILI9341_WIDTH) return;
     if((y + h - 1) >= ILI9341_HEIGHT) return;
 
-    //ILI9341_Select();
+    ILI9341_Select();
     ILI9341_SetAddressWindow(x, y, x+w-1, y+h-1);
     ILI9341_WriteData((uint8_t*)data, sizeof(uint16_t)*w*h);
-    //ILI9341_Unselect();
+    ILI9341_Unselect();
 }
 
 void ILI9341_InvertColors(bool invert) {
-    //ILI9341_Select();
+    ILI9341_Select();
     ILI9341_WriteCommand(invert ? 0x21 /* INVON */ : 0x20 /* INVOFF */);
-    //ILI9341_Unselect();
+    ILI9341_Unselect();
 }

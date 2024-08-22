@@ -149,18 +149,256 @@ void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise){
 
 // Buttons---------------
 void SynthProcessor::handleOnClick(uint8_t button) {
+	ButtonID id = (ButtonID)button;
+	switch(id){
+	case Alt:
+		break;
+	case Env1:
+		break;
+	case Env2:
+		break;
+	case LFO1:
+		break;
+	case LFO2:
+		break;
+	case LFO3:
+		break;
+	case Osc1:
+		break;
+	case Osc2:
+		break;
+	case PWMB:
+		break;
+	case FilterMode:
+		break;
+	case FoldFirst:
+		break;
+	case Menu:
+		break;
+	case MS1:
+		break;
+	case MS2:
+		break;
+	case MS3:
+		break;
+	case MS4:
+		break;
+	case MS5:
+		break;
+	case MS6:
+		break;
+	case ModBank:
+		break;
+	case MD1:
+		break;
+	case MD2:
+		break;
+	case MD3:
+		break;
+	case MD4:
+		break;
+	case MD5:
+		break;
+	case MD6:
+		break;
+	case MD7:
+		break;
+	case MD8:
+		break;
+	default:
+		break;
+	}
 
 }
 
 void SynthProcessor::handleOnPressStart(uint8_t button) {
+	ButtonID id = (ButtonID)button;
+	switch(id){
+	case Alt:
+		break;
+	case Env1:
+		break;
+	case Env2:
+		break;
+	case LFO1:
+		break;
+	case LFO2:
+		break;
+	case LFO3:
+		break;
+	case Osc1:
+		break;
+	case Osc2:
+		break;
+	case PWMB:
+		break;
+	case FilterMode:
+		break;
+	case FoldFirst:
+		break;
+	case Menu:
+		break;
+	case MS1:
+		break;
+	case MS2:
+		break;
+	case MS3:
+		break;
+	case MS4:
+		break;
+	case MS5:
+		break;
+	case MS6:
+		break;
+	case ModBank:
+		break;
+	case MD1:
+		break;
+	case MD2:
+		break;
+	case MD3:
+		break;
+	case MD4:
+		break;
+	case MD5:
+		break;
+	case MD6:
+		break;
+	case MD7:
+		break;
+	case MD8:
+		break;
+	default:
+		break;
+	}
+
 
 }
 
 void SynthProcessor::handleOnPressEnd(uint8_t button) {
+	ButtonID id = (ButtonID)button;
+	switch(id){
+	case Alt:
+		break;
+	case Env1:
+		break;
+	case Env2:
+		break;
+	case LFO1:
+		break;
+	case LFO2:
+		break;
+	case LFO3:
+		break;
+	case Osc1:
+		break;
+	case Osc2:
+		break;
+	case PWMB:
+		break;
+	case FilterMode:
+		break;
+	case FoldFirst:
+		break;
+	case Menu:
+		break;
+	case MS1:
+		break;
+	case MS2:
+		break;
+	case MS3:
+		break;
+	case MS4:
+		break;
+	case MS5:
+		break;
+	case MS6:
+		break;
+	case ModBank:
+		break;
+	case MD1:
+		break;
+	case MD2:
+		break;
+	case MD3:
+		break;
+	case MD4:
+		break;
+	case MD5:
+		break;
+	case MD6:
+		break;
+	case MD7:
+		break;
+	case MD8:
+		break;
+	default:
+		break;
+	}
+
 
 }
 
 void SynthProcessor::handleDuringPress(uint8_t button) {
+	ButtonID id = (ButtonID)button;
+	switch(id){
+	case Alt:
+		break;
+	case Env1:
+		break;
+	case Env2:
+		break;
+	case LFO1:
+		break;
+	case LFO2:
+		break;
+	case LFO3:
+		break;
+	case Osc1:
+		break;
+	case Osc2:
+		break;
+	case PWMB:
+		break;
+	case FilterMode:
+		break;
+	case FoldFirst:
+		break;
+	case Menu:
+		break;
+	case MS1:
+		break;
+	case MS2:
+		break;
+	case MS3:
+		break;
+	case MS4:
+		break;
+	case MS5:
+		break;
+	case MS6:
+		break;
+	case ModBank:
+		break;
+	case MD1:
+		break;
+	case MD2:
+		break;
+	case MD3:
+		break;
+	case MD4:
+		break;
+	case MD5:
+		break;
+	case MD6:
+		break;
+	case MD7:
+		break;
+	case MD8:
+		break;
+	default:
+		break;
+	}
 
 }
 
