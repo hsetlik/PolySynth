@@ -414,3 +414,8 @@ void set_during_press(button_processor_t proc, btn_func_t func){
 	ButtonProcessor* p = static_cast<ButtonProcessor*>(proc);
 	p->setDuringPress(func);
 }
+
+void check_buttons(button_processor_t proc){
+	ButtonProcessor* p = static_cast<ButtonProcessor*>(proc);
+	p->checkButtons();
+}

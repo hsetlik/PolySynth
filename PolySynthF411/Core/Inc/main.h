@@ -95,10 +95,13 @@ void Error_Handler(void);
 #define EXP_MOSI_GPIO_Port GPIOB
 #define EXP_INTR_A_Pin GPIO_PIN_6
 #define EXP_INTR_A_GPIO_Port GPIOC
+#define EXP_INTR_A_EXTI_IRQn EXTI9_5_IRQn
 #define EXP_INTR_B_Pin GPIO_PIN_7
 #define EXP_INTR_B_GPIO_Port GPIOC
+#define EXP_INTR_B_EXTI_IRQn EXTI9_5_IRQn
 #define EXP_INTR_C_Pin GPIO_PIN_8
 #define EXP_INTR_C_GPIO_Port GPIOC
+#define EXP_INTR_C_EXTI_IRQn EXTI9_5_IRQn
 #define DAC_SDA_Pin GPIO_PIN_9
 #define DAC_SDA_GPIO_Port GPIOC
 #define DAC_SCL_Pin GPIO_PIN_8

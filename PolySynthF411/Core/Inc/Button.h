@@ -9,6 +9,8 @@
 #define INC_BUTTON_H_
 #include "MCP23S17.h"
 
+#define BUTTON_CHECK_INTERVAL 40
+
 typedef void (*btn_func_t)(uint8_t); // the main C-friendly function pointer typedef
 
 #ifdef __cplusplus
@@ -251,6 +253,9 @@ EXTERNC void set_on_click(button_processor_t proc, btn_func_t func);
 EXTERNC void set_on_press_start(button_processor_t proc, btn_func_t func);
 EXTERNC void set_on_press_end(button_processor_t proc, btn_func_t func);
 EXTERNC void set_during_press(button_processor_t proc, btn_func_t func);
+
+// this goes in the callback
+EXTERNC void check_buttons(button_processor_t proc);
 
 #undef EXTERNC
 
