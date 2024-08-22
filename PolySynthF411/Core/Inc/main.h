@@ -31,7 +31,6 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "ili9341.h"
 #include "TickTimer.h"
 
 /* USER CODE END Includes */
@@ -120,8 +119,8 @@ void Error_Handler(void);
 #define SD_CS_GPIO_Port GPIOD
 #define DISP_DC_Pin GPIO_PIN_4
 #define DISP_DC_GPIO_Port GPIOB
-#define DISP_RES_Pin GPIO_PIN_5
-#define DISP_RES_GPIO_Port GPIOB
+#define DISP_RST_Pin GPIO_PIN_5
+#define DISP_RST_GPIO_Port GPIOB
 #define MIDI_TX_Pin GPIO_PIN_6
 #define MIDI_TX_GPIO_Port GPIOB
 #define MIDI_RX_Pin GPIO_PIN_7
@@ -134,6 +133,7 @@ void Error_Handler(void);
 /* USER CODE BEGIN Private defines */
 
 extern SPI_HandleTypeDef hspi2;
+extern SPI_HandleTypeDef hspi3;
 
 /* USER CODE END Private defines */
 

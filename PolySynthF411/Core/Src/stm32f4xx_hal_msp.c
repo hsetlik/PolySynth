@@ -356,21 +356,12 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
     /* Peripheral clock enable */
     __HAL_RCC_SPI3_CLK_ENABLE();
 
-    __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOC_CLK_ENABLE();
     /**SPI3 GPIO Configuration
-    PA15     ------> SPI3_NSS
     PC10     ------> SPI3_SCK
     PC11     ------> SPI3_MISO
     PC12     ------> SPI3_MOSI
     */
-    GPIO_InitStruct.Pin = DISP_CS_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-    GPIO_InitStruct.Alternate = GPIO_AF6_SPI3;
-    HAL_GPIO_Init(DISP_CS_GPIO_Port, &GPIO_InitStruct);
-
     GPIO_InitStruct.Pin = DISP_SCK_Pin|DISP_MISO_Pin|DISP_MOSI_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -441,13 +432,10 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* hspi)
     __HAL_RCC_SPI3_CLK_DISABLE();
 
     /**SPI3 GPIO Configuration
-    PA15     ------> SPI3_NSS
     PC10     ------> SPI3_SCK
     PC11     ------> SPI3_MISO
     PC12     ------> SPI3_MOSI
     */
-    HAL_GPIO_DeInit(DISP_CS_GPIO_Port, DISP_CS_Pin);
-
     HAL_GPIO_DeInit(GPIOC, DISP_SCK_Pin|DISP_MISO_Pin|DISP_MOSI_Pin);
 
   /* USER CODE BEGIN SPI3_MspDeInit 1 */

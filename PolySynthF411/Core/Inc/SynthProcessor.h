@@ -17,6 +17,7 @@
 #include "ADSR.h"
 #include "Button.h"
 #include "Encoder.h"
+#include "Graphics.h"
 
 #ifdef __cplusplus
 

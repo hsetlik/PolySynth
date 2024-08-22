@@ -5,9 +5,15 @@
 
 #ifndef __ILI9341_H__
 #define __ILI9341_H__
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 
 #include "fonts.h"
 #include <stdbool.h>
+#include "main.h"
 
 #define ILI9341_MADCTL_MY  0x80
 #define ILI9341_MADCTL_MX  0x40
@@ -23,12 +29,12 @@ extern SPI_HandleTypeDef ILI9341_SPI_PORT;
 
 //IMPORTANT: these need to match the pins in the IOC file
 
-#define ILI9341_RES_Pin       GPIO_PIN_5
-#define ILI9341_RES_GPIO_Port GPIOB
-#define ILI9341_CS_Pin        GPIO_PIN_15
-#define ILI9341_CS_GPIO_Port  GPIOA
-#define ILI9341_DC_Pin        GPIO_PIN_4
-#define ILI9341_DC_GPIO_Port  GPIOB
+#define ILI9341_RES_Pin       DISP_RST_Pin
+#define ILI9341_RES_GPIO_Port DISP_RST_GPIO_Port
+#define ILI9341_CS_Pin        DISP_CS_Pin
+#define ILI9341_CS_GPIO_Port  DISP_CS_GPIO_Port
+#define ILI9341_DC_Pin        DISP_DC_Pin
+#define ILI9341_DC_GPIO_Port  DISP_DC_GPIO_Port
 
 // default orientation
 #define ILI9341_WIDTH  240
@@ -79,5 +85,10 @@ void ILI9341_FillRectangle(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint1
 void ILI9341_FillScreen(uint16_t color);
 void ILI9341_DrawImage(uint16_t x, uint16_t y, uint16_t w, uint16_t h, const uint16_t* data);
 void ILI9341_InvertColors(bool invert);
+
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __ILI9341_H__
