@@ -116,6 +116,54 @@ void SynthProcessor::endNote(uint8_t note) {
 	}
 }
 
+//CONTROLS==================================================================================
+
+// Encoders---------------
+void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise){
+	EncID id = (EncID)num;
+	switch(id){
+	case A:
+		break;
+	case B:
+		break;
+	case C:
+		break;
+	case D:
+		break;
+	case MenuEnc:
+		break;
+	case Depth:
+		break;
+	case Cutoff:
+		break;
+	case Res:
+		break;
+	case PWM:
+		break;
+	case Fold:
+		break;
+	default:
+		break;
+	}
+}
+
+// Buttons---------------
+void SynthProcessor::handleOnClick(uint8_t button) {
+
+}
+
+void SynthProcessor::handleOnPressStart(uint8_t button) {
+
+}
+
+void SynthProcessor::handleOnPressEnd(uint8_t button) {
+
+}
+
+void SynthProcessor::handleDuringPress(uint8_t button) {
+
+}
+
 //==================================================================================
 synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep,
 		button_processor_t bp) {
@@ -132,3 +180,31 @@ void process_midi_msg(synth_processor_t proc, midiMsg msg) {
 	ptr->processMidiMessage(msg);
 }
 
+void handle_on_click(synth_processor_t synth, uint8_t button){
+
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
+	ptr->handleOnClick(button);
+}
+
+void handle_on_press_start(synth_processor_t synth, uint8_t button){
+
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
+	ptr->handleOnPressStart(button);
+}
+
+void handle_on_press_end(synth_processor_t synth, uint8_t button){
+
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
+	ptr->handleOnPressEnd(button);
+}
+
+void handle_during_press(synth_processor_t synth, uint8_t button){
+
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
+	ptr->handleDuringPress(button);
+}
+//-----------------------
+void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir){
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
+	ptr->handleEncoderTurn(enc, dir);
+}
