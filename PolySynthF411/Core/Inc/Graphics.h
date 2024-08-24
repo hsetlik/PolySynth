@@ -25,16 +25,49 @@
  * drawing the entire frame should
  * take ~19.5ms
  *
- *
+ * Because a 150kb screen buffer can't fit in our 128kb of RAM,
+ * we'll split our graphics draw calls into chunks of 64x64 max
+ * and have a DMA buffer of 8192 bytes (4096 pixels)
  *
  *	 */
+#define MAX_CHUNK_WIDTH 64
+#define MAX_CHUNK_HEIGHT 64
+#define MAX_CHUNK_PX 4096
+#define MAX_CHUNK_BYTES 8192
 
 
 #ifdef __cplusplus
+#include <functional>
+
+
+
+typedef std::function<void(uint16_t, uint16_t, uint16_t, uint16_t, uint16_t*)> DrawFunc;
+
+struct DrawArea {
+	uint16_t x;
+	uint16_t y;
+	uint16_t w;
+	uint16_t h;
+};
+
+struct DrawTask {
+	DrawFunc func;
+	DrawArea area;
+};
+
+
+
+#define DRAW_QUEUE_SIZE 20
 
 class GraphicsProcessor{
 private:
 	bool dmaBusy;
+	uint16_t dmaBuf[MAX_CHUNK_PX];
+
+	// queue stuff
+	DrawTask drawQueue[DRAW_QUEUE_SIZE];
+	uint8_t front = 0;
+	uint8_t back = 0;
 public:
 	GraphicsProcessor();
 	void dmaFinished() {

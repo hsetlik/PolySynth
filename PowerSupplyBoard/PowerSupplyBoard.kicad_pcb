@@ -4735,7 +4735,7 @@
 		(descr "CP, Radial series, Radial, pin pitch=2.50mm, , diameter=5mm, Electrolytic Capacitor")
 		(tags "CP Radial series Radial pin pitch 2.50mm  diameter 5mm Electrolytic Capacitor")
 		(property "Reference" "C111"
-			(at 1.25 -3.75 360)
+			(at 1.25 -3.75 0)
 			(layer "F.SilkS")
 			(uuid "8b6c0585-064c-434e-9789-0d9b55790c71")
 			(effects
@@ -4746,7 +4746,7 @@
 			)
 		)
 		(property "Value" "330u"
-			(at 1.25 3.75 360)
+			(at 1.25 3.75 0)
 			(layer "F.Fab")
 			(uuid "2c7a8c3e-d504-42ac-bc1a-180112eb0bec")
 			(effects
@@ -6054,7 +6054,7 @@
 			(uuid "2b669507-2450-4665-8bf8-b3bb848f8407")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 1.249999 0 360)
+			(at 1.249999 0 0)
 			(layer "F.Fab")
 			(uuid "6fe26098-6ed8-4eaa-8e06-da4e6ac905e5")
 			(effects
@@ -11898,7 +11898,7 @@
 		(descr "Potentiometer, vertical, Bourns 3296W, https://www.bourns.com/pdfs/3296.pdf")
 		(tags "Potentiometer vertical Bourns 3296W")
 		(property "Reference" "RV103"
-			(at -2.54 3.475 360)
+			(at -2.54 3.475 0)
 			(layer "F.SilkS")
 			(uuid "23934158-b26b-497a-91d4-d7f1be333565")
 			(effects
@@ -11909,7 +11909,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at -2.54 3.67 360)
+			(at -2.54 3.67 0)
 			(layer "F.Fab")
 			(uuid "6e404b65-f15c-4025-91ae-fccbf777f943")
 			(effects
@@ -12115,7 +12115,7 @@
 			(uuid "05e6e606-4ecd-4faa-98f6-f8e8b87f92a8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at -3.175 0.005001 360)
+			(at -3.175 0.005001 0)
 			(layer "F.Fab")
 			(uuid "b76ef65e-64f6-44da-981c-71de1d891d98")
 			(effects
@@ -19733,7 +19733,7 @@
 		(descr "SOD-123")
 		(tags "SOD-123")
 		(property "Reference" "D106"
-			(at 0 -2.000001 360)
+			(at 0 -2.000001 0)
 			(layer "F.SilkS")
 			(uuid "c2942f96-c08a-4351-9283-cd232a875b5a")
 			(effects
@@ -19744,7 +19744,7 @@
 			)
 		)
 		(property "Value" "PMEG3030"
-			(at 0 2.1 360)
+			(at 0 2.1 0)
 			(layer "F.Fab")
 			(uuid "5d8b2062-5a8a-4bef-8044-efafb97e0a0c")
 			(effects
@@ -19979,7 +19979,7 @@
 			(uuid "c379e38f-06e4-44fa-b2d5-0cd2dfd7c246")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -2.000001 360)
+			(at 0 -2.000001 0)
 			(layer "F.Fab")
 			(uuid "107c72ad-86f2-48c4-8463-76ce3ad67f7b")
 			(effects
