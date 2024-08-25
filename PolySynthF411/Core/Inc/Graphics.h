@@ -120,9 +120,6 @@ private:
 	uint16_t dmaBuf[MAX_CHUNK_PX];
 
 	// queue stuff
-	DrawTask drawQueue[DRAW_QUEUE_SIZE];
-	uint8_t front = 0;
-	uint8_t length = 0;
 	RingBuffer<DrawTask> queue;
 
 	void pushTask(DrawTask task);
@@ -133,6 +130,7 @@ private:
 public:
 	GraphicsProcessor();
 	void dmaFinished();
+	void checkDrawQueue();
 
 };
 
@@ -150,6 +148,7 @@ typedef void* graphics_processor_t;
 
 EXTERNC graphics_processor_t create_graphics_processor();
 EXTERNC void disp_dma_finished(graphics_processor_t proc);
+EXTERNC void check_draw_queue(graphics_processor_t proc);
 
 #undef EXTERNC
 

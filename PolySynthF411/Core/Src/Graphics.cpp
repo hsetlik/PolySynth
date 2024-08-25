@@ -47,10 +47,14 @@ GraphicsProcessor::GraphicsProcessor() :
 
 void GraphicsProcessor::dmaFinished() {
 	// our DMA transmission from runFront() is finished so we'll increment the front now
-	if (!queue.empty()) {
+	dmaBusy = false;
+}
+
+
+void GraphicsProcessor::checkDrawQueue(){
+	if(!dmaBusy && !queue.empty()){
 		runFront();
-	} else
-		dmaBusy = false;
+	}
 }
 
 void GraphicsProcessor::pushTask(DrawTask task) {
@@ -58,7 +62,7 @@ void GraphicsProcessor::pushTask(DrawTask task) {
 }
 
 void GraphicsProcessor::runFront() {
-	DrawTask &t = queue.getFront();
+	DrawTask t = queue.getFront();
 	// run the callback to render the pixels
 	t.func(t.area, dmaBuf);
 	ILI9341_DrawImage_DMA(t.area.x, t.area.y, t.area.w, t.area.h, dmaBuf);
@@ -75,4 +79,10 @@ void disp_dma_finished(graphics_processor_t proc) {
 	GraphicsProcessor *ptr = static_cast<GraphicsProcessor*>(proc);
 	ptr->dmaFinished();
 }
+
+void check_draw_queue(graphics_processor_t proc){
+	GraphicsProcessor *ptr = static_cast<GraphicsProcessor*>(proc);
+	ptr->checkDrawQueue();
+}
+
 

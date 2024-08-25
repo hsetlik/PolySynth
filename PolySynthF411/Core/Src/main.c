@@ -92,7 +92,6 @@ enc_processor_t encoderProc;
 graphics_processor_t graphicsProc;
 synth_processor_t synthProc;
 
-//TODO diaplay stuff
 
 //------------------------------------
 /* USER CODE END PV */
@@ -324,6 +323,8 @@ int main(void)
 			update_dac_levels(synthProc, voiceLevels);
 			dacLevelsNeeded = 0;
 		}
+		// send the next DMA chunk to the display of needed
+		check_draw_queue(graphicsProc);
 		// see if it's time to check the buttons
 		now = TickTimer_get();
 		if (now - lastButtonCheck > BUTTON_CHECK_INTERVAL) {
