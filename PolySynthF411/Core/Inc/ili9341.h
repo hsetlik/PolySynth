@@ -9,11 +9,18 @@
 extern "C" {
 #endif
 
-
-
 #include "fonts.h"
 #include <stdbool.h>
 #include "main.h"
+
+typedef struct {
+	uint16_t x;
+	uint16_t y;
+	uint16_t w;
+	uint16_t h;
+} area_t;
+
+
 
 #define ILI9341_MADCTL_MY  0x80
 #define ILI9341_MADCTL_MX  0x40
