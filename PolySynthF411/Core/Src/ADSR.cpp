@@ -82,7 +82,7 @@ uint16_t ADSRProcessor::nextDACCode() {
 	default:
 		break;
 	}
-	// TODO: convert this to logarithmic for the VCA maybe?
-	return (uint16_t) level * 4096.0f;
+	lastCode = (uint16_t) level * 4096.0f;
+	return lastCode;
 
 }

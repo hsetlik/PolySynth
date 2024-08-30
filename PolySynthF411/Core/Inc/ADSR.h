@@ -25,6 +25,7 @@ private:
 	float msSinceStateChange;
 	float level;
 	float releaseStartLevel;
+	uint16_t lastCode;
 public:
 	ADSRProcessor(adsr_t *env);
 	ADSRProcessor();
@@ -37,6 +38,7 @@ public:
 	void gateOn();
 	void gateOff();
 	uint16_t nextDACCode();
+	uint16_t prevDACCode() {return lastCode;}
 
 };
 

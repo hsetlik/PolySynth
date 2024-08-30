@@ -323,11 +323,11 @@ int main(void)
 			update_dac_levels(synthProc, voiceLevels);
 			dacLevelsNeeded = 0;
 		}
-		// send the next DMA chunk to the display of needed
+		// send the next DMA chunk to the display if needed
 		check_draw_queue(graphicsProc);
 		// see if it's time to check the buttons
 		now = TickTimer_get();
-		if (now - lastButtonCheck > BUTTON_CHECK_INTERVAL) {
+		if (TickTimer_tickDistanceMs(lastButtonCheck, now) > BUTTON_CHECK_INTERVAL) {
 			check_buttons(buttonProc);
 			lastButtonCheck = now;
 		}

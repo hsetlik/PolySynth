@@ -9,7 +9,7 @@
 #define INC_BUTTON_H_
 #include "MCP23S17.h"
 
-#define BUTTON_CHECK_INTERVAL 40
+#define BUTTON_CHECK_INTERVAL 8.0f
 
 typedef void (*btn_func_t)(uint8_t); // the main C-friendly function pointer typedef
 

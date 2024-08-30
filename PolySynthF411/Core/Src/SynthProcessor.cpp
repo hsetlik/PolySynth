@@ -24,11 +24,13 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	// remember, the argument pointer is an array of dacLevels arranged PER VOICE
 	for (uint8_t v = 0; v < 6; v++) {
 		if (isVoiceActive(v)) {
-			// TODO: grip each of the 7 DAC voltages
 			levels->currentData[DACChannel::VCA_CH] =
 					env1Voices[v].nextDACCode();
 			levels->currentData[DACChannel::AC1_CH] = ampComp1[v];
 			levels->currentData[DACChannel::AC2_CH] = ampComp2[v];
+
+			// TODO: calculate these CVs based on the mod matrix
+
 		}
 	}
 
@@ -115,13 +117,66 @@ void SynthProcessor::endNote(uint8_t note) {
 		}
 	}
 }
+//MOD MATRIX ==================================================================================
+
+uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
+	ModDest id = (ModDest) dest;
+	switch (id) {
+	case CUTOFF:
+		break;
+	case RESONANCE:
+		break;
+	case FOLD:
+		break;
+	case PWM1:
+		break;
+	case PWM2:
+		break;
+	case TUNE1:
+		break;
+	case TUNE2:
+		break;
+	case VCA:
+		break;
+	default:
+		break;
+	}
+	return 0;
+}
+
+uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
+	ModSource id = (ModSource) src;
+	switch (id) {
+	case ENV1:
+		return env1Voices[voice].prevDACCode();
+	case ENV2:
+		return env1Voices[voice].prevDACCode();
+		break;
+	case LFO1:
+		break;
+	case LFO2:
+		break;
+	case LFO3:
+		break;
+	case MODWHL:
+		break;
+	case PITCHWHL:
+		break;
+	case VEL:
+		break;
+	default:
+		break;
+
+	}
+	return 0;
+}
 
 //CONTROLS==================================================================================
 
 // Encoders---------------
-void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise){
-	EncID id = (EncID)num;
-	switch(id){
+void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise) {
+	EncID id = (EncID) num;
+	switch (id) {
 	case A:
 		break;
 	case B:
@@ -149,8 +204,8 @@ void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise){
 
 // Buttons---------------
 void SynthProcessor::handleOnClick(uint8_t button) {
-	ButtonID id = (ButtonID)button;
-	switch(id){
+	ButtonID id = (ButtonID) button;
+	switch (id) {
 	case Alt:
 		break;
 	case Env1:
@@ -208,12 +263,11 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 	default:
 		break;
 	}
-
 }
 
 void SynthProcessor::handleOnPressStart(uint8_t button) {
-	ButtonID id = (ButtonID)button;
-	switch(id){
+	ButtonID id = (ButtonID) button;
+	switch (id) {
 	case Alt:
 		break;
 	case Env1:
@@ -271,13 +325,11 @@ void SynthProcessor::handleOnPressStart(uint8_t button) {
 	default:
 		break;
 	}
-
-
 }
 
 void SynthProcessor::handleOnPressEnd(uint8_t button) {
-	ButtonID id = (ButtonID)button;
-	switch(id){
+	ButtonID id = (ButtonID) button;
+	switch (id) {
 	case Alt:
 		break;
 	case Env1:
@@ -335,13 +387,11 @@ void SynthProcessor::handleOnPressEnd(uint8_t button) {
 	default:
 		break;
 	}
-
-
 }
 
 void SynthProcessor::handleDuringPress(uint8_t button) {
-	ButtonID id = (ButtonID)button;
-	switch(id){
+	ButtonID id = (ButtonID) button;
+	switch (id) {
 	case Alt:
 		break;
 	case Env1:
@@ -399,7 +449,6 @@ void SynthProcessor::handleDuringPress(uint8_t button) {
 	default:
 		break;
 	}
-
 }
 
 //==================================================================================
@@ -418,31 +467,31 @@ void process_midi_msg(synth_processor_t proc, midiMsg msg) {
 	ptr->processMidiMessage(msg);
 }
 
-void handle_on_click(synth_processor_t synth, uint8_t button){
+void handle_on_click(synth_processor_t synth, uint8_t button) {
 
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleOnClick(button);
 }
 
-void handle_on_press_start(synth_processor_t synth, uint8_t button){
+void handle_on_press_start(synth_processor_t synth, uint8_t button) {
 
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleOnPressStart(button);
 }
 
-void handle_on_press_end(synth_processor_t synth, uint8_t button){
+void handle_on_press_end(synth_processor_t synth, uint8_t button) {
 
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleOnPressEnd(button);
 }
 
-void handle_during_press(synth_processor_t synth, uint8_t button){
+void handle_during_press(synth_processor_t synth, uint8_t button) {
 
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleDuringPress(button);
 }
 //-----------------------
-void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir){
+void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleEncoderTurn(enc, dir);
 }

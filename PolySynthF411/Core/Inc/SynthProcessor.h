@@ -67,6 +67,9 @@ private:
 	int8_t getVoiceForNote(uint8_t note);
 	void startNote(uint8_t note, uint8_t vel);
 	void endNote(uint8_t note);
+	// helper for calculating our mod matrix stuff
+	uint16_t modDestValue(uint8_t dest, uint8_t voice);
+	uint16_t modSourceValue(uint8_t dest, uint8_t voice);
 
 
 };
