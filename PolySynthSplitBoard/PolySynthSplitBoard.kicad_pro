@@ -1277,6 +1277,10 @@
     [
       "3d9ecb3b-9556-42d6-955a-a32d9efd5d3a",
       "LowerBoard"
+    ],
+    [
+      "c18fe030-c86d-45ba-9286-9b340d3ea677",
+      "VoiceClock"
     ]
   ],
   "text_variables": {}

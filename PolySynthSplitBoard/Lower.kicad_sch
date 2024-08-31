@@ -3137,6 +3137,44 @@
 		)
 	)
 	(sheet
+		(at 105.156 22.606)
+		(size 34.036 30.226)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c18fe030-c86d-45ba-9286-9b340d3ea677")
+		(property "Sheetname" "VoiceClock"
+			(at 105.156 21.8944 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "VoiceClock.kicad_sch"
+			(at 105.156 53.4166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 22.86 57.912)
 		(size 40.64 27.686)
 		(fields_autoplaced yes)

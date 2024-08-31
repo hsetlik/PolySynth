@@ -70,8 +70,8 @@ void Error_Handler(void);
 #define PIXELS_MAIN_GPIO_Port GPIOA
 #define PIXELS_MATRIX_Pin GPIO_PIN_2
 #define PIXELS_MATRIX_GPIO_Port GPIOA
-#define PITCH_CS_Pin GPIO_PIN_4
-#define PITCH_CS_GPIO_Port GPIOA
+#define PITCH_RST_Pin GPIO_PIN_4
+#define PITCH_RST_GPIO_Port GPIOA
 #define PITCH_SCK_Pin GPIO_PIN_5
 #define PITCH_SCK_GPIO_Port GPIOA
 #define PITCH_MOSI_Pin GPIO_PIN_7
