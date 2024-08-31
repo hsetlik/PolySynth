@@ -16,6 +16,7 @@ extern "C" {
 
 //==============================================================================================================
 // modulation matrix storage/logic
+#define NUM_MOD_DESTS 8
 enum ModDest {
 	CUTOFF,
 	RESONANCE,
@@ -26,6 +27,8 @@ enum ModDest {
 	TUNE2,
 	VCA
 };
+
+#define NUM_MOD_SOURCES 9
 
 enum ModSource{
 	NONE,
@@ -53,18 +56,28 @@ enum ModSource{
  * Just an 8-bit SIGNED integer to represent depth
  *
  */
-#define MAX_MODULATIONS 72
+#define MAX_MODULATIONS 72 // equal to sources * dests
 
 typedef uint16_t mod_t;
+
+typedef struct {
+	uint8_t sources[NUM_MOD_SOURCES];
+	uint8_t numMods;
+} mod_list_t;
 
 typedef struct {
 	mod_t mods[MAX_MODULATIONS];
 } modmatrix_t; // takes 144 bytes to store all this
 
+mod_t get_mod(modmatrix_t mat, uint8_t src, uint8_t dest);
+
+mod_list_t get_mods_for_dest(modmatrix_t mat, uint8_t dest);
+
+
 // helper functions for the data packing described above ^^
-uint8_t getModSource(mod_t mod);
-uint8_t getModDest(mod_t mod);
-int8_t getModDepth(mod_t mod);
+uint8_t get_mod_source(mod_t mod);
+uint8_t get_mod_dest(mod_t mod);
+int8_t get_mod_depth(mod_t mod);
 
 mod_t createMod(uint8_t source, uint8_t dest, int8_t depth);
 

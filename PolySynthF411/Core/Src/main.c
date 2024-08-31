@@ -287,6 +287,9 @@ int main(void)
 	set_on_press_end(buttonProc, &onPressEnd);
 	set_during_press(buttonProc, &duringPress);
 
+	// reset the counter ICs before we start the first transmission
+	HAL_GPIO_WritePin(PITCH_RST_GPIO_Port, PITCH_RST_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(PITCH_RST_GPIO_Port, PITCH_RST_Pin, GPIO_PIN_RESET);
 	// do the first DMA transmission outside the while loop to start
 	send_bits(vClk, currentVBuf, 0, VOICE_CLOCK_BUF_SIZE);
 	if (!HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*) currentVBuf,
@@ -967,9 +970,13 @@ static void MX_GPIO_Init(void)
   HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
+
+  	  // pull our pitch reset low
+	HAL_GPIO_WritePin(PITCH_RST_GPIO_Port, PITCH_RST_Pin, GPIO_PIN_RESET);
 	// we're not using hardware CS handling so we need to pull these high
 	HAL_GPIO_WritePin(SD_CS_GPIO_Port, SD_CS_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(DISP_CS_GPIO_Port, DISP_CS_Pin, GPIO_PIN_SET);
+
 /* USER CODE END MX_GPIO_Init_2 */
 }
 

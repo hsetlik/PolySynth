@@ -11,7 +11,8 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 		voiceClock(static_cast<VoiceClock*>(vc)), encoderProc(
 				static_cast<EncoderProcessor*>(ep)), buttonProc(
 				static_cast<ButtonProcessor*>(bp)), currentPatch(
-				getDefaultPatch()), voicesInUse(0), sustainPedalDown(false) {
+				getDefaultPatch()), voicesInUse(0), sustainPedalDown(false), pitchWhlPos(
+				0), modWhlPos(0) {
 	// give all the envelopes the correct pointer to the patch data
 	for (uint8_t v = 0; v < 6; v++) {
 		env1Voices[v].setParams(&currentPatch.envelopes[0]);
@@ -120,28 +121,20 @@ void SynthProcessor::endNote(uint8_t note) {
 //MOD MATRIX ==================================================================================
 
 uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
-	ModDest id = (ModDest) dest;
-	switch (id) {
-	case CUTOFF:
-		break;
-	case RESONANCE:
-		break;
-	case FOLD:
-		break;
-	case PWM1:
-		break;
-	case PWM2:
-		break;
-	case TUNE1:
-		break;
-	case TUNE2:
-		break;
-	case VCA:
-		break;
-	default:
-		break;
+	mod_list_t mods = get_mods_for_dest(currentPatch.modMatrix, dest);
+	int16_t offset = 0;
+	for(uint8_t m = 0; m < mods.numMods; m++){
+		offset += modSourceOffset(mods.sources[m], dest, voice);
 	}
-	return 0;
+	//TODO: figure out how this 12 bit offset value gets added to each actual base
+	// parameter
+
+}
+
+
+uint16_t SynthProcessor::velocityValue12Bit(uint8_t voice){
+	float fVel = (float)voiceVelocity[voice] / 127.0f;
+	return (uint16_t)fVel * 4096.0f;
 }
 
 uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
@@ -153,22 +146,31 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 		return env1Voices[voice].prevDACCode();
 		break;
 	case LFO1:
+		// TODO: lfo processors should already be ticked and return
+		// their values here
 		break;
 	case LFO2:
 		break;
 	case LFO3:
 		break;
 	case MODWHL:
-		break;
+		return modWhlPos;
 	case PITCHWHL:
-		break;
+		return pitchWhlPos;
 	case VEL:
-		break;
+		return velocityValue12Bit(voice);
 	default:
 		break;
 
 	}
 	return 0;
+}
+
+
+int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest, uint8_t voice){
+	mod_t mod = get_mod(currentPatch.modMatrix, src, dest);
+	float val = (float)modSourceValue(src, voice);
+	return (int16_t)val * ((float)get_mod_depth(mod) / 127.0f);
 }
 
 //CONTROLS==================================================================================

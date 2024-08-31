@@ -36,7 +36,11 @@ private:
 	uint16_t ampComp2[6];
 	ADSRProcessor env1Voices[6];
 	ADSRProcessor env2Voices[6];
+
+	// control change stuff
 	bool sustainPedalDown;
+	uint16_t pitchWhlPos;
+	uint16_t modWhlPos;
 
 public:
 	SynthProcessor(voice_clock_t vc, enc_processor_t ep, button_processor_t bp);
@@ -69,7 +73,11 @@ private:
 	void endNote(uint8_t note);
 	// helper for calculating our mod matrix stuff
 	uint16_t modDestValue(uint8_t dest, uint8_t voice);
-	uint16_t modSourceValue(uint8_t dest, uint8_t voice);
+	uint16_t modSourceValue(uint8_t src, uint8_t voice);
+	int16_t modSourceOffset(uint16_t src, uint8_t dest, uint8_t voice);
+
+	uint16_t velocityValue12Bit(uint8_t voice);
+
 
 
 };
