@@ -73,6 +73,8 @@ mod_t get_mod(modmatrix_t mat, uint8_t src, uint8_t dest);
 
 mod_list_t get_mods_for_dest(modmatrix_t mat, uint8_t dest);
 
+uint16_t apply_mod_offset(uint8_t dest, uint16_t baseDacCode, int16_t modOffset);
+
 
 // helper functions for the data packing described above ^^
 uint8_t get_mod_source(mod_t mod);
@@ -134,18 +136,23 @@ typedef struct{
 
 //TODO: LFO state and default values and stuff should eventually go here
 
-#define CUTOFF_MAX 4096
+#define RES_MAX 4095
+#define RES_MIN 0
+#define RES_DEFAULT 200
+
+#define CUTOFF_MAX 4095
 #define CUTOFF_MIN 0
 #define CUTOFF_DEFAULT 3100
 
-#define FOLD_MAX 4096
+#define FOLD_MAX 4095
 #define FOLD_MIN 0
 #define FOLD_DEFAULT 0
 
-#define PATCH_SIZE_BYTES 183 //NOTE: this number will change when we add LFOs and stuff
+#define PATCH_SIZE_BYTES 185 //NOTE: this number will change when we add LFOs and stuff
 
 typedef struct {
 	uint16_t cutoffBase;
+	uint16_t resBase;
 	uint16_t foldBase;
 	uint8_t foldFirst;
 	uint8_t highPassMode;

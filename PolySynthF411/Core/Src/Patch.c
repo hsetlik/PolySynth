@@ -49,12 +49,55 @@ mod_list_t get_mods_for_dest(modmatrix_t mat, uint8_t dest){
 	return list;
 }
 
+// just a little helper to clean up apply_mod_offset
+uint16_t clampModRange(uint16_t max, uint16_t min, uint16_t baseValue, int16_t offset){
+	uint16_t fullVal = (uint16_t)((int16_t)baseValue + offset);
+	if(fullVal < min)
+		return min;
+	if(fullVal > max)
+		return max;
+	return fullVal;
+}
+
+int16_t centsTo12Bit(int8_t tune){
+	float fVal = (float)tune / 100.0f;
+	return (int16_t)fVal * 4095.0f;
+}
+
+
+uint16_t apply_mod_offset(uint8_t dest, uint16_t baseDacCode, int16_t modOffset){
+	ModDest id = (ModDest)dest;
+	switch (id) {
+	case CUTOFF:
+		return clampModRange(CUTOFF_MAX, CUTOFF_MIN, baseDacCode, modOffset);
+	case RESONANCE:
+		return clampModRange(RES_MAX, RES_MIN, baseDacCode, modOffset);
+	case FOLD:
+		return clampModRange(FOLD_MAX, FOLD_MIN, baseDacCode, modOffset);
+	case PWM1:
+		return clampModRange(PWM_MAX, PWM_MIN, baseDacCode, modOffset);
+	case PWM2:
+		return clampModRange(PWM_MAX, PWM_MIN, baseDacCode, modOffset);
+	case TUNE1: // TODO: figure out how deal with these three
+		break;
+	case TUNE2:
+		break;
+	case VCA:
+		break;
+	default:
+		break;
+	}
+	return 0;
+
+}
+
 //========================================================================
 
 patch_t getDefaultPatch(){
 	patch_t patch;
 
 	patch.cutoffBase = CUTOFF_DEFAULT;
+	patch.resBase = RES_DEFAULT;
 	patch.foldBase = FOLD_DEFAULT;
 	patch.foldFirst = 0;
 	patch.highPassMode = 0;

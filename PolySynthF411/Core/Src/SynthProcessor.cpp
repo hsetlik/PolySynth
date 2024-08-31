@@ -29,9 +29,10 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 					env1Voices[v].nextDACCode();
 			levels->currentData[DACChannel::AC1_CH] = ampComp1[v];
 			levels->currentData[DACChannel::AC2_CH] = ampComp2[v];
-
-			// TODO: calculate these CVs based on the mod matrix
-
+			levels->currentData[DACChannel::CUTOFF_CH] = modDestValue((uint8_t)ModDest::CUTOFF, v);
+			levels->currentData[DACChannel::FOLD_CH] = modDestValue((uint8_t)ModDest::FOLD, v);
+			levels->currentData[DACChannel::PWM1_CH] = modDestValue((uint8_t)ModDest::PWM1, v);
+			levels->currentData[DACChannel::PWM2_CH] = modDestValue((uint8_t)ModDest::PWM2, v);
 		}
 	}
 
@@ -93,6 +94,8 @@ void SynthProcessor::startNote(uint8_t note, uint8_t vel) {
 		voiceNotes[v] = note;
 		voiceVelocity[v] = vel;
 		// consult patch data for tuning of each osc
+		//TODO: we need to calculate how to offset these fine tuning values
+		// for pitch modulation
 		float hz1 = hzForTuning(note, currentPatch.oscillators[0].coarseTune,
 				currentPatch.oscillators[0].fineTune);
 		float hz2 = hzForTuning(note, currentPatch.oscillators[1].coarseTune,
@@ -126,9 +129,28 @@ uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
 	for(uint8_t m = 0; m < mods.numMods; m++){
 		offset += modSourceOffset(mods.sources[m], dest, voice);
 	}
-	//TODO: figure out how this 12 bit offset value gets added to each actual base
-	// parameter
-
+	ModDest id = (ModDest)dest;
+	switch (id) {
+	case CUTOFF:
+		return apply_mod_offset(dest, currentPatch.cutoffBase, offset);
+	case RESONANCE:
+		return apply_mod_offset(dest, currentPatch.resBase, offset);
+	case FOLD:
+		return apply_mod_offset(dest, currentPatch.foldBase, offset);
+	case PWM1:
+		return apply_mod_offset(dest, currentPatch.oscillators[0].pulseWidth, offset);
+	case PWM2:
+		return apply_mod_offset(dest, currentPatch.oscillators[1].pulseWidth, offset);
+	case TUNE1:
+		break;
+	case TUNE2:
+		break;
+	case VCA:
+		break;
+	default:
+		break;
+	}
+	return 0;
 }
 
 
@@ -170,7 +192,7 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest, uint8_t voice){
 	mod_t mod = get_mod(currentPatch.modMatrix, src, dest);
 	float val = (float)modSourceValue(src, voice);
-	return (int16_t)val * ((float)get_mod_depth(mod) / 127.0f);
+	return (int16_t)(val * ((float)get_mod_depth(mod) / 127.0f));
 }
 
 //CONTROLS==================================================================================
