@@ -14955,7 +14955,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "FOLD_DAC"
 			(at 95.25 214.3759 0)
 			(effects
 				(font
@@ -18698,7 +18698,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "LVL1_DAC"
 			(at 92.71 172.7199 0)
 			(effects
 				(font
@@ -19326,7 +19326,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "LVL2_RAW"
 			(at 69.85 213.3599 0)
 			(effects
 				(font
@@ -21374,7 +21374,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "CTF_RAW"
 			(at 71.12 196.5959 0)
 			(effects
 				(font
@@ -23654,7 +23654,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "CTF_DAC"
 			(at 95.25 224.0279 0)
 			(effects
 				(font
@@ -24074,7 +24074,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "LVL2_DAC"
 			(at 92.71 181.8639 0)
 			(effects
 				(font
@@ -31512,7 +31512,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "VCA_DAC"
 			(at 93.98 198.3739 0)
 			(effects
 				(font
@@ -33248,7 +33248,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "PWM2_DAC"
 			(at 93.98 189.4839 0)
 			(effects
 				(font
@@ -36588,7 +36588,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "LVL1_RAW"
 			(at 69.85 204.7239 0)
 			(effects
 				(font
@@ -38174,7 +38174,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "PWM1_DAC"
 			(at 95.25 206.2479 0)
 			(effects
 				(font

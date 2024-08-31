@@ -182,7 +182,8 @@
       "track_widths": [
         0.0,
         0.18,
-        0.25,
+        0.2286,
+        0.254,
         0.35,
         0.5
       ],
@@ -1074,6 +1075,14 @@
       {
         "netclass": "Signal",
         "pattern": "MENU_B"
+      },
+      {
+        "netclass": "DPWR",
+        "pattern": "+5*"
+      },
+      {
+        "netclass": "DPWR",
+        "pattern": "-5*"
       }
     ]
   },

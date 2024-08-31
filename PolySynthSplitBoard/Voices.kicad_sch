@@ -2784,26 +2784,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.136 155.956) (xy 72.136 155.702)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0d142327-471d-4cc7-8aaf-35e28f454fdf")
-	)
-	(wire
-		(pts
-			(xy 49.276 171.704) (xy 49.276 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e4b56ce-3e58-484b-80d7-47fa512f5655")
-	)
-	(wire
-		(pts
 			(xy 86.36 57.15) (xy 89.154 57.15)
 		)
 		(stroke
@@ -2944,6 +2924,26 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 132.842) (xy 76.2 132.842)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "188feddf-45fc-408f-89fa-8d1d7eff7348")
+	)
+	(wire
+		(pts
+			(xy 48.514 148.844) (xy 56.134 148.844)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "191e7376-1e60-4a12-9168-218868b43982")
+	)
+	(wire
+		(pts
 			(xy 335.28 164.084) (xy 340.106 164.084)
 		)
 		(stroke
@@ -3034,16 +3034,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.628 133.35) (xy 71.628 133.096)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2440e7d9-4fd2-4579-811a-c6a8efed80a1")
-	)
-	(wire
-		(pts
 			(xy 287.782 121.158) (xy 296.164 121.158)
 		)
 		(stroke
@@ -3051,6 +3041,16 @@
 			(type default)
 		)
 		(uuid "247c9ef8-237d-4d18-b4ed-597e4be9eb0b")
+	)
+	(wire
+		(pts
+			(xy 70.104 172.212) (xy 70.104 171.958)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "268554f8-913d-4e55-95a4-465cad28670c")
 	)
 	(wire
 		(pts
@@ -3164,6 +3164,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.514 148.844) (xy 48.514 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f146885-dbcf-4067-9f8d-bcf6ee825ce4")
+	)
+	(wire
+		(pts
 			(xy 49.022 230.886) (xy 55.372 230.886)
 		)
 		(stroke
@@ -3171,26 +3181,6 @@
 			(type default)
 		)
 		(uuid "2fce6d15-f5cb-452d-86a7-71a4933c8aca")
-	)
-	(wire
-		(pts
-			(xy 71.628 133.35) (xy 79.248 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "30c02fba-c0a3-472b-97d0-d088506b7ed1")
-	)
-	(wire
-		(pts
-			(xy 48.768 148.844) (xy 56.388 148.844)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "311100b7-6887-43a2-ae96-a671a5b2c28a")
 	)
 	(wire
 		(pts
@@ -3211,6 +3201,16 @@
 			(type default)
 		)
 		(uuid "3300a62b-a6d5-4339-a2b2-b74f0791d21d")
+	)
+	(wire
+		(pts
+			(xy 68.834 139.954) (xy 76.454 139.954)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33a27080-a77d-4f31-a7da-7ac4efaa2f60")
 	)
 	(wire
 		(pts
@@ -3264,16 +3264,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.644 171.45) (xy 80.264 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37d1ea15-5634-48d0-83d1-fb09fbcb3ddb")
-	)
-	(wire
-		(pts
 			(xy 359.156 105.41) (xy 360.807 105.41)
 		)
 		(stroke
@@ -3281,16 +3271,6 @@
 			(type default)
 		)
 		(uuid "3823b832-22ff-429b-b58b-fa67b23a8606")
-	)
-	(wire
-		(pts
-			(xy 72.39 164.338) (xy 72.39 164.084)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a90b321-c111-49b7-8dd7-06f0f7f33608")
 	)
 	(wire
 		(pts
@@ -3304,6 +3284,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.768 155.956) (xy 48.768 155.702)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c6ba1c5-2120-4b8e-af71-9a22b74129f5")
+	)
+	(wire
+		(pts
 			(xy 185.801 78.105) (xy 185.801 79.883)
 		)
 		(stroke
@@ -3311,16 +3301,6 @@
 			(type default)
 		)
 		(uuid "3cc132c2-b7b3-4632-bb9a-161031900fd8")
-	)
-	(wire
-		(pts
-			(xy 49.022 164.592) (xy 56.642 164.592)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f3b0218-8ec3-41fc-ae91-8dfc1e6d680c")
 	)
 	(wire
 		(pts
@@ -3391,6 +3371,16 @@
 			(type default)
 		)
 		(uuid "43b808db-38bb-4226-a4eb-c522770b53cb")
+	)
+	(wire
+		(pts
+			(xy 48.768 155.956) (xy 56.388 155.956)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44a51737-abf8-4391-9596-8e149c67e7eb")
 	)
 	(wire
 		(pts
@@ -3584,16 +3574,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 164.338) (xy 80.01 164.338)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5200e25d-76ff-44b3-8c1c-60c3f1dca1c5")
-	)
-	(wire
-		(pts
 			(xy 330.327 143.891) (xy 330.327 145.669)
 		)
 		(stroke
@@ -3724,16 +3704,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.768 148.844) (xy 48.768 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b6f3f6d-5d6c-4cfc-bf29-8f8cd52c0610")
-	)
-	(wire
-		(pts
 			(xy 30.48 250.19) (xy 30.48 250.952)
 		)
 		(stroke
@@ -3854,6 +3824,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 132.842) (xy 68.58 132.588)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67c05dd4-516b-4353-8ab6-ea5460285cf0")
+	)
+	(wire
+		(pts
 			(xy 77.978 102.108) (xy 78.994 102.108)
 		)
 		(stroke
@@ -3891,16 +3871,6 @@
 			(type default)
 		)
 		(uuid "6bb6d014-8fe4-4410-804e-81ac2d8e29e0")
-	)
-	(wire
-		(pts
-			(xy 72.136 155.956) (xy 79.756 155.956)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6bcbb9c0-2da1-41e0-9b15-a936a5b8fc67")
 	)
 	(wire
 		(pts
@@ -3971,16 +3941,6 @@
 			(type default)
 		)
 		(uuid "71f1bfa2-2183-404b-8e94-070d152c513f")
-	)
-	(wire
-		(pts
-			(xy 72.644 171.45) (xy 72.644 171.196)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "732ddef9-b053-4277-b4f6-28aa3113a669")
 	)
 	(wire
 		(pts
@@ -4074,16 +4034,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.882 148.844) (xy 71.882 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "834a92fa-259c-407d-81b6-958cc2226621")
-	)
-	(wire
-		(pts
 			(xy 333.502 171.704) (xy 340.106 171.704)
 		)
 		(stroke
@@ -4134,13 +4084,13 @@
 	)
 	(wire
 		(pts
-			(xy 71.882 148.844) (xy 79.502 148.844)
+			(xy 69.342 155.956) (xy 76.962 155.956)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "88b93d97-02b5-4ded-8425-1b04946e093a")
+		(uuid "877d9bfd-b980-4dc5-a3d0-9bf76fee7ff9")
 	)
 	(wire
 		(pts
@@ -4224,16 +4174,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.276 171.704) (xy 56.896 171.704)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91605f37-6e90-495e-8011-1f34e51eb358")
-	)
-	(wire
-		(pts
 			(xy 60.452 68.326) (xy 60.452 74.168)
 		)
 		(stroke
@@ -4251,6 +4191,16 @@
 			(type default)
 		)
 		(uuid "929a6a0c-5df8-4561-ad22-dd8a8d320203")
+	)
+	(wire
+		(pts
+			(xy 69.088 148.844) (xy 76.708 148.844)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "930adc73-b9c6-42a5-a4a4-0cf478f6b807")
 	)
 	(wire
 		(pts
@@ -4304,6 +4254,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.834 139.954) (xy 68.834 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95d55a43-492a-4b6b-8ba0-82c0ebe02197")
+	)
+	(wire
+		(pts
 			(xy 213.36 113.538) (xy 215.011 113.538)
 		)
 		(stroke
@@ -4341,6 +4301,16 @@
 			(type default)
 		)
 		(uuid "99f20c7c-19af-4ab1-8156-c3b1ecc2b8b9")
+	)
+	(wire
+		(pts
+			(xy 49.276 172.212) (xy 49.276 171.958)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b9c9e41-4039-4b02-92f4-8a4373e2b332")
 	)
 	(wire
 		(pts
@@ -4401,16 +4371,6 @@
 			(type default)
 		)
 		(uuid "a1716987-97fd-4678-b968-d2c396e17391")
-	)
-	(wire
-		(pts
-			(xy 49.022 164.592) (xy 49.022 164.338)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4051f2b-2908-4ed9-8253-0edfe93174f3")
 	)
 	(wire
 		(pts
@@ -4484,6 +4444,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 165.1) (xy 69.85 164.846)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1d33ff1-7fbe-47bf-8b24-ef7f2d17b8e8")
+	)
+	(wire
+		(pts
 			(xy 212.344 190.754) (xy 215.138 190.754)
 		)
 		(stroke
@@ -4544,6 +4514,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.022 165.1) (xy 56.642 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b73943c5-7641-4c6f-91bc-026c12e46907")
+	)
+	(wire
+		(pts
 			(xy 89.154 117.348) (xy 89.154 118.11)
 		)
 		(stroke
@@ -4571,6 +4551,16 @@
 			(type default)
 		)
 		(uuid "b9a47afe-7075-4ad6-bd26-5b90b6c71198")
+	)
+	(wire
+		(pts
+			(xy 69.85 165.1) (xy 77.47 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9c46ba8-9543-4fb5-a02f-cb5a2d6c53a5")
 	)
 	(wire
 		(pts
@@ -4694,16 +4684,6 @@
 	)
 	(wire
 		(pts
-			(xy 71.882 140.462) (xy 79.502 140.462)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2fb72bc-6b3c-48ab-ae8b-ff8e45e41ab8")
-	)
-	(wire
-		(pts
 			(xy 247.523 183.134) (xy 247.523 186.69)
 		)
 		(stroke
@@ -4724,6 +4704,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.276 172.212) (xy 56.896 172.212)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c578f922-8b5b-48c4-bfb8-cb9835033ec8")
+	)
+	(wire
+		(pts
 			(xy 263.525 109.728) (xy 270.002 109.728)
 		)
 		(stroke
@@ -4741,16 +4731,6 @@
 			(type default)
 		)
 		(uuid "c644b05f-c02a-43de-ab25-2601f55c9406")
-	)
-	(wire
-		(pts
-			(xy 49.022 155.956) (xy 56.642 155.956)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9d0172e-6cb9-4f79-8f13-98eaef7274d7")
 	)
 	(wire
 		(pts
@@ -4811,16 +4791,6 @@
 			(type default)
 		)
 		(uuid "d1e3c61c-d12a-4b08-9c77-f457c1aa45e5")
-	)
-	(wire
-		(pts
-			(xy 71.882 140.462) (xy 71.882 140.208)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d3d575c4-7b2c-448c-bf94-16a468ee2b68")
 	)
 	(wire
 		(pts
@@ -4894,6 +4864,16 @@
 	)
 	(wire
 		(pts
+			(xy 70.104 172.212) (xy 77.724 172.212)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df9fc64c-61b2-4608-8427-8262225fa2be")
+	)
+	(wire
+		(pts
 			(xy 99.314 76.708) (xy 103.124 76.708)
 		)
 		(stroke
@@ -4901,6 +4881,16 @@
 			(type default)
 		)
 		(uuid "e050d07d-bfa5-4386-a52f-05c11d095474")
+	)
+	(wire
+		(pts
+			(xy 69.088 148.844) (xy 69.088 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0d153c3-2d19-492c-89bf-664539ff7ee8")
 	)
 	(wire
 		(pts
@@ -5124,6 +5114,16 @@
 	)
 	(wire
 		(pts
+			(xy 49.022 165.1) (xy 49.022 164.846)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4c615c2-66de-4637-909b-8378974a11ed")
+	)
+	(wire
+		(pts
 			(xy 220.726 186.944) (xy 220.726 190.246)
 		)
 		(stroke
@@ -5144,16 +5144,6 @@
 	)
 	(wire
 		(pts
-			(xy 49.022 155.956) (xy 49.022 155.702)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7ef36b5-810f-487a-bf6e-6b16da387ba7")
-	)
-	(wire
-		(pts
 			(xy 77.978 104.648) (xy 77.978 102.108)
 		)
 		(stroke
@@ -5171,6 +5161,16 @@
 			(type default)
 		)
 		(uuid "f9a0d153-177b-4a09-9400-2da5458fa0fc")
+	)
+	(wire
+		(pts
+			(xy 69.342 155.956) (xy 69.342 155.702)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "faaa9f10-329b-45d1-9896-9ddff49f305a")
 	)
 	(wire
 		(pts
@@ -5360,28 +5360,6 @@
 		)
 		(uuid "eee1e0f5-30b0-4073-953f-be3feb2a10d4")
 	)
-	(global_label "SDA_V4"
-		(shape input)
-		(at 79.502 140.462 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "01b50880-badb-4aa6-93f0-44b26d04797d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.321 140.462 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "LVL1_V6"
 		(shape input)
 		(at 359.664 156.464 0)
@@ -5395,6 +5373,28 @@
 		(uuid "0302e2b6-50fd-4c73-ab77-c63bc4f99993")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 370.2692 156.464 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCL_V5"
+		(shape input)
+		(at 76.708 148.844 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0348314c-12a7-4732-a30a-f8b57ceb6880")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.4665 148.844 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5422,6 +5422,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA_V6"
+		(shape input)
+		(at 77.724 172.212 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "072dce58-020a-4252-990b-819017920761")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.543 172.212 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5532,6 +5554,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA_V3"
+		(shape input)
+		(at 56.896 172.212 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1d5ffa77-07ff-41da-98ea-33fc01d23e8e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.715 172.212 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5866,6 +5910,28 @@
 			)
 		)
 	)
+	(global_label "SCL_V3"
+		(shape input)
+		(at 56.642 165.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "46a20818-b868-4b4c-99f5-a4c8c3cf2525")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.4005 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SDA_V1"
 		(shape input)
 		(at 56.134 140.208 0)
@@ -5998,28 +6064,6 @@
 			)
 		)
 	)
-	(global_label "SDA_V6"
-		(shape input)
-		(at 80.264 171.45 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4d33be4f-9785-45eb-ba27-5a0d662cd997")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 90.083 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "LVL2_V4"
 		(shape input)
 		(at 214.122 160.274 0)
@@ -6082,28 +6126,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SCL_V3"
-		(shape input)
-		(at 56.642 164.592 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "54785378-9620-4b5f-b681-ede28bedd040")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.4005 164.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6196,28 +6218,6 @@
 			)
 		)
 	)
-	(global_label "SCL_V2"
-		(shape input)
-		(at 56.388 148.844 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "59fc1887-94e8-405f-9e54-61437465aff5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.1465 148.844 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "FOLD_FIRST"
 		(shape input)
 		(at 262.763 175.26 180)
@@ -6258,28 +6258,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA_V2"
-		(shape input)
-		(at 56.642 155.956 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5d1c4d67-e1bf-46ff-b7e3-aa15c9dc687b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.461 155.956 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6396,28 +6374,6 @@
 	)
 	(global_label "SCL_V6"
 		(shape input)
-		(at 80.01 164.338 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6b1f6c7f-c2b4-427f-96cd-29907b5725c6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.7685 164.338 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SCL_V6"
-		(shape input)
 		(at 315.595 160.274 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6456,28 +6412,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA_V3"
-		(shape input)
-		(at 56.896 171.704 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6ecafe3f-9664-48e2-b791-a8a477ac9cd1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.715 171.704 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6658,6 +6592,28 @@
 			)
 		)
 	)
+	(global_label "SDA_V2"
+		(shape input)
+		(at 56.388 155.956 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d1b6457-356a-4601-930a-a9eb5be27b54")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.207 155.956 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "V2_CLK2"
 		(shape input)
 		(at 265.176 102.108 180)
@@ -6676,6 +6632,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCL_V2"
+		(shape input)
+		(at 56.134 148.844 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "80737f5c-92ff-4663-87a8-676d633f0254")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65.8925 148.844 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -6790,28 +6768,6 @@
 			)
 		)
 	)
-	(global_label "SCL_V5"
-		(shape input)
-		(at 79.502 148.844 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "89725cfe-4b9a-4390-ad47-b70e7cd2b71e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.2605 148.844 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "V3_CLK2"
 		(shape input)
 		(at 336.55 101.6 180)
@@ -6891,28 +6847,6 @@
 		(uuid "91907059-1a65-48f8-82ed-9f6a7b97604a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 224.7272 156.464 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA_V5"
-		(shape input)
-		(at 79.756 155.956 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "924eb576-a8b5-41fc-b807-03a9557c2f09")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.575 155.956 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7230,9 +7164,9 @@
 			)
 		)
 	)
-	(global_label "SCL_V4"
+	(global_label "SDA_V4"
 		(shape input)
-		(at 79.248 133.35 0)
+		(at 76.454 139.954 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7240,9 +7174,9 @@
 			)
 			(justify left)
 		)
-		(uuid "ba2bb778-33fb-423c-8de0-cb7b7a820cdd")
+		(uuid "ba709287-8636-4ec8-9dec-6677a5f043f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.0065 133.35 0)
+			(at 86.273 139.954 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7384,6 +7318,28 @@
 			)
 		)
 	)
+	(global_label "SDA_V5"
+		(shape input)
+		(at 76.962 155.956 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c6e2fd70-5032-43b9-8d85-9478be955b10")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 86.781 155.956 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "FOLD_V5"
 		(shape input)
 		(at 288.671 171.45 0)
@@ -7441,6 +7397,28 @@
 		(uuid "cd23540a-4983-4503-9293-4f003e6c6162")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 300.1652 90.678 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCL_V6"
+		(shape input)
+		(at 77.47 165.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cfe1fb5a-e3be-43e0-974c-2727fd4c0514")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 87.2285 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7573,6 +7551,28 @@
 		(uuid "e3dcf908-d1f2-4c17-95ae-3cbd60e0969d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 112.943 86.868 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SCL_V4"
+		(shape input)
+		(at 76.2 132.842 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e6cbb82b-1384-489d-81f9-bd28196a39e6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85.9585 132.842 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8391,73 +8391,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 49.276 171.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "15a6f385-4e1f-4eaa-82b8-d069b200e1e8")
-		(property "Reference" "TP706"
-			(at 51.562 166.8779 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.562 169.4179 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 54.356 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.356 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 49.276 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1b8268f2-207a-4e2e-b2ff-909dba9f9f86")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP706")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 71.374 64.262 0)
 		(unit 1)
@@ -8725,6 +8658,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "#PWR0860")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 49.022 164.846 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26e5f402-d2fe-447a-bd9d-0204a42463f6")
+		(property "Reference" "TP705"
+			(at 51.562 160.2739 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SCL_V3"
+			(at 51.562 162.8139 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 54.102 164.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.102 164.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 49.022 164.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3c1fbd69-a5a6-4c2b-b948-2b23890b9140")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP705")
 					(unit 1)
 				)
 			)
@@ -9139,73 +9139,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 71.628 133.096 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "366d78ad-e643-47d3-8507-165311b44114")
-		(property "Reference" "TP707"
-			(at 73.152 128.5239 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 73.152 131.0639 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 76.708 133.096 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 76.708 133.096 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 71.628 133.096 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "01b095da-1efc-4206-8437-92823bf3e072")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP707")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:-5V")
 		(at 55.372 251.206 180)
 		(unit 1)
@@ -9466,73 +9399,6 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "C704")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 72.39 164.084 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3b327517-cb4e-4bbe-9d53-b60998a0d702")
-		(property "Reference" "TP711"
-			(at 74.422 159.5119 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 74.422 162.0519 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 77.47 164.084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 77.47 164.084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 72.39 164.084 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0cbbdce6-e56d-4dc3-912e-9806fd02c1b9")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP711")
 					(unit 1)
 				)
 			)
@@ -9802,6 +9668,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "#PWR0798")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 49.276 171.958 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "42b0d4fa-9e3c-45a4-90ff-620235bad1b4")
+		(property "Reference" "TP706"
+			(at 51.562 167.3859 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SDA_V3"
+			(at 51.562 169.9259 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 54.356 171.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 54.356 171.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 49.276 171.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ab9285ce-5395-4bd0-b274-b8bd4a6f0c78")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP706")
 					(unit 1)
 				)
 			)
@@ -10478,16 +10411,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 49.022 164.338 0)
+		(at 68.58 132.588 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "62b73ab3-5da3-465b-bed5-5ed7ddda0ffe")
-		(property "Reference" "TP705"
-			(at 51.562 159.7659 0)
+		(uuid "60111686-0372-4e7c-bbd4-92851c05273b")
+		(property "Reference" "TP707"
+			(at 71.12 128.0159 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10495,8 +10428,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 51.562 162.3059 0)
+		(property "Value" "SCL_V4"
+			(at 71.12 130.5559 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10505,7 +10438,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 54.102 164.338 0)
+			(at 73.66 132.588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10514,7 +10447,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 54.102 164.338 0)
+			(at 73.66 132.588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10523,7 +10456,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 49.022 164.338 0)
+			(at 68.58 132.588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10532,12 +10465,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e8d17579-3196-494d-9dba-7812424ed2e9")
+			(uuid "cf74b879-17e5-41db-be83-23d0c3da8def")
 		)
 		(instances
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP705")
+					(reference "TP707")
 					(unit 1)
 				)
 			)
@@ -10554,7 +10487,7 @@
 		(fields_autoplaced yes)
 		(uuid "64861edd-1126-4bb6-84b0-cdafe7e151f7")
 		(property "Reference" "TP701"
-			(at 50.292 128.2699 0)
+			(at 50.8 128.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10562,8 +10495,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 50.292 130.8099 0)
+		(property "Value" "SCL_V1"
+			(at 50.8 130.8099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11126,6 +11059,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "#PWR0855")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 69.342 155.702 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "72321638-2c1e-48f8-8e26-7dee95d3044a")
+		(property "Reference" "TP710"
+			(at 71.628 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SDA_V5"
+			(at 71.628 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 74.422 155.702 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.422 155.702 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 69.342 155.702 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92d77707-def1-4bf5-be72-91b938b03d89")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP710")
 					(unit 1)
 				)
 			)
@@ -11977,6 +11977,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 70.104 171.958 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "84f168e2-2f1e-45da-a40d-ead78d6d78bf")
+		(property "Reference" "TP712"
+			(at 72.39 167.3859 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SDA_V6"
+			(at 72.39 169.9259 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 75.184 171.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 75.184 171.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 70.104 171.958 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd5944b2-1dc4-48cf-af10-229524e21957")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP712")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 172.847 183.388 0)
 		(unit 1)
@@ -12248,6 +12315,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 48.768 155.702 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8bf18a5d-d2ab-4f58-92b9-32c6e3a0d518")
+		(property "Reference" "TP704"
+			(at 51.054 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SDA_V2"
+			(at 51.054 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 53.848 155.702 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.848 155.702 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 48.768 155.702 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad8f0b7c-b372-4874-95a6-68825ff36e6b")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP704")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 214.884 117.348 0)
 		(unit 1)
@@ -12512,73 +12646,6 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "R704")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 49.022 155.702 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "91a21f6f-d865-4c3d-ba31-a0ebccbdaec6")
-		(property "Reference" "TP704"
-			(at 51.562 151.1299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 51.562 153.6699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 54.102 155.702 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 54.102 155.702 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 49.022 155.702 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2999e3d7-7890-458d-8422-bc258db0dbcb")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP704")
 					(unit 1)
 				)
 			)
@@ -12980,16 +13047,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 72.136 155.702 0)
+		(at 69.088 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ab03049b-7cce-4372-96a6-5414b15ce185")
-		(property "Reference" "TP710"
-			(at 74.422 151.1299 0)
+		(uuid "a956cac2-c139-4bc9-9b71-3e8f66c684a2")
+		(property "Reference" "TP709"
+			(at 71.628 144.0179 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12997,8 +13064,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 74.422 153.6699 0)
+		(property "Value" "SCL_V5"
+			(at 71.628 146.5579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13007,7 +13074,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 77.216 155.702 0)
+			(at 74.168 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13016,7 +13083,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 77.216 155.702 0)
+			(at 74.168 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13025,7 +13092,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 72.136 155.702 0)
+			(at 69.088 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13034,12 +13101,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0101759f-4c4e-499c-899b-33909a5a6618")
+			(uuid "6937459d-b0ea-4b64-b34f-c54ac4433f31")
 		)
 		(instances
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP710")
+					(reference "TP709")
 					(unit 1)
 				)
 			)
@@ -13106,73 +13173,6 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "#PWR0771")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 48.768 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ae21b9dc-95ec-44de-8153-7a6bf1f1a30a")
-		(property "Reference" "TP703"
-			(at 50.292 144.0179 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 50.292 146.5579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 53.848 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 53.848 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 48.768 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6b8eb067-6582-463b-8663-b60bced36a0c")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP703")
 					(unit 1)
 				)
 			)
@@ -13629,6 +13629,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "J703")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 48.514 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba518d5f-9a02-465c-8c1d-c79a1370c619")
+		(property "Reference" "TP703"
+			(at 51.054 144.0179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SCL_V2"
+			(at 51.054 146.5579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 53.594 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 53.594 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 48.514 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b692a0e6-c291-4e6c-ba27-07014cb1bb9e")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP703")
 					(unit 1)
 				)
 			)
@@ -14176,83 +14243,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 72.644 171.196 0)
+		(at 68.834 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ddfabfd5-df29-42a4-96ba-b1e1939432d6")
-		(property "Reference" "TP712"
-			(at 74.422 166.6239 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 74.422 169.1639 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 77.724 171.196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 77.724 171.196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 72.644 171.196 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28176ee9-5058-4b6c-ba8c-491b8a9aab1a")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP712")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 71.882 140.208 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e22e6e06-9d00-485f-9181-f809ed702b79")
+		(uuid "e2f793d1-0093-4adb-9932-2be7eca5b36a")
 		(property "Reference" "TP708"
-			(at 74.422 135.6359 0)
+			(at 71.12 135.1279 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14260,8 +14260,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 74.422 138.1759 0)
+		(property "Value" "SDA_V4"
+			(at 71.12 137.6679 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14270,7 +14270,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 76.962 140.208 0)
+			(at 73.914 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14279,7 +14279,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.962 140.208 0)
+			(at 73.914 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14288,7 +14288,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 71.882 140.208 0)
+			(at 68.834 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14297,7 +14297,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8bbbe7ca-480a-4962-809a-9347869b7a2e")
+			(uuid "e219b6b6-3dbb-4870-b891-4099df2facaa")
 		)
 		(instances
 			(project "PolySynthSplitBoard"
@@ -14520,7 +14520,7 @@
 		(fields_autoplaced yes)
 		(uuid "e803ea64-c527-4d9f-a824-51ab5536d38a")
 		(property "Reference" "TP702"
-			(at 50.292 135.3819 0)
+			(at 50.8 135.3819 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14528,8 +14528,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
-			(at 50.292 137.9219 0)
+		(property "Value" "SDA_V1"
+			(at 50.8 137.9219 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14637,6 +14637,73 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "#PWR0784")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 69.85 164.846 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef24104c-36b9-44ee-b02e-0ecd4008d891")
+		(property "Reference" "TP711"
+			(at 72.39 160.2739 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SCL_V6"
+			(at 72.39 162.8139 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
+			(at 74.93 164.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 164.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 69.85 164.846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b4d3fe9a-be34-4bf5-a2dc-4a3b03ae6f33")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
+					(reference "TP711")
 					(unit 1)
 				)
 			)
@@ -14769,73 +14836,6 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
 					(reference "#PWR0776")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 71.882 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f27dc5a5-6472-422c-9afb-c2888dbdbc36")
-		(property "Reference" "TP709"
-			(at 74.422 144.0179 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 74.422 146.5579 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 76.962 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 76.962 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 71.882 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b6627f1f-a8aa-4cde-8480-1d0a0f4038d3")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/d2bf2fa4-926f-4293-bbff-8fd2e3e15c15"
-					(reference "TP709")
 					(unit 1)
 				)
 			)

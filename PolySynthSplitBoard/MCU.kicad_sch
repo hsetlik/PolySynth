@@ -13005,7 +13005,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "MUX_A1"
 			(at 82.55 239.0139 0)
 			(effects
 				(font
@@ -13477,7 +13477,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_INTC"
 			(at 187.96 249.9359 0)
 			(effects
 				(font
@@ -13544,7 +13544,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "MUX_A0"
 			(at 83.82 231.3939 0)
 			(effects
 				(font
@@ -14303,7 +14303,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_SCK"
 			(at 118.11 242.5699 0)
 			(effects
 				(font
@@ -14638,7 +14638,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "LDAC"
 			(at 172.72 229.3619 0)
 			(effects
 				(font
@@ -15141,7 +15141,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "FF"
 			(at 83.82 264.9219 0)
 			(effects
 				(font
@@ -16338,7 +16338,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_INTB"
 			(at 187.96 237.9979 0)
 			(effects
 				(font
@@ -16539,7 +16539,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "MUX_INH"
 			(at 83.82 223.7739 0)
 			(effects
 				(font
@@ -16606,7 +16606,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "HP_MODE"
 			(at 83.82 256.2859 0)
 			(effects
 				(font
@@ -16673,7 +16673,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "POTS_SDA"
 			(at 154.94 227.5839 0)
 			(effects
 				(font
@@ -17152,7 +17152,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_MISO"
 			(at 118.11 252.4759 0)
 			(effects
 				(font
@@ -19129,7 +19129,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "DAC_SDA"
 			(at 172.72 250.6979 0)
 			(effects
 				(font
@@ -19671,7 +19671,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "PITCH_MOSI"
 			(at 138.43 260.0959 0)
 			(effects
 				(font
@@ -19942,7 +19942,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_INTA"
 			(at 187.96 222.5039 0)
 			(effects
 				(font
@@ -20908,7 +20908,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "PITCH_SCK"
 			(at 138.43 248.4119 0)
 			(effects
 				(font
@@ -21453,7 +21453,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_CS"
 			(at 118.11 232.9179 0)
 			(effects
 				(font
@@ -21858,7 +21858,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "MUX_A2"
 			(at 83.82 247.1419 0)
 			(effects
 				(font
@@ -21993,7 +21993,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "PITCH_SS"
 			(at 137.16 239.0139 0)
 			(effects
 				(font
@@ -22522,7 +22522,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "EXP_MOSI"
 			(at 118.11 262.3819 0)
 			(effects
 				(font
@@ -22589,7 +22589,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "MIDI_T"
 			(at 137.16 227.8379 0)
 			(effects
 				(font
@@ -23164,7 +23164,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "POTS_SCL"
 			(at 153.67 217.9319 0)
 			(effects
 				(font
@@ -23568,7 +23568,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "DAC_SCL"
 			(at 172.72 240.0299 0)
 			(effects
 				(font
@@ -24174,7 +24174,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TestPoint"
+		(property "Value" "MIDI_R"
 			(at 137.16 217.6779 0)
 			(effects
 				(font

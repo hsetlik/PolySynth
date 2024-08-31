@@ -5,6 +5,578 @@
 	(uuid "f57141b7-5121-4602-8685-3e385460b2bf")
 	(paper "A4")
 	(lib_symbols
+		(symbol "4xxx:40106"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "40106"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Hex Schmitt trigger inverter"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "CMOS"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "DIP?14*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "40106_1_0"
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -3.81 -3.81) (xy 3.81 0) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_2_0"
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -3.81 -3.81) (xy 3.81 0) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_3_0"
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -3.81 -3.81) (xy 3.81 0) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_4_0"
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -3.81 -3.81) (xy 3.81 0) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin output inverted
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_5_0"
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -3.81 -3.81) (xy 3.81 0) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin output inverted
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_6_0"
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy -0.635 1.27) (xy 0.635 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.81) (xy -3.81 -3.81) (xy 3.81 0) (xy -3.81 3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin output inverted
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_7_0"
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 5.08)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 5.08)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "40106_7_1"
+				(rectangle
+					(start -5.08 7.62)
+					(end 5.08 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+		)
 		(symbol "Connector:Conn_01x03_Pin"
 			(pin_names
 				(offset 1.016) hide)
@@ -2119,944 +2691,6 @@
 				)
 			)
 		)
-		(symbol "PCM_4ms_IC:CD40106BPWR"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "CD40106BPWR"
-				(at 5.08 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Footprint" "4ms_Package_SSOP:TSSOP-14_4.4x5mm_P0.65mm"
-				(at 21.59 -17.78 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-				(at 1.27 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-				(at -2.54 -7.874 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer" "Texas Instruments"
-				(at -2.54 -9.398 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Part Number" "CD40106BPWR"
-				(at -2.54 -10.922 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer 2" "Texas Instruments"
-				(at 6.35 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Part Number 2" "CD40106BPWR"
-				(at 3.81 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Display" "40106"
-				(at 2.54 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "JLCPCB ID" "C58834"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_1_0"
-				(polyline
-					(pts
-						(xy -3.937 -1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0.127 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "I"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "O"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_1_1"
-				(polyline
-					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_2_0"
-				(pin input line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "I"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "O"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_2_1"
-				(polyline
-					(pts
-						(xy -3.937 -1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0.127 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_3_0"
-				(pin input line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "I"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "O"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_3_1"
-				(polyline
-					(pts
-						(xy -3.937 -1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0.127 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_4_0"
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "O"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "I"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_4_1"
-				(polyline
-					(pts
-						(xy -3.937 -1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0.127 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_5_0"
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "O"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "I"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_5_1"
-				(polyline
-					(pts
-						(xy -3.937 -1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0.127 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_6_0"
-				(pin output inverted
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "O"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "I"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_6_1"
-				(polyline
-					(pts
-						(xy -3.937 -1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.048 -1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -3.048 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.778 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0.127 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 -5.08) (xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_7_0"
-				(text "VDD"
-					(at -1.27 0.635 0)
-					(effects
-						(font
-							(size 1.0668 1.0668)
-						)
-						(justify right top)
-					)
-				)
-				(text "VSS"
-					(at 4.572 0.635 0)
-					(effects
-						(font
-							(size 1.0668 1.0668)
-						)
-						(justify right top)
-					)
-				)
-				(pin power_in line
-					(at -10.16 0 0)
-					(length 5.08)
-					(name "VDD"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 10.16 0 180)
-					(length 5.08)
-					(name "VSS"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "CD40106BPWR_7_1"
-				(rectangle
-					(start -5.08 2.54)
-					(end 5.08 -3.81)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-		)
 		(symbol "cs5173:CS5173"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3601,72 +3235,78 @@
 		)
 	)
 	(junction
-		(at 258.318 68.326)
+		(at 246.38 69.596)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06495909-7be5-4178-b6a5-ae40a9cabe57")
 	)
 	(junction
-		(at 232.156 83.566)
+		(at 220.218 84.836)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "136dbe80-2e8f-4c8c-9803-f19a79466ea6")
 	)
 	(junction
-		(at 193.294 76.708)
+		(at 181.356 77.978)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "189af0b7-c7d2-4a2d-944b-6014fd8f1829")
 	)
 	(junction
-		(at 260.604 130.048)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "30999b2d-f998-456c-96aa-81b9562a3a49")
-	)
-	(junction
-		(at 245.872 68.326)
+		(at 233.934 69.596)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "62577180-ca33-46c4-805b-c78888adcdc4")
 	)
 	(junction
-		(at 233.426 78.486)
+		(at 221.488 79.756)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "88978a64-cc44-4196-b396-486e1287592c")
 	)
 	(junction
-		(at 239.268 83.566)
+		(at 227.33 84.836)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "906905a0-12be-4729-9e82-a031fb3b8ea1")
 	)
 	(junction
-		(at 258.318 58.42)
+		(at 257.81 69.596)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5436d6c-47b1-4143-afcc-4459a86aa12e")
+	)
+	(junction
+		(at 270.256 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab299d6a-a725-4333-8165-e76cda187427")
+	)
+	(junction
+		(at 246.38 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d5d6b88d-cc40-4cf1-893b-75d6c75856c9")
 	)
 	(no_connect
-		(at 214.884 157.48)
-		(uuid "2c9e0422-ac9f-4bc8-a711-0a3198b5754a")
+		(at 194.056 155.448)
+		(uuid "100b45d1-44fa-4f54-85cf-3d0340af2024")
 	)
 	(no_connect
-		(at 216.916 157.48)
-		(uuid "4d8de873-f6d2-4cf6-b46d-de1d1fd0082d")
+		(at 210.82 155.448)
+		(uuid "2dfedcfa-299e-4fef-91c4-6173c219b0ac")
 	)
 	(no_connect
-		(at 205.486 83.566)
+		(at 209.296 155.448)
+		(uuid "8310ffbe-fdf4-4385-b876-f7e730d60060")
+	)
+	(no_connect
+		(at 193.548 84.836)
 		(uuid "bcb9a2b7-187a-4e05-b055-0052f1261faf")
 	)
 	(no_connect
-		(at 237.236 157.48)
-		(uuid "c61d7589-83dd-48fc-95c6-a7bac11cae27")
-	)
-	(no_connect
-		(at 194.564 157.48)
-		(uuid "ffdadc39-9f13-427f-9cd9-0702d43de56a")
+		(at 226.06 155.448)
+		(uuid "d51b60c8-07b3-4f9a-8b4f-d61157658e0f")
 	)
 	(wire
 		(pts
@@ -3700,7 +3340,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.872 68.326) (xy 247.904 68.326)
+			(xy 233.934 69.596) (xy 235.966 69.596)
 		)
 		(stroke
 			(width 0)
@@ -3710,13 +3350,33 @@
 	)
 	(wire
 		(pts
-			(xy 233.426 78.486) (xy 233.426 79.248)
+			(xy 258.318 119.38) (xy 270.256 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10c9ee14-3ff8-4731-858b-f658f0e71b7a")
+	)
+	(wire
+		(pts
+			(xy 221.488 79.756) (xy 221.488 80.518)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1459cd4c-bb6f-472b-96c9-1cd7fcfabe15")
+	)
+	(wire
+		(pts
+			(xy 268.986 69.596) (xy 257.81 69.596)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1862fcb4-87b3-4106-b17b-9c8eb7f970a9")
 	)
 	(wire
 		(pts
@@ -3730,7 +3390,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.872 83.566) (xy 239.268 83.566)
+			(xy 233.934 84.836) (xy 227.33 84.836)
 		)
 		(stroke
 			(width 0)
@@ -3740,7 +3400,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.156 94.234) (xy 232.156 94.996)
+			(xy 220.218 95.504) (xy 220.218 96.266)
 		)
 		(stroke
 			(width 0)
@@ -3750,7 +3410,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.156 83.566) (xy 239.268 83.566)
+			(xy 220.218 84.836) (xy 227.33 84.836)
 		)
 		(stroke
 			(width 0)
@@ -3760,23 +3420,13 @@
 	)
 	(wire
 		(pts
-			(xy 200.152 73.406) (xy 205.486 73.406)
+			(xy 188.214 74.676) (xy 193.548 74.676)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "235ffec0-b1bb-47cd-b045-0c741787f13a")
-	)
-	(wire
-		(pts
-			(xy 214.63 124.46) (xy 215.9 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2563a0af-a3dc-4722-b716-a0b6d860024f")
 	)
 	(wire
 		(pts
@@ -3790,7 +3440,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.118 85.852) (xy 182.118 86.614)
+			(xy 170.18 87.122) (xy 170.18 87.884)
 		)
 		(stroke
 			(width 0)
@@ -3800,7 +3450,7 @@
 	)
 	(wire
 		(pts
-			(xy 258.318 56.896) (xy 258.318 58.42)
+			(xy 246.38 58.166) (xy 246.38 59.69)
 		)
 		(stroke
 			(width 0)
@@ -3810,7 +3460,7 @@
 	)
 	(wire
 		(pts
-			(xy 258.318 58.42) (xy 258.318 68.326)
+			(xy 246.38 59.69) (xy 246.38 69.596)
 		)
 		(stroke
 			(width 0)
@@ -3830,16 +3480,6 @@
 	)
 	(wire
 		(pts
-			(xy 260.604 141.732) (xy 260.604 142.494)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "309597bc-cab6-4a2e-847c-a7271a49cf03")
-	)
-	(wire
-		(pts
 			(xy 134.62 167.132) (xy 134.62 166.116)
 		)
 		(stroke
@@ -3847,16 +3487,6 @@
 			(type default)
 		)
 		(uuid "30fe44b5-da07-4782-b41c-7fd0b9434871")
-	)
-	(wire
-		(pts
-			(xy 280.924 130.048) (xy 280.924 132.842)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31a0c734-7022-47de-b281-87bced39f3f3")
 	)
 	(wire
 		(pts
@@ -3880,7 +3510,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.748 80.264) (xy 269.748 81.026)
+			(xy 257.81 81.534) (xy 257.81 82.296)
 		)
 		(stroke
 			(width 0)
@@ -3890,7 +3520,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.872 80.264) (xy 245.872 83.566)
+			(xy 233.934 81.534) (xy 233.934 84.836)
 		)
 		(stroke
 			(width 0)
@@ -3920,7 +3550,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.156 78.486) (xy 233.426 78.486)
+			(xy 220.218 79.756) (xy 221.488 79.756)
 		)
 		(stroke
 			(width 0)
@@ -3930,23 +3560,23 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 124.46) (xy 236.982 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "402e2ffb-d271-4564-8cb0-97dd4d4b2429")
-	)
-	(wire
-		(pts
-			(xy 201.422 68.326) (xy 201.422 65.786)
+			(xy 189.484 69.596) (xy 189.484 67.056)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4486ff6f-2bd2-4ee3-aa96-56e975c175ba")
+	)
+	(wire
+		(pts
+			(xy 270.256 118.364) (xy 270.256 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "492307dc-a3b3-42e7-96a5-f3b3e9aa6173")
 	)
 	(wire
 		(pts
@@ -3960,17 +3590,7 @@
 	)
 	(wire
 		(pts
-			(xy 260.604 130.048) (xy 260.604 134.112)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4bdf6b1a-41b5-4823-82b7-3dc4675f14da")
-	)
-	(wire
-		(pts
-			(xy 193.294 76.2) (xy 193.294 76.708)
+			(xy 181.356 77.47) (xy 181.356 77.978)
 		)
 		(stroke
 			(width 0)
@@ -3980,13 +3600,23 @@
 	)
 	(wire
 		(pts
-			(xy 203.962 78.486) (xy 205.486 78.486)
+			(xy 192.024 79.756) (xy 193.548 79.756)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "4d57d19b-7b1a-4c64-8408-8a2a25aa0f96")
+	)
+	(wire
+		(pts
+			(xy 209.55 124.46) (xy 210.566 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e0a89ec-3ac4-4a25-a369-d0c0555f8eac")
 	)
 	(wire
 		(pts
@@ -4020,7 +3650,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.294 76.708) (xy 193.294 77.978)
+			(xy 181.356 77.978) (xy 181.356 79.248)
 		)
 		(stroke
 			(width 0)
@@ -4030,7 +3660,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.152 76.708) (xy 200.152 73.406)
+			(xy 188.214 77.978) (xy 188.214 74.676)
 		)
 		(stroke
 			(width 0)
@@ -4050,7 +3680,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.294 85.598) (xy 193.294 86.36)
+			(xy 181.356 86.868) (xy 181.356 87.63)
 		)
 		(stroke
 			(width 0)
@@ -4060,7 +3690,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.118 65.786) (xy 182.118 68.326)
+			(xy 170.18 67.056) (xy 170.18 69.596)
 		)
 		(stroke
 			(width 0)
@@ -4100,26 +3730,6 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 141.732) (xy 236.982 141.732)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fa4d136-8054-4ac8-802d-552ecc7baa8c")
-	)
-	(wire
-		(pts
-			(xy 214.376 141.732) (xy 215.9 141.732)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "81bf06dd-62d6-467d-b37f-809d822b4d94")
-	)
-	(wire
-		(pts
 			(xy 102.108 180.34) (xy 103.886 180.34)
 		)
 		(stroke
@@ -4127,6 +3737,16 @@
 			(type default)
 		)
 		(uuid "837e8c46-5bfb-416d-af20-94a9995d3e6c")
+	)
+	(wire
+		(pts
+			(xy 268.986 73.66) (xy 268.986 69.596)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "864be739-a7e9-4198-be63-b975de9c8cd6")
 	)
 	(wire
 		(pts
@@ -4140,7 +3760,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.294 76.708) (xy 200.152 76.708)
+			(xy 181.356 77.978) (xy 188.214 77.978)
 		)
 		(stroke
 			(width 0)
@@ -4150,7 +3770,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.294 58.42) (xy 258.318 58.42)
+			(xy 181.356 59.69) (xy 246.38 59.69)
 		)
 		(stroke
 			(width 0)
@@ -4160,7 +3780,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.872 68.326) (xy 245.872 72.644)
+			(xy 233.934 69.596) (xy 233.934 73.914)
 		)
 		(stroke
 			(width 0)
@@ -4170,7 +3790,27 @@
 	)
 	(wire
 		(pts
-			(xy 232.156 73.406) (xy 233.426 73.406)
+			(xy 209.296 141.732) (xy 210.058 141.732)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96dac659-e39c-457d-b397-35e67a876256")
+	)
+	(wire
+		(pts
+			(xy 270.256 147.574) (xy 270.256 148.336)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ba281fb-50ac-48f5-89c1-da4e756d8af2")
+	)
+	(wire
+		(pts
+			(xy 220.218 74.676) (xy 221.488 74.676)
 		)
 		(stroke
 			(width 0)
@@ -4190,6 +3830,16 @@
 	)
 	(wire
 		(pts
+			(xy 258.318 128.016) (xy 258.318 128.778)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1559faf-033c-4171-88bb-d0e0dc7b3c8a")
+	)
+	(wire
+		(pts
 			(xy 33.274 169.164) (xy 39.37 169.164)
 		)
 		(stroke
@@ -4200,13 +3850,23 @@
 	)
 	(wire
 		(pts
-			(xy 193.294 68.58) (xy 193.294 58.42)
+			(xy 181.356 69.85) (xy 181.356 59.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "abccd2bf-741c-41cf-81cc-af0ab898228a")
+	)
+	(wire
+		(pts
+			(xy 268.986 81.28) (xy 268.986 82.042)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb57144-a15b-44aa-92f2-1d10c5cafa4a")
 	)
 	(wire
 		(pts
@@ -4230,7 +3890,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.748 68.326) (xy 258.318 68.326)
+			(xy 257.81 69.596) (xy 246.38 69.596)
 		)
 		(stroke
 			(width 0)
@@ -4260,7 +3920,7 @@
 	)
 	(wire
 		(pts
-			(xy 258.318 80.01) (xy 258.318 80.772)
+			(xy 246.38 81.28) (xy 246.38 82.042)
 		)
 		(stroke
 			(width 0)
@@ -4280,13 +3940,23 @@
 	)
 	(wire
 		(pts
-			(xy 258.318 68.326) (xy 255.524 68.326)
+			(xy 246.38 69.596) (xy 243.586 69.596)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c3d1aab3-0353-4786-956b-6bdce666cc8a")
+	)
+	(wire
+		(pts
+			(xy 270.256 119.38) (xy 270.256 122.174)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4f8f85b-d850-48b5-a678-e00f055e178e")
 	)
 	(wire
 		(pts
@@ -4300,7 +3970,7 @@
 	)
 	(wire
 		(pts
-			(xy 205.486 68.326) (xy 201.422 68.326)
+			(xy 193.548 69.596) (xy 189.484 69.596)
 		)
 		(stroke
 			(width 0)
@@ -4330,7 +4000,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.426 73.406) (xy 233.426 78.486)
+			(xy 221.488 74.676) (xy 221.488 79.756)
 		)
 		(stroke
 			(width 0)
@@ -4340,7 +4010,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.422 65.786) (xy 182.118 65.786)
+			(xy 189.484 67.056) (xy 170.18 67.056)
 		)
 		(stroke
 			(width 0)
@@ -4380,7 +4050,17 @@
 	)
 	(wire
 		(pts
-			(xy 269.748 72.644) (xy 269.748 68.326)
+			(xy 225.806 124.46) (xy 227.076 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e054c823-c628-4b34-8ef8-7e41f40aec75")
+	)
+	(wire
+		(pts
+			(xy 257.81 73.914) (xy 257.81 69.596)
 		)
 		(stroke
 			(width 0)
@@ -4390,7 +4070,17 @@
 	)
 	(wire
 		(pts
-			(xy 182.118 75.946) (xy 182.118 78.232)
+			(xy 258.318 120.396) (xy 258.318 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6699c09-5680-4f62-a4c7-b52806896db0")
+	)
+	(wire
+		(pts
+			(xy 170.18 77.216) (xy 170.18 79.502)
 		)
 		(stroke
 			(width 0)
@@ -4400,23 +4090,13 @@
 	)
 	(wire
 		(pts
-			(xy 232.156 68.326) (xy 245.872 68.326)
+			(xy 220.218 69.596) (xy 233.934 69.596)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "eaf055e2-5aff-41a5-b329-b914d6382931")
-	)
-	(wire
-		(pts
-			(xy 260.604 128.016) (xy 260.604 130.048)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ecec8bdd-d765-44cd-aebc-6d84988b6a21")
 	)
 	(wire
 		(pts
@@ -4430,7 +4110,17 @@
 	)
 	(wire
 		(pts
-			(xy 258.318 68.326) (xy 258.318 72.39)
+			(xy 225.298 141.732) (xy 227.076 141.732)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f148bbf5-e3c5-4906-b96f-d561591547ae")
+	)
+	(wire
+		(pts
+			(xy 246.38 69.596) (xy 246.38 73.66)
 		)
 		(stroke
 			(width 0)
@@ -4450,7 +4140,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.156 83.566) (xy 232.156 86.614)
+			(xy 220.218 84.836) (xy 220.218 87.884)
 		)
 		(stroke
 			(width 0)
@@ -4505,7 +4195,7 @@
 		(uuid 5373f7a2-0566-4aa3-b3e1-86665c46ff32)
 	)
 	(rectangle
-		(start 172.466 48.26)
+		(start 166.37 48.26)
 		(end 282.702 103.124)
 		(stroke
 			(width 0)
@@ -4518,7 +4208,7 @@
 	)
 	(text "FB pin is held at 1.276V (datasheet p. 4)"
 		(exclude_from_sim no)
-		(at 199.898 95.758 0)
+		(at 187.96 97.028 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4641,7 +4331,7 @@
 	)
 	(global_label "PIXELS_MATRIX_5V"
 		(shape output)
-		(at 236.982 124.46 0)
+		(at 227.076 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4651,7 +4341,7 @@
 		)
 		(uuid "29c2bb59-12a9-4990-ae03-fd112d3895c1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 257.2633 124.46 0)
+			(at 247.3573 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4773,7 +4463,7 @@
 	)
 	(global_label "PIXELS_MAIN_5V"
 		(shape output)
-		(at 236.982 141.732 0)
+		(at 227.076 141.732 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4783,7 +4473,7 @@
 		)
 		(uuid "50f25792-1a0e-42ad-8ce5-1e0f9113a66d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 255.1467 141.732 0)
+			(at 245.2407 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5081,7 +4771,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 203.962 78.486 0)
+		(at 192.024 79.756 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5090,7 +4780,7 @@
 		(fields_autoplaced yes)
 		(uuid "02f0e382-95ad-4ce0-b95a-3309595b9ce9")
 		(property "Reference" "#PWR0847"
-			(at 203.962 84.836 0)
+			(at 192.024 86.106 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5099,7 +4789,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 203.962 82.296 0)
+			(at 192.024 83.566 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5108,7 +4798,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.962 78.486 0)
+			(at 192.024 79.756 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5117,7 +4807,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.962 78.486 0)
+			(at 192.024 79.756 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5126,7 +4816,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.962 78.486 0)
+			(at 192.024 79.756 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5213,43 +4903,33 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 204.724 157.48 0)
-		(unit 5)
+		(lib_id "4xxx:40106")
+		(at 218.44 155.448 0)
+		(unit 6)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "06c0ca86-7349-44f2-9a77-a602676c6602")
+		(uuid "0ab0318c-1b02-4ed9-b994-0ff8d26ff7df")
 		(property "Reference" "U801"
-			(at 204.724 148.082 0)
+			(at 218.44 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "CD40106BPWR"
-			(at 209.804 163.83 0)
+		(property "Value" "40106"
+			(at 218.44 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 226.314 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 205.994 157.48 0)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 218.44 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5257,8 +4937,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 204.724 157.48 0)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 218.44 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5266,125 +4946,69 @@
 				(hide yes)
 			)
 		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 202.184 165.354 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 202.184 166.878 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 202.184 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 211.074 170.18 0)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 218.44 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 208.534 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 204.724 150.622 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 204.724 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc98")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5acdc")
 		)
 		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee57")
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220b9")
 		)
 		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9f6")
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28be8")
 		)
 		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1ef")
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b46c")
 		)
 		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94bffe")
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc90a")
 		)
 		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e97f")
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451ce")
 		)
 		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a7135")
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a8956")
 		)
 		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972ddf")
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c1")
 		)
 		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b627")
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a11967")
 		)
 		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac09980a")
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d220627")
 		)
 		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685ab")
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869f9")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc0a")
 		)
 		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada33")
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a5939")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181980")
 		)
 		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb2")
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afd4")
 		)
 		(instances
 			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "U801")
-					(unit 5)
+					(unit 6)
 				)
 			)
 		)
 	)
 	(symbol
 		(lib_id "Device:L")
-		(at 245.872 76.454 0)
+		(at 233.934 77.724 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5393,7 +5017,7 @@
 		(fields_autoplaced yes)
 		(uuid "0f897fb6-2634-4a3f-b13f-8fc53113b259")
 		(property "Reference" "L801"
-			(at 247.523 75.184 0)
+			(at 235.585 76.454 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5402,7 +5026,7 @@
 			)
 		)
 		(property "Value" "22uH"
-			(at 247.523 77.724 0)
+			(at 235.585 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5411,7 +5035,7 @@
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_Changjiang_FNR4010S"
-			(at 245.872 76.454 0)
+			(at 233.934 77.724 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5420,7 +5044,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.872 76.454 0)
+			(at 233.934 77.724 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5429,7 +5053,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 245.872 76.454 0)
+			(at 233.934 77.724 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5453,87 +5077,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 260.604 137.922 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1b00de29-1651-41b9-b0f1-20ac6b44ca51")
-		(property "Reference" "C801"
-			(at 263.906 136.6519 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 263.906 139.1919 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 261.5692 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 260.604 137.922 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 260.604 137.922 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5ad9e7e2-0a72-47e2-871f-d0e31918c35e")
-		)
-		(pin "1"
-			(uuid "b669b1d6-79c4-4fd3-927f-f248ffc41d09")
-		)
-		(instances
-			(project ""
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "C801")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5VP")
-		(at 260.604 128.016 0)
+		(at 270.256 118.364 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1f4fe2d0-4365-4a89-b1b8-831770181193")
-		(property "Reference" "#PWR0841"
-			(at 260.604 131.826 0)
+		(uuid "135ab912-a779-4295-a095-5fea60005fe4")
+		(property "Reference" "#PWR0840"
+			(at 270.256 122.174 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5542,7 +5096,7 @@
 			)
 		)
 		(property "Value" "+5VP"
-			(at 260.604 122.936 0)
+			(at 270.256 113.284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5550,7 +5104,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.604 128.016 0)
+			(at 270.256 118.364 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5559,7 +5113,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.604 128.016 0)
+			(at 270.256 118.364 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5568,7 +5122,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 260.604 128.016 0)
+			(at 270.256 118.364 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5577,12 +5131,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6d38b5e7-4558-42b3-9dde-22feb1c065e9")
+			(uuid "9e3171fc-f90a-4422-84ba-0bb68d8e10fe")
 		)
 		(instances
-			(project ""
+			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "#PWR0841")
+					(reference "#PWR0840")
 					(unit 1)
 				)
 			)
@@ -5590,7 +5144,7 @@
 	)
 	(symbol
 		(lib_id "cs5173:CS5173")
-		(at 216.916 75.946 0)
+		(at 204.978 77.216 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5599,7 +5153,7 @@
 		(fields_autoplaced yes)
 		(uuid "22d0c133-f287-45d8-bb49-d2abd4b0c6a1")
 		(property "Reference" "U802"
-			(at 218.821 61.214 0)
+			(at 206.883 62.484 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5607,7 +5161,7 @@
 			)
 		)
 		(property "Value" "CS5173"
-			(at 218.821 63.754 0)
+			(at 206.883 65.024 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5615,7 +5169,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 216.916 75.946 0)
+			(at 204.978 77.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5624,7 +5178,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 216.916 75.946 0)
+			(at 204.978 77.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5633,7 +5187,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 216.916 75.946 0)
+			(at 204.978 77.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5676,7 +5230,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 193.294 81.788 0)
+		(at 181.356 83.058 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5685,7 +5239,7 @@
 		(fields_autoplaced yes)
 		(uuid "292caad8-9db1-463d-8493-9cde7330cc36")
 		(property "Reference" "R802"
-			(at 195.072 80.5179 0)
+			(at 183.134 81.7879 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5694,7 +5248,7 @@
 			)
 		)
 		(property "Value" "5k1"
-			(at 195.072 83.0579 0)
+			(at 183.134 84.3279 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5703,7 +5257,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 194.31 82.042 90)
+			(at 182.372 83.312 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5712,7 +5266,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 193.294 81.788 0)
+			(at 181.356 83.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5721,7 +5275,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 193.294 81.788 0)
+			(at 181.356 83.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5746,7 +5300,7 @@
 	)
 	(symbol
 		(lib_id "power:+5VP")
-		(at 258.318 56.896 0)
+		(at 246.38 58.166 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5755,7 +5309,7 @@
 		(fields_autoplaced yes)
 		(uuid "30e08087-de6a-4977-8cb8-8af0fc931b02")
 		(property "Reference" "#PWR0850"
-			(at 258.318 60.706 0)
+			(at 246.38 61.976 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5764,7 +5318,7 @@
 			)
 		)
 		(property "Value" "+5VP"
-			(at 258.318 51.816 0)
+			(at 246.38 53.086 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5772,7 +5326,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 258.318 56.896 0)
+			(at 246.38 58.166 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5781,7 +5335,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 258.318 56.896 0)
+			(at 246.38 58.166 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5790,7 +5344,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 258.318 56.896 0)
+			(at 246.38 58.166 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5970,43 +5524,33 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 226.06 124.46 0)
-		(unit 2)
+		(lib_id "4xxx:40106")
+		(at 201.676 155.448 0)
+		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3bb9e08c-7ee6-4b1b-a292-4daadb5129c4")
+		(uuid "3b029401-8ff3-48af-9600-b610de8e14ad")
 		(property "Reference" "U801"
-			(at 226.06 114.554 0)
+			(at 201.676 147.066 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "CD40106BPWR"
-			(at 231.14 130.81 0)
+		(property "Value" "40106"
+			(at 201.676 149.606 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 247.65 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 227.33 124.46 0)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 201.676 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6014,8 +5558,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 226.06 124.46 0)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 201.676 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6023,125 +5567,173 @@
 				(hide yes)
 			)
 		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 223.52 132.334 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 223.52 133.858 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 223.52 135.382 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 232.41 137.16 0)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 201.676 155.448 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 229.87 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 226.06 117.094 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 226.06 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc99")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5acdd")
 		)
 		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee58")
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220ba")
 		)
 		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9f7")
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28be9")
 		)
 		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1f0")
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b46d")
 		)
 		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94bfff")
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc90b")
 		)
 		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e980")
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451cf")
 		)
 		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a7136")
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a8957")
 		)
 		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972de0")
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c2")
 		)
 		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b628")
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a11968")
 		)
 		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac09980b")
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d220628")
 		)
 		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685ac")
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869fa")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc0b")
 		)
 		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada34")
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a593a")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181981")
 		)
 		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb3")
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afd5")
 		)
 		(instances
 			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "U801")
-					(unit 2)
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "4xxx:40106")
+		(at 201.93 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ce1104e-ec0e-4e19-b5a1-0f87e995bbf5")
+		(property "Reference" "U801"
+			(at 201.93 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "40106"
+			(at 201.93 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 201.93 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 201.93 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 201.93 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220bb")
+		)
+		(pin "6"
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28bea")
+		)
+		(pin "8"
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b46e")
+		)
+		(pin "9"
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc90c")
+		)
+		(pin "10"
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451d0")
+		)
+		(pin "11"
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a8958")
+		)
+		(pin "12"
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c3")
+		)
+		(pin "13"
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a11969")
+		)
+		(pin "14"
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d220629")
+		)
+		(pin "7"
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869fb")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc0c")
+		)
+		(pin "2"
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a593b")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181982")
+		)
+		(pin "1"
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afd6")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "U801")
+					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
-		(at 251.714 68.326 180)
+		(at 239.776 69.596 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6150,7 +5742,7 @@
 		(fields_autoplaced yes)
 		(uuid "4149f091-ba14-437e-b0d6-9ed28fea3c81")
 		(property "Reference" "D801"
-			(at 252.0315 62.484 0)
+			(at 240.0935 63.754 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6158,7 +5750,7 @@
 			)
 		)
 		(property "Value" "PMEG3030"
-			(at 252.0315 65.024 0)
+			(at 240.0935 66.294 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6166,7 +5758,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 251.714 68.326 0)
+			(at 239.776 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6175,7 +5767,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 251.714 68.326 0)
+			(at 239.776 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6184,7 +5776,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 251.714 68.326 0)
+			(at 239.776 69.596 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6203,6 +5795,112 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "D801")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "4xxx:40106")
+		(at 270.256 134.874 0)
+		(unit 7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "428c154c-1d71-4ad9-9c38-1a432538acd9")
+		(property "Reference" "U801"
+			(at 276.098 133.6039 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "40106"
+			(at 276.098 136.1439 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 270.256 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 270.256 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 270.256 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220bc")
+		)
+		(pin "6"
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28beb")
+		)
+		(pin "8"
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b46f")
+		)
+		(pin "9"
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc90d")
+		)
+		(pin "10"
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451d1")
+		)
+		(pin "11"
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a8959")
+		)
+		(pin "12"
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c4")
+		)
+		(pin "13"
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a1196a")
+		)
+		(pin "14"
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d22062a")
+		)
+		(pin "7"
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869fc")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc0d")
+		)
+		(pin "2"
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a593c")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181983")
+		)
+		(pin "1"
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afd7")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "U801")
+					(unit 7)
 				)
 			)
 		)
@@ -6279,43 +5977,33 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 204.216 141.732 0)
-		(unit 3)
+		(lib_id "4xxx:40106")
+		(at 217.678 141.732 0)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5147194c-0de0-446a-b5bb-5c37d56596a2")
+		(uuid "4bc77a8c-360c-4e5e-814c-71c840bb6aec")
 		(property "Reference" "U801"
-			(at 204.216 131.572 0)
+			(at 217.678 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "CD40106BPWR"
-			(at 209.296 148.082 0)
+		(property "Value" "40106"
+			(at 217.678 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 225.806 159.512 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 205.486 141.732 0)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 217.678 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6323,8 +6011,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 204.216 141.732 0)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 217.678 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6332,304 +6020,78 @@
 				(hide yes)
 			)
 		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 201.676 149.606 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 201.676 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 201.676 152.654 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 210.566 154.432 0)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 217.678 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 208.026 156.972 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 204.216 134.112 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 204.216 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc9a")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5acde")
 		)
 		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee59")
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220bd")
 		)
 		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9f8")
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28bec")
 		)
 		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1f1")
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b470")
 		)
 		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94c000")
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc90e")
 		)
 		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e981")
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451d2")
 		)
 		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a7137")
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a895a")
 		)
 		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972de1")
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c5")
 		)
 		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b629")
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a1196b")
 		)
 		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac09980c")
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d22062b")
 		)
 		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685ad")
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869fd")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc0e")
 		)
 		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada35")
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a593d")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181984")
 		)
 		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb4")
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afd8")
 		)
 		(instances
 			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "U801")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 270.764 130.048 0)
-		(unit 7)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "66cd198d-20ca-4a90-ab0d-d668b776d4a8")
-		(property "Reference" "U801"
-			(at 270.764 122.936 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CD40106BPWR"
-			(at 275.844 136.398 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 292.354 147.828 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 272.034 130.048 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 270.764 130.048 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 268.224 137.922 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 268.224 139.446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 268.224 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 277.114 142.748 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 274.574 145.288 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 270.764 125.476 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 270.764 130.048 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc9b")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5acdf")
-		)
-		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee5a")
-		)
-		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9f9")
-		)
-		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1f2")
-		)
-		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94c001")
-		)
-		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e982")
-		)
-		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a7138")
-		)
-		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972de2")
-		)
-		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b62a")
-		)
-		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac09980d")
-		)
-		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685ae")
-		)
-		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada36")
-		)
-		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb5")
-		)
-		(instances
-			(project ""
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "U801")
-					(unit 7)
+					(unit 4)
 				)
 			)
 		)
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 182.118 86.614 0)
+		(at 268.986 82.042 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "66d1752a-6e03-4784-b474-fc29540027b3")
-		(property "Reference" "#PWR0848"
-			(at 182.118 92.964 0)
+		(uuid "60409a3b-24df-408c-b2d7-50870010d916")
+		(property "Reference" "#PWR0869"
+			(at 268.986 88.392 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6638,7 +6100,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 182.118 90.424 0)
+			(at 268.986 85.852 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6647,7 +6109,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 182.118 86.614 0)
+			(at 268.986 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6656,7 +6118,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 182.118 86.614 0)
+			(at 268.986 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6665,7 +6127,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 182.118 86.614 0)
+			(at 268.986 82.042 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6eed3861-73e1-4b2c-8e4c-ccf17209eb98")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "#PWR0869")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170.18 87.884 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "66d1752a-6e03-4784-b474-fc29540027b3")
+		(property "Reference" "#PWR0848"
+			(at 170.18 94.234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 170.18 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 87.884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 87.884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.18 87.884 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6820,187 +6349,17 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 227.076 157.48 0)
-		(unit 6)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "734d661d-9e59-405a-a102-65e4d715020d")
-		(property "Reference" "U801"
-			(at 227.076 148.082 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CD40106BPWR"
-			(at 232.156 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 248.666 175.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 228.346 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 227.076 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 224.536 165.354 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 224.536 166.878 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 224.536 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 233.426 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 230.886 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 227.076 150.622 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 227.076 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc9c")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5ace0")
-		)
-		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee5b")
-		)
-		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9fa")
-		)
-		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1f3")
-		)
-		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94c002")
-		)
-		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e983")
-		)
-		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a7139")
-		)
-		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972de3")
-		)
-		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b62b")
-		)
-		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac09980e")
-		)
-		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685af")
-		)
-		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada37")
-		)
-		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb6")
-		)
-		(instances
-			(project ""
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "U801")
-					(unit 6)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 260.604 142.494 0)
+		(at 258.318 128.778 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8246bfdd-80c8-471f-bb3c-6176e62b0277")
-		(property "Reference" "#PWR0842"
-			(at 260.604 148.844 0)
+		(uuid "7fe9e65f-b422-4595-83da-39372584190e")
+		(property "Reference" "#PWR0841"
+			(at 258.318 135.128 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7009,7 +6368,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 260.604 146.304 0)
+			(at 258.318 132.588 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7018,7 +6377,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.604 142.494 0)
+			(at 258.318 128.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7027,7 +6386,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.604 142.494 0)
+			(at 258.318 128.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7036,7 +6395,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 260.604 142.494 0)
+			(at 258.318 128.778 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7045,12 +6404,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d4d6d977-2dc3-45ef-b22b-9eea8048a2a5")
+			(uuid "58d1ce88-95c9-4230-b974-4fc9cece008b")
 		)
 		(instances
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "#PWR0842")
+					(reference "#PWR0841")
 					(unit 1)
 				)
 			)
@@ -7118,176 +6477,6 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "#PWR0816")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 226.06 141.732 0)
-		(unit 4)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "88568ee2-b09e-43b1-8052-1896af394a6d")
-		(property "Reference" "U801"
-			(at 226.06 131.572 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CD40106BPWR"
-			(at 231.14 148.082 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 247.65 159.512 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 227.33 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 226.06 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 223.52 149.606 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 223.52 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 223.52 152.654 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 232.41 154.432 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 229.87 156.972 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 226.06 134.112 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 226.06 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc9d")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5ace1")
-		)
-		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee5c")
-		)
-		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9fb")
-		)
-		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1f4")
-		)
-		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94c003")
-		)
-		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e984")
-		)
-		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a713a")
-		)
-		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972de4")
-		)
-		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b62c")
-		)
-		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac09980f")
-		)
-		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685b0")
-		)
-		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada38")
-		)
-		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb7")
-		)
-		(instances
-			(project ""
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "U801")
-					(unit 4)
 				)
 			)
 		)
@@ -7448,75 +6637,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 280.924 132.842 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9213f40b-3e29-4bc6-a718-0d0332c669b2")
-		(property "Reference" "#PWR0840"
-			(at 280.924 139.192 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDA"
-			(at 280.924 136.652 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 280.924 132.842 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 280.924 132.842 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 280.924 132.842 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bdb93b2d-ec62-44d3-bec4-32bd3ad1f167")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "#PWR0840")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
-		(at 193.294 72.39 0)
+		(at 181.356 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7525,7 +6647,7 @@
 		(fields_autoplaced yes)
 		(uuid "a3acdc10-7290-4824-b333-454ea9db16fe")
 		(property "Reference" "R801"
-			(at 195.072 71.1199 0)
+			(at 183.134 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7534,7 +6656,7 @@
 			)
 		)
 		(property "Value" "15k"
-			(at 195.072 73.6599 0)
+			(at 183.134 74.9299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7543,7 +6665,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 194.31 72.644 90)
+			(at 182.372 73.914 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7552,7 +6674,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 193.294 72.39 0)
+			(at 181.356 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7561,7 +6683,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 193.294 72.39 0)
+			(at 181.356 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7586,7 +6708,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 258.318 80.772 0)
+		(at 246.38 82.042 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7595,7 +6717,7 @@
 		(fields_autoplaced yes)
 		(uuid "a8fd3457-dda5-4ea4-9aa4-752eb8b4ef49")
 		(property "Reference" "#PWR0849"
-			(at 258.318 87.122 0)
+			(at 246.38 88.392 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7604,7 +6726,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 258.318 84.582 0)
+			(at 246.38 85.852 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7613,7 +6735,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 258.318 80.772 0)
+			(at 246.38 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7622,7 +6744,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 258.318 80.772 0)
+			(at 246.38 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7631,7 +6753,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 258.318 80.772 0)
+			(at 246.38 82.042 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7653,7 +6775,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 193.294 86.36 0)
+		(at 181.356 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7662,7 +6784,7 @@
 		(fields_autoplaced yes)
 		(uuid "a9c8b10b-c0d5-4d42-ba79-0e8f457008ef")
 		(property "Reference" "#PWR0846"
-			(at 193.294 92.71 0)
+			(at 181.356 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7671,7 +6793,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 193.294 90.17 0)
+			(at 181.356 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7680,7 +6802,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.294 86.36 0)
+			(at 181.356 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7689,7 +6811,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.294 86.36 0)
+			(at 181.356 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7698,7 +6820,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.294 86.36 0)
+			(at 181.356 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7720,7 +6842,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 258.318 76.2 0)
+		(at 246.38 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7729,7 +6851,7 @@
 		(fields_autoplaced yes)
 		(uuid "abf2af86-23ea-4678-b4bf-280f7be02e85")
 		(property "Reference" "C804"
-			(at 261.874 74.9299 0)
+			(at 249.936 76.1999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7738,7 +6860,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 261.874 77.4699 0)
+			(at 249.936 78.7399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7747,7 +6869,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 259.2832 80.01 0)
+			(at 247.3452 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7756,7 +6878,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 258.318 76.2 0)
+			(at 246.38 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7765,7 +6887,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 258.318 76.2 0)
+			(at 246.38 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7789,6 +6911,110 @@
 		)
 	)
 	(symbol
+		(lib_id "4xxx:40106")
+		(at 201.676 141.732 0)
+		(unit 5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aed2d0d1-8d63-499e-a158-6425e4e2771d")
+		(property "Reference" "U801"
+			(at 201.676 132.334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "40106"
+			(at 201.676 134.874 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 201.676 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 201.676 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 201.676 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220be")
+		)
+		(pin "6"
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28bed")
+		)
+		(pin "8"
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b471")
+		)
+		(pin "9"
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc90f")
+		)
+		(pin "10"
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451d3")
+		)
+		(pin "11"
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a895b")
+		)
+		(pin "12"
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c6")
+		)
+		(pin "13"
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a1196c")
+		)
+		(pin "14"
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d22062c")
+		)
+		(pin "7"
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869fe")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc0f")
+		)
+		(pin "2"
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a593e")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181985")
+		)
+		(pin "1"
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afd9")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "U801")
+					(unit 5)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Potentiometer_US")
 		(at 158.242 170.434 0)
 		(mirror y)
@@ -7797,7 +7023,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b43bdfc4-f520-42bb-b5a9-a0e817930969")
 		(property "Reference" "RV801"
 			(at 161.036 169.164 0)
@@ -7864,34 +7089,34 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 182.118 72.136 0)
-		(mirror y)
+		(at 258.318 124.206 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "be9e92de-c6c4-455c-b201-2d8f7dc82ccb")
-		(property "Reference" "C803"
-			(at 185.928 70.8659 0)
+		(fields_autoplaced yes)
+		(uuid "b756029f-9af3-4b86-8906-30d3b84cde71")
+		(property "Reference" "C801"
+			(at 261.62 122.9359 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "10n"
-			(at 185.928 73.4059 0)
+		(property "Value" "100n"
+			(at 261.62 125.4759 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 181.1528 75.946 0)
+			(at 259.2832 128.016 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7900,7 +7125,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 182.118 72.136 0)
+			(at 258.318 124.206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7909,7 +7134,77 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 182.118 72.136 0)
+			(at 258.318 124.206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "036263cf-438a-4213-b0a9-d3ca3c239910")
+		)
+		(pin "1"
+			(uuid "13fd6301-eb9b-4e62-ba99-9877a362440a")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "C801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 170.18 73.406 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "be9e92de-c6c4-455c-b201-2d8f7dc82ccb")
+		(property "Reference" "C803"
+			(at 173.99 72.1359 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10n"
+			(at 173.99 74.6759 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 169.2148 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 170.18 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 170.18 73.406 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7927,6 +7222,180 @@
 			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "C803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "4xxx:40106")
+		(at 218.186 124.46 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c35d099a-92a3-4250-9308-997f0ad242f5")
+		(property "Reference" "U801"
+			(at 218.186 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "40106"
+			(at 218.186 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 218.186 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/HEF40106B.pdf"
+			(at 218.186 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hex Schmitt trigger inverter"
+			(at 218.186 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "7d6da1da-3802-4e34-a0b1-08a8b43220bf")
+		)
+		(pin "6"
+			(uuid "932da3bb-7088-4430-9c6c-8bb102e28bee")
+		)
+		(pin "8"
+			(uuid "0320a65f-0ce1-4fb1-8713-495b0976b472")
+		)
+		(pin "9"
+			(uuid "deb8c56c-567b-4f12-8570-f939003fc910")
+		)
+		(pin "10"
+			(uuid "f8d08182-5354-4cc8-90f9-06565e8451d4")
+		)
+		(pin "11"
+			(uuid "af1b658b-4b96-4c6d-9edd-b7b3184a895c")
+		)
+		(pin "12"
+			(uuid "0c925fe8-1ccc-4b87-98df-b855bed526c7")
+		)
+		(pin "13"
+			(uuid "c4bafccb-95f9-491e-b30b-8c4ed2a1196d")
+		)
+		(pin "14"
+			(uuid "87daf2e5-eb38-4f1b-ba4d-86157d22062d")
+		)
+		(pin "7"
+			(uuid "02b55703-b36f-4b0b-854a-d0f9846869ff")
+		)
+		(pin "3"
+			(uuid "3e28af33-b96e-4c7a-bd56-e608e525cc10")
+		)
+		(pin "2"
+			(uuid "781b7a19-836c-4403-8a0e-50cf468a593f")
+		)
+		(pin "4"
+			(uuid "9622818f-ab1d-4133-8f62-48d2d8181986")
+		)
+		(pin "1"
+			(uuid "5c384810-c893-411e-8ee1-2997a0d6afda")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "U801")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 268.986 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c92eac48-608e-4031-a4aa-b121fad52f14")
+		(property "Reference" "C806"
+			(at 273.05 76.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 273.05 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 269.9512 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 268.986 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 268.986 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "801c2199-f3b2-4ea6-8446-33ebda3847dc")
+		)
+		(pin "1"
+			(uuid "2df5ad7a-c823-4f0a-8cf1-546c9a789104")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "C806")
 					(unit 1)
 				)
 			)
@@ -7994,176 +7463,6 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(reference "#PWR0821")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "PCM_4ms_IC:CD40106BPWR")
-		(at 204.47 124.46 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cfe80a7c-8dc2-410d-8757-2403d6b579b2")
-		(property "Reference" "U801"
-			(at 204.47 114.554 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CD40106BPWR"
-			(at 209.55 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14-16_3.9x9.9mm_P1.27mm"
-			(at 226.06 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/cd40106b.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1624570529286&ref_url=https%253A%252F%252Fwww.mouser.com%252F"
-			(at 205.74 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 204.47 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Specifications" "CMOS, Hex Inverting Schmitt Trigger, TSSOP-14"
-			(at 201.93 132.334 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 201.93 133.858 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Part Number" "CD40106BPWR"
-			(at 201.93 135.382 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer 2" "Texas Instruments"
-			(at 210.82 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Number 2" "CD40106BPWR"
-			(at 208.28 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Display" "40106"
-			(at 204.47 117.094 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB ID" "C58834"
-			(at 204.47 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "e7378cfb-93e3-4226-ae8f-99ffc8a1dc9e")
-		)
-		(pin "4"
-			(uuid "f0dfac5e-d31b-4e7c-a60a-7450bbd5ace2")
-		)
-		(pin "5"
-			(uuid "1ac2c7ae-d54c-4ce8-822b-2f8f75c8ee5d")
-		)
-		(pin "6"
-			(uuid "4e6498d2-dd46-43ad-9b57-63cf4d69d9fc")
-		)
-		(pin "8"
-			(uuid "e6033a83-e3e0-4413-9cfd-566467edd1f5")
-		)
-		(pin "9"
-			(uuid "926f7f74-594b-4844-ab50-1b603f94c004")
-		)
-		(pin "10"
-			(uuid "31540b41-93a6-48b0-9b0a-ee8fbba7e985")
-		)
-		(pin "11"
-			(uuid "b9dab19b-8250-410e-9a8b-64d3829a713b")
-		)
-		(pin "12"
-			(uuid "af8fac39-26c7-400b-937b-8bfc52972de5")
-		)
-		(pin "13"
-			(uuid "f526b800-f106-41b7-a7d6-c0ea1ba4b62d")
-		)
-		(pin "14"
-			(uuid "fad44bcc-3789-46bb-b369-e31cac099810")
-		)
-		(pin "7"
-			(uuid "3a863e39-0b8d-4863-b987-176a445685b1")
-		)
-		(pin "2"
-			(uuid "c8d1de1d-8ed6-4aae-8a44-586e58aada39")
-		)
-		(pin "1"
-			(uuid "51b82d4c-1ba2-4d1b-b69a-afaf655aadb8")
-		)
-		(instances
-			(project ""
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
-					(reference "U801")
 					(unit 1)
 				)
 			)
@@ -8248,7 +7547,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 233.426 79.248 0)
+		(at 221.488 80.518 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8257,7 +7556,7 @@
 		(fields_autoplaced yes)
 		(uuid "d86b8f12-82fc-477b-8f44-dbbf7492693c")
 		(property "Reference" "#PWR0843"
-			(at 233.426 85.598 0)
+			(at 221.488 86.868 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8266,7 +7565,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 233.426 83.058 0)
+			(at 221.488 84.328 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8275,7 +7574,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.426 79.248 0)
+			(at 221.488 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8284,7 +7583,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.426 79.248 0)
+			(at 221.488 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8293,7 +7592,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 233.426 79.248 0)
+			(at 221.488 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8315,7 +7614,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 269.748 81.026 0)
+		(at 257.81 82.296 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8324,7 +7623,7 @@
 		(fields_autoplaced yes)
 		(uuid "e0587968-b352-4ece-87bf-97792d7752ac")
 		(property "Reference" "#PWR0851"
-			(at 269.748 87.376 0)
+			(at 257.81 88.646 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8333,7 +7632,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 269.748 84.836 0)
+			(at 257.81 86.106 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8342,7 +7641,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 269.748 81.026 0)
+			(at 257.81 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8351,7 +7650,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 269.748 81.026 0)
+			(at 257.81 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8360,7 +7659,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.748 81.026 0)
+			(at 257.81 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8381,8 +7680,75 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 270.256 148.336 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e57f07c7-78b7-4745-b47f-331cdfc63a4a")
+		(property "Reference" "#PWR0842"
+			(at 270.256 154.686 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDA"
+			(at 270.256 152.146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 270.256 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 270.256 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 270.256 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65c6ca52-c092-42ee-9c40-1de2cd432b66")
+		)
+		(instances
+			(project "PolySynthSplitBoard"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
+					(reference "#PWR0842")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
-		(at 269.748 76.454 0)
+		(at 257.81 77.724 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8391,7 +7757,7 @@
 		(fields_autoplaced yes)
 		(uuid "e5c88dd0-6a8e-4579-aa2b-50072fc3ea10")
 		(property "Reference" "C805"
-			(at 273.05 75.1839 0)
+			(at 261.112 76.4539 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8400,7 +7766,7 @@
 			)
 		)
 		(property "Value" "10u"
-			(at 273.05 77.7239 0)
+			(at 261.112 78.9939 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8409,7 +7775,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 270.7132 80.264 0)
+			(at 258.7752 81.534 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8418,7 +7784,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 269.748 76.454 0)
+			(at 257.81 77.724 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8427,7 +7793,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 269.748 76.454 0)
+			(at 257.81 77.724 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8452,7 +7818,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 232.156 94.996 0)
+		(at 220.218 96.266 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8461,7 +7827,7 @@
 		(fields_autoplaced yes)
 		(uuid "e5fe528b-dddc-4aa4-b783-22603e285032")
 		(property "Reference" "#PWR0845"
-			(at 232.156 101.346 0)
+			(at 220.218 102.616 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8470,7 +7836,7 @@
 			)
 		)
 		(property "Value" "GNDA"
-			(at 232.156 98.806 0)
+			(at 220.218 100.076 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8479,7 +7845,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 232.156 94.996 0)
+			(at 220.218 96.266 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8488,7 +7854,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.156 94.996 0)
+			(at 220.218 96.266 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8497,7 +7863,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 232.156 94.996 0)
+			(at 220.218 96.266 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8519,7 +7885,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 182.118 82.042 0)
+		(at 170.18 83.312 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8527,7 +7893,7 @@
 		(dnp no)
 		(uuid "e870645c-a721-4ff1-b982-d1b676bb27ab")
 		(property "Reference" "R803"
-			(at 183.896 80.7719 0)
+			(at 171.958 82.0419 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8536,7 +7902,7 @@
 			)
 		)
 		(property "Value" "5k1"
-			(at 183.896 83.3119 0)
+			(at 171.958 84.5819 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8545,7 +7911,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 183.134 82.296 90)
+			(at 171.196 83.566 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8554,7 +7920,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 182.118 82.042 0)
+			(at 170.18 83.312 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8563,7 +7929,7 @@
 			)
 		)
 		(property "Description" "Resistor, US symbol"
-			(at 182.118 82.042 0)
+			(at 170.18 83.312 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8588,7 +7954,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 232.156 90.424 0)
+		(at 220.218 91.694 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8597,7 +7963,7 @@
 		(fields_autoplaced yes)
 		(uuid "f0e992d7-cdc4-4248-9eed-6e462609d47a")
 		(property "Reference" "C802"
-			(at 235.712 89.1539 0)
+			(at 223.774 90.4239 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8606,7 +7972,7 @@
 			)
 		)
 		(property "Value" "22u"
-			(at 235.712 91.6939 0)
+			(at 223.774 92.9639 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8615,7 +7981,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 233.1212 94.234 0)
+			(at 221.1832 95.504 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8624,7 +7990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 232.156 90.424 0)
+			(at 220.218 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8633,7 +7999,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 232.156 90.424 0)
+			(at 220.218 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8658,7 +8024,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3VP")
-		(at 239.268 83.566 0)
+		(at 227.33 84.836 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8667,7 +8033,7 @@
 		(fields_autoplaced yes)
 		(uuid "f1a6bb04-6564-4770-a143-3eb8fbf142e5")
 		(property "Reference" "#PWR0844"
-			(at 243.078 84.836 0)
+			(at 231.14 86.106 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8676,7 +8042,7 @@
 			)
 		)
 		(property "Value" "+3.3VP"
-			(at 239.268 78.994 0)
+			(at 227.33 80.264 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8684,7 +8050,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 239.268 83.566 0)
+			(at 227.33 84.836 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8693,7 +8059,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 239.268 83.566 0)
+			(at 227.33 84.836 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8702,7 +8068,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
-			(at 239.268 83.566 0)
+			(at 227.33 84.836 0)
 			(effects
 				(font
 					(size 1.27 1.27)
