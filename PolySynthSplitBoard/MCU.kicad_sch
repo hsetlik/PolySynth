@@ -10149,7 +10149,7 @@
 			)
 		)
 	)
-	(global_label "PITCH_SS"
+	(global_label "PITCH_RST_GPIO"
 		(shape output)
 		(at 138.938 242.57 0)
 		(fields_autoplaced yes)
@@ -10161,7 +10161,7 @@
 		)
 		(uuid "68ac9135-3617-4a5c-baad-cd1a47889329")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 150.7527 242.57 0)
+			(at 157.2237 242.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18767,7 +18767,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PITCH_SS"
+		(property "Value" "P_RST_GPIO"
 			(at 137.16 239.0139 0)
 			(effects
 				(font
