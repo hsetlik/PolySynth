@@ -41,7 +41,7 @@ void ADSRProcessor::gateOff() {
 
 }
 
-uint16_t ADSRProcessor::nextDACCode() {
+void ADSRProcessor::tick() {
 
 	tick_t now = TickTimer_get();
 	msSinceStateChange += TickTimer_tickDistanceMs(lastUpdateTick, now);
@@ -83,6 +83,4 @@ uint16_t ADSRProcessor::nextDACCode() {
 		break;
 	}
 	lastCode = (uint16_t) level * 4096.0f;
-	return lastCode;
-
 }

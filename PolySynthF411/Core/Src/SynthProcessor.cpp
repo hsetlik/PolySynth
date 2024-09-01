@@ -32,14 +32,21 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	}
 	for (uint8_t v = 0; v < 6; v++) {
 		if (isVoiceActive(v)) {
-	// REMEMBER the argument pointer is an array of dacLevels arranged PER VOICE
-			levels[v].currentData[DACChannel::VCA_CH] = env1Voices[v].nextDACCode();
+			env1Voices[v].tick();
+			env2Voices[v].tick();
+			// REMEMBER the argument pointer is an array of dacLevels arranged PER VOICE
+			levels[v].currentData[DACChannel::VCA_CH] = modDestValue(
+					(uint8_t) ModDest::VCA, v);
 			levels[v].currentData[DACChannel::AC1_CH] = ampComp1[v];
 			levels[v].currentData[DACChannel::AC2_CH] = ampComp2[v];
-			levels[v].currentData[DACChannel::CUTOFF_CH] = modDestValue((uint8_t) ModDest::CUTOFF, v);
-			levels[v].currentData[DACChannel::FOLD_CH] = modDestValue((uint8_t) ModDest::FOLD, v);
-			levels[v].currentData[DACChannel::PWM1_CH] = modDestValue((uint8_t) ModDest::PWM1, v);
-			levels[v].currentData[DACChannel::PWM2_CH] = modDestValue((uint8_t) ModDest::PWM2, v);
+			levels[v].currentData[DACChannel::CUTOFF_CH] = modDestValue(
+					(uint8_t) ModDest::CUTOFF, v);
+			levels[v].currentData[DACChannel::FOLD_CH] = modDestValue(
+					(uint8_t) ModDest::FOLD, v);
+			levels[v].currentData[DACChannel::PWM1_CH] = modDestValue(
+					(uint8_t) ModDest::PWM1, v);
+			levels[v].currentData[DACChannel::PWM2_CH] = modDestValue(
+					(uint8_t) ModDest::PWM2, v);
 		}
 	}
 
@@ -155,7 +162,7 @@ uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
 	case TUNE2:
 		break;
 	case VCA:
-		break;
+		return apply_mod_offset(dest, env1Voices[voice].prevDACCode(), offset);
 	default:
 		break;
 	}

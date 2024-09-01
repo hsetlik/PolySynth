@@ -51,12 +51,16 @@ void LFOProcessor::tick(){
 	switch((LFOType)params->lfoType){
 	case Sine:
 		lastCode = sineAtPhase(phase);
+		break;
 	case Triangle:
 		lastCode = triangleAtPhase(phase);
+		break;
 	case Ramp:
 		lastCode = rampAtPhase(phase);
+		break;
 	case Perlin:
 		lastCode = perlin.getNextValue(params->freq);
+		break;
 	default:
 		break;
 	}
