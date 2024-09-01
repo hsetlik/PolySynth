@@ -17,7 +17,7 @@ extern "C" {
 //==============================================================================================================
 // modulation matrix storage/logic
 #define NUM_MOD_DESTS 8
-enum ModDest {
+typedef enum {
 	CUTOFF,
 	RESONANCE,
 	FOLD,
@@ -26,11 +26,11 @@ enum ModDest {
 	TUNE1,
 	TUNE2,
 	VCA
-};
+}ModDest;
 
 #define NUM_MOD_SOURCES 9
 
-enum ModSource{
+typedef enum {
 	NONE,
 	ENV1,
 	ENV2,
@@ -40,7 +40,7 @@ enum ModSource{
 	MODWHL,
 	PITCHWHL,
 	VEL
-};
+}ModSource;
 
 /**
  * We have eight sources (not counting NONE) and eight destinations,
@@ -108,7 +108,7 @@ typedef struct{
 	float release;
 } adsr_t; // these take 16 bytes each
 
-// params for the DCOs
+// OSCILLATORS==============================================================
 #define COARSE_MIN -24
 #define COARSE_MAX 24
 
@@ -134,8 +134,25 @@ typedef struct{
 
 } dco_t; // 8 bytes each
 
-//TODO: LFO state and default values and stuff should eventually go here
+// LFO==============================================================
+#define NUM_LFO_TYPES 3
+typedef enum{
+	Sine,
+	Triangle,
+	Ramp
+} LFOType;
 
+#define LFO_FREQ_MIN 0.001f
+#define LFO_FREQ_MAX 25.0f
+#define LFO_FREQ_DEFAULT 1.5f
+
+typedef struct{
+float freq;
+uint8_t lfoType;
+} lfo_t; // 5 bytes each
+
+
+// FILTER/FOLDER==============================================================
 #define RES_MAX 4095
 #define RES_MIN 0
 #define RES_DEFAULT 200
@@ -148,7 +165,7 @@ typedef struct{
 #define FOLD_MIN 0
 #define FOLD_DEFAULT 0
 
-#define PATCH_SIZE_BYTES 185 //NOTE: this number will change when we add LFOs and stuff
+#define PATCH_SIZE_BYTES 200
 
 typedef struct {
 	uint16_t cutoffBase;
@@ -161,6 +178,8 @@ typedef struct {
 
 	dco_t oscillators[2];
 	adsr_t envelopes[2];
+
+	lfo_t lfos[3];
 
 	uint8_t useSustainPedal;
 

@@ -134,6 +134,7 @@ void Error_Handler(void);
 
 extern SPI_HandleTypeDef hspi2;
 extern SPI_HandleTypeDef hspi3;
+//extern RNG_HandleTypeDef hrng;
 
 /* USER CODE END Private defines */
 

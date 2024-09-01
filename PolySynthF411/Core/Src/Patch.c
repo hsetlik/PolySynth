@@ -119,6 +119,8 @@ patch_t getDefaultPatch(){
 	patch.oscillators[1].sawLevel = 0;
 	patch.oscillators[1].oscLevel = LEVEL_DEFAULT;
 
+
+
 	patch.envelopes[0].attack = ATTACK_DEFAULT;
 	patch.envelopes[0].decay = DECAY_DEFAULT;
 	patch.envelopes[0].sustain = SUSTAIN_DEFAULT;

@@ -253,6 +253,8 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
+  // init the RNG
+
 
   /* USER CODE END SysInit */
 
