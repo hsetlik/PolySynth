@@ -18,21 +18,28 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 		env1Voices[v].setParams(&currentPatch.envelopes[0]);
 		env2Voices[v].setParams(&currentPatch.envelopes[1]);
 	}
+	// do the same for the LFOs
+	for (uint8_t l = 0; l < 3; l++) {
+		lfos[l].setParams(&currentPatch.lfos[l]);
+	}
 
 }
 
 void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
-	// remember, the argument pointer is an array of dacLevels arranged PER VOICE
+	//tick our LFOs
+	for (uint8_t i = 0; i < 3; i++) {
+		lfos[i].tick();
+	}
 	for (uint8_t v = 0; v < 6; v++) {
 		if (isVoiceActive(v)) {
-			levels->currentData[DACChannel::VCA_CH] =
-					env1Voices[v].nextDACCode();
-			levels->currentData[DACChannel::AC1_CH] = ampComp1[v];
-			levels->currentData[DACChannel::AC2_CH] = ampComp2[v];
-			levels->currentData[DACChannel::CUTOFF_CH] = modDestValue((uint8_t)ModDest::CUTOFF, v);
-			levels->currentData[DACChannel::FOLD_CH] = modDestValue((uint8_t)ModDest::FOLD, v);
-			levels->currentData[DACChannel::PWM1_CH] = modDestValue((uint8_t)ModDest::PWM1, v);
-			levels->currentData[DACChannel::PWM2_CH] = modDestValue((uint8_t)ModDest::PWM2, v);
+	// REMEMBER the argument pointer is an array of dacLevels arranged PER VOICE
+			levels[v].currentData[DACChannel::VCA_CH] = env1Voices[v].nextDACCode();
+			levels[v].currentData[DACChannel::AC1_CH] = ampComp1[v];
+			levels[v].currentData[DACChannel::AC2_CH] = ampComp2[v];
+			levels[v].currentData[DACChannel::CUTOFF_CH] = modDestValue((uint8_t) ModDest::CUTOFF, v);
+			levels[v].currentData[DACChannel::FOLD_CH] = modDestValue((uint8_t) ModDest::FOLD, v);
+			levels[v].currentData[DACChannel::PWM1_CH] = modDestValue((uint8_t) ModDest::PWM1, v);
+			levels[v].currentData[DACChannel::PWM2_CH] = modDestValue((uint8_t) ModDest::PWM2, v);
 		}
 	}
 
@@ -126,10 +133,10 @@ void SynthProcessor::endNote(uint8_t note) {
 uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
 	mod_list_t mods = get_mods_for_dest(currentPatch.modMatrix, dest);
 	int16_t offset = 0;
-	for(uint8_t m = 0; m < mods.numMods; m++){
+	for (uint8_t m = 0; m < mods.numMods; m++) {
 		offset += modSourceOffset(mods.sources[m], dest, voice);
 	}
-	ModDest id = (ModDest)dest;
+	ModDest id = (ModDest) dest;
 	switch (id) {
 	case CUTOFF:
 		return apply_mod_offset(dest, currentPatch.cutoffBase, offset);
@@ -138,9 +145,11 @@ uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
 	case FOLD:
 		return apply_mod_offset(dest, currentPatch.foldBase, offset);
 	case PWM1:
-		return apply_mod_offset(dest, currentPatch.oscillators[0].pulseWidth, offset);
+		return apply_mod_offset(dest, currentPatch.oscillators[0].pulseWidth,
+				offset);
 	case PWM2:
-		return apply_mod_offset(dest, currentPatch.oscillators[1].pulseWidth, offset);
+		return apply_mod_offset(dest, currentPatch.oscillators[1].pulseWidth,
+				offset);
 	case TUNE1:
 		break;
 	case TUNE2:
@@ -153,10 +162,9 @@ uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
 	return 0;
 }
 
-
-uint16_t SynthProcessor::velocityValue12Bit(uint8_t voice){
-	float fVel = (float)voiceVelocity[voice] / 127.0f;
-	return (uint16_t)fVel * 4096.0f;
+uint16_t SynthProcessor::velocityValue12Bit(uint8_t voice) {
+	float fVel = (float) voiceVelocity[voice] / 127.0f;
+	return (uint16_t) fVel * 4096.0f;
 }
 
 uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
@@ -168,13 +176,11 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 		return env1Voices[voice].prevDACCode();
 		break;
 	case LFO1:
-		// TODO: lfo processors should already be ticked and return
-		// their values here
-		break;
+		return lfos[0].getCurrentValue();
 	case LFO2:
-		break;
+		return lfos[1].getCurrentValue();
 	case LFO3:
-		break;
+		return lfos[2].getCurrentValue();
 	case MODWHL:
 		return modWhlPos;
 	case PITCHWHL:
@@ -188,11 +194,11 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 	return 0;
 }
 
-
-int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest, uint8_t voice){
+int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
+		uint8_t voice) {
 	mod_t mod = get_mod(currentPatch.modMatrix, src, dest);
-	float val = (float)modSourceValue(src, voice);
-	return (int16_t)(val * ((float)get_mod_depth(mod) / 127.0f));
+	float val = (float) modSourceValue(src, voice);
+	return (int16_t) (val * ((float) get_mod_depth(mod) / 127.0f));
 }
 
 //CONTROLS==================================================================================

@@ -15,6 +15,7 @@
 #include "MIDI.h"
 #include "ControlVoltage.h"
 #include "ADSR.h"
+#include "LFO.h"
 #include "Button.h"
 #include "Encoder.h"
 #include "Graphics.h"
@@ -36,6 +37,7 @@ private:
 	uint16_t ampComp2[6];
 	ADSRProcessor env1Voices[6];
 	ADSRProcessor env2Voices[6];
+	LFOProcessor lfos[3];
 
 	// control change stuff
 	bool sustainPedalDown;
