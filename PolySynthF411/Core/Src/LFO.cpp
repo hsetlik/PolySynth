@@ -55,6 +55,8 @@ void LFOProcessor::tick(){
 		lastCode = triangleAtPhase(phase);
 	case Ramp:
 		lastCode = rampAtPhase(phase);
+	case Perlin:
+		lastCode = perlin.getNextValue(params->freq);
 	default:
 		break;
 	}

@@ -135,11 +135,12 @@ typedef struct{
 } dco_t; // 8 bytes each
 
 // LFO==============================================================
-#define NUM_LFO_TYPES 3
+#define NUM_LFO_TYPES 4
 typedef enum{
 	Sine,
 	Triangle,
-	Ramp
+	Ramp,
+	Perlin
 } LFOType;
 
 #define LFO_FREQ_MIN 0.001f

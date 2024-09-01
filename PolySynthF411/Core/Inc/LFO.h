@@ -11,7 +11,9 @@
 #include "main.h"
 #include "Patch.h"
 
+
 #ifdef __cplusplus
+#include "Perlin.h"
 
 class LFOProcessor{
 private:
@@ -19,7 +21,7 @@ private:
 	float phase;
 	uint16_t lastCode;
 	tick_t lastUpdateTick;
-
+	PerlinGen perlin;
 public:
 	LFOProcessor();
 	void setParams(lfo_t* lfo);

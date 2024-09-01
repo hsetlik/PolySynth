@@ -26,7 +26,6 @@
 #include "SynthProcessor.h"
 
 /* USER CODE END Includes */
-
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
@@ -305,6 +304,8 @@ int main(void)
 
 	// start the first interrupt receive for MIDI
 	HAL_UART_Receive_IT(&huart1, midiBuf, 3);
+
+	// seed our RNG
 
   /* USER CODE END 2 */
 
