@@ -110,6 +110,23 @@ void Component::draw(RingBuffer<DrawTask> &queue) {
 		queue.push(task);
 	}
 }
+
+//======================================================
+View::View(){
+
+}
+
+View::~View(){
+
+}
+
+void View::draw(RingBuffer<DrawTask>& queue){
+	for(uint8_t i = 0; i < children.size(); i++){
+		children[i]->draw(queue);
+	}
+}
+
+//======================================================
 //---------------------------
 Label::Label(const std::string &s) :
 		text(s), font(&Font_7x10) {
@@ -186,8 +203,7 @@ void drawStringChunk(FontDef *font, uint16_t *buf, area_t bufArea,
 void Label::drawChunk(area_t chunk, uint16_t *buf) {
 	if (!hasOverlap(area, chunk))
 		return;
-
-
+	drawStringChunk(font, buf, chunk, text, getStringArea(), txtColor, bkgndColor);
 }
 
 area_t Label::getStringArea() {
@@ -198,6 +214,88 @@ area_t Label::getStringArea() {
 	a.h = (uint16_t) font->height;
 	return a;
 }
+
+// ADSR graph===========================================
+
+float totalLengthMs(adsr_t* env){
+	return env->attack + env->decay + env->release;
+}
+
+uint16_t flerp16(uint16_t a, uint16_t b, float t){
+	return a + (uint16_t)((float)(b - a) * t);
+}
+
+// define how short/long the flat section representing sustain can be
+// depending on the length of the envelope
+#define SUSTAIN_WIDTH_MIN 0.16f
+#define SUSTAIN_WIDTH_MAX 0.84f
+
+// line math stuff----------------
+bool isLineInChunk(line_t line, area_t area){
+	point_t* left = (line.a.x < line.b.x) ? &line.a : &line.b;
+	point_t* right = (left == &line.a) ? &line.b : &line.a;
+	point_t* upper = (line.a.y < line.b.y) ? &line.a : &line.b;
+	point_t* lower = (upper == &line.a) ? &line.b : &line.a;
+	area_t lineArea;
+	lineArea.x = left->x;
+	lineArea.y = upper->y;
+	lineArea.w = right->x - left->x;
+	lineArea.h = lower->y - upper->y;
+	return hasOverlap(area, lineArea);
+}
+
+line_t trimLineToArea(line_t line, area_t chunk){
+	point_t* left = (line.a.x < line.b.x) ? &line.a : &line.b;
+	point_t* right = (left == &line.a) ? &line.b : &line.a;
+	point_t* upper = (line.a.y < line.b.y) ? &line.a : &line.b;
+	point_t* lower = (upper == &line.a) ? &line.b : &line.a;
+	float m = (float)(lower->y - upper->y) / (float)(right->x - left->x);
+
+}
+// get the points for a given envelope within a given area
+std::vector<point_t> getEnvPoints(adsr_t* env, area_t area) {
+	std::vector<point_t> points;
+	// first point is easy enough, just start from the bottom left corner
+	points.push_back({area.x, (uint16_t)(area.y + area.h)});
+	// figure out how much we should scale stuff relative to the length of the envelope
+	const float envMs = totalLengthMs(env);
+	float fLength = (float)(envMs - ENV_LENGTH_MIN) / (float)(ENV_LENGTH_MAX - ENV_LENGTH_MIN);
+	const uint16_t slopedLengthMin = (uint16_t)((1.0f - SUSTAIN_WIDTH_MAX) * (float)area.w);
+	const uint16_t slopedLengthMax = (uint16_t)((1.0f - SUSTAIN_WIDTH_MIN) * (float)area.w);
+	const uint16_t totalSlopedLength = flerp16(slopedLengthMin, slopedLengthMax, fLength);
+	const uint16_t sustainLength = area.w - totalSlopedLength;
+
+	uint16_t attackX = (uint16_t)((env->attack / envMs) * (float)totalSlopedLength) + area.x;
+	// add the top attack point 3px below the top of the component
+	const uint16_t topMargin = 3;
+	points.push_back({attackX, (uint16_t)(area.y + topMargin)});
+	// find the y coordinate for the sustain  value
+	const uint16_t sustainY = flerp16(area.y + topMargin, area.y + area.h, 1.0f - env->sustain);
+	// find the x for the decay length
+	uint16_t decayX = attackX + (uint16_t)((env->decay / envMs) * (float)totalSlopedLength);
+	points.push_back({decayX, sustainY});
+	uint16_t sustainEndX = decayX + sustainLength;
+	points.push_back({sustainEndX, sustainY});
+
+	points.push_back({(uint16_t)(area.x + area.w), (uint16_t)(area.y + area.h)});
+
+	return points;
+}
+
+//------
+EnvGraph::EnvGraph() {
+
+}
+
+void EnvGraph::setParams(adsr_t* p){
+	params = p;
+}
+
+void EnvGraph::drawChunk(area_t chunk, uint16_t* buf){
+	//TODO
+}
+
+
 
 //======================================================
 

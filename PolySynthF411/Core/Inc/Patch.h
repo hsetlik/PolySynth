@@ -101,6 +101,9 @@ mod_t createMod(uint8_t source, uint8_t dest, int8_t depth);
 #define RELEASE_MAX 4000.0f
 #define RELEASE_DEFAULT 200.0f
 
+#define ENV_LENGTH_MAX ATTACK_MAX + DECAY_MAX + RELEASE_MAX
+#define ENV_LENGTH_MIN ATTACK_MIN + DECAY_MIN + RELEASE_MIN
+
 typedef struct{
 	float attack;
 	float decay;

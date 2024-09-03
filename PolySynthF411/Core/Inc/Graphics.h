@@ -11,6 +11,7 @@
 #include "ili9341.h"
 #include <stdbool.h>
 #include "Color565.h"
+#include "Patch.h"
 #define MAX_CHUNK_WIDTH 64
 #define MAX_CHUNK_HEIGHT 64
 #define MAX_CHUNK_PX 4096
@@ -18,7 +19,7 @@
 
 // some C stuff
 #ifdef __cplusplus
-extern "C"{
+extern "C" {
 #endif
 area_t getOverlap(area_t a, area_t b);
 bool hasOverlap(area_t a, area_t b);
@@ -26,8 +27,15 @@ bool pointInArea(area_t a, uint16_t x, uint16_t y);
 
 uint16_t numChunksNeeded(area_t area);
 
+// line stuff
+typedef struct {
+	point_t a;
+	point_t b;
+} line_t;
+
 // pixel access
-uint16_t* getPixel(uint16_t* buf, uint16_t width, uint16_t height, uint16_t x, uint16_t y);
+uint16_t* getPixel(uint16_t *buf, uint16_t width, uint16_t height, uint16_t x,
+		uint16_t y);
 uint16_t* pixelInChunk(uint16_t buf, area_t area);
 
 #ifdef __cplusplus
@@ -55,21 +63,15 @@ uint16_t* pixelInChunk(uint16_t buf, area_t area);
  *
  *	 */
 
-
 #ifdef __cplusplus
 #include <functional>
 #include <memory>
 #include <string>
 #include <vector>
 
-
-
 // each GUI element will be split up into some number of DrawTasks
 
 typedef std::function<void(area_t a, uint16_t*)> DrawFunc;
-
-
-
 
 struct DrawTask {
 	DrawFunc func;
@@ -79,20 +81,21 @@ struct DrawTask {
 #define DRAW_QUEUE_SIZE 35
 
 // a basic circular buffer class to keep our DrawTasks in
-template <typename T>
-class RingBuffer{
+template<typename T>
+class RingBuffer {
 private:
 	std::unique_ptr<T[]> data;
 	uint16_t head = 0;
 	uint16_t tail = 0;
 	bool isFull = false;
 public:
-	RingBuffer() : data(std::unique_ptr<T[]>(new T[DRAW_QUEUE_SIZE])){
+	RingBuffer() :
+			data(std::unique_ptr<T[]>(new T[DRAW_QUEUE_SIZE])) {
 
 	}
 	// add/remove elements
-	T getFront(){
-		if(empty()){
+	T getFront() {
+		if (empty()) {
 			return T();
 		}
 		T value = data[tail];
@@ -100,20 +103,20 @@ public:
 		tail = (tail + 1) % DRAW_QUEUE_SIZE;
 		return value;
 	}
-	void push(T obj){
+	void push(T obj) {
 		data[head] = obj;
-		if(isFull){
+		if (isFull) {
 			tail = (tail + 1) % DRAW_QUEUE_SIZE;
 		}
 		head = (head + 1) % DRAW_QUEUE_SIZE;
 		isFull = (head == tail);
 	}
 	// check state
-	bool full(){
+	bool full() {
 		return isFull;
 	}
 
-	bool empty(){
+	bool empty() {
 		return (!isFull && (head == tail));
 	}
 };
@@ -131,30 +134,61 @@ public:
 	void setArea(area_t a);
 	void setZIndex(uint8_t val);
 	// this needs to be overridden by all subclasses
-	virtual void drawChunk(area_t chunk, uint16_t* buf)=0;
+	virtual void drawChunk(area_t chunk, uint16_t *buf)=0;
 	// this can be called from the processor to draw all the chunks of this component
-	void draw(RingBuffer<DrawTask>& queue);
+	void draw(RingBuffer<DrawTask> &queue);
 };
+
+
 //--------------------
-class Label : public Component {
+class Label: public Component {
 private:
 	std::string text;
-	FontDef* font;
+	FontDef *font;
 
 	// drawing helper
 	area_t getStringArea();
+	// colors
+	color16_t txtColor = color565_getColor16(ColorID::White);
+	color16_t bkgndColor = color565_getColor16(ColorID::Black);
 public:
 	Label();
-	Label(const std::string& s);
-	void setFont(FontDef* f);
+	Label(const std::string &s);
+	void setFont(FontDef *f);
 	uint16_t getIdealWidth(uint16_t margin);
 	uint16_t getIdealHeight(uint16_t margin);
-	void drawChunk(area_t chunk, uint16_t* buf) override;
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+};
+
+//---------------------------------
+
+class EnvGraph: public Component {
+private:
+	adsr_t* params;
+public:
+	color16_t lineColor = color565_getColor16(ColorID::Black);
+	color16_t bkgndColor = color565_getColor16(ColorID::White);
+	EnvGraph();
+	void setParams(adsr_t* params);
+	void drawChunk(area_t chunk, uint16_t *buf) override;
 };
 
 
+// VIEW==============================================
+
+class View {
+protected:
+	std::vector<Component*> children;
+public:
+	View();
+	virtual ~View();
+	// override this to set the child components' positions and add the pointers to our children vector
+	virtual void initChildren()=0;
+	void draw(RingBuffer<DrawTask>& queue);
+};
+
 //==================================================
-class GraphicsProcessor{
+class GraphicsProcessor {
 private:
 	bool dmaBusy;
 	uint16_t dmaBuf[MAX_CHUNK_PX];
@@ -166,14 +200,14 @@ private:
 	void runFront();
 
 	// helpers for drawing
-	void drawLabel(area_t area, const char* text, uint16_t bkgndColor, uint16_t textColor);
+	void drawLabel(area_t area, const char *text, uint16_t bkgndColor,
+			uint16_t textColor);
 public:
 	GraphicsProcessor();
 	void dmaFinished();
 	void checkDrawQueue();
 
 };
-
 
 #endif
 
@@ -184,7 +218,7 @@ public:
 #endif
 
 /* ----C-FRIENDLY BINDINGS GO HERE------*/
-typedef void* graphics_processor_t;
+typedef void *graphics_processor_t;
 
 EXTERNC graphics_processor_t create_graphics_processor();
 EXTERNC void disp_dma_finished(graphics_processor_t proc);

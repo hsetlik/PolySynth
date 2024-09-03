@@ -20,6 +20,11 @@ typedef struct {
 	uint16_t h;
 } area_t;
 
+typedef struct {
+	uint16_t x;
+	uint16_t y;
+} point_t;
+
 
 
 #define ILI9341_MADCTL_MY  0x80
