@@ -18,7 +18,6 @@
 #ifdef __cplusplus
 extern "C"{
 #endif
-
 area_t getOverlap(area_t a, area_t b);
 
 uint16_t numChunksNeeded(area_t area);
@@ -52,6 +51,9 @@ uint16_t numChunksNeeded(area_t area);
 #ifdef __cplusplus
 #include <functional>
 #include <memory>
+#include <string>
+#include <vector>
+
 
 
 // each GUI element will be split up into some number of DrawTasks
@@ -108,12 +110,33 @@ public:
 	}
 };
 
+// COMPONENT CLASSES ==================================
+class Component {
+protected:
+	area_t area;
+	uint8_t zIndex;
+	// this splits the component up into task-sized chunks
+	std::vector<area_t> getTaskChunks();
+public:
+	Component();
+	virtual ~Component();
+	void setArea(area_t a);
+	void setZIndex(uint8_t val);
+	// this needs to be overridden by all subclasses
+	virtual void drawChunk(area_t chunk, uint16_t buf)=0;
+	// this can be called from the processor to draw all the chunks of this component
+	void draw(RingBuffer<DrawTask>& queue);
+};
+//--------------------
+class Label : public Component {
+private:
+	std::string text;
+public:
+	Label(std::string& s);
+};
+
+
 //==================================================
-
-
-
-
-
 class GraphicsProcessor{
 private:
 	bool dmaBusy;

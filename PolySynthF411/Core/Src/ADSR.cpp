@@ -48,7 +48,7 @@ void ADSRProcessor::tick() {
 	lastUpdateTick = now;
 	switch (state) {
 	case Idle:
-		return 0;
+		return;
 	case Attack:
 		if (msSinceStateChange > params->attack) {
 			state = Decay;

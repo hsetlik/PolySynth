@@ -34,8 +34,62 @@ uint16_t numChunksNeeded(area_t area) {
 	return rows * columns;
 }
 
+//======================================================
+
+Component::Component() {
+
+}
+
+Component::~Component() {
+
+}
+
+void Component::setArea(area_t a) {
+	area = a;
+}
+
+void Component::setZIndex(uint8_t val){
+	zIndex = val;
+}
 
 
+std::vector<area_t> Component::getTaskChunks(){
+	std::vector<area_t> chunks;
+	uint16_t currentX = area.x;
+	uint16_t currentY = area.y;
+	const uint16_t xLimit = area.x + area.w;
+	const uint16_t yLimit = area.y + area.h;
+	while(currentX < xLimit || currentY < yLimit){
+		area_t current;
+		current.x = currentX;
+		current.y = currentY;
+		if(currentX >= xLimit){ // we've hit the right edge and now move down a row
+			current.w = xLimit - currentX;
+			current.h = std::min<uint16_t>(area.h, MAX_CHUNK_HEIGHT);
+			currentX = area.x;
+			currentY += MAX_CHUNK_HEIGHT;
+		} else { // otherwise move right
+			current.w = std::min<uint16_t>(MAX_CHUNK_WIDTH, xLimit - currentX);
+			current.h = std::min<uint16_t>(area.h, MAX_CHUNK_HEIGHT);
+			currentX += MAX_CHUNK_WIDTH;
+		}
+		chunks.push_back(current);
+	}
+	return chunks;
+}
+
+
+void Component::draw(RingBuffer<DrawTask>& queue){
+	std::vector<area_t> chunks = getTaskChunks();
+	for(uint8_t c = 0; c < chunks.size(); c++){
+		DrawTask task;
+		task.area = chunks[c];
+		task.func = [this](area_t area, uint16_t* buf){
+			this->drawChunk(area, buf);
+		};
+		queue.push(task);
+	}
+}
 //======================================================
 
 GraphicsProcessor::GraphicsProcessor() :
@@ -50,9 +104,8 @@ void GraphicsProcessor::dmaFinished() {
 	dmaBusy = false;
 }
 
-
-void GraphicsProcessor::checkDrawQueue(){
-	if(!dmaBusy && !queue.empty()){
+void GraphicsProcessor::checkDrawQueue() {
+	if (!dmaBusy && !queue.empty()) {
 		runFront();
 	}
 }
@@ -80,9 +133,8 @@ void disp_dma_finished(graphics_processor_t proc) {
 	ptr->dmaFinished();
 }
 
-void check_draw_queue(graphics_processor_t proc){
+void check_draw_queue(graphics_processor_t proc) {
 	GraphicsProcessor *ptr = static_cast<GraphicsProcessor*>(proc);
 	ptr->checkDrawQueue();
 }
-
 

@@ -8,8 +8,6 @@
 #ifndef INC_SYNTHPROCESSOR_H_
 #define INC_SYNTHPROCESSOR_H_
 
-
-
 #include "Patch.h"
 #include "VoiceClock.h"
 #include "MIDI.h"
@@ -73,13 +71,16 @@ private:
 	int8_t getVoiceForNote(uint8_t note);
 	void startNote(uint8_t note, uint8_t vel);
 	void endNote(uint8_t note);
+
 	// helper for calculating our mod matrix stuff
 	uint16_t modDestValue(uint8_t dest, uint8_t voice);
 	uint16_t modSourceValue(uint8_t src, uint8_t voice);
 	int16_t modSourceOffset(uint16_t src, uint8_t dest, uint8_t voice);
 
+	// convert the 7-bit MIDI velocity value to a 12 bit DAC-friendly value
 	uint16_t velocityValue12Bit(uint8_t voice);
 
+	//CONTROL STUFF==============================
 
 
 };
