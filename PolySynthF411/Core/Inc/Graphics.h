@@ -123,7 +123,7 @@ public:
 	void setArea(area_t a);
 	void setZIndex(uint8_t val);
 	// this needs to be overridden by all subclasses
-	virtual void drawChunk(area_t chunk, uint16_t buf)=0;
+	virtual void drawChunk(area_t chunk, uint16_t* buf)=0;
 	// this can be called from the processor to draw all the chunks of this component
 	void draw(RingBuffer<DrawTask>& queue);
 };
@@ -131,8 +131,14 @@ public:
 class Label : public Component {
 private:
 	std::string text;
+	FontDef* font;
 public:
-	Label(std::string& s);
+	Label();
+	Label(const std::string& s);
+	void setFont(FontDef* f);
+	uint16_t getIdealWidth(uint16_t margin);
+	uint16_t getIdealHeight(uint16_t margin);
+	void drawChunk(area_t chunk, uint16_t* buf) override;
 };
 
 

@@ -90,6 +90,34 @@ void Component::draw(RingBuffer<DrawTask>& queue){
 		queue.push(task);
 	}
 }
+//---------------------------
+Label::Label(const std::string& s) : text(s), font(&Font_7x10){
+
+}
+
+
+Label::Label() : text("Label"), font(Font_7x10){
+
+}
+
+void Label::setFont(FontDef* f){
+	font = f;
+}
+
+
+uint16_t Label::getIdealWidth(uint16_t margin){
+	return (2 * margin) + (uint16_t)(text.length() * font->width);
+}
+
+uint16_t Label::getIdealHeight(uint16_t margin){
+	return (2 * margin) + (uint16_t)font->height;
+}
+
+
+void Label::drawChunk(area_t chunk, uint16_t* buf){
+
+}
+
 //======================================================
 
 GraphicsProcessor::GraphicsProcessor() :
@@ -100,7 +128,6 @@ GraphicsProcessor::GraphicsProcessor() :
 }
 
 void GraphicsProcessor::dmaFinished() {
-	// our DMA transmission from runFront() is finished so we'll increment the front now
 	dmaBusy = false;
 }
 
