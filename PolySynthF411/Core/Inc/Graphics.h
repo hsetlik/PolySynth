@@ -9,6 +9,8 @@
 #define INC_GRAPHICS_H_
 #include "main.h"
 #include "ili9341.h"
+#include <stdbool.h>
+#include "Color565.h"
 #define MAX_CHUNK_WIDTH 64
 #define MAX_CHUNK_HEIGHT 64
 #define MAX_CHUNK_PX 4096
@@ -19,8 +21,14 @@
 extern "C"{
 #endif
 area_t getOverlap(area_t a, area_t b);
+bool hasOverlap(area_t a, area_t b);
+bool pointInArea(area_t a, uint16_t x, uint16_t y);
 
 uint16_t numChunksNeeded(area_t area);
+
+// pixel access
+uint16_t* getPixel(uint16_t* buf, uint16_t width, uint16_t height, uint16_t x, uint16_t y);
+uint16_t* pixelInChunk(uint16_t buf, area_t area);
 
 #ifdef __cplusplus
 }
@@ -132,6 +140,9 @@ class Label : public Component {
 private:
 	std::string text;
 	FontDef* font;
+
+	// drawing helper
+	area_t getStringArea();
 public:
 	Label();
 	Label(const std::string& s);

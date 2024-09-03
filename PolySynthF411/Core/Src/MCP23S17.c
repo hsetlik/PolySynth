@@ -30,7 +30,7 @@ uint8_t readRegister(SPI_HandleTypeDef *spi, uint8_t reg, uint8_t addr) {
 	return dest[0];
 }
 
-int8_t writeRegister(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
+int8_t writeRegisterI(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 		uint8_t data) {
 	uint8_t msg[3];
 	msg[0] = addr;
@@ -46,7 +46,7 @@ int8_t writeRegister(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 
 }
 
-void writeRegisterv(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
+void writeRegister(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t reg,
 		uint8_t data) {
 	uint8_t msg[3];
 	msg[0] = addr;
@@ -68,14 +68,14 @@ void setPinDefval(SPI_HandleTypeDef *spi, uint8_t addr, uint8_t port,
 			defVal = defVal | (1 << pin);
 		else
 			defVal = defVal & ~(1 << pin);
-		writeRegisterv(spi, addr, MCP23S17_DEFVALB, defVal);
+		writeRegister(spi, addr, MCP23S17_DEFVALB, defVal);
 	} else { // we're on port A
 		uint8_t defVal = readRegister(spi, MCP23S17_DEFVALA, addr);
 		if (val)
 			defVal = defVal | (1 << pin);
 		else
 			defVal = defVal & ~(1 << pin);
-		writeRegisterv(spi, addr, MCP23S17_DEFVALA, defVal);
+		writeRegister(spi, addr, MCP23S17_DEFVALA, defVal);
 	}
 }
 //====================================================================================
@@ -84,7 +84,7 @@ int8_t MCP32S17_init(SPI_HandleTypeDef *spi, uint8_t addr) {
 	// 1. set the IOCON byte to use SPI addressing mode
 	uint8_t iocon = readRegister(spi, MCP23S17_IOCON, addr);
 	iocon = iocon | (1 << 3);
-	if (writeRegister(spi, addr, MCP23S17_IOCON, iocon) < 0) {
+	if (writeRegisterI(spi, addr, MCP23S17_IOCON, iocon) < 0) {
 		return -1;
 	}
 	return 1;
@@ -104,9 +104,9 @@ void MCP23S17_setInterruptOnPin(SPI_HandleTypeDef *spi, uint8_t addr,
 	gpinten = gpinten | (1 << pin);
 	// 4: write back to the same register
 	if (port)
-		writeRegisterv(spi, addr, MCP23S17_GPINTENB, gpinten);
+		writeRegister(spi, addr, MCP23S17_GPINTENB, gpinten);
 	else
-		writeRegisterv(spi, addr, MCP23S17_GPINTENA, gpinten);
+		writeRegister(spi, addr, MCP23S17_GPINTENA, gpinten);
 
 	// 5: do a similar thing for the INTCON register
 
@@ -120,9 +120,9 @@ void MCP23S17_setInterruptOnPin(SPI_HandleTypeDef *spi, uint8_t addr,
 		intcon = readRegister(spi, MCP23S17_INTCONA, addr);
 	intcon = intcon | (1 << pin);
 	if (port)
-		writeRegisterv(spi, addr, MCP23S17_INTCONB, intcon);
+		writeRegister(spi, addr, MCP23S17_INTCONB, intcon);
 	else
-		writeRegisterv(spi, addr, MCP23S17_INTCONA, intcon);
+		writeRegister(spi, addr, MCP23S17_INTCONA, intcon);
 }
 
 
@@ -147,10 +147,15 @@ uint8_t MCP23S17_getLatchBits(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port
 
 uint8_t MCP23S17_getLastInterruptPin(SPI_HandleTypeDef* spi, uint8_t addr, uint8_t port){
 	uint8_t intf = 0;
-	if(port)
+	if(port){
 		intf = readRegister(spi, MCP23S17_INTFB, addr);
-	else
+		// I *think* we need to clear this register before the next interrupt?
+		writeRegister(spi, addr, MCP23S17_INTFB, 0x00);
+	}
+	else {
 		intf = readRegister(spi, MCP23S17_INTFA, addr);
+		writeRegister(spi, addr, MCP23S17_INTFA, 0x00);
+	}
 	for(uint8_t i = 0; i < 8; i ++){
 		if(intf & (1 << i))
 			return i;

@@ -27,6 +27,12 @@ typedef struct {
 color16_t color565_fromRGB(uint8_t r, uint8_t g, uint8_t b);
 color24_t color565_to24Bit(color16_t col);
 
+typedef enum {
+	Black,
+	White
+} ColorID;
+
+color16_t color565_getColor16(uint8_t id);
 
 #ifdef __cplusplus
 }

@@ -24,9 +24,9 @@ color24_t color565_to24Bit(color16_t col){
 
 	color24_t out;
 
-	uint8_t b = col & 0x0007;
-	uint8_t g = col & 0x01F8;
-	uint8_t r = col & 0x3E00;
+	uint16_t b = col & 0x0007;
+	uint16_t g = (col & 0x01F8) >> 6;
+	uint16_t r = (col & 0x3E00) >> 11;
 
 	float fR = (float)r / 32.0f;
 	float fG = (float)g / 64.0f;
@@ -39,4 +39,16 @@ color24_t color565_to24Bit(color16_t col){
 	return out;
 }
 
+//=====================================================
+
+const color24_t colors24[] = {
+		{0, 0, 0},
+		{255, 255, 255}
+};
+
+
+color16_t color565_getColor16(uint8_t id){
+	color24_t col = colors24[id];
+	return color565_fromRGB(col.r, col.g, col.b);
+}
 
