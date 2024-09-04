@@ -155,9 +155,18 @@ public:
 	Label();
 	Label(const std::string &s);
 	void setFont(FontDef *f);
+	void setText(const std::string& str);
 	uint16_t getIdealWidth(uint16_t margin);
 	uint16_t getIdealHeight(uint16_t margin);
 	void drawChunk(area_t chunk, uint16_t *buf) override;
+};
+
+// keep track of all the labeled parameters in all the UI screens
+enum LabelID {
+	AttackMs,
+	DecayMs,
+	SustainPercent,
+	ReleaseMs
 };
 
 //---------------------------------
@@ -184,7 +193,28 @@ public:
 	virtual ~View();
 	// override this to set the child components' positions and add the pointers to our children vector
 	virtual void initChildren()=0;
+	virtual void paramUpdated(uint8_t labelId){
+	}
 	void draw(RingBuffer<DrawTask>& queue);
+};
+
+// envelope view
+class EnvView : public View {
+private:
+	adsr_t* params;
+	Label aLabel;
+	Label dLabel;
+	Label sLabel;
+	Label rLabel;
+	EnvGraph graph;
+public:
+	EnvView();
+	void setParams(adsr_t* p);
+	void initChildren() override;
+	void paramUpdated(uint8_t l) override;
+private:
+	void setLabels();
+	std::string textForLabel(Label* l);
 };
 
 //==================================================
@@ -199,9 +229,6 @@ private:
 	void pushTask(DrawTask task);
 	void runFront();
 
-	// helpers for drawing
-	void drawLabel(area_t area, const char *text, uint16_t bkgndColor,
-			uint16_t textColor);
 public:
 	GraphicsProcessor();
 	void dmaFinished();

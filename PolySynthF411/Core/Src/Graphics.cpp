@@ -111,22 +111,6 @@ void Component::draw(RingBuffer<DrawTask> &queue) {
 	}
 }
 
-//======================================================
-View::View() {
-
-}
-
-View::~View() {
-
-}
-
-void View::draw(RingBuffer<DrawTask> &queue) {
-	for (uint8_t i = 0; i < children.size(); i++) {
-		children[i]->draw(queue);
-	}
-}
-
-//======================================================
 //---------------------------
 Label::Label(const std::string &s) :
 		text(s), font(&Font_7x10) {
@@ -140,6 +124,10 @@ Label::Label() :
 
 void Label::setFont(FontDef *f) {
 	font = f;
+}
+
+void Label::setText(const std::string &str) {
+	text = str;
 }
 
 uint16_t Label::getIdealWidth(uint16_t margin) {
@@ -448,6 +436,106 @@ void EnvGraph::drawChunk(area_t chunk, uint16_t *buf) {
 			drawLineInChunk(line, chunk, buf, lineColor, bkgndColor);
 	}
 
+}
+
+//VIEWS==================================================
+View::View() {
+
+}
+
+View::~View() {
+
+}
+
+void View::draw(RingBuffer<DrawTask> &queue) {
+	for (uint8_t i = 0; i < children.size(); i++) {
+		children[i]->draw(queue);
+	}
+}
+
+//======================================================
+EnvView::EnvView() {
+
+}
+
+void EnvView::setParams(adsr_t *p) {
+	params = p;
+}
+
+void EnvView::initChildren() {
+	// 1. set areas for the child components
+	const uint16_t labelWidth = ILI9341_WIDTH / 4;
+	const uint16_t labelHeight = 15;
+	uint16_t lX = 0;
+	uint16_t lY = ILI9341_HEIGHT - labelHeight;
+	//set the labels
+	aLabel.setArea({lX, lY, labelWidth, labelHeight});
+	lX += labelWidth;
+	dLabel.setArea({lX, lY, labelWidth, labelHeight});
+	lX += labelWidth;
+	sLabel.setArea({lX, lY, labelWidth, labelHeight});
+	lX += labelWidth;
+	rLabel.setArea({lX, lY, labelWidth, labelHeight});
+	// set the graph
+	graph.setArea({0, 0, ILI9341_WIDTH, lY});
+
+	// set the label text
+	setLabels();
+
+	//2. add everything to the children array
+	children.push_back(&aLabel);
+	children.push_back(&dLabel);
+	children.push_back(&sLabel);
+	children.push_back(&rLabel);
+	children.push_back(&graph);
+
+}
+
+void EnvView::setLabels() {
+
+	aLabel.setText(textForLabel(&aLabel));
+	dLabel.setText(textForLabel(&dLabel));
+	sLabel.setText(textForLabel(&sLabel));
+	rLabel.setText(textForLabel(&rLabel));
+
+}
+
+std::string EnvView::textForLabel(Label *l) {
+
+	std::string full = "";
+	if (l == &aLabel)
+		full = "A: " + std::to_string(params->attack);
+	else if (l == &dLabel)
+		full = "D: " + std::to_string(params->decay);
+	else if (l == &sLabel)
+		full = "S: " + std::to_string((uint8_t) (params->sustain * 100.0f));
+	else
+		full = "R: " + std::to_string(params->release);
+
+	// now we need to shorten the strings and add a suffix for each parameter
+	if (l == &sLabel) {
+		return full.substr(0, 5) + "\%";
+	} else {
+		return full.substr(0, 6) + "ms";
+	}
+}
+
+void EnvView::paramUpdated(uint8_t l){
+	LabelID id = (LabelID)l;
+	switch(id){
+	case AttackMs:
+		aLabel.setText(textForLabel(&aLabel));
+
+		break;
+	case DecayMs:
+		break;
+	case SustainPercent:
+		break;
+	case ReleaseMs:
+		break;
+	default:
+		break;
+	}
 }
 
 //======================================================
