@@ -58,7 +58,7 @@ uint16_t* getPixel(uint16_t *buf, uint16_t width, uint16_t height, uint16_t x,
 
 //======================================================
 
-Component::Component() {
+Component::Component() : queue(static_cast<DisplayQueue*>(mainDispQueue)) {
 
 }
 
@@ -99,7 +99,7 @@ std::vector<area_t> Component::getTaskChunks() {
 	return chunks;
 }
 
-void Component::draw(RingBuffer<DrawTask> &queue) {
+void Component::draw() {
 	std::vector<area_t> chunks = getTaskChunks();
 	for (uint8_t c = 0; c < chunks.size(); c++) {
 		DrawTask task;
@@ -107,7 +107,7 @@ void Component::draw(RingBuffer<DrawTask> &queue) {
 		task.func = [this](area_t area, uint16_t *buf) {
 			this->drawChunk(area, buf);
 		};
-		queue.push(task);
+		queue->push(task);
 	}
 }
 
@@ -447,9 +447,9 @@ View::~View() {
 
 }
 
-void View::draw(RingBuffer<DrawTask> &queue) {
+void View::draw() {
 	for (uint8_t i = 0; i < children.size(); i++) {
-		children[i]->draw(queue);
+		children[i]->draw();
 	}
 }
 
@@ -525,23 +525,30 @@ void EnvView::paramUpdated(uint8_t l){
 	switch(id){
 	case AttackMs:
 		aLabel.setText(textForLabel(&aLabel));
-
+		aLabel.draw();
 		break;
 	case DecayMs:
+		dLabel.setText(textForLabel(&dLabel));
+		dLabel.draw();
 		break;
 	case SustainPercent:
+		sLabel.setText(textForLabel(&sLabel));
+		sLabel.draw();
 		break;
 	case ReleaseMs:
+		rLabel.setText(textForLabel(&rLabel));
+		rLabel.draw();
 		break;
 	default:
 		break;
 	}
+
 }
 
 //======================================================
 
 GraphicsProcessor::GraphicsProcessor() :
-		dmaBusy(false) {
+		queue(static_cast<DisplayQueue*>(mainDispQueue)),dmaBusy(false) {
 // initialize the screen
 	ILI9341_Init();
 
@@ -552,17 +559,17 @@ void GraphicsProcessor::dmaFinished() {
 }
 
 void GraphicsProcessor::checkDrawQueue() {
-	if (!dmaBusy && !queue.empty()) {
+	if (!dmaBusy && !queue->empty()) {
 		runFront();
 	}
 }
 
 void GraphicsProcessor::pushTask(DrawTask task) {
-	queue.push(task);
+	queue->push(task);
 }
 
 void GraphicsProcessor::runFront() {
-	DrawTask t = queue.getFront();
+	DrawTask t = queue->getFront();
 // run the callback to render the pixels
 	t.func(t.area, dmaBuf);
 	ILI9341_DrawImage_DMA(t.area.x, t.area.y, t.area.w, t.area.h, dmaBuf);

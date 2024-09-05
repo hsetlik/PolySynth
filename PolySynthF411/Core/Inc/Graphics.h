@@ -12,6 +12,7 @@
 #include <stdbool.h>
 #include "Color565.h"
 #include "Patch.h"
+#include "DisplayQueue.h"
 #define MAX_CHUNK_WIDTH 64
 #define MAX_CHUNK_HEIGHT 64
 #define MAX_CHUNK_PX 4096
@@ -69,14 +70,6 @@ uint16_t* pixelInChunk(uint16_t buf, area_t area);
 #include <string>
 #include <vector>
 
-// each GUI element will be split up into some number of DrawTasks
-
-typedef std::function<void(area_t a, uint16_t*)> DrawFunc;
-
-struct DrawTask {
-	DrawFunc func;
-	area_t area;
-};
 
 #define DRAW_QUEUE_SIZE 35
 
@@ -124,6 +117,7 @@ public:
 // COMPONENT CLASSES ==================================
 class Component {
 protected:
+	DisplayQueue* const queue;
 	area_t area;
 	uint8_t zIndex;
 	// this splits the component up into task-sized chunks
@@ -136,7 +130,7 @@ public:
 	// this needs to be overridden by all subclasses
 	virtual void drawChunk(area_t chunk, uint16_t *buf)=0;
 	// this can be called from the processor to draw all the chunks of this component
-	void draw(RingBuffer<DrawTask> &queue);
+	void draw();
 };
 
 
@@ -195,7 +189,7 @@ public:
 	virtual void initChildren()=0;
 	virtual void paramUpdated(uint8_t labelId){
 	}
-	void draw(RingBuffer<DrawTask>& queue);
+	void draw();
 };
 
 // envelope view
@@ -220,12 +214,9 @@ private:
 //==================================================
 class GraphicsProcessor {
 private:
+	DisplayQueue* const queue;
 	bool dmaBusy;
 	uint16_t dmaBuf[MAX_CHUNK_PX];
-
-	// queue stuff
-	RingBuffer<DrawTask> queue;
-
 	void pushTask(DrawTask task);
 	void runFront();
 

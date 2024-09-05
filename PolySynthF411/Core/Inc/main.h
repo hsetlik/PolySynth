@@ -37,6 +37,8 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
+// this is used to access our display queue class
+typedef void* display_queue_t;
 
 /* USER CODE END ET */
 
@@ -134,6 +136,7 @@ void Error_Handler(void);
 
 extern SPI_HandleTypeDef hspi2;
 extern SPI_HandleTypeDef hspi3;
+extern display_queue_t mainDispQueue;
 //extern RNG_HandleTypeDef hrng;
 
 /* USER CODE END Private defines */
