@@ -29,7 +29,14 @@ color24_t color565_to24Bit(color16_t col);
 
 typedef enum {
 	Black,
-	White
+	White,
+	Maroon,
+	Salmon,
+	DarkOrange,
+	Gold,
+	LimeGreen,
+	DarkGreen
+
 } ColorID;
 
 color16_t color565_getColor16(uint8_t id);

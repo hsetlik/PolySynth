@@ -192,6 +192,52 @@ typedef struct {
 patch_t getDefaultPatch();
 //TODO: functions to encode/decode the patch struct in bytes here
 
+// enum to assign IDs to every base parameter (ie not including modulations or depths)
+#define NUM_PARAMS 33
+
+typedef enum {
+	// envelopes
+	pEnv1Attack,
+	pEnv1Decay,
+	pEnv1Sustain,
+	pEnv1Release,
+
+	pEnv2Attack,
+	pEnv2Decay,
+	pEnv2Sustain,
+	pEnv2Release,
+	// LFOs
+	pLFO1Freq,
+	pLFO1Mode,
+	pLFO2Freq,
+	pLFO2Mode,
+	pLFO3Freq,
+	pLFO3Mode,
+	// Oscillators
+	pOsc1Coarse,
+	pOsc1Fine,
+	pOsc1PulseWidth,
+	pOsc1SquareLevel,
+	pOsc1SawLevel,
+	pOsc1TriLevel,
+	pOsc1OscLevel,
+
+	pOsc2Coarse,
+	pOsc2Fine,
+	pOsc2PulseWidth,
+	pOsc2SquareLevel,
+	pOsc2SawLevel,
+	pOsc2TriLevel,
+	pOsc2OscLevel,
+	// filter
+	pFilterCutoff,
+	pFilterRes,
+	pFilterMode,
+	//folder
+	pFoldLevel,
+	pFoldFirst
+} ParamID;
+
 
 #ifdef __cplusplus
 }

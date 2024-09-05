@@ -71,49 +71,6 @@ uint16_t* pixelInChunk(uint16_t buf, area_t area);
 #include <vector>
 
 
-#define DRAW_QUEUE_SIZE 35
-
-// a basic circular buffer class to keep our DrawTasks in
-template<typename T>
-class RingBuffer {
-private:
-	std::unique_ptr<T[]> data;
-	uint16_t head = 0;
-	uint16_t tail = 0;
-	bool isFull = false;
-public:
-	RingBuffer() :
-			data(std::unique_ptr<T[]>(new T[DRAW_QUEUE_SIZE])) {
-
-	}
-	// add/remove elements
-	T getFront() {
-		if (empty()) {
-			return T();
-		}
-		T value = data[tail];
-		isFull = false;
-		tail = (tail + 1) % DRAW_QUEUE_SIZE;
-		return value;
-	}
-	void push(T obj) {
-		data[head] = obj;
-		if (isFull) {
-			tail = (tail + 1) % DRAW_QUEUE_SIZE;
-		}
-		head = (head + 1) % DRAW_QUEUE_SIZE;
-		isFull = (head == tail);
-	}
-	// check state
-	bool full() {
-		return isFull;
-	}
-
-	bool empty() {
-		return (!isFull && (head == tail));
-	}
-};
-
 // COMPONENT CLASSES ==================================
 class Component {
 protected:
@@ -136,16 +93,17 @@ public:
 
 //--------------------
 class Label: public Component {
-private:
+protected:
 	std::string text;
 	FontDef *font;
+	bool needsRedraw = true;
 
 	// drawing helper
 	area_t getStringArea();
+public:
 	// colors
 	color16_t txtColor = color565_getColor16(ColorID::White);
 	color16_t bkgndColor = color565_getColor16(ColorID::Black);
-public:
 	Label();
 	Label(const std::string &s);
 	void setFont(FontDef *f);
@@ -153,14 +111,7 @@ public:
 	uint16_t getIdealWidth(uint16_t margin);
 	uint16_t getIdealHeight(uint16_t margin);
 	void drawChunk(area_t chunk, uint16_t *buf) override;
-};
-
-// keep track of all the labeled parameters in all the UI screens
-enum LabelID {
-	AttackMs,
-	DecayMs,
-	SustainPercent,
-	ReleaseMs
+	bool textHasChanged() { return needsRedraw; }
 };
 
 //---------------------------------
@@ -182,20 +133,23 @@ public:
 class View {
 protected:
 	std::vector<Component*> children;
+	std::string viewName = "Null View";
 public:
 	View();
 	virtual ~View();
+	void setName(const std::string& str);
 	// override this to set the child components' positions and add the pointers to our children vector
 	virtual void initChildren()=0;
-	virtual void paramUpdated(uint8_t labelId){
+	virtual void paramUpdated(uint8_t id){
 	}
 	void draw();
 };
 
-// envelope view
+// envelope view ---------------------------
 class EnvView : public View {
 private:
 	adsr_t* params;
+	Label nameLabel;
 	Label aLabel;
 	Label dLabel;
 	Label sLabel;
@@ -206,24 +160,93 @@ public:
 	void setParams(adsr_t* p);
 	void initChildren() override;
 	void paramUpdated(uint8_t l) override;
+
 private:
 	void setLabels();
 	std::string textForLabel(Label* l);
 };
 
+// mixer view (and associated components)-------------------------------
+
+class BarGraph : public Component {
+private:
+	const uint16_t maxLevel;
+	uint16_t currentLevel = 0;
+	uint16_t margin = 3;
+	area_t getBarArea();
+public:
+	color16_t barColor = color565_getColor16(ColorID::Maroon);
+	color16_t bkgndColor = color565_getColor16(ColorID::Salmon);
+	BarGraph(uint16_t maxValue=255);
+	void setLevel(uint16_t lvl){
+		currentLevel = lvl;
+	}
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+};
+
+class MixerView : public View {
+private:
+	dco_t* params;
+
+	Label nameLabel;
+
+	Label sawNameLabel;
+	Label sawLevelLabel;
+
+	Label triNameLabel;
+	Label triLevelLabel;
+
+	Label pulseNameLabel;
+	Label pulseLevelLabel;
+
+	Label masterNameLabel;
+	Label masterLevelLabel;
+
+	//TODO: bar graph for levels component
+public:
+	MixerView();
+	void setParams(dco_t* p){
+		params = p;
+	}
+	void initChildren() override;
+	void paramUpdated(uint8_t id) override;
+private:
+
+
+};
+
+
+
 //==================================================
+
+
 class GraphicsProcessor {
 private:
 	DisplayQueue* const queue;
+	patch_t* patch = nullptr;
 	bool dmaBusy;
 	uint16_t dmaBuf[MAX_CHUNK_PX];
 	void pushTask(DrawTask task);
 	void runFront();
-
+	// keep our views here
+	View* visibleView = nullptr;
+	EnvView env1View;
+	EnvView env2View;
+	std::vector<View*> views;
+	// helper to return the relevant view for a given parameter change
+	View* viewForParam(uint8_t p);
 public:
 	GraphicsProcessor();
+	~GraphicsProcessor();
 	void dmaFinished();
 	void checkDrawQueue();
+	void setPatchData(patch_t* p) {
+		patch = p;
+	}
+	// call this to allocate our view objects AFTER getting the patch data
+	void initViews();
+	// call this from the synth processor
+	void paramUpdated(uint8_t param);
 
 };
 
@@ -241,6 +264,7 @@ typedef void *graphics_processor_t;
 EXTERNC graphics_processor_t create_graphics_processor();
 EXTERNC void disp_dma_finished(graphics_processor_t proc);
 EXTERNC void check_draw_queue(graphics_processor_t proc);
+
 
 #undef EXTERNC
 

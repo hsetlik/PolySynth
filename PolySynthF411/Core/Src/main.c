@@ -279,7 +279,8 @@ int main(void) {
 	buttonProc = create_button_processor();
 	encoderProc = create_enc_processor();
 	graphicsProc = create_graphics_processor();
-	synthProc = create_synth_processor(vClk, encoderProc, buttonProc);
+	synthProc = create_synth_processor(vClk, encoderProc, buttonProc, graphicsProc);
+
 	// initialize the MCP23S17 interrupts for the encoders
 	enc_init_interrupts(encoderProc);
 

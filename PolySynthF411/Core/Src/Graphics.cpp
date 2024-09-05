@@ -56,9 +56,16 @@ uint16_t* getPixel(uint16_t *buf, uint16_t width, uint16_t height, uint16_t x,
 	return &buf[(row * width) + x];
 }
 
+void fillChunk(uint16_t *buf, uint16_t w, uint16_t h, color16_t color) {
+	// I think O(n) complexity is the best we can do here :(
+	for (uint16_t i = 0; i < (w * h); i++)
+		buf[i] = color;
+}
+
 //======================================================
 
-Component::Component() : queue(static_cast<DisplayQueue*>(mainDispQueue)) {
+Component::Component() :
+		queue(static_cast<DisplayQueue*>(mainDispQueue)) {
 
 }
 
@@ -127,7 +134,10 @@ void Label::setFont(FontDef *f) {
 }
 
 void Label::setText(const std::string &str) {
-	text = str;
+	if (str != text) {
+		text = str;
+		needsRedraw = true;
+	}
 }
 
 uint16_t Label::getIdealWidth(uint16_t margin) {
@@ -149,8 +159,7 @@ area_t charArea(FontDef *font, uint8_t idx, uint16_t x0, uint16_t y0) {
 }
 
 void drawStringChunk(FontDef *font, uint16_t *buf, area_t bufArea,
-		const std::string &str, area_t strArea, color16_t textColor,
-		color16_t bkgndColor) {
+		const std::string &str, area_t strArea, color16_t textColor) {
 	area_t currentCharArea { 0, 0, 0, 0 };
 	uint8_t idx = 0;
 
@@ -164,22 +173,22 @@ void drawStringChunk(FontDef *font, uint16_t *buf, area_t bufArea,
 	uint16_t f;
 
 	while (hasOverlap(currentCharArea, bufArea)) {
-		// draw this character
-		for (uint16_t yChar = 0; yChar < font->height; yChar++) {
-			char c = str[idx];
-			f = font->data[(c - 32) * font->height + yChar];
-			for (uint16_t xChar = 0; xChar < font->width; xChar++) {
-				if (pointInArea(bufArea, xBuf + xChar, yBuf + yChar)) {
-					uint16_t *px = getPixel(buf, bufArea.w, bufArea.h, xBuf,
-							yBuf);
-					if ((f << xChar) & 0x8000) {
-						*px = textColor;
-					} else {
-						*px = bkgndColor;
+		// draw this character unless it's a space
+		if (str[idx] != ' ') {
+			for (uint16_t yChar = 0; yChar < font->height; yChar++) {
+				char c = str[idx];
+				f = font->data[(c - 32) * font->height + yChar];
+				for (uint16_t xChar = 0; xChar < font->width; xChar++) {
+					if (pointInArea(bufArea, xBuf + xChar, yBuf + yChar)) {
+						uint16_t *px = getPixel(buf, bufArea.w, bufArea.h, xBuf,
+								yBuf);
+						if ((f << xChar) & 0x8000) {
+							*px = textColor;
+						}
 					}
 				}
-			}
 
+			}
 		}
 		// move on to the next character
 		idx++;
@@ -189,10 +198,12 @@ void drawStringChunk(FontDef *font, uint16_t *buf, area_t bufArea,
 }
 
 void Label::drawChunk(area_t chunk, uint16_t *buf) {
+	if (needsRedraw)
+		needsRedraw = false;
 	if (!hasOverlap(area, chunk))
 		return;
-	drawStringChunk(font, buf, chunk, text, getStringArea(), txtColor,
-			bkgndColor);
+	fillChunk(buf, chunk.w, chunk.h, bkgndColor);
+	drawStringChunk(font, buf, chunk, text, getStringArea(), txtColor);
 }
 
 area_t Label::getStringArea() {
@@ -347,22 +358,11 @@ std::vector<line_t> getEnvLines(adsr_t *env, area_t area) {
 }
 
 void drawLineInChunk(line_t line, area_t chunk, uint16_t *buf,
-		color16_t lineCol, color16_t bkgndCol) {
+		color16_t lineCol) {
 	// it's easier to work with the points in terms of left and right
 	point_t *left = (line.a.x < line.b.x) ? &line.a : &line.b;
 	point_t *right = (left == &line.a) ? &line.b : &line.a;
 
-	// ok step 1 ufortunately there's no way around having to fill the
-	// buffer with the background color
-	uint16_t xBuf = 0;
-	uint16_t yBuf = 0;
-	for (xBuf = 0; xBuf < chunk.w; xBuf++) {
-		for (yBuf = 0; yBuf < chunk.h; yBuf++) {
-			uint16_t *px = getPixel(buf, chunk.w, chunk.h, xBuf, yBuf);
-			if (*px != lineCol)
-				*px = bkgndCol;
-		}
-	}
 	// this is Bresenham's line algorithm as explained here: https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm
 	if (std::abs(right->y - left->y) < std::abs(right->x - left->x)) {
 		// equivalent to 'plotLineLow' in the wiki article
@@ -416,7 +416,6 @@ void drawLineInChunk(line_t line, area_t chunk, uint16_t *buf,
 				D = D + (2 * dx);
 			}
 		}
-
 	}
 }
 
@@ -431,9 +430,11 @@ void EnvGraph::setParams(adsr_t *p) {
 
 void EnvGraph::drawChunk(area_t chunk, uint16_t *buf) {
 	std::vector<line_t> lines = getEnvLines(params, area);
+	fillChunk(buf, chunk.w, chunk.h, bkgndColor);
 	for (auto &line : lines) {
-		if (isLineInChunk(line, chunk))
-			drawLineInChunk(line, chunk, buf, lineColor, bkgndColor);
+		if (isLineInChunk(line, chunk)){
+			drawLineInChunk(line, chunk, buf, lineColor);
+		}
 	}
 
 }
@@ -453,6 +454,10 @@ void View::draw() {
 	}
 }
 
+void View::setName(const std::string &str) {
+	viewName = str;
+}
+
 //======================================================
 EnvView::EnvView() {
 
@@ -469,15 +474,23 @@ void EnvView::initChildren() {
 	uint16_t lX = 0;
 	uint16_t lY = ILI9341_HEIGHT - labelHeight;
 	//set the labels
-	aLabel.setArea({lX, lY, labelWidth, labelHeight});
+	aLabel.setArea( { lX, lY, labelWidth, labelHeight });
 	lX += labelWidth;
-	dLabel.setArea({lX, lY, labelWidth, labelHeight});
+	dLabel.setArea( { lX, lY, labelWidth, labelHeight });
 	lX += labelWidth;
-	sLabel.setArea({lX, lY, labelWidth, labelHeight});
+	sLabel.setArea( { lX, lY, labelWidth, labelHeight });
 	lX += labelWidth;
-	rLabel.setArea({lX, lY, labelWidth, labelHeight});
+	rLabel.setArea( { lX, lY, labelWidth, labelHeight });
+
+	// set the name label
+	const uint16_t nameHeight = 24; // for 11x18 font
+	nameLabel.setFont(&Font_11x18);
+	nameLabel.setText(viewName);
+	nameLabel.setArea( { 0, 0, ILI9341_WIDTH, nameHeight });
+
 	// set the graph
-	graph.setArea({0, 0, ILI9341_WIDTH, lY});
+	graph.setArea(
+			{ 0, nameHeight, ILI9341_WIDTH, (uint16_t) (lY - nameHeight) });
 
 	// set the label text
 	setLabels();
@@ -487,6 +500,7 @@ void EnvView::initChildren() {
 	children.push_back(&dLabel);
 	children.push_back(&sLabel);
 	children.push_back(&rLabel);
+	children.push_back(&nameLabel);
 	children.push_back(&graph);
 
 }
@@ -520,38 +534,196 @@ std::string EnvView::textForLabel(Label *l) {
 	}
 }
 
-void EnvView::paramUpdated(uint8_t l){
-	LabelID id = (LabelID)l;
-	switch(id){
-	case AttackMs:
+void EnvView::paramUpdated(uint8_t l) {
+	uint8_t attackIdx = (uint8_t) ParamID::pEnv1Attack;
+	// figure out which envelope this is
+	if (l > ParamID::pEnv1Release)
+		attackIdx = (uint8_t) ParamID::pEnv2Attack;
+	// see the ParamID enum in Patch.h for why this code makes sense
+	l = l - attackIdx;
+	Label *changedLabel = nullptr;
+	switch (l) {
+	case 0: // attack
 		aLabel.setText(textForLabel(&aLabel));
-		aLabel.draw();
+		changedLabel = &aLabel;
 		break;
-	case DecayMs:
+	case 1: // decay
 		dLabel.setText(textForLabel(&dLabel));
-		dLabel.draw();
+		changedLabel = &dLabel;
 		break;
-	case SustainPercent:
+	case 2: // sutain
 		sLabel.setText(textForLabel(&sLabel));
-		sLabel.draw();
+		changedLabel = &sLabel;
 		break;
-	case ReleaseMs:
+	case 3: // release
 		rLabel.setText(textForLabel(&rLabel));
-		rLabel.draw();
+		changedLabel = &rLabel;
 		break;
 	default:
 		break;
 	}
 
+	/** This makes it so that we only redraw the label and the env graph when
+	 * a value changes enough to alter the text of the label, the idea being
+	 * that a change so small it isn't visible with however many decimal points
+	 * on a label is probably also so small that the envelope graph won't be significantly
+	 * different and updating it is a waste of time.
+	 */
+
+	if (changedLabel->textHasChanged()) {
+		changedLabel->draw();
+		graph.draw();
+	}
+
 }
+
+//MIXER VIEW============================================
+
+BarGraph::BarGraph(uint16_t maxVal) : maxLevel(maxVal){
+
+}
+
+
+area_t BarGraph::getBarArea(){
+	area_t a;
+	float fLevel = (float)currentLevel / (float)maxLevel;
+	a.h = (uint16_t)((1.0f - fLevel) * (float)(area.h - (2 * margin)));
+	a.x = area.x + margin;
+	a.y = (area.y + area.h) - (a.h + margin);
+	a.w = area.w - (2 * margin);
+	return a;
+}
+
+void BarGraph::drawChunk(area_t chunk, uint16_t* buf){
+	if(!hasOverlap(chunk, area))
+		return;
+	area_t barArea = getBarArea();
+	for(uint16_t x = chunk.x; x < chunk.x + chunk.w; x++){
+		for(uint16_t y = chunk.y; y < chunk.y + chunk.h; y++){
+			uint16_t* px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
+			if(pointInArea(barArea, x, y)){
+				*px = barColor;
+			} else {
+				*px = bkgndColor;
+			}
+		}
+	}
+}
+
+
+MixerView::MixerView(){
+
+}
+
+void MixerView::initChildren(){
+	// set the name label
+	static const uint16_t nameHeight = 24; // for 11x18 font
+	nameLabel.setFont(&Font_11x18);
+	nameLabel.setText(viewName);
+	nameLabel.setArea( { 0, 0, ILI9341_WIDTH, nameHeight });
+
+	static const uint16_t labelWidth = ILI9341_WIDTH / 4;
+	static const uint16_t labelHeight = 14; // for 7x10 font
+	static const uint16_t valueY = ILI9341_HEIGHT - labelHeight;
+	static const uint16_t paramY = valueY - labelHeight;
+	uint16_t labelX = 0;
+	// set up each name label and its corresponding param label
+	sawNameLabel.setText("Sawtooth");
+	sawNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	sawLevelLabel.setText(std::to_string(params->sawLevel));
+	sawLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	labelX += labelWidth;
+
+	triNameLabel.setText("Triangle");
+	triNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	triLevelLabel.setText(std::to_string(params->triLevel));
+	triLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	labelX += labelWidth;
+
+	pulseNameLabel.setText("Pulse");
+	pulseNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	pulseLevelLabel.setText(std::to_string(params->pulseLevel));
+	pulseLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	labelX += labelWidth;
+
+	masterNameLabel.setText("Master");
+	masterNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	masterLevelLabel.setText(std::to_string(params->oscLevel));
+	masterLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	labelX += labelWidth;
+
+	children.push_back(&nameLabel);
+	children.push_back(&sawNameLabel);
+	children.push_back(&sawLevelLabel);
+	children.push_back(&triNameLabel);
+	children.push_back(&triLevelLabel);
+	children.push_back(&pulseNameLabel);
+	children.push_back(&pulseLevelLabel);
+	children.push_back(&masterNameLabel);
+	children.push_back(&masterLevelLabel);
+}
+
+void MixerView::paramUpdated(uint8_t id){
+	uint8_t squareIdx = (uint8_t)ParamID::pOsc1SquareLevel;
+	if(id > (uint8_t)ParamID::pOsc1OscLevel && id <= (uint8_t)ParamID::pOsc2OscLevel){
+		squareIdx = (uint8_t)ParamID::pOsc2SquareLevel;
+	}
+	//determine which param
+	id -= squareIdx;
+	switch(id){
+	case 0: // pulse
+		pulseLevelLabel.setText(std::to_string(params->pulseLevel));
+		pulseLevelLabel.draw();
+		//TODO: redraw the relevant bar graph as well
+		break;
+	case 1: // saw
+		sawLevelLabel.setText(std::to_string(params->sawLevel));
+		sawLevelLabel.draw();
+		break;
+	case 2: // tri
+		break;
+	case 3: // master
+		break;
+	default:
+		break;
+	}
+
+
+}
+
 
 //======================================================
 
 GraphicsProcessor::GraphicsProcessor() :
-		queue(static_cast<DisplayQueue*>(mainDispQueue)),dmaBusy(false) {
+		queue(static_cast<DisplayQueue*>(mainDispQueue)), dmaBusy(false) {
 // initialize the screen
 	ILI9341_Init();
 
+}
+
+GraphicsProcessor::~GraphicsProcessor() {
+
+}
+
+void GraphicsProcessor::initViews() {
+
+	// envelope views
+	env1View.setParams(&patch->envelopes[0]);
+	env1View.setName("ADSR 1");
+	env2View.setParams(&patch->envelopes[1]);
+	env2View.setName("ADSR 2");
+
+	views.push_back(&env1View);
+	views.push_back(&env2View);
+
+	// initialize all the views' child components
+	for (View *v : views) {
+		v->initChildren();
+	}
+
+	// make envelope 1 visible to start
+	visibleView = &env1View;
+	visibleView->draw();
 }
 
 void GraphicsProcessor::dmaFinished() {
@@ -569,12 +741,31 @@ void GraphicsProcessor::pushTask(DrawTask task) {
 }
 
 void GraphicsProcessor::runFront() {
-	DrawTask t = queue->getFront();
+	DrawTask t = queue->popFront();
 // run the callback to render the pixels
 	t.func(t.area, dmaBuf);
 	ILI9341_DrawImage_DMA(t.area.x, t.area.y, t.area.w, t.area.h, dmaBuf);
 	dmaBusy = true;
 
+}
+
+
+void GraphicsProcessor::paramUpdated(uint8_t param){
+	View* v = viewForParam(param);
+	if(v != nullptr){
+		v->paramUpdated(param);
+	}
+
+}
+
+View* GraphicsProcessor::viewForParam(uint8_t p) {
+	// refer to the ParamID enum in Patch.h for my reasoning here
+	if (p < ParamID::pEnv2Attack) {
+		return &env1View;
+	} else if (p >= ParamID::pEnv2Attack && p < ParamID::pLFO1Freq) {
+		return &env2View;
+	}
+	return nullptr;
 }
 //======================================================
 
@@ -591,4 +782,3 @@ void check_draw_queue(graphics_processor_t proc) {
 	GraphicsProcessor *ptr = static_cast<GraphicsProcessor*>(proc);
 	ptr->checkDrawQueue();
 }
-

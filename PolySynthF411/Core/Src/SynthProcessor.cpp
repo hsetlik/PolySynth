@@ -7,10 +7,11 @@
 #include "SynthProcessor.h"
 
 SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
-		button_processor_t bp) :
+		button_processor_t bp, graphics_processor_t gp) :
 		voiceClock(static_cast<VoiceClock*>(vc)), encoderProc(
 				static_cast<EncoderProcessor*>(ep)), buttonProc(
-				static_cast<ButtonProcessor*>(bp)), currentPatch(
+				static_cast<ButtonProcessor*>(bp)), graphicsProc(
+				static_cast<GraphicsProcessor*>(gp)), currentPatch(
 				getDefaultPatch()), voicesInUse(0), sustainPedalDown(false), pitchWhlPos(
 				0), modWhlPos(0) {
 	// give all the envelopes the correct pointer to the patch data
@@ -22,6 +23,10 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 	for (uint8_t l = 0; l < 3; l++) {
 		lfos[l].setParams(&currentPatch.lfos[l]);
 	}
+
+	// set up the graphics processor
+	graphicsProc->setPatchData(&currentPatch);
+	graphicsProc->initViews();
 
 }
 
@@ -490,8 +495,8 @@ void SynthProcessor::handleDuringPress(uint8_t button) {
 
 //==================================================================================
 synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep,
-		button_processor_t bp) {
-	return new SynthProcessor(clk, ep, bp);
+		button_processor_t bp, graphics_processor_t gp) {
+	return new SynthProcessor(clk, ep, bp, gp);
 }
 
 void update_dac_levels(synth_processor_t proc, dacLevels_t *levels) {

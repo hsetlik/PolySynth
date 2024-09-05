@@ -33,7 +33,8 @@ private:
 	bool isFull = false;
 public:
 	DisplayQueue();
-	DrawTask getFront();
+	DrawTask popFront();
+	DrawTask peekFront();
 	void push(DrawTask obj);
 	bool full() {
 		return isFull;
