@@ -626,41 +626,54 @@ void MixerView::initChildren(){
 	static const uint16_t labelHeight = 14; // for 7x10 font
 	static const uint16_t valueY = ILI9341_HEIGHT - labelHeight;
 	static const uint16_t paramY = valueY - labelHeight;
+	static const uint16_t graphHeight = ILI9341_HEIGHT - (nameHeight + (labelHeight * 2));
 	uint16_t labelX = 0;
 	// set up each name label and its corresponding param label
 	sawNameLabel.setText("Sawtooth");
 	sawNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
 	sawLevelLabel.setText(std::to_string(params->sawLevel));
 	sawLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	sawLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
+	sawLevelGraph.setLevel((uint16_t)params->sawLevel);
 	labelX += labelWidth;
 
 	triNameLabel.setText("Triangle");
 	triNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
 	triLevelLabel.setText(std::to_string(params->triLevel));
 	triLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	triLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
+	triLevelGraph.setLevel((uint16_t)params->triLevel);
 	labelX += labelWidth;
 
 	pulseNameLabel.setText("Pulse");
 	pulseNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
 	pulseLevelLabel.setText(std::to_string(params->pulseLevel));
 	pulseLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	pulseLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
+	pulseLevelGraph.setLevel((uint16_t)params->pulseLevel);
 	labelX += labelWidth;
 
 	masterNameLabel.setText("Master");
 	masterNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
 	masterLevelLabel.setText(std::to_string(params->oscLevel));
 	masterLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
+	masterLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
+	masterLevelGraph.setLevel((uint16_t)params->oscLevel);
 	labelX += labelWidth;
 
 	children.push_back(&nameLabel);
 	children.push_back(&sawNameLabel);
 	children.push_back(&sawLevelLabel);
+	children.push_back(&sawLevelGraph);
 	children.push_back(&triNameLabel);
 	children.push_back(&triLevelLabel);
+	children.push_back(&triLevelGraph);
 	children.push_back(&pulseNameLabel);
 	children.push_back(&pulseLevelLabel);
+	children.push_back(&pulseLevelGraph);
 	children.push_back(&masterNameLabel);
 	children.push_back(&masterLevelLabel);
+	children.push_back(&masterLevelGraph);
 }
 
 void MixerView::paramUpdated(uint8_t id){
@@ -674,15 +687,26 @@ void MixerView::paramUpdated(uint8_t id){
 	case 0: // pulse
 		pulseLevelLabel.setText(std::to_string(params->pulseLevel));
 		pulseLevelLabel.draw();
-		//TODO: redraw the relevant bar graph as well
+		pulseLevelGraph.setLevel((uint16_t)params->pulseLevel);
+		pulseLevelGraph.draw();
 		break;
 	case 1: // saw
 		sawLevelLabel.setText(std::to_string(params->sawLevel));
 		sawLevelLabel.draw();
+		sawLevelGraph.setLevel((uint16_t)params->sawLevel);
+		sawLevelGraph.draw();
 		break;
 	case 2: // tri
+		triLevelLabel.setText(std::to_string(params->triLevel));
+		triLevelLabel.draw();
+		triLevelGraph.setLevel((uint16_t)params->triLevel);
+		triLevelGraph.draw();
 		break;
 	case 3: // master
+		masterLevelLabel.setText(std::to_string(params->oscLevel));
+		masterLevelLabel.draw();
+		masterLevelGraph.setLevel((uint16_t)params->oscLevel);
+		masterLevelGraph.draw();
 		break;
 	default:
 		break;

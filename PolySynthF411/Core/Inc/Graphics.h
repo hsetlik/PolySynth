@@ -192,17 +192,20 @@ private:
 
 	Label sawNameLabel;
 	Label sawLevelLabel;
+	BarGraph sawLevelGraph;
 
 	Label triNameLabel;
 	Label triLevelLabel;
+	BarGraph triLevelGraph;
 
 	Label pulseNameLabel;
 	Label pulseLevelLabel;
+	BarGraph pulseLevelGraph;
 
 	Label masterNameLabel;
 	Label masterLevelLabel;
+	BarGraph masterLevelGraph;
 
-	//TODO: bar graph for levels component
 public:
 	MixerView();
 	void setParams(dco_t* p){
