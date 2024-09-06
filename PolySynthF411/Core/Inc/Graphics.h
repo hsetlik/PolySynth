@@ -237,11 +237,54 @@ public:
 	}
 };
 
+class OscTuningView : public View {
+private:
+
+	//state
+	dco_t* params1;
+	dco_t* params2;
+
+	//components
+	Label nameLabel;
+	//osc1
+	Label lOsc1;
+	Label lFineName1;
+	Label lFineVal1;
+	BipolarBarGraph gFine1;
+	Label lCoarseName1;
+	Label lCoarseVal1;
+	BipolarBarGraph gCoarse1;
+	//osc2
+	Label lOsc2;
+	Label lFineName2;
+	Label lFineVal2;
+	BipolarBarGraph gFine2;
+	Label lCoarseName2;
+	Label lCoarseVal2;
+	BipolarBarGraph gCoarse2;
+public:
+	OscTuningView();
+	void setParams(dco_t* osc1, dco_t* osc2){
+		params1 = osc1;
+		params2 = osc2;
+	}
+	void initChildren() override;
+	void paramUpdated(uint8_t id) override;
+};
 
 
 
 
 //==================================================
+
+// enum of the view types
+enum ViewID {
+	vEnv1,
+	vEnv2,
+	vMix1,
+	vMix2,
+	vTune
+};
 
 
 class GraphicsProcessor {
@@ -258,6 +301,7 @@ private:
 	EnvView env2View;
 	MixerView mix1View;
 	MixerView mix2View;
+	OscTuningView tuningView;
 	std::vector<View*> views;
 	// helper to return the relevant view for a given parameter change
 	View* viewForParam(uint8_t p);

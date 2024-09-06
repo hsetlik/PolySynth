@@ -432,7 +432,7 @@ void EnvGraph::drawChunk(area_t chunk, uint16_t *buf) {
 	std::vector<line_t> lines = getEnvLines(params, area);
 	fillChunk(buf, chunk.w, chunk.h, bkgndColor);
 	for (auto &line : lines) {
-		if (isLineInChunk(line, chunk)){
+		if (isLineInChunk(line, chunk)) {
 			drawLineInChunk(line, chunk, buf, lineColor);
 		}
 	}
@@ -579,29 +579,30 @@ void EnvView::paramUpdated(uint8_t l) {
 
 //MIXER VIEW============================================
 
-BarGraph::BarGraph(uint16_t maxVal) : maxLevel(maxVal){
+BarGraph::BarGraph(uint16_t maxVal) :
+		maxLevel(maxVal) {
 
 }
 
-
-area_t BarGraph::getBarArea(){
+area_t BarGraph::getBarArea() {
 	area_t a;
-	float fLevel = (float)currentLevel / (float)maxLevel;
-	a.h = (uint16_t)((1.0f - fLevel) * (float)(area.h - (2 * margin)));
+	float fLevel = (float) currentLevel / (float) maxLevel;
+	a.h = (uint16_t) ((1.0f - fLevel) * (float) (area.h - (2 * margin)));
 	a.x = area.x + margin;
 	a.y = (area.y + area.h) - (a.h + margin);
 	a.w = area.w - (2 * margin);
 	return a;
 }
 
-void BarGraph::drawChunk(area_t chunk, uint16_t* buf){
-	if(!hasOverlap(chunk, area))
+void BarGraph::drawChunk(area_t chunk, uint16_t *buf) {
+	if (!hasOverlap(chunk, area))
 		return;
 	area_t barArea = getBarArea();
-	for(uint16_t x = chunk.x; x < chunk.x + chunk.w; x++){
-		for(uint16_t y = chunk.y; y < chunk.y + chunk.h; y++){
-			uint16_t* px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
-			if(pointInArea(barArea, x, y)){
+	for (uint16_t x = chunk.x; x < chunk.x + chunk.w; x++) {
+		for (uint16_t y = chunk.y; y < chunk.y + chunk.h; y++) {
+			uint16_t *px = getPixel(buf, chunk.w, chunk.h, x - chunk.x,
+					y - chunk.y);
+			if (pointInArea(barArea, x, y)) {
 				*px = barColor;
 			} else {
 				*px = bkgndColor;
@@ -610,12 +611,11 @@ void BarGraph::drawChunk(area_t chunk, uint16_t* buf){
 	}
 }
 
-
-MixerView::MixerView(){
+MixerView::MixerView() {
 
 }
 
-void MixerView::initChildren(){
+void MixerView::initChildren() {
 	// set the name label
 	static const uint16_t nameHeight = 24; // for 11x18 font
 	nameLabel.setFont(&Font_11x18);
@@ -626,39 +626,40 @@ void MixerView::initChildren(){
 	static const uint16_t labelHeight = 14; // for 7x10 font
 	static const uint16_t valueY = ILI9341_HEIGHT - labelHeight;
 	static const uint16_t paramY = valueY - labelHeight;
-	static const uint16_t graphHeight = ILI9341_HEIGHT - (nameHeight + (labelHeight * 2));
+	static const uint16_t graphHeight = ILI9341_HEIGHT
+			- (nameHeight + (labelHeight * 2));
 	uint16_t labelX = 0;
 	// set up each name label and its corresponding param label
 	sawNameLabel.setText("Sawtooth");
-	sawNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	sawNameLabel.setArea( { labelX, paramY, labelWidth, labelHeight });
 	sawLevelLabel.setText(std::to_string(params->sawLevel));
-	sawLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
-	sawLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
-	sawLevelGraph.setLevel((uint16_t)params->sawLevel);
+	sawLevelLabel.setArea( { labelX, valueY, labelWidth, labelHeight });
+	sawLevelGraph.setArea( { labelX, nameHeight, labelWidth, graphHeight });
+	sawLevelGraph.setLevel((uint16_t) params->sawLevel);
 	labelX += labelWidth;
 
 	triNameLabel.setText("Triangle");
-	triNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	triNameLabel.setArea( { labelX, paramY, labelWidth, labelHeight });
 	triLevelLabel.setText(std::to_string(params->triLevel));
-	triLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
-	triLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
-	triLevelGraph.setLevel((uint16_t)params->triLevel);
+	triLevelLabel.setArea( { labelX, valueY, labelWidth, labelHeight });
+	triLevelGraph.setArea( { labelX, nameHeight, labelWidth, graphHeight });
+	triLevelGraph.setLevel((uint16_t) params->triLevel);
 	labelX += labelWidth;
 
 	pulseNameLabel.setText("Pulse");
-	pulseNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	pulseNameLabel.setArea( { labelX, paramY, labelWidth, labelHeight });
 	pulseLevelLabel.setText(std::to_string(params->pulseLevel));
-	pulseLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
-	pulseLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
-	pulseLevelGraph.setLevel((uint16_t)params->pulseLevel);
+	pulseLevelLabel.setArea( { labelX, valueY, labelWidth, labelHeight });
+	pulseLevelGraph.setArea( { labelX, nameHeight, labelWidth, graphHeight });
+	pulseLevelGraph.setLevel((uint16_t) params->pulseLevel);
 	labelX += labelWidth;
 
 	masterNameLabel.setText("Master");
-	masterNameLabel.setArea({labelX, paramY, labelWidth, labelHeight});
+	masterNameLabel.setArea( { labelX, paramY, labelWidth, labelHeight });
 	masterLevelLabel.setText(std::to_string(params->oscLevel));
-	masterLevelLabel.setArea({labelX, valueY, labelWidth, labelHeight});
-	masterLevelGraph.setArea({labelX, nameHeight, labelWidth, graphHeight});
-	masterLevelGraph.setLevel((uint16_t)params->oscLevel);
+	masterLevelLabel.setArea( { labelX, valueY, labelWidth, labelHeight });
+	masterLevelGraph.setArea( { labelX, nameHeight, labelWidth, graphHeight });
+	masterLevelGraph.setLevel((uint16_t) params->oscLevel);
 	labelX += labelWidth;
 
 	children.push_back(&nameLabel);
@@ -676,36 +677,37 @@ void MixerView::initChildren(){
 	children.push_back(&masterLevelGraph);
 }
 
-void MixerView::paramUpdated(uint8_t id){
-	uint8_t squareIdx = (uint8_t)ParamID::pOsc1SquareLevel;
-	if(id > (uint8_t)ParamID::pOsc1OscLevel && id <= (uint8_t)ParamID::pOsc2OscLevel){
-		squareIdx = (uint8_t)ParamID::pOsc2SquareLevel;
+void MixerView::paramUpdated(uint8_t id) {
+	uint8_t squareIdx = (uint8_t) ParamID::pOsc1SquareLevel;
+	if (id > (uint8_t) ParamID::pOsc1OscLevel
+			&& id <= (uint8_t) ParamID::pOsc2OscLevel) {
+		squareIdx = (uint8_t) ParamID::pOsc2SquareLevel;
 	}
 	//determine which param
 	id -= squareIdx;
-	switch(id){
+	switch (id) {
 	case 0: // pulse
 		pulseLevelLabel.setText(std::to_string(params->pulseLevel));
 		pulseLevelLabel.draw();
-		pulseLevelGraph.setLevel((uint16_t)params->pulseLevel);
+		pulseLevelGraph.setLevel((uint16_t) params->pulseLevel);
 		pulseLevelGraph.draw();
 		break;
 	case 1: // saw
 		sawLevelLabel.setText(std::to_string(params->sawLevel));
 		sawLevelLabel.draw();
-		sawLevelGraph.setLevel((uint16_t)params->sawLevel);
+		sawLevelGraph.setLevel((uint16_t) params->sawLevel);
 		sawLevelGraph.draw();
 		break;
 	case 2: // tri
 		triLevelLabel.setText(std::to_string(params->triLevel));
 		triLevelLabel.draw();
-		triLevelGraph.setLevel((uint16_t)params->triLevel);
+		triLevelGraph.setLevel((uint16_t) params->triLevel);
 		triLevelGraph.draw();
 		break;
 	case 3: // master
 		masterLevelLabel.setText(std::to_string(params->oscLevel));
 		masterLevelLabel.draw();
-		masterLevelGraph.setLevel((uint16_t)params->oscLevel);
+		masterLevelGraph.setLevel((uint16_t) params->oscLevel);
 		masterLevelGraph.draw();
 		break;
 	default:
@@ -714,20 +716,21 @@ void MixerView::paramUpdated(uint8_t id){
 }
 
 // TUNING VIEW=============================================
-BipolarBarGraph::BipolarBarGraph(int16_t max) : maxLevel(max){
+BipolarBarGraph::BipolarBarGraph(int16_t max) :
+		maxLevel(max) {
 
 }
 
-area_t BipolarBarGraph::getBarArea(){
+area_t BipolarBarGraph::getBarArea() {
 	area_t bar;
 	bar.x = area.x + margin; // the x and width will always be the same
 	bar.w = area.w - (2 * margin);
 	// now check if we're positive or negative
 	const uint16_t centerY = area.y + (area.h / 2);
 	const uint16_t maxBarHeight = (area.h / 2) - margin;
-	float fHeight = (float)std::abs(currentLevel) / (float)maxLevel;
-	uint16_t barHeight = (uint16_t)(fHeight * (float)maxBarHeight);
-	if(currentLevel >= 0) { // positive value
+	float fHeight = (float) std::abs(currentLevel) / (float) maxLevel;
+	uint16_t barHeight = (uint16_t) (fHeight * (float) maxBarHeight);
+	if (currentLevel >= 0) { // positive value
 		bar.y = centerY - barHeight;
 		bar.h = barHeight;
 	} else { // negative value
@@ -737,16 +740,17 @@ area_t BipolarBarGraph::getBarArea(){
 	return bar;
 }
 
-void BipolarBarGraph::drawChunk(area_t chunk, uint16_t* buf){
+void BipolarBarGraph::drawChunk(area_t chunk, uint16_t *buf) {
 
-	if(!hasOverlap(chunk, area))
+	if (!hasOverlap(chunk, area))
 		return;
-	color16_t* barColor = (currentLevel >= 0) ? &posBarColor : &negBarColor;
+	color16_t *barColor = (currentLevel >= 0) ? &posBarColor : &negBarColor;
 	area_t barArea = getBarArea();
-	for(uint16_t x = chunk.x; x < chunk.x + chunk.w; x++){
-		for(uint16_t y = chunk.y; y < chunk.y + chunk.h; y++){
-			uint16_t* px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
-			if(pointInArea(barArea, x, y)){
+	for (uint16_t x = chunk.x; x < chunk.x + chunk.w; x++) {
+		for (uint16_t y = chunk.y; y < chunk.y + chunk.h; y++) {
+			uint16_t *px = getPixel(buf, chunk.w, chunk.h, x - chunk.x,
+					y - chunk.y);
+			if (pointInArea(barArea, x, y)) {
 				*px = *barColor;
 			} else {
 				*px = bkgndColor;
@@ -755,6 +759,130 @@ void BipolarBarGraph::drawChunk(area_t chunk, uint16_t* buf){
 	}
 }
 
+OscTuningView::OscTuningView() {
+
+}
+
+void OscTuningView::initChildren() {
+	// set the name label
+	static const uint16_t nameHeight = 24; // for 11x18 font
+	nameLabel.setFont(&Font_11x18);
+	nameLabel.setText(viewName);
+	nameLabel.setArea( { 0, 0, ILI9341_WIDTH, nameHeight });
+
+	static const uint16_t sectionW = ILI9341_WIDTH / 4;
+
+	// set up each osc's name label
+	lOsc1.setFont(&Font_11x18);
+	lOsc1.setText("DCO 1");
+	lOsc1.setArea( { 0, nameHeight, (uint16_t) (2 * sectionW), nameHeight });
+
+	lOsc2.setFont(&Font_11x18);
+	lOsc2.setText("DCO 2");
+	lOsc2.setArea(
+			{ (uint16_t) (2 * sectionW), nameHeight, (uint16_t) (2 * sectionW),
+					nameHeight });
+
+	// now the labels below each
+	uint16_t currentX = 0;
+	static const uint16_t labelHeight = 14;
+	static const uint16_t valueY = ILI9341_HEIGHT - labelHeight;
+	static const uint16_t nameY = valueY - labelHeight;
+	static const uint16_t graphY = 2 * nameHeight;
+	static const uint16_t graphHeight = nameY - graphY;
+
+	// coarse tune 1
+	gCoarse1.setArea( { currentX, graphY, sectionW, graphHeight });
+	lCoarseName1.setArea( { currentX, nameY, sectionW, labelHeight });
+	lCoarseVal1.setArea( { currentX, valueY, sectionW, labelHeight });
+	gCoarse1.setLevel((int16_t) params1->coarseTune);
+	lCoarseName1.setText("COARSE");
+	lCoarseVal1.setText(std::to_string(params1->coarseTune));
+	currentX += sectionW;
+
+	// fine tune 1
+	gFine1.setArea( { currentX, graphY, sectionW, graphHeight });
+	lFineName1.setArea( { currentX, nameY, sectionW, labelHeight });
+	lFineVal1.setArea( { currentX, valueY, sectionW, labelHeight });
+	gFine1.setLevel((int16_t) params1->fineTune);
+	lFineName1.setText("COARSE");
+	lFineVal1.setText(std::to_string(params1->fineTune));
+	currentX += sectionW;
+
+	// coarse tune 2
+	gCoarse2.setArea( { currentX, graphY, sectionW, graphHeight });
+	lCoarseName2.setArea( { currentX, nameY, sectionW, labelHeight });
+	lCoarseVal2.setArea( { currentX, valueY, sectionW, labelHeight });
+	gCoarse2.setLevel((int16_t) params2->coarseTune);
+	lCoarseName2.setText("COARSE");
+	lCoarseVal2.setText(std::to_string(params2->coarseTune));
+	currentX += sectionW;
+
+	// fine tune 2
+	gFine2.setArea( { currentX, graphY, sectionW, graphHeight });
+	lFineName2.setArea( { currentX, nameY, sectionW, labelHeight });
+	lFineVal2.setArea( { currentX, valueY, sectionW, labelHeight });
+	gFine2.setLevel((int16_t) params2->fineTune);
+	lFineName2.setText("COARSE");
+	lFineVal2.setText(std::to_string(params2->fineTune));
+
+	// now add pointers to the children vector
+	children.push_back(&nameLabel);
+
+	children.push_back(&lOsc1);
+	children.push_back(&lFineName1);
+	children.push_back(&lFineVal1);
+	children.push_back(&gFine1);
+	children.push_back(&lCoarseName1);
+	children.push_back(&lCoarseVal1);
+	children.push_back(&gCoarse1);
+
+	children.push_back(&lOsc2);
+	children.push_back(&lFineName2);
+	children.push_back(&lFineVal2);
+	children.push_back(&gFine2);
+	children.push_back(&lCoarseName2);
+	children.push_back(&lCoarseVal2);
+	children.push_back(&gCoarse2);
+
+}
+
+void OscTuningView::paramUpdated(uint8_t id) {
+	ParamID p = (ParamID) id;
+
+	switch (p) {
+	case ParamID::pOsc1Coarse:
+		int16_t val = (int16_t) params1->coarseTune;
+		lCoarseVal1.setText(std::to_string(val));
+		gCoarse1.setLevel(val);
+		lCoarseVal1.draw();
+		gCoarse1.draw();
+		break;
+	case ParamID::pOsc1Fine:
+		int16_t val = (int16_t) params1->fineTune;
+		lFineVal1.setText(std::to_string(val));
+		gFine1.setLevel(val);
+		lFineVal1.draw();
+		gFine1.draw();
+		break;
+	case ParamID::pOsc2Coarse:
+		int16_t val = (int16_t) params2->coarseTune;
+		lCoarseVal2.setText(std::to_string(val));
+		gCoarse2.setLevel(val);
+		lCoarseVal2.draw();
+		gCoarse2.draw();
+		break;
+	case ParamID::pOsc2Fine:
+		int16_t val = (int16_t) params2->fineTune;
+		lFineVal2.setText(std::to_string(val));
+		gFine2.setLevel(val);
+		lFineVal2.draw();
+		gFine2.draw();
+		break;
+	default:
+		break;
+	}
+}
 
 //======================================================
 
@@ -783,10 +911,15 @@ void GraphicsProcessor::initViews() {
 	mix2View.setParams(&patch->oscillators[1]);
 	mix2View.setName("DCO 2 Mix");
 
+	// tuning view
+	tuningView.setParams(&patch->oscillators[0], &patch->oscillators[1]);
+	tuningView.setName("Tuning");
+
 	views.push_back(&env1View);
 	views.push_back(&env2View);
 	views.push_back(&mix1View);
 	views.push_back(&mix2View);
+	views.push_back(&tuningView);
 
 	// initialize all the views' child components
 	for (View *v : views) {
@@ -821,10 +954,9 @@ void GraphicsProcessor::runFront() {
 
 }
 
-
-void GraphicsProcessor::paramUpdated(uint8_t param){
-	View* v = viewForParam(param);
-	if(v != nullptr){
+void GraphicsProcessor::paramUpdated(uint8_t param) {
+	View *v = viewForParam(param);
+	if (v != nullptr) {
 		v->paramUpdated(param);
 	}
 
@@ -836,11 +968,13 @@ View* GraphicsProcessor::viewForParam(uint8_t p) {
 		return &env1View;
 	} else if (p >= ParamID::pEnv2Attack && p < ParamID::pLFO1Freq) {
 		return &env2View;
-	} else if (p >= ParamID::pOsc1SquareLevel && p < ParamID::pOsc2Coarse){
+	} else if (p >= ParamID::pOsc1SquareLevel && p < ParamID::pOsc2Coarse) {
 		return &mix1View;
-	} else if (p >= ParamID::pOsc2SquareLevel && p < ParamID::pFilterCutoff){
+	} else if (p >= ParamID::pOsc2SquareLevel && p < ParamID::pFilterCutoff) {
 		return &mix2View;
-	}
+	} else if ((p >= ParamID::pOsc1Coarse && p < ParamID::pOsc1PulseWidth)
+			|| (p >= ParamID::pOsc2Coarse && p < ParamID::pOsc2PulseWidth))
+		return &tuningView;
 	return nullptr;
 }
 //======================================================
