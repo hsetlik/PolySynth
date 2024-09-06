@@ -711,8 +711,48 @@ void MixerView::paramUpdated(uint8_t id){
 	default:
 		break;
 	}
+}
 
+// TUNING VIEW=============================================
+BipolarBarGraph::BipolarBarGraph(int16_t max) : maxLevel(max){
 
+}
+
+area_t BipolarBarGraph::getBarArea(){
+	area_t bar;
+	bar.x = area.x + margin; // the x and width will always be the same
+	bar.w = area.w - (2 * margin);
+	// now check if we're positive or negative
+	const uint16_t centerY = area.y + (area.h / 2);
+	const uint16_t maxBarHeight = (area.h / 2) - margin;
+	float fHeight = (float)std::abs(currentLevel) / (float)maxLevel;
+	uint16_t barHeight = (uint16_t)(fHeight * (float)maxBarHeight);
+	if(currentLevel >= 0) { // positive value
+		bar.y = centerY - barHeight;
+		bar.h = barHeight;
+	} else { // negative value
+		bar.y = centerY;
+		bar.h = barHeight;
+	}
+	return bar;
+}
+
+void BipolarBarGraph::drawChunk(area_t chunk, uint16_t* buf){
+
+	if(!hasOverlap(chunk, area))
+		return;
+	color16_t* barColor = (currentLevel >= 0) ? &posBarColor : &negBarColor;
+	area_t barArea = getBarArea();
+	for(uint16_t x = chunk.x; x < chunk.x + chunk.w; x++){
+		for(uint16_t y = chunk.y; y < chunk.y + chunk.h; y++){
+			uint16_t* px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
+			if(pointInArea(barArea, x, y)){
+				*px = *barColor;
+			} else {
+				*px = bkgndColor;
+			}
+		}
+	}
 }
 
 
@@ -737,8 +777,16 @@ void GraphicsProcessor::initViews() {
 	env2View.setParams(&patch->envelopes[1]);
 	env2View.setName("ADSR 2");
 
+	// mixer views
+	mix1View.setParams(&patch->oscillators[0]);
+	mix1View.setName("DCO 1 Mix");
+	mix2View.setParams(&patch->oscillators[1]);
+	mix2View.setName("DCO 2 Mix");
+
 	views.push_back(&env1View);
 	views.push_back(&env2View);
+	views.push_back(&mix1View);
+	views.push_back(&mix2View);
 
 	// initialize all the views' child components
 	for (View *v : views) {
@@ -784,10 +832,14 @@ void GraphicsProcessor::paramUpdated(uint8_t param){
 
 View* GraphicsProcessor::viewForParam(uint8_t p) {
 	// refer to the ParamID enum in Patch.h for my reasoning here
-	if (p < ParamID::pEnv2Attack) {
+	if (p < ParamID::pEnv2Attack) { // envelopes--------------
 		return &env1View;
 	} else if (p >= ParamID::pEnv2Attack && p < ParamID::pLFO1Freq) {
 		return &env2View;
+	} else if (p >= ParamID::pOsc1SquareLevel && p < ParamID::pOsc2Coarse){
+		return &mix1View;
+	} else if (p >= ParamID::pOsc2SquareLevel && p < ParamID::pFilterCutoff){
+		return &mix2View;
 	}
 	return nullptr;
 }

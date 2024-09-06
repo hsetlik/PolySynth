@@ -218,6 +218,27 @@ private:
 
 };
 
+//TUNING VIEW-------------------------------------
+
+class BipolarBarGraph : public Component {
+private:
+	const int16_t maxLevel;
+	int16_t currentLevel = 0;
+	uint16_t margin = 3;
+	area_t getBarArea();
+public:
+	color16_t negBarColor = color565_getColor16(ColorID::Maroon);
+	color16_t posBarColor = color565_getColor16(ColorID::DarkGreen);
+	color16_t bkgndColor = color565_getColor16(ColorID::Salmon);
+	BipolarBarGraph(int16_t max=127);
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+	void setLevel(int16_t lvl) {
+		currentLevel = lvl;
+	}
+};
+
+
+
 
 
 //==================================================
@@ -235,6 +256,8 @@ private:
 	View* visibleView = nullptr;
 	EnvView env1View;
 	EnvView env2View;
+	MixerView mix1View;
+	MixerView mix2View;
 	std::vector<View*> views;
 	// helper to return the relevant view for a given parameter change
 	View* viewForParam(uint8_t p);
