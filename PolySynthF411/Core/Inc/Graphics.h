@@ -82,12 +82,20 @@ protected:
 public:
 	Component();
 	virtual ~Component();
+	area_t getArea(){
+		return area;
+	}
 	void setArea(area_t a);
 	void setZIndex(uint8_t val);
 	// this needs to be overridden by all subclasses
 	virtual void drawChunk(area_t chunk, uint16_t *buf)=0;
 	// this can be called from the processor to draw all the chunks of this component
 	void draw();
+
+protected:
+	DrawTask drawTaskForChunk(area_t chunk);
+	// helpful later
+	friend class View;
 };
 
 
@@ -143,6 +151,7 @@ public:
 	virtual void paramUpdated(uint8_t id){
 	}
 	void draw();
+	void redrawChunks(std::vector<area_t>& chunks);
 };
 
 // envelope view ---------------------------
@@ -170,7 +179,7 @@ private:
 
 class BarGraph : public Component {
 private:
-	const uint16_t maxLevel;
+	uint16_t maxLevel;
 	uint16_t currentLevel = 0;
 	uint16_t margin = 3;
 	area_t getBarArea();
@@ -182,6 +191,9 @@ public:
 		currentLevel = lvl;
 	}
 	void drawChunk(area_t chunk, uint16_t *buf) override;
+	void setMaxLevel(int16_t val) {
+		maxLevel = val;
+	}
 };
 
 class MixerView : public View {
@@ -217,14 +229,14 @@ private:
 
 
 };
-
 //TUNING VIEW-------------------------------------
 
 class BipolarBarGraph : public Component {
 private:
-	const int16_t maxLevel;
+	int16_t maxLevel;
 	int16_t currentLevel = 0;
 	uint16_t margin = 3;
+	bool isVertical = true;
 	area_t getBarArea();
 public:
 	color16_t negBarColor = color565_getColor16(ColorID::Maroon);
@@ -234,6 +246,12 @@ public:
 	void drawChunk(area_t chunk, uint16_t *buf) override;
 	void setLevel(int16_t lvl) {
 		currentLevel = lvl;
+	}
+	void setVertical(bool v){
+		isVertical = v;
+	}
+	void setMaxLevel(int16_t val) {
+		maxLevel = val;
 	}
 };
 
@@ -273,6 +291,50 @@ public:
 };
 
 
+// MODAL CHANGE THING-----------------------------
+//NOTE: this guy is a little unique in that it's (so far)
+// the only component to own other components which it will be
+// responsible for drawing
+class ModalChangeComponent : public Component {
+private:
+// components
+	Label lName;
+	Label lValue;
+	BipolarBarGraph graph;
+// drawing state
+	uint16_t margin = 7;
+	color16_t bkgndColor = color565_getColor16(ColorID::Salmon);
+	color16_t edgeColor = color565_getColor16(ColorID::Maroon);
+	// this should palce all child components relative to this component's area
+	void placeChildren();
+	std::vector<Component*> children;
+	// this gets called from ModalChangeView's paramUpdated method
+	void prepareToShow(const std::string& name, const std::string& value, int16_t level, int16_t maxLevel);
+
+public:
+	ModalChangeComponent();
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+	void draw();
+	friend class ModalChangeView;
+};
+
+class ModalChangeView : public View {
+private:
+	patch_t* patch;
+	tick_t lastUpdateTick = 0;
+public:
+	ModalChangeView();
+	void initChildren() override;
+	//Note: in this case updating the param causes this view to become visible
+	void paramUpdated(uint8_t id) override;
+	void setPatch(patch_t* p) {
+		patch = p;
+	}
+	// check if this component has been visible for longer that the alloted time
+	bool timeToRemove();
+};
+
+
 
 
 //==================================================
@@ -297,19 +359,22 @@ private:
 	void runFront();
 	// keep our views here
 	View* visibleView = nullptr;
+	View* viewToDraw = nullptr;
 	EnvView env1View;
 	EnvView env2View;
 	MixerView mix1View;
 	MixerView mix2View;
 	OscTuningView tuningView;
+	ModalChangeView modalView;
 	std::vector<View*> views;
+	bool inModalMode = false;
 	// helper to return the relevant view for a given parameter change
 	View* viewForParam(uint8_t p);
 public:
 	GraphicsProcessor();
 	~GraphicsProcessor();
 	void dmaFinished();
-	void checkDrawQueue();
+	void checkGUIUpdates();
 	void setPatchData(patch_t* p) {
 		patch = p;
 	}
@@ -333,7 +398,8 @@ typedef void *graphics_processor_t;
 
 EXTERNC graphics_processor_t create_graphics_processor();
 EXTERNC void disp_dma_finished(graphics_processor_t proc);
-EXTERNC void check_draw_queue(graphics_processor_t proc);
+EXTERNC void check_gui_updates(graphics_processor_t proc);
+
 
 
 #undef EXTERNC

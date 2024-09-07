@@ -195,7 +195,7 @@ patch_t getDefaultPatch();
 // enum to assign IDs to every base parameter (ie not including modulations or depths)
 #define NUM_PARAMS 33
 
-typedef enum {
+typedef enum { // ALL the params on here have their UI view roughed in as of 9/7
 	// envelopes
 	pEnv1Attack,
 	pEnv1Decay,

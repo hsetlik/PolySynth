@@ -333,7 +333,7 @@ int main(void) {
 			dacLevelsNeeded = 0;
 		}
 		// send the next DMA chunk to the display if needed
-		check_draw_queue(graphicsProc);
+		check_gui_updates(graphicsProc);
 		// see if it's time to check the buttons
 		now = TickTimer_get();
 		if (TickTimer_tickDistanceMs(lastButtonCheck,

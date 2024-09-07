@@ -109,13 +109,18 @@ std::vector<area_t> Component::getTaskChunks() {
 void Component::draw() {
 	std::vector<area_t> chunks = getTaskChunks();
 	for (uint8_t c = 0; c < chunks.size(); c++) {
-		DrawTask task;
-		task.area = chunks[c];
-		task.func = [this](area_t area, uint16_t *buf) {
-			this->drawChunk(area, buf);
-		};
+		DrawTask task = drawTaskForChunk(chunks[c]);
 		queue->push(task);
 	}
+}
+
+DrawTask Component::drawTaskForChunk(area_t chunk) {
+	DrawTask task;
+	task.area = chunk;
+	task.func = [this](area_t a, uint16_t *buf) {
+		this->drawChunk(a, buf);
+	};
+	return task;
 }
 
 //---------------------------
@@ -454,6 +459,21 @@ void View::draw() {
 	}
 }
 
+void View::redrawChunks(std::vector<area_t> &chunks) {
+	DisplayQueue *queue = static_cast<DisplayQueue*>(mainDispQueue);
+	for (auto &chunk : chunks) {
+		// check each child to see if it needs to draw this chunk
+		// this is O(n * numComponents) but it should ultimately
+		// save time by drawing fewer pixels in smaller tasks
+		for (auto *child : children) {
+			if (hasOverlap(chunk, child->area)) { // we have to redraw
+				auto task = child->drawTaskForChunk(chunk);
+				queue->push(task);
+			}
+		}
+	}
+}
+
 void View::setName(const std::string &str) {
 	viewName = str;
 }
@@ -723,19 +743,35 @@ BipolarBarGraph::BipolarBarGraph(int16_t max) :
 
 area_t BipolarBarGraph::getBarArea() {
 	area_t bar;
-	bar.x = area.x + margin; // the x and width will always be the same
-	bar.w = area.w - (2 * margin);
-	// now check if we're positive or negative
-	const uint16_t centerY = area.y + (area.h / 2);
-	const uint16_t maxBarHeight = (area.h / 2) - margin;
-	float fHeight = (float) std::abs(currentLevel) / (float) maxLevel;
-	uint16_t barHeight = (uint16_t) (fHeight * (float) maxBarHeight);
-	if (currentLevel >= 0) { // positive value
-		bar.y = centerY - barHeight;
-		bar.h = barHeight;
-	} else { // negative value
-		bar.y = centerY;
-		bar.h = barHeight;
+	if (isVertical) {
+		bar.x = area.x + margin; // the x and width will always be the same
+		bar.w = area.w - (2 * margin);
+		// now check if we're positive or negative
+		const uint16_t centerY = area.y + (area.h / 2);
+		const uint16_t maxBarHeight = (area.h / 2) - margin;
+		float fHeight = (float) std::abs(currentLevel) / (float) maxLevel;
+		uint16_t barHeight = (uint16_t) (fHeight * (float) maxBarHeight);
+		if (currentLevel >= 0) { // positive value
+			bar.y = centerY - barHeight;
+			bar.h = barHeight;
+		} else { // negative value
+			bar.y = centerY;
+			bar.h = barHeight;
+		}
+	} else { // horizontal;
+		bar.y = area.y + margin;
+		bar.h = area.h - (2 * margin);
+		const uint16_t centerX = area.x + (area.w / 2);
+		const uint16_t maxBarWidth = (area.w / 2) - margin;
+		float fWidth = (float) std::abs(currentLevel) / (float) maxLevel;
+		const uint16_t barWidth = (uint16_t) (fWidth * (float) maxBarWidth);
+		if (currentLevel >= 0) { // positive-> bar on the right
+			bar.x = centerX;
+			bar.w = barWidth;
+		} else { // negative -> bar on the left
+			bar.x = centerX - barWidth;
+			bar.w = barWidth;
+		}
 	}
 	return bar;
 }
@@ -849,31 +885,31 @@ void OscTuningView::initChildren() {
 
 void OscTuningView::paramUpdated(uint8_t id) {
 	ParamID p = (ParamID) id;
-
+	int16_t val = 0;
 	switch (p) {
 	case ParamID::pOsc1Coarse:
-		int16_t val = (int16_t) params1->coarseTune;
+		val = (int16_t) params1->coarseTune;
 		lCoarseVal1.setText(std::to_string(val));
 		gCoarse1.setLevel(val);
 		lCoarseVal1.draw();
 		gCoarse1.draw();
 		break;
 	case ParamID::pOsc1Fine:
-		int16_t val = (int16_t) params1->fineTune;
+		val = (int16_t) params1->fineTune;
 		lFineVal1.setText(std::to_string(val));
 		gFine1.setLevel(val);
 		lFineVal1.draw();
 		gFine1.draw();
 		break;
 	case ParamID::pOsc2Coarse:
-		int16_t val = (int16_t) params2->coarseTune;
+		val = (int16_t) params2->coarseTune;
 		lCoarseVal2.setText(std::to_string(val));
 		gCoarse2.setLevel(val);
 		lCoarseVal2.draw();
 		gCoarse2.draw();
 		break;
 	case ParamID::pOsc2Fine:
-		int16_t val = (int16_t) params2->fineTune;
+		val = (int16_t) params2->fineTune;
 		lFineVal2.setText(std::to_string(val));
 		gFine2.setLevel(val);
 		lFineVal2.draw();
@@ -884,6 +920,86 @@ void OscTuningView::paramUpdated(uint8_t id) {
 	}
 }
 
+//MODAL VIEW===========================================
+ModalChangeComponent::ModalChangeComponent() {
+	lName.bkgndColor = bkgndColor;
+	lValue.bkgndColor = bkgndColor;
+	children.push_back(&lName);
+	children.push_back(&lValue);
+	children.push_back(&graph);
+}
+
+void ModalChangeComponent::drawChunk(area_t chunk, uint16_t *buf) {
+	// first fill with the background/edge color as needed
+	uint16_t *px = nullptr;
+	for (uint16_t x = chunk.x; x < (chunk.x + chunk.w); x++) {
+		for (uint16_t y = chunk.y; y < (chunk.y + chunk.h); y++) {
+			px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
+			if ((x < margin) || (x >= (area.x + area.w) - margin)
+					|| (y < margin) || (y >= (area.y + area.h))) {
+				*px = (uint16_t) edgeColor;
+			} else {
+				*px = (uint16_t) bkgndColor;
+			}
+
+		}
+	}
+	// now draw any relevant child components
+	for (auto *child : children) {
+		if (hasOverlap(chunk, child->getArea()))
+			child->drawChunk(chunk, buf);
+	}
+
+}
+
+void ModalChangeComponent::placeChildren() {
+	// little idea maybe
+	const uint16_t dX = area.w / 12;
+	const uint16_t dY = area.h / 9;
+
+	area_t nameArea;
+	nameArea.x = dX;
+	nameArea.y = dY;
+	nameArea.w = dX * 10;
+	nameArea.h = lName.getIdealHeight(2);
+	lName.setArea(nameArea);
+
+	area_t valueArea;
+	valueArea.x = dX;
+	valueArea.y = 2 * dY;
+	valueArea.w = dX * 10;
+	lValue.setArea(valueArea);
+
+}
+
+void ModalChangeComponent::prepareToShow(const std::string &name,
+		const std::string &value, int16_t level, int16_t maxLevel) {
+	lName.setText(name);
+	lValue.setText(value);
+	graph.setMaxLevel(maxLevel);
+	graph.setLevel(level);
+}
+
+// view -------------------
+ModalChangeView::ModalChangeView() {
+
+}
+
+void ModalChangeView::initChildren() {
+
+}
+
+void ModalChangeView::paramUpdated(uint8_t id) {
+	lastUpdateTick = TickTimer_get();
+	//TODO: set the strings and prepare this guy to be drawn
+
+}
+
+bool ModalChangeView::timeToRemove() {
+	constexpr float modalLengthMs = 3100.0f;
+	return TickTimer_tickDistanceMs(lastUpdateTick, TickTimer_get())
+			>= modalLengthMs;
+}
 //======================================================
 
 GraphicsProcessor::GraphicsProcessor() :
@@ -915,11 +1031,15 @@ void GraphicsProcessor::initViews() {
 	tuningView.setParams(&patch->oscillators[0], &patch->oscillators[1]);
 	tuningView.setName("Tuning");
 
+	// modal view
+	modalView.setPatch(patch);
+
 	views.push_back(&env1View);
 	views.push_back(&env2View);
 	views.push_back(&mix1View);
 	views.push_back(&mix2View);
 	views.push_back(&tuningView);
+	views.push_back(&modalView);
 
 	// initialize all the views' child components
 	for (View *v : views) {
@@ -935,7 +1055,7 @@ void GraphicsProcessor::dmaFinished() {
 	dmaBusy = false;
 }
 
-void GraphicsProcessor::checkDrawQueue() {
+void GraphicsProcessor::checkGUIUpdates() {
 	if (!dmaBusy && !queue->empty()) {
 		runFront();
 	}
@@ -973,8 +1093,12 @@ View* GraphicsProcessor::viewForParam(uint8_t p) {
 	} else if (p >= ParamID::pOsc2SquareLevel && p < ParamID::pFilterCutoff) {
 		return &mix2View;
 	} else if ((p >= ParamID::pOsc1Coarse && p < ParamID::pOsc1PulseWidth)
-			|| (p >= ParamID::pOsc2Coarse && p < ParamID::pOsc2PulseWidth))
+			|| (p >= ParamID::pOsc2Coarse && p < ParamID::pOsc2PulseWidth)) {
 		return &tuningView;
+	} else if ((p == ParamID::pOsc1PulseWidth || p == ParamID::pOsc2PulseWidth)
+			|| (p >= ParamID::pFilterCutoff)) {
+		return &modalView;
+	}
 	return nullptr;
 }
 //======================================================
@@ -988,7 +1112,7 @@ void disp_dma_finished(graphics_processor_t proc) {
 	ptr->dmaFinished();
 }
 
-void check_draw_queue(graphics_processor_t proc) {
+void check_gui_updates(graphics_processor_t proc) {
 	GraphicsProcessor *ptr = static_cast<GraphicsProcessor*>(proc);
-	ptr->checkDrawQueue();
+	ptr->checkGUIUpdates();
 }
