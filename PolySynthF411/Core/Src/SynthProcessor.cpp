@@ -215,6 +215,160 @@ int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
 
 //CONTROLS==================================================================================
 
+/** This needs to
+ * 1. update the currentPatch data as appropriate
+ * 2. tell the GraphicsProcesor to react
+ */
+void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
+	uint8_t* valC = nullptr;
+	float *valF = nullptr;
+	switch (id) {
+	// envelopes
+	case ParamID::pEnv1Attack:
+		valF = &currentPatch.envelopes[0].attack;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.8f, ATTACK_MAX);
+		else
+			*valF = std::max<float>(*valF - 0.8f, ATTACK_MIN);
+		break;
+	case ParamID::pEnv1Decay:
+		valF = &currentPatch.envelopes[0].decay;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.8f, DECAY_MAX);
+		else
+			*valF = std::max<float>(*valF - 0.8f, DECAY_MIN);
+		break;
+	case ParamID::pEnv1Sustain:
+		valF = &currentPatch.envelopes[0].sustain;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.0075f, 1.0f);
+		else
+			*valF = std::max<float>(*valF - 0.0075f, 0.0f);
+		break;
+	case ParamID::pEnv1Release:
+		valF = &currentPatch.envelopes[0].release;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.8f, RELEASE_MAX);
+		else
+			*valF = std::max<float>(*valF - 0.8f, RELEASE_MIN);
+		break;
+	case ParamID::pEnv2Attack:
+		valF = &currentPatch.envelopes[1].attack;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.8f, ATTACK_MAX);
+		else
+			*valF = std::max<float>(*valF - 0.8f, ATTACK_MIN);
+		break;
+	case ParamID::pEnv2Decay:
+		valF = &currentPatch.envelopes[1].decay;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.8f, DECAY_MAX);
+		else
+			*valF = std::max<float>(*valF - 0.8f, DECAY_MIN);
+		break;
+	case ParamID::pEnv2Sustain:
+		valF = &currentPatch.envelopes[1].sustain;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.0075f, 1.0f);
+		else
+			*valF = std::max<float>(*valF - 0.0075f, 0.0f);
+		break;
+	case ParamID::pEnv2Release:
+		valF = &currentPatch.envelopes[0].release;
+		if (dir)
+			*valF = std::min<float>(*valF + 0.8f, RELEASE_MAX);
+		else
+			*valF = std::max<float>(*valF - 0.8f, RELEASE_MIN);
+		break;
+		// LFOs
+	case ParamID::pLFO1Freq:
+		valF = &currentPatch.lfos[0].freq;
+		if (dir)
+			*valF = std::min<float>(*valF * 1.02f, LFO_FREQ_MAX);
+		else
+			*valF = std::max<float>(*valF * 0.98f, LFO_FREQ_MIN);
+		break;
+	case ParamID::pLFO1Mode:
+		valC = &currentPatch.lfos[0].lfoType;
+		if(dir)
+			*valC = (*valC + 1) % NUM_LFO_TYPES;
+		else{
+			*valC = (*valC == 0) ? NUM_LFO_TYPES - 1 : *valC - 1;
+		}
+			break;
+	case ParamID::pLFO2Freq:
+		valF = &currentPatch.lfos[1].freq;
+		if (dir)
+			*valF = std::min<float>(*valF * 1.02f, LFO_FREQ_MAX);
+		else
+			*valF = std::max<float>(*valF * 0.98f, LFO_FREQ_MIN);
+		break;
+	case ParamID::pLFO2Mode:
+		valC = &currentPatch.lfos[1].lfoType;
+		if(dir)
+			*valC = (*valC + 1) % NUM_LFO_TYPES;
+		else{
+			*valC = (*valC == 0) ? NUM_LFO_TYPES - 1 : *valC - 1;
+		}
+		break;
+	case ParamID::pLFO3Freq:
+		valF = &currentPatch.lfos[2].freq;
+		if (dir)
+			*valF = std::min<float>(*valF * 1.02f, LFO_FREQ_MAX);
+		else
+			*valF = std::max<float>(*valF * 0.98f, LFO_FREQ_MIN);
+		break;
+	case ParamID::pLFO3Mode:
+		valC = &currentPatch.lfos[1].lfoType;
+		if(dir)
+			*valC = (*valC + 1) % NUM_LFO_TYPES;
+		else{
+			*valC = (*valC == 0) ? NUM_LFO_TYPES - 1 : *valC - 1;
+		}
+		break;
+		// oscillator 1
+	case ParamID::pOsc1Coarse:
+		break;
+	case ParamID::pOsc1Fine:
+		break;
+	case ParamID::pOsc1PulseWidth:
+		break;
+	case ParamID::pOsc1SquareLevel:
+		break;
+	case ParamID::pOsc1SawLevel:
+		break;
+	case ParamID::pOsc1TriLevel:
+		break;
+	case ParamID::pOsc1OscLevel:
+		break;
+		// oscillator 2
+	case ParamID::pOsc2Coarse:
+		break;
+	case ParamID::pOsc2Fine:
+		break;
+	case ParamID::pOsc2PulseWidth:
+		break;
+	case ParamID::pOsc2SquareLevel:
+		break;
+	case ParamID::pOsc2SawLevel:
+		break;
+	case ParamID::pOsc2TriLevel:
+		break;
+	case ParamID::pOsc2OscLevel:
+		break;
+		// filter/folder
+	case ParamID::pFilterCutoff:
+		break;
+	case ParamID::pFilterRes:
+		break;
+	case ParamID::pFilterMode:
+		break;
+	case ParamID::pFoldLevel:
+		break;
+	case ParamID::pFoldFirst:
+		break;
+	}
+}
 // Encoders---------------
 void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise) {
 	EncID id = (EncID) num;

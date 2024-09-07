@@ -83,6 +83,8 @@ private:
 	uint16_t velocityValue12Bit(uint8_t voice);
 
 	//CONTROL STUFF==============================
+	void nudgeParameter(uint8_t id, bool dir);
+
 
 
 };
