@@ -606,11 +606,19 @@ BarGraph::BarGraph(uint16_t maxVal) :
 
 area_t BarGraph::getBarArea() {
 	area_t a;
-	float fLevel = (float) currentLevel / (float) maxLevel;
-	a.h = (uint16_t) ((1.0f - fLevel) * (float) (area.h - (2 * margin)));
-	a.x = area.x + margin;
-	a.y = (area.y + area.h) - (a.h + margin);
-	a.w = area.w - (2 * margin);
+	if (isVertical) {
+		float fLevel = (float) currentLevel / (float) maxLevel;
+		a.h = (uint16_t) ((1.0f - fLevel) * (float) (area.h - (2 * margin)));
+		a.x = area.x + margin;
+		a.y = (area.y + area.h) - (a.h + margin);
+		a.w = area.w - (2 * margin);
+	} else {
+		a.x = area.x + margin;
+		float fLevel = (float)currentLevel / (float) maxLevel;
+		a.w = (uint16_t) ((1.0f - fLevel) * (float) (area.w - (2 * margin)));
+		a.y = area.y + margin;
+		a.h = area.h - (2 * margin);
+	}
 	return a;
 }
 
@@ -935,6 +943,7 @@ void ModalChangeComponent::drawChunk(area_t chunk, uint16_t *buf) {
 	for (uint16_t x = chunk.x; x < (chunk.x + chunk.w); x++) {
 		for (uint16_t y = chunk.y; y < (chunk.y + chunk.h); y++) {
 			px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
+			// check if we're on the margin
 			if ((x < margin) || (x >= (area.x + area.w) - margin)
 					|| (y < margin) || (y >= (area.y + area.h))) {
 				*px = (uint16_t) edgeColor;
@@ -968,7 +977,15 @@ void ModalChangeComponent::placeChildren() {
 	valueArea.x = dX;
 	valueArea.y = 2 * dY;
 	valueArea.w = dX * 10;
+	valueArea.h = lValue.getIdealHeight(2);
 	lValue.setArea(valueArea);
+
+	area_t graphArea;
+	graphArea.x = 2 * dX;
+	graphArea.y = 4 * dY;
+	graphArea.w = dX * 8;
+	graphArea.h = dY * 2;
+	graph.setArea(graphArea);
 
 }
 
@@ -978,6 +995,11 @@ void ModalChangeComponent::prepareToShow(const std::string &name,
 	lValue.setText(value);
 	graph.setMaxLevel(maxLevel);
 	graph.setLevel(level);
+	//NOTE: we don't always want the bar graph and we can indicate that by passing a maxLevel < 0
+	if (maxLevel < 0)
+		forbiddenComp = &graph;
+	else
+		forbiddenComp = nullptr;
 }
 
 // view -------------------
@@ -986,13 +1008,69 @@ ModalChangeView::ModalChangeView() {
 }
 
 void ModalChangeView::initChildren() {
-
+	constexpr uint16_t dX = ILI9341_WIDTH / 8;
+	constexpr uint16_t dY = ILI9341_HEIGHT / 8;
+	area_t modalArea;
+	modalArea.x = dX;
+	modalArea.y = dY;
+	modalArea.w = 6 * dX;
+	modalArea.h = 6 * dY;
+	comp.setArea(modalArea);
 }
 
 void ModalChangeView::paramUpdated(uint8_t id) {
 	lastUpdateTick = TickTimer_get();
-	//TODO: set the strings and prepare this guy to be drawn
-
+	/** COMPLETE LIST OF PARAMS THIS NEEDS TO HANDE (as of 9/7):
+	 * - Pulse width 1: value/4096
+	 * - Pulse width 2
+	 * - Filter cutoff
+	 * - Filter resonance
+	 * - Filter mode (hi/low pass)
+	 * - Fold level
+	 * - Fold Order (whether filter -> folder or folder -> filter)
+	 */
+	std::string nameStr, valStr;
+	switch (id) {
+	case ParamID::pOsc1PulseWidth:
+		nameStr = "DCO 1 Pulse Width";
+		valStr = std::to_string(patch->oscillators[0].pulseWidth) + "/4096";
+		comp.prepareToShow(nameStr, valStr, patch->oscillators[0].pulseWidth, 4096);
+	break;
+	case ParamID::pOsc2PulseWidth:
+		nameStr = "DCO 2 Pulse Width";
+		valStr = std::to_string(patch->oscillators[1].pulseWidth) + "/4096";
+		comp.prepareToShow(nameStr, valStr, patch->oscillators[1].pulseWidth, 4096);
+		break;
+	case ParamID::pFilterCutoff:
+		nameStr = "Filter Cutoff";
+		valStr = std::to_string(patch->cutoffBase) + "/4096";
+		comp.prepareToShow(nameStr, valStr, patch->cutoffBase, 4096);
+		break;
+	case ParamID::pFilterRes:
+		nameStr = "Filter Resonance";
+		valStr = std::to_string(patch->resBase) + "/256";
+		comp.prepareToShow(nameStr, valStr, patch->resBase, 256);
+		break;
+	case ParamID::pFilterMode:
+		nameStr = "Filter Mode";
+		valStr = (patch->highPassMode > 0) ? "High Pass" : "Low Pass";
+		// the -1 indicates that we won't show the graph for this
+		comp.prepareToShow(nameStr, valStr, 0, -1);
+		break;
+	case ParamID::pFoldLevel:
+		nameStr = "Wavefolder Level";
+		valStr = std::to_string(patch->foldBase) + "/4096";
+		comp.prepareToShow(nameStr, valStr, patch->foldBase, 4096);
+		break;
+	case ParamID::pFoldFirst:
+		nameStr = "Wavefolder/Filter Order";
+		valStr = (patch->foldFirst > 0) ? "Wavefolder > Filter" : "Filter > Wavefolder";
+		comp.prepareToShow(nameStr, valStr, 0, -1);
+		break;
+	default:
+		break;
+	}
+	comp.draw();
 }
 
 bool ModalChangeView::timeToRemove() {
@@ -1056,6 +1134,10 @@ void GraphicsProcessor::dmaFinished() {
 }
 
 void GraphicsProcessor::checkGUIUpdates() {
+	if (inModalMode && modalView.timeToRemove()) {
+		undrawModal();
+		inModalMode = false;
+	}
 	if (!dmaBusy && !queue->empty()) {
 		runFront();
 	}
@@ -1074,12 +1156,23 @@ void GraphicsProcessor::runFront() {
 
 }
 
+void GraphicsProcessor::undrawModal() {
+	auto chunks = modalView.getChunksForArea();
+	// bc our visibleView* doesn't change when we enter modal mode
+	visibleView->redrawChunks(chunks);
+}
+
 void GraphicsProcessor::paramUpdated(uint8_t param) {
 	View *v = viewForParam(param);
 	if (v != nullptr) {
+		inModalMode = (v == &modalView);
 		v->paramUpdated(param);
+		if (inModalMode) {
+			v->draw();
+		} else {
+			visibleView = v;
+		}
 	}
-
 }
 
 View* GraphicsProcessor::viewForParam(uint8_t p) {

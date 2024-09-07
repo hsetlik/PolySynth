@@ -182,6 +182,7 @@ private:
 	uint16_t maxLevel;
 	uint16_t currentLevel = 0;
 	uint16_t margin = 3;
+	bool isVertical = true;
 	area_t getBarArea();
 public:
 	color16_t barColor = color565_getColor16(ColorID::Maroon);
@@ -193,6 +194,9 @@ public:
 	void drawChunk(area_t chunk, uint16_t *buf) override;
 	void setMaxLevel(int16_t val) {
 		maxLevel = val;
+	}
+	void setVertical(bool v){
+		isVertical = v;
 	}
 };
 
@@ -300,7 +304,7 @@ private:
 // components
 	Label lName;
 	Label lValue;
-	BipolarBarGraph graph;
+	BarGraph graph;
 // drawing state
 	uint16_t margin = 7;
 	color16_t bkgndColor = color565_getColor16(ColorID::Salmon);
@@ -308,6 +312,7 @@ private:
 	// this should palce all child components relative to this component's area
 	void placeChildren();
 	std::vector<Component*> children;
+	Component* forbiddenComp = nullptr;
 	// this gets called from ModalChangeView's paramUpdated method
 	void prepareToShow(const std::string& name, const std::string& value, int16_t level, int16_t maxLevel);
 
@@ -318,10 +323,14 @@ public:
 	friend class ModalChangeView;
 };
 
+// view------
+
 class ModalChangeView : public View {
 private:
 	patch_t* patch;
 	tick_t lastUpdateTick = 0;
+
+	ModalChangeComponent comp;
 public:
 	ModalChangeView();
 	void initChildren() override;
@@ -332,6 +341,12 @@ public:
 	}
 	// check if this component has been visible for longer that the alloted time
 	bool timeToRemove();
+
+	//get the area we need to redraw
+	std::vector<area_t> getChunksForArea(){
+		return comp.getTaskChunks();
+	}
+
 };
 
 
@@ -348,6 +363,7 @@ enum ViewID {
 	vTune
 };
 
+//TODO: only view(s) left to rough in are the LFOs
 
 class GraphicsProcessor {
 private:
@@ -359,7 +375,6 @@ private:
 	void runFront();
 	// keep our views here
 	View* visibleView = nullptr;
-	View* viewToDraw = nullptr;
 	EnvView env1View;
 	EnvView env2View;
 	MixerView mix1View;
@@ -370,6 +385,8 @@ private:
 	bool inModalMode = false;
 	// helper to return the relevant view for a given parameter change
 	View* viewForParam(uint8_t p);
+	// modal helper
+	void undrawModal();
 public:
 	GraphicsProcessor();
 	~GraphicsProcessor();
