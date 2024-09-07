@@ -614,7 +614,7 @@ area_t BarGraph::getBarArea() {
 		a.w = area.w - (2 * margin);
 	} else {
 		a.x = area.x + margin;
-		float fLevel = (float)currentLevel / (float) maxLevel;
+		float fLevel = (float) currentLevel / (float) maxLevel;
 		a.w = (uint16_t) ((1.0f - fLevel) * (float) (area.w - (2 * margin)));
 		a.y = area.y + margin;
 		a.h = area.h - (2 * margin);
@@ -929,7 +929,8 @@ void OscTuningView::paramUpdated(uint8_t id) {
 }
 
 //MODAL VIEW===========================================
-ModalChangeComponent::ModalChangeComponent() {
+// base comp----------------------------------------
+BaseChangeComponent::BaseChangeComponent() {
 	lName.bkgndColor = bkgndColor;
 	lValue.bkgndColor = bkgndColor;
 	children.push_back(&lName);
@@ -937,7 +938,7 @@ ModalChangeComponent::ModalChangeComponent() {
 	children.push_back(&graph);
 }
 
-void ModalChangeComponent::drawChunk(area_t chunk, uint16_t *buf) {
+void BaseChangeComponent::drawChunk(area_t chunk, uint16_t *buf) {
 	// first fill with the background/edge color as needed
 	uint16_t *px = nullptr;
 	for (uint16_t x = chunk.x; x < (chunk.x + chunk.w); x++) {
@@ -961,7 +962,7 @@ void ModalChangeComponent::drawChunk(area_t chunk, uint16_t *buf) {
 
 }
 
-void ModalChangeComponent::placeChildren() {
+void BaseChangeComponent::placeChildren() {
 	// little idea maybe
 	const uint16_t dX = area.w / 12;
 	const uint16_t dY = area.h / 9;
@@ -989,7 +990,7 @@ void ModalChangeComponent::placeChildren() {
 
 }
 
-void ModalChangeComponent::prepareToShow(const std::string &name,
+void BaseChangeComponent::prepareToShow(const std::string &name,
 		const std::string &value, int16_t level, int16_t maxLevel) {
 	lName.setText(name);
 	lValue.setText(value);
@@ -1000,6 +1001,133 @@ void ModalChangeComponent::prepareToShow(const std::string &name,
 		forbiddenComp = &graph;
 	else
 		forbiddenComp = nullptr;
+}
+
+// mod comp----------------------------------------
+ModChangeComponent::ModChangeComponent() {
+	// set up the header component
+	lHeader.setFont(&Font_11x18);
+	lHeader.setText("Selected Modulation:");
+	graph.setMaxLevel(128);
+	children.push_back(&lHeader);
+	children.push_back(&lName);
+	children.push_back(&lValue);
+	children.push_back(&graph);
+}
+
+void ModChangeComponent::placeChildren() {
+
+	const uint16_t dX = area.w / 12;
+	const uint16_t dY = area.h / 9;
+
+	area_t headerArea;
+	headerArea.x = 2 * dX;
+	headerArea.y = dY;
+	headerArea.w = dX * 10;
+	headerArea.h = lHeader.getIdealHeight(2);
+	lHeader.setArea(headerArea);
+
+	area_t nameArea;
+	nameArea.x = dX;
+	nameArea.y = 3 * dY;
+	nameArea.w = dX * 10;
+	nameArea.h = lName.getIdealHeight(2);
+	lName.setArea(nameArea);
+
+	area_t valueArea;
+	valueArea.x = dX;
+	valueArea.y = 4 * dY;
+	valueArea.w = dX * 10;
+	valueArea.h = lValue.getIdealHeight(2);
+	lValue.setArea(valueArea);
+
+	area_t graphArea;
+	graphArea.x = 2 * dX;
+	graphArea.y = 6 * dY;
+	graphArea.w = dX * 8;
+	graphArea.h = dY * 2;
+	graph.setArea(graphArea);
+}
+
+// helpers for setting the label text
+std::string modSourceString(uint8_t id) {
+	switch (id) {
+	case ModSource::ENV1:
+		return "ADSR 1";
+	case ModSource::ENV2:
+		return "ADSR 2";
+	case ModSource::LFO1:
+		return "LFO 1";
+	case ModSource::LFO2:
+		return "LFO 2";
+	case ModSource::LFO3:
+		return "LFO 3";
+	case ModSource::MODWHL:
+		return "Mod Wheel";
+	case ModSource::PITCHWHL:
+		return "Pitch Wheel";
+	case ModSource::VEL:
+		return "Note Velocity";
+	default:
+		return "NONE";
+	}
+	return "";
+}
+
+std::string modDestString(uint8_t id) {
+	switch (id) {
+	case ModDest::CUTOFF:
+		return "Filter Cutoff";
+	case ModDest::RESONANCE:
+		return "Filter Resonance";
+	case ModDest::FOLD:
+		return "Wavefolder Amount";
+	case ModDest::PWM1:
+		return "Osc 1 PWM";
+	case ModDest::PWM2:
+		return "Osc 2 PWM";
+	case ModDest::TUNE1:
+		return "Osc 1 Detune";
+	case ModDest::TUNE2:
+		return "Osc 2 Detune";
+	case ModDest::VCA:
+		return "VCA";
+	default:
+		return "null";
+	}
+
+}
+
+void ModChangeComponent::prepareToShow(uint8_t source, uint8_t dest,
+		int8_t depth) {
+	std::string val = modSourceString(source) + " >> " + modDestString(dest);
+	lName.setText(val);
+	lValue.setText(std::to_string(depth));
+	graph.setLevel(depth);
+
+}
+
+void ModChangeComponent::drawChunk(area_t chunk, uint16_t *buf) {
+
+	uint16_t *px = nullptr;
+	for (uint16_t x = chunk.x; x < (chunk.x + chunk.w); x++) {
+		for (uint16_t y = chunk.y; y < (chunk.y + chunk.h); y++) {
+			px = getPixel(buf, chunk.w, chunk.h, x - chunk.x, y - chunk.y);
+			// check if we're on the margin
+			if ((x < margin) || (x >= (area.x + area.w) - margin)
+					|| (y < margin) || (y >= (area.y + area.h))) {
+				*px = (uint16_t) edgeColor;
+			} else {
+				*px = (uint16_t) bkgndColor;
+			}
+
+		}
+	}
+	// now draw any relevant child components
+	for (auto *child : children) {
+		if (hasOverlap(chunk, child->getArea()))
+			child->drawChunk(chunk, buf);
+	}
 }
 
 // view -------------------
@@ -1015,7 +1143,14 @@ void ModalChangeView::initChildren() {
 	modalArea.y = dY;
 	modalArea.w = 6 * dX;
 	modalArea.h = 6 * dY;
-	comp.setArea(modalArea);
+
+	baseModal.setArea(modalArea);
+	baseModal.placeChildren();
+	modModal.setArea(modalArea);
+	modModal.placeChildren();
+
+	children.push_back(&baseModal);
+	//children.push_back(&modModal);
 }
 
 void ModalChangeView::paramUpdated(uint8_t id) {
@@ -1034,43 +1169,47 @@ void ModalChangeView::paramUpdated(uint8_t id) {
 	case ParamID::pOsc1PulseWidth:
 		nameStr = "DCO 1 Pulse Width";
 		valStr = std::to_string(patch->oscillators[0].pulseWidth) + "/4096";
-		comp.prepareToShow(nameStr, valStr, patch->oscillators[0].pulseWidth, 4096);
-	break;
+		baseModal.prepareToShow(nameStr, valStr,
+				patch->oscillators[0].pulseWidth, 4096);
+		break;
 	case ParamID::pOsc2PulseWidth:
 		nameStr = "DCO 2 Pulse Width";
 		valStr = std::to_string(patch->oscillators[1].pulseWidth) + "/4096";
-		comp.prepareToShow(nameStr, valStr, patch->oscillators[1].pulseWidth, 4096);
+		baseModal.prepareToShow(nameStr, valStr,
+				patch->oscillators[1].pulseWidth, 4096);
 		break;
 	case ParamID::pFilterCutoff:
 		nameStr = "Filter Cutoff";
 		valStr = std::to_string(patch->cutoffBase) + "/4096";
-		comp.prepareToShow(nameStr, valStr, patch->cutoffBase, 4096);
+		baseModal.prepareToShow(nameStr, valStr, patch->cutoffBase, 4096);
 		break;
 	case ParamID::pFilterRes:
 		nameStr = "Filter Resonance";
 		valStr = std::to_string(patch->resBase) + "/256";
-		comp.prepareToShow(nameStr, valStr, patch->resBase, 256);
+		baseModal.prepareToShow(nameStr, valStr, patch->resBase, 256);
 		break;
 	case ParamID::pFilterMode:
 		nameStr = "Filter Mode";
 		valStr = (patch->highPassMode > 0) ? "High Pass" : "Low Pass";
 		// the -1 indicates that we won't show the graph for this
-		comp.prepareToShow(nameStr, valStr, 0, -1);
+		baseModal.prepareToShow(nameStr, valStr, 0, -1);
 		break;
 	case ParamID::pFoldLevel:
 		nameStr = "Wavefolder Level";
 		valStr = std::to_string(patch->foldBase) + "/4096";
-		comp.prepareToShow(nameStr, valStr, patch->foldBase, 4096);
+		baseModal.prepareToShow(nameStr, valStr, patch->foldBase, 4096);
 		break;
 	case ParamID::pFoldFirst:
 		nameStr = "Wavefolder/Filter Order";
-		valStr = (patch->foldFirst > 0) ? "Wavefolder > Filter" : "Filter > Wavefolder";
-		comp.prepareToShow(nameStr, valStr, 0, -1);
+		valStr =
+				(patch->foldFirst > 0) ?
+						"Wavefolder > Filter" : "Filter > Wavefolder";
+		baseModal.prepareToShow(nameStr, valStr, 0, -1);
 		break;
 	default:
 		break;
 	}
-	comp.draw();
+	baseModal.draw();
 }
 
 bool ModalChangeView::timeToRemove() {
@@ -1167,11 +1306,6 @@ void GraphicsProcessor::paramUpdated(uint8_t param) {
 	if (v != nullptr) {
 		inModalMode = (v == &modalView);
 		v->paramUpdated(param);
-		if (inModalMode) {
-			v->draw();
-		} else {
-			visibleView = v;
-		}
 	}
 }
 

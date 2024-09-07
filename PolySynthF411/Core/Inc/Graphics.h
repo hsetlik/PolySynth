@@ -296,10 +296,8 @@ public:
 
 
 // MODAL CHANGE THING-----------------------------
-//NOTE: this guy is a little unique in that it's (so far)
-// the only component to own other components which it will be
-// responsible for drawing
-class ModalChangeComponent : public Component {
+// this is for changes to BASE parameters
+class BaseChangeComponent : public Component {
 private:
 // components
 	Label lName;
@@ -317,10 +315,32 @@ private:
 	void prepareToShow(const std::string& name, const std::string& value, int16_t level, int16_t maxLevel);
 
 public:
-	ModalChangeComponent();
+	BaseChangeComponent();
 	void drawChunk(area_t chunk, uint16_t *buf) override;
-	void draw();
 	friend class ModalChangeView;
+};
+
+// this is similar to the above but for changes to modulations
+class ModChangeComponent : public Component {
+private:
+	Label lHeader;
+	Label lName;
+	Label lValue;
+	BipolarBarGraph graph;
+
+	uint16_t margin = 7;
+	color16_t bkgndColor = color565_getColor16(ColorID::Salmon);
+	color16_t edgeColor = color565_getColor16(ColorID::Maroon);
+
+	void placeChildren();
+	std::vector<Component*> children;
+	// this sets up the labels and graphs
+	void prepareToShow(uint8_t source, uint8_t dest, int8_t depth);
+public:
+	ModChangeComponent();
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+	friend class ModalChangeView;
+
 };
 
 // view------
@@ -330,7 +350,8 @@ private:
 	patch_t* patch;
 	tick_t lastUpdateTick = 0;
 
-	ModalChangeComponent comp;
+	BaseChangeComponent baseModal;
+	ModChangeComponent modModal;
 public:
 	ModalChangeView();
 	void initChildren() override;
@@ -344,7 +365,7 @@ public:
 
 	//get the area we need to redraw
 	std::vector<area_t> getChunksForArea(){
-		return comp.getTaskChunks();
+		return baseModal.getTaskChunks();
 	}
 
 };
