@@ -1168,15 +1168,15 @@ void ModalChangeView::paramUpdated(uint8_t id) {
 	switch (id) {
 	case ParamID::pOsc1PulseWidth:
 		nameStr = "DCO 1 Pulse Width";
-		valStr = std::to_string(patch->oscillators[0].pulseWidth) + "/4096";
+		valStr = std::to_string(patch->oscs[0].pulseWidth) + "/4096";
 		baseModal.prepareToShow(nameStr, valStr,
-				patch->oscillators[0].pulseWidth, 4096);
+				patch->oscs[0].pulseWidth, 4096);
 		break;
 	case ParamID::pOsc2PulseWidth:
 		nameStr = "DCO 2 Pulse Width";
-		valStr = std::to_string(patch->oscillators[1].pulseWidth) + "/4096";
+		valStr = std::to_string(patch->oscs[1].pulseWidth) + "/4096";
 		baseModal.prepareToShow(nameStr, valStr,
-				patch->oscillators[1].pulseWidth, 4096);
+				patch->oscs[1].pulseWidth, 4096);
 		break;
 	case ParamID::pFilterCutoff:
 		nameStr = "Filter Cutoff";
@@ -1233,19 +1233,19 @@ GraphicsProcessor::~GraphicsProcessor() {
 void GraphicsProcessor::initViews() {
 
 	// envelope views
-	env1View.setParams(&patch->envelopes[0]);
+	env1View.setParams(&patch->envs[0]);
 	env1View.setName("ADSR 1");
-	env2View.setParams(&patch->envelopes[1]);
+	env2View.setParams(&patch->envs[1]);
 	env2View.setName("ADSR 2");
 
 	// mixer views
-	mix1View.setParams(&patch->oscillators[0]);
+	mix1View.setParams(&patch->oscs[0]);
 	mix1View.setName("DCO 1 Mix");
-	mix2View.setParams(&patch->oscillators[1]);
+	mix2View.setParams(&patch->oscs[1]);
 	mix2View.setName("DCO 2 Mix");
 
 	// tuning view
-	tuningView.setParams(&patch->oscillators[0], &patch->oscillators[1]);
+	tuningView.setParams(&patch->oscs[0], &patch->oscs[1]);
 	tuningView.setName("Tuning");
 
 	// modal view
@@ -1281,6 +1281,35 @@ void GraphicsProcessor::checkGUIUpdates() {
 		runFront();
 	}
 }
+
+
+View* GraphicsProcessor::viewForID(uint8_t idx){
+	ViewID id = (ViewID)idx;
+	switch(id){
+	case vEnv1:
+		return &env1View;
+	case vEnv2:
+		return &env2View;
+	case vMix1:
+		return &mix1View;
+	case vMix2:
+		return &mix2View;
+	case vTune:
+		return &tuningView;
+	default:
+		return nullptr;
+	}
+}
+
+void GraphicsProcessor::selectView(uint8_t idx){
+	View* v = viewForID(idx);
+	if(v != nullptr && v != visibleView){
+		visibleView = v;
+		visibleView->draw();
+	}
+
+}
+//----------------------------------------
 
 void GraphicsProcessor::pushTask(DrawTask task) {
 	queue->push(task);

@@ -180,8 +180,8 @@ typedef struct {
 
 	modmatrix_t modMatrix;
 
-	dco_t oscillators[2];
-	adsr_t envelopes[2];
+	dco_t oscs[2];
+	adsr_t envs[2];
 
 	lfo_t lfos[3];
 

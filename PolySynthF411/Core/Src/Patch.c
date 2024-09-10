@@ -103,28 +103,35 @@ patch_t getDefaultPatch(){
 	patch.highPassMode = 0;
 	patch.useSustainPedal = 1;
 
-	patch.oscillators[0].coarseTune = 0;
-	patch.oscillators[0].fineTune = 0;
-	patch.oscillators[0].pulseWidth = PWM_DEFAULT;
-	patch.oscillators[0].pulseLevel = 0;
-	patch.oscillators[0].triLevel = 0;
-	patch.oscillators[0].sawLevel = LEVEL_DEFAULT;
-	patch.oscillators[0].oscLevel = LEVEL_DEFAULT;
+	patch.oscs[0].coarseTune = 0;
+	patch.oscs[0].fineTune = 0;
+	patch.oscs[0].pulseWidth = PWM_DEFAULT;
+	patch.oscs[0].pulseLevel = 0;
+	patch.oscs[0].triLevel = 0;
+	patch.oscs[0].sawLevel = LEVEL_DEFAULT;
+	patch.oscs[0].oscLevel = LEVEL_DEFAULT;
 
-	patch.oscillators[1].coarseTune = -12;
-	patch.oscillators[1].fineTune = 0;
-	patch.oscillators[1].pulseWidth = PWM_DEFAULT;
-	patch.oscillators[1].pulseLevel = LEVEL_DEFAULT;
-	patch.oscillators[1].triLevel = 0;
-	patch.oscillators[1].sawLevel = 0;
-	patch.oscillators[1].oscLevel = LEVEL_DEFAULT;
+	patch.oscs[1].coarseTune = -12;
+	patch.oscs[1].fineTune = 0;
+	patch.oscs[1].pulseWidth = PWM_DEFAULT;
+	patch.oscs[1].pulseLevel = LEVEL_DEFAULT;
+	patch.oscs[1].triLevel = 0;
+	patch.oscs[1].sawLevel = 0;
+	patch.oscs[1].oscLevel = LEVEL_DEFAULT;
 
 
 
-	patch.envelopes[0].attack = ATTACK_DEFAULT;
-	patch.envelopes[0].decay = DECAY_DEFAULT;
-	patch.envelopes[0].sustain = SUSTAIN_DEFAULT;
-	patch.envelopes[0].release = RELEASE_DEFAULT;
+	patch.envs[0].attack = ATTACK_DEFAULT;
+	patch.envs[0].decay = DECAY_DEFAULT;
+	patch.envs[0].sustain = SUSTAIN_DEFAULT;
+	patch.envs[0].release = RELEASE_DEFAULT;
+
+	patch.envs[1].attack = ATTACK_DEFAULT;
+	patch.envs[1].decay = DECAY_DEFAULT;
+	patch.envs[1].sustain = SUSTAIN_DEFAULT;
+	patch.envs[1].release = RELEASE_DEFAULT;
+
+	//TODO: set up the LFOs here also
 
 	return patch;
 }

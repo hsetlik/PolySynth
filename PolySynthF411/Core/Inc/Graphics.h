@@ -408,6 +408,7 @@ private:
 	View* viewForParam(uint8_t p);
 	// modal helper
 	void undrawModal();
+	View* viewForID(uint8_t id);
 public:
 	GraphicsProcessor();
 	~GraphicsProcessor();
@@ -420,6 +421,8 @@ public:
 	void initViews();
 	// call this from the synth processor
 	void paramUpdated(uint8_t param);
+	// callback for selecting a new view and drawing it
+	void selectView(uint8_t  id);
 
 };
 

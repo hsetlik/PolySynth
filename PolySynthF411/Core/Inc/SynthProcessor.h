@@ -27,7 +27,7 @@ private:
 	EncoderProcessor* const encoderProc;
 	ButtonProcessor* const buttonProc;
 	GraphicsProcessor* const graphicsProc;
-	patch_t currentPatch;
+	patch_t patch;
 	//---STATE STUFF----
 	uint8_t voicesInUse; //bits represent a voice in use
 	uint8_t voiceVelocity[6];
@@ -42,6 +42,10 @@ private:
 	bool sustainPedalDown;
 	uint16_t pitchWhlPos;
 	uint16_t modWhlPos;
+
+	// device state stuff
+	bool inAltMode = false;
+	uint8_t visibleView = ViewID::vEnv1;
 
 public:
 	SynthProcessor(voice_clock_t vc, enc_processor_t ep, button_processor_t bp, graphics_processor_t gp);
@@ -65,6 +69,9 @@ public:
 	void handleDuringPress(uint8_t button);
 
 private:
+	bool alt() {
+		return inAltMode;
+	}
 	bool isVoiceActive(uint8_t voice);
 	void startVoice(uint8_t voice);
 	void endVoice(uint8_t voice);
@@ -84,6 +91,8 @@ private:
 
 	//CONTROL STUFF==============================
 	void nudgeParameter(uint8_t id, bool dir);
+	//  nudge the appropriate parameter for this encoder given the selected view
+	void handleViewEncoder(uint8_t enc, bool dir);
 
 
 

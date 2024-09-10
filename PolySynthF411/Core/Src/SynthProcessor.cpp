@@ -11,21 +11,20 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 		voiceClock(static_cast<VoiceClock*>(vc)), encoderProc(
 				static_cast<EncoderProcessor*>(ep)), buttonProc(
 				static_cast<ButtonProcessor*>(bp)), graphicsProc(
-				static_cast<GraphicsProcessor*>(gp)), currentPatch(
-				getDefaultPatch()), voicesInUse(0), sustainPedalDown(false), pitchWhlPos(
-				0), modWhlPos(0) {
+				static_cast<GraphicsProcessor*>(gp)), patch(getDefaultPatch()), voicesInUse(
+				0), sustainPedalDown(false), pitchWhlPos(0), modWhlPos(0) {
 	// give all the envelopes the correct pointer to the patch data
 	for (uint8_t v = 0; v < 6; v++) {
-		env1Voices[v].setParams(&currentPatch.envelopes[0]);
-		env2Voices[v].setParams(&currentPatch.envelopes[1]);
+		env1Voices[v].setParams(&patch.envs[0]);
+		env2Voices[v].setParams(&patch.envs[1]);
 	}
 	// do the same for the LFOs
 	for (uint8_t l = 0; l < 3; l++) {
-		lfos[l].setParams(&currentPatch.lfos[l]);
+		lfos[l].setParams(&patch.lfos[l]);
 	}
 
 	// set up the graphics processor
-	graphicsProc->setPatchData(&currentPatch);
+	graphicsProc->setPatchData(&patch);
 	graphicsProc->initViews();
 
 }
@@ -115,10 +114,10 @@ void SynthProcessor::startNote(uint8_t note, uint8_t vel) {
 		// consult patch data for tuning of each osc
 		//TODO: we need to calculate how to offset these fine tuning values
 		// for pitch modulation
-		float hz1 = hzForTuning(note, currentPatch.oscillators[0].coarseTune,
-				currentPatch.oscillators[0].fineTune);
-		float hz2 = hzForTuning(note, currentPatch.oscillators[1].coarseTune,
-				currentPatch.oscillators[1].fineTune);
+		float hz1 = hzForTuning(note, patch.oscs[0].coarseTune,
+				patch.oscs[0].fineTune);
+		float hz2 = hzForTuning(note, patch.oscs[1].coarseTune,
+				patch.oscs[1].fineTune);
 		ampComp1[v] = dacValueForHz(hz1);
 		ampComp2[v] = dacValueForHz(hz2);
 		// set the VoiceClock object to the resulting value in hz
@@ -143,7 +142,7 @@ void SynthProcessor::endNote(uint8_t note) {
 //MOD MATRIX ==================================================================================
 
 uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
-	mod_list_t mods = get_mods_for_dest(currentPatch.modMatrix, dest);
+	mod_list_t mods = get_mods_for_dest(patch.modMatrix, dest);
 	int16_t offset = 0;
 	for (uint8_t m = 0; m < mods.numMods; m++) {
 		offset += modSourceOffset(mods.sources[m], dest, voice);
@@ -151,17 +150,15 @@ uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
 	ModDest id = (ModDest) dest;
 	switch (id) {
 	case CUTOFF:
-		return apply_mod_offset(dest, currentPatch.cutoffBase, offset);
+		return apply_mod_offset(dest, patch.cutoffBase, offset);
 	case RESONANCE:
-		return apply_mod_offset(dest, currentPatch.resBase, offset);
+		return apply_mod_offset(dest, patch.resBase, offset);
 	case FOLD:
-		return apply_mod_offset(dest, currentPatch.foldBase, offset);
+		return apply_mod_offset(dest, patch.foldBase, offset);
 	case PWM1:
-		return apply_mod_offset(dest, currentPatch.oscillators[0].pulseWidth,
-				offset);
+		return apply_mod_offset(dest, patch.oscs[0].pulseWidth, offset);
 	case PWM2:
-		return apply_mod_offset(dest, currentPatch.oscillators[1].pulseWidth,
-				offset);
+		return apply_mod_offset(dest, patch.oscs[1].pulseWidth, offset);
 	case TUNE1:
 		break;
 	case TUNE2:
@@ -208,7 +205,7 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 
 int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
 		uint8_t voice) {
-	mod_t mod = get_mod(currentPatch.modMatrix, src, dest);
+	mod_t mod = get_mod(patch.modMatrix, src, dest);
 	float val = (float) modSourceValue(src, voice);
 	return (int16_t) (val * ((float) get_mod_depth(mod) / 127.0f));
 }
@@ -219,134 +216,159 @@ int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
  * 1. update the currentPatch data as appropriate
  * 2. tell the GraphicsProcesor to react
  */
+
+// helpers to nudge each type of parameter
+// envs -----
+float nudgeEnvAttack(float val, bool dir) {
+	constexpr float atkNudge = 0.06f;
+	if (dir)
+		return std::min<float>(val * (1.0f + atkNudge), ATTACK_MAX);
+	return std::max<float>(val * (1.0f - atkNudge), ATTACK_MIN);
+}
+
+float nudgeEnvDecay(float val, bool dir) {
+	constexpr float decayNudge = 0.06f;
+	if (dir)
+		return std::min<float>(val * (1.0f + decayNudge), DECAY_MAX);
+	return std::max<float>(val * (1.0f - decayNudge), DECAY_MIN);
+}
+
+float nudgeEnvSustain(float val, bool dir) {
+	constexpr float sustainNudge = 0.08f;
+	if (dir)
+		return std::min<float>(val * (1.0f + sustainNudge), 1.0f);
+	return std::max<float>(val * (1.0f - sustainNudge), 0.0f);
+}
+
+float nudgeEnvRelease(float val, bool dir) {
+	constexpr float releaseNudge = 0.08f;
+	if (dir)
+		return std::min<float>(val * (1.0f + releaseNudge), RELEASE_MAX);
+	return std::max<float>(val * (1.0f - releaseNudge), RELEASE_MIN);
+}
+
+// lfos -----
+
+float nudgeLFOFreq(float val, bool dir) {
+	constexpr float freqNudge = 0.08f;
+	if (dir)
+		return std::min<float>(val * (1.0f + freqNudge), LFO_FREQ_MAX);
+	return std::max<float>(val * (1.0f - freqNudge), LFO_FREQ_MIN);
+}
+
+uint8_t nudgeLFOType(uint8_t val, bool dir) {
+	if (dir)
+		return std::min<uint8_t>(val + 1, NUM_LFO_TYPES - 1);
+	return (val == 0) ? 0 : val - 1;
+}
+
+// oscs----------
+int8_t nudgeCoarseTune(int8_t val, bool dir) {
+	if (dir)
+		return std::min<int8_t>(val + 1, COARSE_MAX);
+	return std::max<int8_t>(val - 1, COARSE_MIN);
+}
+
+int8_t nudgeFineTune(int8_t val, bool dir) {
+	if (dir)
+		return std::min<int8_t>(val + 1, FINE_MAX);
+	return std::max<int8_t>(val - 1, FINE_MIN);
+}
+
+uint16_t nudgePulseWidth(uint16_t val, bool dir) {
+	if (dir)
+		return std::min<uint16_t>(val + 1, PWM_MAX);
+	return std::max<uint16_t>(val - 1, PWM_MIN);
+}
+
+uint8_t nudgeWaveLevel(uint8_t val, bool dir) {
+	if (dir)
+		return std::min<uint8_t>(val + 1, 255);
+	return (val == 0) ? 0 : val - 1;
+}
+
 void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
-	uint8_t* valC = nullptr;
-	float *valF = nullptr;
 	switch (id) {
 	// envelopes
 	case ParamID::pEnv1Attack:
-		valF = &currentPatch.envelopes[0].attack;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.8f, ATTACK_MAX);
-		else
-			*valF = std::max<float>(*valF - 0.8f, ATTACK_MIN);
+		patch.envs[0].attack = nudgeEnvAttack(patch.envs[0].attack, dir);
 		break;
 	case ParamID::pEnv1Decay:
-		valF = &currentPatch.envelopes[0].decay;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.8f, DECAY_MAX);
-		else
-			*valF = std::max<float>(*valF - 0.8f, DECAY_MIN);
+		patch.envs[0].decay = nudgeEnvDecay(patch.envs[0].decay, dir);
 		break;
 	case ParamID::pEnv1Sustain:
-		valF = &currentPatch.envelopes[0].sustain;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.0075f, 1.0f);
-		else
-			*valF = std::max<float>(*valF - 0.0075f, 0.0f);
+		patch.envs[0].sustain = nudgeEnvSustain(patch.envs[0].sustain, dir);
 		break;
 	case ParamID::pEnv1Release:
-		valF = &currentPatch.envelopes[0].release;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.8f, RELEASE_MAX);
-		else
-			*valF = std::max<float>(*valF - 0.8f, RELEASE_MIN);
+		patch.envs[0].release = nudgeEnvRelease(patch.envs[0].release, dir);
 		break;
 	case ParamID::pEnv2Attack:
-		valF = &currentPatch.envelopes[1].attack;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.8f, ATTACK_MAX);
-		else
-			*valF = std::max<float>(*valF - 0.8f, ATTACK_MIN);
+		patch.envs[1].attack = nudgeEnvAttack(patch.envs[1].attack, dir);
 		break;
 	case ParamID::pEnv2Decay:
-		valF = &currentPatch.envelopes[1].decay;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.8f, DECAY_MAX);
-		else
-			*valF = std::max<float>(*valF - 0.8f, DECAY_MIN);
+		patch.envs[1].decay = nudgeEnvDecay(patch.envs[1].decay, dir);
 		break;
 	case ParamID::pEnv2Sustain:
-		valF = &currentPatch.envelopes[1].sustain;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.0075f, 1.0f);
-		else
-			*valF = std::max<float>(*valF - 0.0075f, 0.0f);
+		patch.envs[1].sustain = nudgeEnvSustain(patch.envs[1].sustain, dir);
 		break;
 	case ParamID::pEnv2Release:
-		valF = &currentPatch.envelopes[0].release;
-		if (dir)
-			*valF = std::min<float>(*valF + 0.8f, RELEASE_MAX);
-		else
-			*valF = std::max<float>(*valF - 0.8f, RELEASE_MIN);
+		patch.envs[1].release = nudgeEnvRelease(patch.envs[1].release, dir);
 		break;
 		// LFOs
 	case ParamID::pLFO1Freq:
-		valF = &currentPatch.lfos[0].freq;
-		if (dir)
-			*valF = std::min<float>(*valF * 1.02f, LFO_FREQ_MAX);
-		else
-			*valF = std::max<float>(*valF * 0.98f, LFO_FREQ_MIN);
+		patch.lfos[0].freq = nudgeLFOFreq(patch.lfos[0].freq, dir);
 		break;
 	case ParamID::pLFO1Mode:
-		valC = &currentPatch.lfos[0].lfoType;
-		if(dir)
-			*valC = (*valC + 1) % NUM_LFO_TYPES;
-		else{
-			*valC = (*valC == 0) ? NUM_LFO_TYPES - 1 : *valC - 1;
-		}
-			break;
+		patch.lfos[0].lfoType = nudgeLFOType(patch.lfos[0].lfoType, dir);
+		break;
 	case ParamID::pLFO2Freq:
-		valF = &currentPatch.lfos[1].freq;
-		if (dir)
-			*valF = std::min<float>(*valF * 1.02f, LFO_FREQ_MAX);
-		else
-			*valF = std::max<float>(*valF * 0.98f, LFO_FREQ_MIN);
+		patch.lfos[1].freq = nudgeLFOFreq(patch.lfos[1].freq, dir);
 		break;
 	case ParamID::pLFO2Mode:
-		valC = &currentPatch.lfos[1].lfoType;
-		if(dir)
-			*valC = (*valC + 1) % NUM_LFO_TYPES;
-		else{
-			*valC = (*valC == 0) ? NUM_LFO_TYPES - 1 : *valC - 1;
-		}
+		patch.lfos[1].lfoType = nudgeLFOType(patch.lfos[1].lfoType, dir);
 		break;
 	case ParamID::pLFO3Freq:
-		valF = &currentPatch.lfos[2].freq;
-		if (dir)
-			*valF = std::min<float>(*valF * 1.02f, LFO_FREQ_MAX);
-		else
-			*valF = std::max<float>(*valF * 0.98f, LFO_FREQ_MIN);
+		patch.lfos[2].freq = nudgeLFOFreq(patch.lfos[2].freq, dir);
 		break;
 	case ParamID::pLFO3Mode:
-		valC = &currentPatch.lfos[1].lfoType;
-		if(dir)
-			*valC = (*valC + 1) % NUM_LFO_TYPES;
-		else{
-			*valC = (*valC == 0) ? NUM_LFO_TYPES - 1 : *valC - 1;
-		}
+		patch.lfos[2].lfoType = nudgeLFOType(patch.lfos[2].lfoType, dir);
 		break;
 		// oscillator 1
 	case ParamID::pOsc1Coarse:
+		patch.oscs[0].coarseTune = nudgeCoarseTune(patch.oscs[0].coarseTune,
+				dir);
 		break;
 	case ParamID::pOsc1Fine:
+		patch.oscs[0].fineTune = nudgeFineTune(patch.oscs[0].fineTune, dir);
 		break;
 	case ParamID::pOsc1PulseWidth:
+		patch.oscs[0].pulseWidth = nudgePulseWidth(patch.oscs[0].pulseWidth,
+				dir);
 		break;
 	case ParamID::pOsc1SquareLevel:
+		patch.oscs[0].pulseLevel = nudgeWaveLevel(patch.oscs[0].pulseLevel,
+				dir);
 		break;
 	case ParamID::pOsc1SawLevel:
+		patch.oscs[0].sawLevel = nudgeWaveLevel(patch.oscs[0].sawLevel, dir);
 		break;
 	case ParamID::pOsc1TriLevel:
+		patch.oscs[0].triLevel = nudgeWaveLevel(patch.oscs[0].triLevel, dir);
 		break;
 	case ParamID::pOsc1OscLevel:
+		patch.oscs[0].oscLevel = nudgeWaveLevel(patch.oscs[0].oscLevel, dir);
 		break;
 		// oscillator 2
 	case ParamID::pOsc2Coarse:
+		patch.oscs[1].coarseTune = nudgeCoarseTune(patch.oscs[1].coarseTune,
+				dir);
 		break;
 	case ParamID::pOsc2Fine:
+		patch.oscs[1].fineTune = nudgeFineTune(patch.oscs[1].fineTune, dir);
 		break;
 	case ParamID::pOsc2PulseWidth:
+		patch.oscs[1].pulseWidth = nudgePulseWidth(patch.oscs[1].pulseWidth,
+				dir);
 		break;
 	case ParamID::pOsc2SquareLevel:
 		break;
@@ -369,11 +391,103 @@ void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
 		break;
 	}
 }
+
 // Encoders---------------
+void SynthProcessor::handleViewEncoder(uint8_t enc, bool dir) {
+	if (visibleView == ViewID::vEnv1) {
+		switch (enc) {
+		case EncID::A: // attack
+			nudgeParameter(ParamID::pEnv1Attack, dir);
+			break;
+		case EncID::B: // decay
+			nudgeParameter(ParamID::pEnv1Decay, dir);
+			break;
+		case EncID::C: // sustain
+			nudgeParameter(ParamID::pEnv1Sustain, dir);
+			break;
+		case EncID::D: // release
+			nudgeParameter(ParamID::pEnv1Release, dir);
+			break;
+		default:
+			break;
+		}
+	} else if (visibleView == ViewID::vEnv2) {
+		switch (enc) {
+		case EncID::A:
+			nudgeParameter(ParamID::pEnv2Attack, dir);
+			break;
+		case EncID::B:
+			nudgeParameter(ParamID::pEnv2Decay, dir);
+			break;
+		case EncID::C:
+			nudgeParameter(ParamID::pEnv2Sustain, dir);
+			break;
+		case EncID::D:
+			nudgeParameter(ParamID::pEnv2Release, dir);
+			break;
+		default:
+			break;
+		}
+	} else if (visibleView == ViewID::vMix1) {
+		switch (enc) {
+		case EncID::A: // square level
+			nudgeParameter(ParamID::pOsc1SquareLevel, dir);
+			break;
+		case EncID::B: // saw level
+			nudgeParameter(ParamID::pOsc1SawLevel, dir);
+			break;
+		case EncID::C: // tri level
+			nudgeParameter(ParamID::pOsc1TriLevel, dir);
+			break;
+		case EncID::D: // osc level
+			nudgeParameter(ParamID::pOsc1OscLevel, dir);
+			break;
+		default:
+			break;
+		}
+	} else if (visibleView == ViewID::vMix2) {
+		switch (enc) {
+		case EncID::A:
+			nudgeParameter(ParamID::pOsc2SquareLevel, dir);
+			break;
+		case EncID::B:
+			nudgeParameter(ParamID::pOsc2SawLevel, dir);
+			break;
+		case EncID::C:
+			nudgeParameter(ParamID::pOsc2TriLevel, dir);
+			break;
+		case EncID::D:
+			nudgeParameter(ParamID::pOsc2OscLevel, dir);
+			break;
+		default:
+			break;
+		}
+	} else if (visibleView == ViewID::vTune) {
+		switch (enc) {
+		case EncID::A: // osc 1 coarse
+			nudgeParameter(ParamID::pOsc1Coarse, dir);
+			break;
+		case EncID::B: // osc 1 fine
+			nudgeParameter(ParamID::pOsc1Fine, dir);
+			break;
+		case EncID::C:
+			nudgeParameter(ParamID::pOsc2Coarse, dir);
+			break;
+		case EncID::D:
+			nudgeParameter(ParamID::pOsc2Fine, dir);
+			break;
+		default:
+			break;
+		}
+	}
+
+}
+
 void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise) {
 	EncID id = (EncID) num;
 	switch (id) {
 	case A:
+		handleViewEncoder(num, clockwise > 0);
 		break;
 	case B:
 		break;
@@ -405,8 +519,12 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 	case Alt:
 		break;
 	case Env1:
+		visibleView = ViewID::vEnv1;
+		graphicsProc->selectView(visibleView);
 		break;
 	case Env2:
+		visibleView = ViewID::vEnv2;
+		graphicsProc->selectView(visibleView);
 		break;
 	case LFO1:
 		break;
@@ -415,14 +533,22 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 	case LFO3:
 		break;
 	case Osc1:
+		visibleView = alt() ? ViewID::vTune : ViewID::vMix1;
+		graphicsProc->selectView(visibleView);
 		break;
 	case Osc2:
+		visibleView = alt() ? ViewID::vTune : ViewID::vMix2;
+		graphicsProc->selectView(visibleView);
 		break;
-	case PWMB:
+	case PWMB: //TODO: some sort of modal component to indicate what this button is for
 		break;
 	case FilterMode:
+		patch.highPassMode = (patch.highPassMode > 0) ? 0 : 1;
+		graphicsProc->paramUpdated(ParamID::pFilterMode);
 		break;
 	case FoldFirst:
+		patch.foldFirst = (patch.foldFirst > 0) ? 0 : 1;
+		graphicsProc->paramUpdated(ParamID::pFoldFirst);
 		break;
 	case Menu:
 		break;
@@ -465,6 +591,8 @@ void SynthProcessor::handleOnPressStart(uint8_t button) {
 	ButtonID id = (ButtonID) button;
 	switch (id) {
 	case Alt:
+		inAltMode = true;
+		//TODO: bring up the relevant menu for alt mode
 		break;
 	case Env1:
 		break;
@@ -527,6 +655,7 @@ void SynthProcessor::handleOnPressEnd(uint8_t button) {
 	ButtonID id = (ButtonID) button;
 	switch (id) {
 	case Alt:
+		inAltMode = false;
 		break;
 	case Env1:
 		break;
