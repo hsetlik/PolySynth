@@ -313,8 +313,12 @@ public:
 
 class LFOGraph : public Component {
 private:
+	enum DrawState {
+		ReadyToDraw,
+		Drawing,
+		FinishedDrawing
+	};
 	// state stuff
-	lfo_t* params;
 	tick_t lastGraphPoint = 0;
 
 	// graph stuff
@@ -324,14 +328,42 @@ public:
 	color16_t bkgndColor = color565_getColor16(ColorID::Black);
 	color16_t lineColor = color565_getColor16(ColorID::LimeGreen);
 	LFOGraph();
+
+	bool needsGraphPoint(float freq);
+	void addGraphPoint(uint16_t val);
+	void updateGraphLines();
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+
+};
+
+class LFOView : public View {
+private:
+	lfo_t* params;
+	// components
+	Label lName;
+
+	Label lTypeName;
+	Label lTypeVal;
+
+	Label lFreqName;
+	Label lFreqVal;
+
+	LFOGraph graph;
+
+public:
+	LFOView();
 	void setParams(lfo_t* p){
 		params = p;
 	}
-	bool needsGraphPoint();
-	void addGraphPoint(uint16_t val);
-	void updateGraphLines(area_t area);
-	void drawChunk(area_t chunk, uint16_t *buf) override;
-
+	void initChildren() override;
+	void paramUpdated(uint8_t id) override;
+	bool needsRedraw() {
+		return graph.needsGraphPoint(params->freq);
+	}
+	void updateGraph(uint16_t val){
+		graph.addGraphPoint(val);
+		graph.draw();
+	}
 };
 
 
@@ -420,6 +452,9 @@ public:
 enum ViewID {
 	vEnv1,
 	vEnv2,
+	vLFO1,
+	vLFO2,
+	vLFO3,
 	vMix1,
 	vMix2,
 	vTune
@@ -441,10 +476,15 @@ private:
 	EnvView env2View;
 	MixerView mix1View;
 	MixerView mix2View;
+	LFOView lfo1View;
+	LFOView lfo2View;
+	LFOView lfo3View;
 	OscTuningView tuningView;
 	ModalChangeView modalView;
 	std::vector<View*> views;
 	bool inModalMode = false;
+	bool needsRedrawChecks = false;
+	void checkForRedraw();
 	// helper to return the relevant view for a given parameter change
 	View* viewForParam(uint8_t p);
 	// modal helper
