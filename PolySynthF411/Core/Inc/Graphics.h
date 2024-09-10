@@ -71,6 +71,8 @@ uint16_t* pixelInChunk(uint16_t buf, area_t area);
 #include <vector>
 
 
+
+
 // COMPONENT CLASSES ==================================
 class Component {
 protected:
@@ -294,6 +296,45 @@ public:
 	void paramUpdated(uint8_t id) override;
 };
 
+// LFO view-----------------
+#define LFO_GRAPH_POINTS 100
+// basic single-ended ring buffer
+class GraphBuffer {
+private:
+	uint16_t data[LFO_GRAPH_POINTS];
+	uint8_t head = 0;
+public:
+	GraphBuffer();
+	void push(uint16_t val);
+	uint16_t operator[](uint8_t idx){
+		return data[(head + idx) % LFO_GRAPH_POINTS];
+	}
+};
+
+class LFOGraph : public Component {
+private:
+	// state stuff
+	lfo_t* params;
+	tick_t lastGraphPoint = 0;
+
+	// graph stuff
+	GraphBuffer lfoPoints;
+	line_t graphLines[LFO_GRAPH_POINTS - 1];
+public:
+	color16_t bkgndColor = color565_getColor16(ColorID::Black);
+	color16_t lineColor = color565_getColor16(ColorID::LimeGreen);
+	LFOGraph();
+	void setParams(lfo_t* p){
+		params = p;
+	}
+	bool needsGraphPoint();
+	void addGraphPoint(uint16_t val);
+	void updateGraphLines(area_t area);
+	void drawChunk(area_t chunk, uint16_t *buf) override;
+
+};
+
+
 
 // MODAL CHANGE THING-----------------------------
 // this is for changes to BASE parameters
@@ -409,6 +450,8 @@ private:
 	// modal helper
 	void undrawModal();
 	View* viewForID(uint8_t id);
+	// LFO graphing stuff
+	tick_t lastLFOUpdate = 0;
 public:
 	GraphicsProcessor();
 	~GraphicsProcessor();

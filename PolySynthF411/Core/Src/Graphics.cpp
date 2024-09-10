@@ -928,6 +928,64 @@ void OscTuningView::paramUpdated(uint8_t id) {
 	}
 }
 
+// LFO VIEW=======================================
+// graph
+GraphBuffer::GraphBuffer(){
+
+}
+
+void GraphBuffer::push(uint16_t val){
+	data[head] = val;
+	head = (head + 1) % LFO_GRAPH_POINTS;
+}
+
+
+LFOGraph::LFOGraph(){
+
+}
+
+void LFOGraph::updateGraphLines(area_t area) {
+	int16_t x0 = (int16_t)area.x;
+	const int16_t dX = (int16_t)((float)area.w / (float)LFO_GRAPH_POINTS);
+	const float yScale = (float)area.h / 4096.0f;
+	const int16_t yBottom = (int16_t)area.y + area.h;
+	int16_t y0 = yBottom - (int16_t)((float)lfoPoints[0] * yScale);
+	int16_t x1, y1;
+	for(uint8_t l = 1; l < LFO_GRAPH_POINTS; l++){
+		x1 = x0 + dX;
+		y1 = yBottom - (int16_t)((float)lfoPoints[l] * yScale);
+		graphLines[l - 1] = {{x0, y0}, {x1, y1}};
+		x0 = x1;
+		y0 = y1;
+	}
+}
+
+bool LFOGraph::needsGraphPoint(){
+	static tick_t now = 0;
+	now = TickTimer_get();
+	// check if the frequency has changed
+	static float prevFreq = 1.0f;
+	static float periodMs = 1000.0f / prevFreq;
+	if(prevFreq != params->freq){
+		prevFreq = params->freq;
+		periodMs = 1000.0f / prevFreq;
+	}
+	return TickTimer_tickDistanceMs(lastGraphPoint, now) > periodMs;
+}
+
+void LFOGraph::addGraphPoint(uint16_t val){
+	lfoPoints.push(val);
+	lastGraphPoint = TickTimer_get();
+}
+
+
+
+void LFOGraph::drawChunk(area_t chunk, uint16_t *buf){
+	//TODO
+}
+
+
+
 //MODAL VIEW===========================================
 // base comp----------------------------------------
 BaseChangeComponent::BaseChangeComponent() {
@@ -1217,6 +1275,8 @@ bool ModalChangeView::timeToRemove() {
 	return TickTimer_tickDistanceMs(lastUpdateTick, TickTimer_get())
 			>= modalLengthMs;
 }
+
+
 //======================================================
 
 GraphicsProcessor::GraphicsProcessor() :

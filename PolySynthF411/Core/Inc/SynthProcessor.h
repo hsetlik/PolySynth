@@ -46,6 +46,8 @@ private:
 	// device state stuff
 	bool inAltMode = false;
 	uint8_t visibleView = ViewID::vEnv1;
+	uint8_t selectedPWM = ParamID::pOsc1PulseWidth;
+
 
 public:
 	SynthProcessor(voice_clock_t vc, enc_processor_t ep, button_processor_t bp, graphics_processor_t gp);

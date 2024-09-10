@@ -157,9 +157,9 @@ uint8_t lfoType;
 
 
 // FILTER/FOLDER==============================================================
-#define RES_MAX 4095
+#define RES_MAX 255
 #define RES_MIN 0
-#define RES_DEFAULT 200
+#define RES_DEFAULT 40
 
 #define CUTOFF_MAX 4095
 #define CUTOFF_MIN 0

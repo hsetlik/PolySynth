@@ -287,6 +287,36 @@ uint8_t nudgeWaveLevel(uint8_t val, bool dir) {
 	return (val == 0) ? 0 : val - 1;
 }
 
+// filter---------------
+uint16_t nudgeFilterCutoff(uint16_t val, bool dir){
+	constexpr float cutoffExp = 0.07f;
+	float fVal;
+	if(dir){
+		fVal = (float)val * (1.0f + cutoffExp);
+		return std::min<uint16_t>((uint16_t)fVal, CUTOFF_MAX);
+	}
+	fVal = (float)val * (1.0f - cutoffExp);
+	return std::max<uint16_t>((uint16_t)fVal, CUTOFF_MIN);
+}
+
+uint16_t nudgeFilterRes(uint16_t val, bool dir){
+	if(dir)
+		return std::min<uint16_t>(val + 1, RES_MAX);
+	return std::min<uint16_t>(val - 1, RES_MIN);
+}
+
+// folder
+uint16_t nudgeFold(uint16_t val, bool dir){
+	constexpr float foldNudge = 0.085f;
+	float fVal;
+	if(dir){
+		fVal = (float)val * (1.0f + foldNudge);
+		return std::min<uint16_t>((uint16_t)fVal, FOLD_MAX);
+	}
+	fVal = (float)val * (1.0f - foldNudge);
+	return std::max<uint16_t>((uint16_t)fVal, FOLD_MIN);
+}
+
 void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
 	switch (id) {
 	// envelopes
@@ -371,25 +401,37 @@ void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
 				dir);
 		break;
 	case ParamID::pOsc2SquareLevel:
+		patch.oscs[1].pulseLevel = nudgeWaveLevel(patch.oscs[1].pulseLevel,
+				dir);
 		break;
 	case ParamID::pOsc2SawLevel:
+		patch.oscs[1].sawLevel = nudgeWaveLevel(patch.oscs[1].sawLevel, dir);
+		break;
 		break;
 	case ParamID::pOsc2TriLevel:
+		patch.oscs[1].triLevel = nudgeWaveLevel(patch.oscs[1].triLevel, dir);
 		break;
 	case ParamID::pOsc2OscLevel:
+		patch.oscs[1].oscLevel = nudgeWaveLevel(patch.oscs[1].oscLevel, dir);
 		break;
 		// filter/folder
 	case ParamID::pFilterCutoff:
+		patch.cutoffBase = nudgeFilterCutoff(patch.cutoffBase, dir);
 		break;
 	case ParamID::pFilterRes:
+		patch.resBase = nudgeFilterRes(patch.resBase, dir);
 		break;
 	case ParamID::pFilterMode:
+		patch.highPassMode = (patch.highPassMode > 0) ? 0 : 1;
 		break;
 	case ParamID::pFoldLevel:
+		patch.foldBase = nudgeFold(patch.foldBase, dir);
 		break;
 	case ParamID::pFoldFirst:
+		patch.foldFirst = (patch.foldFirst > 0) ? 0 : 1;
 		break;
 	}
+	graphicsProc->paramUpdated(id);
 }
 
 // Encoders---------------
@@ -490,22 +532,29 @@ void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise) {
 		handleViewEncoder(num, clockwise > 0);
 		break;
 	case B:
+		handleViewEncoder(num, clockwise > 0);
 		break;
 	case C:
+		handleViewEncoder(num, clockwise > 0);
 		break;
 	case D:
+		handleViewEncoder(num, clockwise > 0);
 		break;
 	case MenuEnc:
 		break;
 	case Depth:
 		break;
 	case Cutoff:
+		nudgeParameter(ParamID::pFilterCutoff, clockwise > 0);
 		break;
 	case Res:
+		nudgeParameter(ParamID::pFilterRes, clockwise > 0);
 		break;
 	case PWM:
+		nudgeParameter(selectedPWM, clockwise > 0);
 		break;
 	case Fold:
+		nudgeParameter(ParamID::pFoldLevel, clockwise > 0);
 		break;
 	default:
 		break;
@@ -541,6 +590,7 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 		graphicsProc->selectView(visibleView);
 		break;
 	case PWMB: //TODO: some sort of modal component to indicate what this button is for
+		selectedPWM = (selectedPWM == ParamID::pOsc1PulseWidth) ? ParamID::pOsc2PulseWidth : ParamID::pOsc1PulseWidth;
 		break;
 	case FilterMode:
 		patch.highPassMode = (patch.highPassMode > 0) ? 0 : 1;
@@ -656,6 +706,7 @@ void SynthProcessor::handleOnPressEnd(uint8_t button) {
 	switch (id) {
 	case Alt:
 		inAltMode = false;
+		//TODO: we need tell the graphics processor to redraw the non-alt component here
 		break;
 	case Env1:
 		break;
