@@ -159,3 +159,22 @@ void loadPatchFromBuf(patch_t*  patch, char* buf){
 	memcpy(&patch->useSustainPedal, ptr, 1);
 }
 
+
+bool isValidPatch(char* buf){
+	std::string headerPrefix(buf, 15);
+	if(headerPrefix != headerBlank.substr(0, 15)){
+		return false;
+	}
+	return buf[headerBlank.length() - 1] == '_';
+}
+
+std::string getPatchName(char* buf){
+	std::string name = "";
+	char* ptr = buf + 15;
+	while(*ptr != "*" && name.length() < 16){
+		name += *ptr;
+		ptr++;
+	}
+	return name;
+}
+

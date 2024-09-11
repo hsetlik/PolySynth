@@ -16,6 +16,8 @@
 #include <string>
 
 namespace PatchFile {
+	bool isValidPatch(char* buf);
+	std::string getPatchName(char* buf);
 	uint16_t patchFileSizeBytes();
 	void writePatchToBuf(patch_t* patch, const std::string& name, char* buf);
 	void loadPatchFromBuf(patch_t*  patch, char* buf);
