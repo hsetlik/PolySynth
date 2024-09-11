@@ -171,7 +171,7 @@ bool isValidPatch(char* buf){
 std::string getPatchName(char* buf){
 	std::string name = "";
 	char* ptr = buf + 15;
-	while(*ptr != "*" && name.length() < 16){
+	while(*ptr != '*' && name.length() < 16){
 		name += *ptr;
 		ptr++;
 	}
