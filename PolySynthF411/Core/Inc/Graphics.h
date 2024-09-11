@@ -362,7 +362,6 @@ public:
 	}
 	void updateGraph(uint16_t val){
 		graph.addGraphPoint(val);
-		graph.draw();
 	}
 };
 
@@ -497,6 +496,9 @@ public:
 	~GraphicsProcessor();
 	void dmaFinished();
 	void checkGUIUpdates();
+	bool needsLFOData();
+
+	void updateLFOs(uint16_t l1, uint16_t l2, uint16_t l3);
 	void setPatchData(patch_t* p) {
 		patch = p;
 	}
@@ -522,7 +524,6 @@ typedef void *graphics_processor_t;
 
 EXTERNC graphics_processor_t create_graphics_processor();
 EXTERNC void disp_dma_finished(graphics_processor_t proc);
-EXTERNC void check_gui_updates(graphics_processor_t proc);
 
 
 

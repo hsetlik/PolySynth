@@ -209,6 +209,14 @@ int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
 	float val = (float) modSourceValue(src, voice);
 	return (int16_t) (val * ((float) get_mod_depth(mod) / 127.0f));
 }
+//GUI------------
+
+void SynthProcessor::checkGUIUpdates(){
+	if(graphicsProc->needsLFOData()){
+		graphicsProc->updateLFOs(lfos[0].getCurrentValue(), lfos[1].getCurrentValue(), lfos[2].getCurrentValue());
+	}
+	graphicsProc->checkGUIUpdates();
+}
 
 //CONTROLS==================================================================================
 
@@ -842,6 +850,13 @@ void process_midi_msg(synth_processor_t proc, midiMsg msg) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
 	ptr->processMidiMessage(msg);
 }
+
+
+void check_gui_updates(synth_processor_t proc){
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
+	ptr->checkGUIUpdates();
+}
+
 
 void handle_on_click(synth_processor_t synth, uint8_t button) {
 

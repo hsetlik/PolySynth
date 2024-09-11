@@ -48,6 +48,7 @@ private:
 	uint8_t visibleView = ViewID::vEnv1;
 	uint8_t selectedPWM = ParamID::pOsc1PulseWidth;
 
+	// update the graphics processor as needed
 
 public:
 	SynthProcessor(voice_clock_t vc, enc_processor_t ep, button_processor_t bp, graphics_processor_t gp);
@@ -69,6 +70,8 @@ public:
 	void handleOnPressStart(uint8_t button);
 	void handleOnPressEnd(uint8_t button);
 	void handleDuringPress(uint8_t button);
+	// main callback for keeping the display up to date
+	void checkGUIUpdates();
 
 private:
 	bool alt() {
@@ -121,6 +124,8 @@ EXTERNC void handle_on_press_end(synth_processor_t synth, uint8_t button);
 EXTERNC void handle_during_press(synth_processor_t synth, uint8_t button);
 
 EXTERNC void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir);
+
+EXTERNC void check_gui_updates(synth_processor_t proc);
 
 #undef EXTERNC
 

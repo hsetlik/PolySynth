@@ -930,71 +930,70 @@ void OscTuningView::paramUpdated(uint8_t id) {
 
 // LFO VIEW=======================================
 // graph
-GraphBuffer::GraphBuffer(){
+GraphBuffer::GraphBuffer() {
 
 }
 
-void GraphBuffer::push(uint16_t val){
+void GraphBuffer::push(uint16_t val) {
 	data[head] = val;
 	head = (head + 1) % LFO_GRAPH_POINTS;
 }
 
-
-LFOGraph::LFOGraph(){
+LFOGraph::LFOGraph() {
 
 }
 
 void LFOGraph::updateGraphLines() {
-	int16_t x0 = (int16_t)area.x;
-	const int16_t dX = (int16_t)((float)area.w / (float)LFO_GRAPH_POINTS);
-	const float yScale = (float)area.h / 4096.0f;
-	const int16_t yBottom = (int16_t)area.y + area.h;
-	int16_t y0 = yBottom - (int16_t)((float)lfoPoints[0] * yScale);
+	int16_t x0 = (int16_t) area.x;
+	const int16_t dX = (int16_t) ((float) area.w / (float) LFO_GRAPH_POINTS);
+	const float yScale = (float) area.h / 4096.0f;
+	const int16_t yBottom = (int16_t) area.y + area.h;
+	int16_t y0 = yBottom - (int16_t) ((float) lfoPoints[0] * yScale);
 	int16_t x1, y1;
-	for(uint8_t l = 1; l < LFO_GRAPH_POINTS; l++){
+	for (uint8_t l = 1; l < LFO_GRAPH_POINTS; l++) {
 		x1 = x0 + dX;
-		y1 = yBottom - (int16_t)((float)lfoPoints[l] * yScale);
-		graphLines[l - 1] = {{x0, y0}, {x1, y1}};
+		y1 = yBottom - (int16_t) ((float) lfoPoints[l] * yScale);
+		graphLines[l - 1] = { { x0, y0 }, { x1, y1 } };
 		x0 = x1;
 		y0 = y1;
 	}
 }
 
-bool LFOGraph::needsGraphPoint(float freq){
+bool LFOGraph::needsGraphPoint(float freq) {
 	static tick_t now = 0;
 	now = TickTimer_get();
 	// check if the frequency has changed
 	static float prevFreq = 1.0f;
 	static float periodMs = 1000.0f / prevFreq;
-	if(prevFreq != freq){
+	if (prevFreq != freq) {
 		prevFreq = freq;
 		periodMs = 1000.0f / prevFreq;
 	}
 	return TickTimer_tickDistanceMs(lastGraphPoint, now) > periodMs;
 }
 
-void LFOGraph::addGraphPoint(uint16_t val){
+void LFOGraph::addGraphPoint(uint16_t val) {
 	lfoPoints.push(val);
 	lastGraphPoint = TickTimer_get();
 	updateGraphLines();
 }
 
-void LFOGraph::drawChunk(area_t chunk, uint16_t *buf){
+void LFOGraph::drawChunk(area_t chunk, uint16_t *buf) {
 	// 1: fill with the background color
-	uint16_t* px = nullptr;
-	for(uint16_t x = 0; x < chunk.w; x++){
-		for(uint16_t y = 0; y < chunk.h; y++){
+	uint16_t *px = nullptr;
+	for (uint16_t x = 0; x < chunk.w; x++) {
+		for (uint16_t y = 0; y < chunk.h; y++) {
 			px = getPixel(buf, chunk.w, chunk.h, x, y);
-			*px = (uint16_t)bkgndColor;
+			*px = (uint16_t) bkgndColor;
 		}
 	}
 	// 2: draw any necessary lines
 	bool startedDrawing = false;
-	for(uint8_t l = 0; l < LFO_GRAPH_POINTS - 1; l++){
-		if(isLineInChunk(graphLines[l], chunk)){
+	for (uint8_t l = 0; l < LFO_GRAPH_POINTS - 1; l++) {
+		if (isLineInChunk(graphLines[l], chunk)) {
 			startedDrawing = true;
 			drawLineInChunk(graphLines[l], chunk, buf, lineColor);
-		} else if(startedDrawing){
+		} else if (startedDrawing) {
 			// if we've exited the group of lines that this chunk intersects, we're done
 			return;
 		}
@@ -1003,12 +1002,12 @@ void LFOGraph::drawChunk(area_t chunk, uint16_t *buf){
 
 // view----------------
 
-LFOView::LFOView(){
+LFOView::LFOView() {
 
 }
 
-std::string LFOTypeStr(uint8_t id){
-	switch(id){
+std::string LFOTypeStr(uint8_t id) {
+	switch (id) {
 	case LFOType::Sine:
 		return "Sine";
 	case LFOType::Triangle:
@@ -1022,11 +1021,11 @@ std::string LFOTypeStr(uint8_t id){
 	}
 }
 
-std::string freqString5Digit(float freq){
+std::string freqString5Digit(float freq) {
 	return std::to_string(freq).substr(0, 4) + " hZ";
 }
 
-void LFOView::initChildren(){
+void LFOView::initChildren() {
 
 	// name
 	const uint16_t nameHeight = 24;
@@ -1084,15 +1083,15 @@ void LFOView::initChildren(){
 
 }
 
-void LFOView::paramUpdated(uint8_t id){
+void LFOView::paramUpdated(uint8_t id) {
 	uint8_t freqIdx = ParamID::pLFO1Freq;
-	if(id >= ParamID::pLFO2Freq && id < ParamID::pLFO3Freq){
+	if (id >= ParamID::pLFO2Freq && id < ParamID::pLFO3Freq) {
 		freqIdx = ParamID::pLFO2Freq;
-	} else if (id >= ParamID::pLFO3Freq && id < ParamID::pOsc1Coarse){
+	} else if (id >= ParamID::pLFO3Freq && id < ParamID::pOsc1Coarse) {
 		freqIdx = ParamID::pLFO3Freq;
 	}
 	id = id - freqIdx;
-	switch(id){
+	switch (id) {
 	case 0: // freq
 		lFreqVal.setText(freqString5Digit(params->freq));
 		lFreqVal.draw();
@@ -1105,8 +1104,6 @@ void LFOView::paramUpdated(uint8_t id){
 		break;
 	}
 }
-
-
 
 //MODAL VIEW===========================================
 // base comp----------------------------------------
@@ -1349,14 +1346,14 @@ void ModalChangeView::paramUpdated(uint8_t id) {
 	case ParamID::pOsc1PulseWidth:
 		nameStr = "DCO 1 Pulse Width";
 		valStr = std::to_string(patch->oscs[0].pulseWidth) + "/4096";
-		baseModal.prepareToShow(nameStr, valStr,
-				patch->oscs[0].pulseWidth, 4096);
+		baseModal.prepareToShow(nameStr, valStr, patch->oscs[0].pulseWidth,
+				4096);
 		break;
 	case ParamID::pOsc2PulseWidth:
 		nameStr = "DCO 2 Pulse Width";
 		valStr = std::to_string(patch->oscs[1].pulseWidth) + "/4096";
-		baseModal.prepareToShow(nameStr, valStr,
-				patch->oscs[1].pulseWidth, 4096);
+		baseModal.prepareToShow(nameStr, valStr, patch->oscs[1].pulseWidth,
+				4096);
 		break;
 	case ParamID::pFilterCutoff:
 		nameStr = "Filter Cutoff";
@@ -1397,7 +1394,6 @@ bool ModalChangeView::timeToRemove() {
 	return TickTimer_tickDistanceMs(lastUpdateTick, TickTimer_get())
 			>= modalLengthMs;
 }
-
 
 //======================================================
 
@@ -1466,7 +1462,6 @@ void GraphicsProcessor::dmaFinished() {
 }
 
 void GraphicsProcessor::checkGUIUpdates() {
-	checkForRedraw();
 	if (inModalMode && modalView.timeToRemove()) {
 		undrawModal();
 		inModalMode = false;
@@ -1476,14 +1471,27 @@ void GraphicsProcessor::checkGUIUpdates() {
 	}
 }
 
-void GraphicsProcessor::checkForRedraw(){
+bool GraphicsProcessor::needsLFOData(){
+	if(needsRedrawChecks){
+		return static_cast<LFOView*>(visibleView)->needsRedraw();
+	} else
+		return false;
+}
 
+void GraphicsProcessor::updateLFOs(uint16_t l1, uint16_t l2, uint16_t l3) {
+	// update the data for all 3 LFOs
+	lfo1View.updateGraph(l1);
+	lfo2View.updateGraph(l2);
+	lfo3View.updateGraph(l3);
+	// only redraw the visible one
+	visibleView->draw();
 }
 
 
-View* GraphicsProcessor::viewForID(uint8_t idx){
-	ViewID id = (ViewID)idx;
-	switch(id){
+
+View* GraphicsProcessor::viewForID(uint8_t idx) {
+	ViewID id = (ViewID) idx;
+	switch (id) {
 	case vEnv1:
 		return &env1View;
 	case vEnv2:
@@ -1505,10 +1513,16 @@ View* GraphicsProcessor::viewForID(uint8_t idx){
 	}
 }
 
-void GraphicsProcessor::selectView(uint8_t idx){
-	View* v = viewForID(idx);
-	if(v != nullptr && v != visibleView){
+void GraphicsProcessor::selectView(uint8_t idx) {
+	View *v = viewForID(idx);
+	if (v != nullptr && v != visibleView) {
 		visibleView = v;
+		if (visibleView == &lfo1View || visibleView == &lfo2View
+				|| visibleView == &lfo3View) {
+			needsRedrawChecks = true;
+		} else {
+			needsRedrawChecks = false;
+		}
 		visibleView->draw();
 	}
 
@@ -1548,11 +1562,11 @@ View* GraphicsProcessor::viewForParam(uint8_t p) {
 		return &env1View;
 	} else if (p >= ParamID::pEnv2Attack && p < ParamID::pLFO1Freq) {
 		return &env2View;
-	} else if(p >= ParamID:: pLFO1Freq && p < ParamID::pLFO2Freq){
+	} else if (p >= ParamID::pLFO1Freq && p < ParamID::pLFO2Freq) {
 		return &lfo1View;
-	} else if(p >= ParamID:: pLFO2Freq && p < ParamID::pLFO3Freq){
+	} else if (p >= ParamID::pLFO2Freq && p < ParamID::pLFO3Freq) {
 		return &lfo2View;
-	} else if(p >= ParamID:: pLFO3Freq && p < ParamID::pOsc1Coarse){
+	} else if (p >= ParamID::pLFO3Freq && p < ParamID::pOsc1Coarse) {
 		return &lfo3View;
 	} else if (p >= ParamID::pOsc1SquareLevel && p < ParamID::pOsc2Coarse) {
 		return &mix1View;
@@ -1578,7 +1592,3 @@ void disp_dma_finished(graphics_processor_t proc) {
 	ptr->dmaFinished();
 }
 
-void check_gui_updates(graphics_processor_t proc) {
-	GraphicsProcessor *ptr = static_cast<GraphicsProcessor*>(proc);
-	ptr->checkGUIUpdates();
-}
