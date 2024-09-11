@@ -1164,6 +1164,7 @@ void BaseChangeComponent::placeChildren() {
 	graphArea.w = dX * 8;
 	graphArea.h = dY * 2;
 	graph.setArea(graphArea);
+	graph.setVertical(false);
 
 }
 
@@ -1186,6 +1187,7 @@ ModChangeComponent::ModChangeComponent() {
 	lHeader.setFont(&Font_11x18);
 	lHeader.setText("Selected Modulation:");
 	graph.setMaxLevel(128);
+	graph.setVertical(false);
 	children.push_back(&lHeader);
 	children.push_back(&lName);
 	children.push_back(&lValue);

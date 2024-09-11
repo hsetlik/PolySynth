@@ -169,28 +169,29 @@ uint8_t lfoType;
 #define FOLD_MIN 0
 #define FOLD_DEFAULT 0
 
-#define PATCH_SIZE_BYTES 200
+#define PATCH_SIZE_BYTES 216
 
 typedef struct {
+	// the below add up to 8 bytes VVV
 	uint16_t cutoffBase;
 	uint16_t resBase;
 	uint16_t foldBase;
 	uint8_t foldFirst;
 	uint8_t highPassMode;
 
-	modmatrix_t modMatrix;
+	modmatrix_t modMatrix; // 144 bytes
 
-	dco_t oscs[2];
-	adsr_t envs[2];
+	dco_t oscs[2]; // 2 x 8 = 16 bytes
+	adsr_t envs[2]; // 2 x 16 = 32 bytes
 
-	lfo_t lfos[3];
+	lfo_t lfos[3]; // 3 x 5 = 15 bytes
 
 	uint8_t useSustainPedal;
 
 } patch_t;
 
 patch_t getDefaultPatch();
-//TODO: functions to encode/decode the patch struct in bytes here
+
 
 // enum to assign IDs to every base parameter (ie not including modulations or depths)
 #define NUM_PARAMS 33
