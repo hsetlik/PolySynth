@@ -18,13 +18,16 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+#include <string.h>
+#include <stdarg.h>
 #include "VoiceClock.h"
 #include "ControlVoltage.h"
 #include "SynthProcessor.h"
+
 
 /* USER CODE END Includes */
 
@@ -95,6 +98,10 @@ button_processor_t buttonProc;
 enc_processor_t encoderProc;
 graphics_processor_t graphicsProc;
 synth_processor_t synthProc;
+
+//Filesystem stuff-----------
+//FATFS fatFS;
+//uint8_t SD_INITIALIZED = 0;
 
 //------------------------------------
 /* USER CODE END PV */
@@ -275,7 +282,6 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM4_Init();
   MX_TIM9_Init();
-  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 	//allocate the display queue
 	mainDispQueue = create_display_queue();
@@ -294,6 +300,13 @@ int main(void)
 	set_on_press_start(buttonProc, &onPressStart);
 	set_on_press_end(buttonProc, &onPressEnd);
 	set_during_press(buttonProc, &duringPress);
+
+//	// initialize the SD card
+//	if(f_mount(&fatFS, "", 1) != FR_OK){
+//		Error_Handler();
+//	} else {
+//		SD_INITIALIZED = 1;
+//	}
 
 	// reset the counter ICs before we start the first transmission
 	HAL_GPIO_WritePin(PITCH_RST_GPIO_Port, PITCH_RST_Pin, GPIO_PIN_SET);

@@ -137,6 +137,7 @@ void Error_Handler(void);
 extern SPI_HandleTypeDef hspi2;
 extern SPI_HandleTypeDef hspi3;
 extern display_queue_t mainDispQueue;
+extern uint8_t SD_INITIALIZED;
 
 #define SD_SPI_HANDLE hspi3
 //extern RNG_HandleTypeDef hrng;
