@@ -7,7 +7,7 @@
 #include "NeopixelChain.h"
 
 void colorToPWM(uint16_t* buf, color32_t col){
-	for(uint8_t i = 0; i < sizeof(color32_t); i++){
+	for(uint8_t i = 0; i < sizeof(color32_t) * 8; i++){
 		if(col & (0x0001 << i)){
 			buf[i] = PWM_HIGH;
 		} else {
@@ -33,27 +33,31 @@ void SK6812Chain::begin(DMA_HandleTypeDef* dma){
 
 }
 
-
 void SK6812Chain::fillNextBuffer(uint16_t* buf){
-	if(currentLed >= numLeds){
-
+	constexpr uint8_t pixelsToSend = DMA_BUF_LEDS / 2; // such that we send half a buffer at a time
+	if(currentLed >= numLeds){ // we've transmitted the last pixel
+		memset(buf, 0x00, sizeof(color32_t) * sizeof(uint16_t));
 	} else {
-
+		uint8_t colorsSent = 0;
+		while(colorsSent < pixelsToSend && currentLED < numLeds){
+			colorToPWM(buf + (colorsSent * 2), colors[currentLed]);
+			++currentLed;
+			++colorsSent;
+		}
 	}
+	// and increment the current LED
+	++currentLed;
+	currentLed %= finalLed;
 }
 
 void SK6812Chain::transmitComplete(){
-
+	fillNextBuffer(dmaBuf);
 }
 
 void SK6812Chain::transmitHalfComplete(){
-
+	fillNextBuffer(&dmaBuf[DMA_BUF_LEDS * sizeof(color32_t) * 4]);
 }
 
 void SK6812Chain::setPixel(uint8_t px, color32_t col){
 	colors[px] = col;
-}
-
-void SK6812Chain::update(){
-
 }

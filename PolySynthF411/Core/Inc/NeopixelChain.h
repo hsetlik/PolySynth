@@ -10,6 +10,7 @@
 
 #include "main.h"
 #include "stm32f4xx_hal.h"
+#include <string.h>
 // handle IDs for each channel
 #define PX_TIMER_MAIN htim2
 #define PX_TIMER_MATRIX htim5
@@ -38,7 +39,7 @@ private:
 	bool dmaWorking = false;
 	bool updateRequested = false;
 	color32_t* colors;
-	uint16_t dmaBuf[DMA_BUF_LEDS * sizeof(color32_t)]; // this is 128 bytes in practice
+	uint16_t dmaBuf[DMA_BUF_LEDS * sizeof(color32_t) * 8]; // this is 128 bytes in practice
 	// this guy does most of the work
 	void fillNextBuffer(uint16_t* buf);
 public:
@@ -50,8 +51,6 @@ public:
 	void transmitComplete();
 	//----------
 	void setPixel(uint8_t px, color32_t col);
-	// this guy actually starts the process of shifting the data out
-	void update();
 
 
 };
