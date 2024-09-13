@@ -7,10 +7,10 @@
 
 #ifndef INC_GRAPHICS_H_
 #define INC_GRAPHICS_H_
+#include <Color.h>
 #include "main.h"
 #include "ili9341.h"
 #include <stdbool.h>
-#include "Color565.h"
 #include "Patch.h"
 #include "DisplayQueue.h"
 #define MAX_CHUNK_WIDTH 64

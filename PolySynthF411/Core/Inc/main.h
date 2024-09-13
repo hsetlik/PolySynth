@@ -139,8 +139,13 @@ extern SPI_HandleTypeDef hspi3;
 extern display_queue_t mainDispQueue;
 extern uint8_t SD_INITIALIZED;
 
+// PWM/timer stuff
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim5;
+extern DMA_HandleTypeDef hdma_tim2_ch2_ch4;
+extern DMA_HandleTypeDef hdma_tim5_ch3_up;
+
 #define SD_SPI_HANDLE hspi3
-//extern RNG_HandleTypeDef hrng;
 
 /* USER CODE END Private defines */
 

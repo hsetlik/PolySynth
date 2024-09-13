@@ -4,7 +4,7 @@
  *  Created on: Sep 2, 2024
  *      Author: hayden
  */
-#include "Color565.h"
+#include <Color.h>
 
 
 color16_t color565_fromRGB(uint8_t r, uint8_t g, uint8_t b){
@@ -56,5 +56,19 @@ const color24_t colors24[] = {
 color16_t color565_getColor16(uint8_t id){
 	color24_t col = colors24[id];
 	return color565_fromRGB(col.r, col.g, col.b);
+}
+
+
+//=====================================================
+
+color32_t color32_getFullBrightness(uint8_t id){
+	return color32_getWithBrightness(id, 255);
+}
+
+color32_t color32_getWithBrightness(uint8_t id, uint32_t b){
+		color24_t c24 = colors24[id];
+	color32_t col = 0;
+	col = col | (c24.r << 24) | (c24.g << 16) | (c24.g << 8) | 255;
+	return col;
 }
 

@@ -5,8 +5,8 @@
  *      Author: hayden
  */
 
-#ifndef INC_COLOR565_H_
-#define INC_COLOR565_H_
+#ifndef INC_COLOR_H_
+#define INC_COLOR_H_
 #include "main.h"
 
 #ifdef __cplusplus
@@ -15,6 +15,7 @@ extern "C" {
 
 // some typedefs for our colors
 typedef uint16_t color16_t;
+typedef uint32_t color32_t;
 
 typedef struct {
 	uint8_t r;
@@ -41,8 +42,12 @@ typedef enum {
 
 color16_t color565_getColor16(uint8_t id);
 
+//NEOPIXEL RGBW STUFF====================================
+color32_t color32_getFullBrightness(uint8_t id);
+color32_t color32_getWithBrightness(uint8_t id, uint32_t b);
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* INC_COLOR565_H_ */
+#endif /* INC_COLOR_H_ */
