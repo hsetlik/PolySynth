@@ -7256,7 +7256,7 @@
 	)
 	(wire
 		(pts
-			(xy 343.662 108.966) (xy 343.662 110.236)
+			(xy 343.662 108.966) (xy 343.662 109.728)
 		)
 		(stroke
 			(width 0)
@@ -7493,6 +7493,16 @@
 			(type default)
 		)
 		(uuid "7c9662af-1aa6-44ae-929a-72ab7e92422f")
+	)
+	(wire
+		(pts
+			(xy 343.662 117.348) (xy 343.662 117.856)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d7f3924-f172-423f-8b77-e69d1df1c32a")
 	)
 	(wire
 		(pts
@@ -9036,7 +9046,7 @@
 	)
 	(rectangle
 		(start 164.084 82.55)
-		(end 187.96 116.586)
+		(end 189.484 116.586)
 		(stroke
 			(width 0)
 			(type dot)
@@ -9241,7 +9251,7 @@
 	)
 	(text "Test Points"
 		(exclude_from_sim no)
-		(at 73.152 277.876 0)
+		(at 72.644 276.86 0)
 		(effects
 			(font
 				(size 3.81 3.81)
@@ -13695,7 +13705,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 343.662 114.046 0)
+		(at 343.662 113.538 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13704,7 +13714,7 @@
 		(fields_autoplaced yes)
 		(uuid "407a6a6c-ad93-4940-aec7-f29388d65989")
 		(property "Reference" "R440"
-			(at 345.44 112.776 0)
+			(at 345.44 112.268 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13713,7 +13723,7 @@
 			)
 		)
 		(property "Value" "220"
-			(at 345.44 115.316 0)
+			(at 345.44 114.808 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13722,7 +13732,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 344.678 114.3 90)
+			(at 344.678 113.792 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13731,7 +13741,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 343.662 114.046 0)
+			(at 343.662 113.538 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13740,7 +13750,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 343.662 114.046 0)
+			(at 343.662 113.538 0)
 			(effects
 				(font
 					(size 1.27 1.27)

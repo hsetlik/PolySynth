@@ -39,7 +39,7 @@ void SK6812Chain::fillNextBuffer(uint16_t* buf){
 		memset(buf, 0x00, sizeof(color32_t) * sizeof(uint16_t));
 	} else {
 		uint8_t colorsSent = 0;
-		while(colorsSent < pixelsToSend && currentLED < numLeds){
+		while(colorsSent < pixelsToSend && currentLed < numLeds){
 			colorToPWM(buf + (colorsSent * 2), colors[currentLed]);
 			++currentLed;
 			++colorsSent;

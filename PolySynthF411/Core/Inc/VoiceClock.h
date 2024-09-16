@@ -39,11 +39,16 @@ private:
 
   // the heavy lifting
   void tick();
-
+  uint16_t dmaBuf[VOICE_CLOCK_BUF_SIZE];
+  uint16_t getNext();
+  // callback helpers
+  void fillHalfBuffer(uint16_t* buf);
 public:
   VoiceClock();
   void setFrequency(uint8_t osc, float hz);
-  uint16_t getNext();
+  void begin(SPI_HandleTypeDef* spi); // start the circular DMA transmission
+  void txHalfFinished();
+  void txFinished();
 };
 #endif // __cplusplus
 
@@ -58,10 +63,11 @@ typedef void *voice_clock_t;
 
 EXTERNC voice_clock_t create_voice_clock();
 EXTERNC void destroy_voice_clock(voice_clock_t clk);
+EXTERNC void begin(voice_clock_t clk, SPI_HandleTypeDef* spi);
+EXTERNC void tx_half_complete(voice_clock_t clk);
+EXTERNC void tx_complete(voice_clock_t clk);
 EXTERNC void set_osc_frequency(voice_clock_t clk, uint8_t osc, float hz);
-EXTERNC uint16_t get_next_bits(voice_clock_t clk);
-EXTERNC void send_bits(voice_clock_t clk, uint16_t *dest, uint16_t startIdx,
-                       uint16_t endIdx);
+
 
 
 #undef EXTERNC

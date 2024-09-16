@@ -56,6 +56,7 @@ DMA_HandleTypeDef hdma_i2c3_tx;
 SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
 SPI_HandleTypeDef hspi3;
+DMA_HandleTypeDef hdma_spi1_tx;
 DMA_HandleTypeDef hdma_spi3_tx;
 
 TIM_HandleTypeDef htim2;
@@ -152,21 +153,16 @@ uint8_t nextVoiceToUpdate() {
 
 void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi) {
 	// when we're half finished sending, request new data in nextVBuf
-	nextVBufNeeded = 1;
+	if(hspi == &hspi1){
+		tx_half_complete(vClk);
+	}
 
 }
 
 void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
 	if (hspi == &hspi1) { // voices are done
-		// switch around the new and old buffers but hold a pointer to the one we just finished
-		uint16_t *justFinished = currentVBuf;
-		currentVBuf = nextVBuf;
-		nextVBuf = justFinished;
-		// start the next DMA transmission right away
-		if (!HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*) currentVBuf,
-		VOICE_CLOCK_BUF_SIZE * 2)) {
-			Error_Handler();
-		}
+		//TODO: this should render the first half of the buffer
+		tx_complete(vClk);
 	} else if (hspi == &hspi3) {
 		// pull CS high again
 		ILI9341_Unselect();
@@ -312,11 +308,8 @@ int main(void)
 	HAL_GPIO_WritePin(PITCH_RST_GPIO_Port, PITCH_RST_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(PITCH_RST_GPIO_Port, PITCH_RST_Pin, GPIO_PIN_RESET);
 	// do the first DMA transmission outside the while loop to start
-	send_bits(vClk, currentVBuf, 0, VOICE_CLOCK_BUF_SIZE);
-	if (!HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*) currentVBuf,
-	VOICE_CLOCK_BUF_SIZE * 2)) {
-		Error_Handler();
-	}
+	begin(vClk, &hspi1);
+
 	// start the timer to update the CVs
 	if (HAL_TIM_Base_Start_IT(&htim4) != HAL_OK) {
 		Error_Handler();
@@ -335,11 +328,7 @@ int main(void)
 	tick_t now = 0;
 
 	while (1) {
-		// if the half complete callback has triggered it, compute the next set of DMA values
-		if (nextVBufNeeded) {
-			send_bits(vClk, nextVBuf, 0, VOICE_CLOCK_BUF_SIZE);
-			nextVBufNeeded = 0;
-		}
+
 		//process any MIDI messages here
 		if (midiMsgReady) {
 			//TODO: actually process the midi message nah mean
@@ -905,6 +894,7 @@ static void MX_DMA_Init(void)
 
   /* DMA controller clock enable */
   __HAL_RCC_DMA1_CLK_ENABLE();
+  __HAL_RCC_DMA2_CLK_ENABLE();
 
   /* DMA interrupt init */
   /* DMA1_Stream0_IRQn interrupt configuration */
@@ -919,6 +909,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream6_IRQn);
+  /* DMA2_Stream2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
 
 }
 
