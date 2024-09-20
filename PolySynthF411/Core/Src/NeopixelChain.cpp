@@ -161,6 +161,31 @@ color32_t PixelProcessor::getSourceBankPixel(uint8_t right){
 	return matrixPx.getPixel(idx);
 }
 
+//Color Business=========================================================
+
+void PixelProcessor::updateForCutoff(uint16_t val){
+	constexpr color24_t minColor = colors24[ColorID::AquaMarine];
+	constexpr color24_t maxColor = colors24[ColorID::OrangeRed];
+	color24_t color = color24_lerp16(minColor, maxColor, val, 4095);
+	color32_t c32 = ((uint32_t)color << 8) | 160;
+	mainPx.setPixel(pixelID::pxCutoff, c32);
+}
+
+void PixelProcessor::updateForRes(uint16_t val){
+	constexpr color24_t minColor = colors24[ColorID::AquaMarine];
+	constexpr color24_t maxColor = colors24[ColorID::OrangeRed];
+	color24_t color = color24_lerp16(minColor, maxColor, val, 255);
+	color32_t c32 = ((uint32_t)color << 8) | 160;
+	mainPx.setPixel(pixelID::pxRes, c32);
+}
+
+void PixelProcessor::updateForFold(uint16_t val){
+	constexpr color24_t minColor = colors24[ColorID::AquaMarine];
+	constexpr color24_t maxColor = colors24[ColorID::OrangeRed];
+	color24_t color = color24_lerp16(minColor, maxColor, val, 4095);
+	color32_t c32 = ((uint32_t)color << 8) | 160;
+	mainPx.setPixel(pixelID::pxFold, c32);
+}
 //==================================================================
 pixel_processor_t create_pixel_processor(){
 	return new PixelProcessor();

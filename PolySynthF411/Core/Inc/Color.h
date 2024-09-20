@@ -23,6 +23,7 @@ typedef struct {
 	uint8_t b;
 } color24_t;
 
+color24_t color24_lerp16(color24_t a, color24_t b, uint16_t val, uint16_t max);
 
 // converts from regular 24-bit RGB to packed 565 RGB
 color16_t color565_fromRGB(uint8_t r, uint8_t g, uint8_t b);
@@ -33,10 +34,35 @@ typedef enum {
 	White,
 	Maroon,
 	Salmon,
+	OrangeRed,
 	DarkOrange,
 	Gold,
+	Yellow,
 	LimeGreen,
-	DarkGreen
+	DarkGreen,
+	DarkSeaGreen,
+	DarkSlateGray,
+	Teal,
+	Cyan,
+	Turquoise,
+	AquaMarine,
+	DeepSkyBlue,
+	Indigo,
+	MediumOrchid,
+	Magenta,
+	DeepPink,
+	LightPink,
+	Bisque,
+	LightYellow,
+	Sienna,
+	SandyBrown,
+	RosyBrown,
+	MistyRose,
+	MintCream,
+	SlateGray,
+	LightSteelBlue,
+	AliceBlue,
+	Honeydew
 
 } ColorID;
 

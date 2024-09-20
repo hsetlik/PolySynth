@@ -586,10 +586,16 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 		graphicsProc->selectView(visibleView);
 		break;
 	case LFO1:
+		visibleView = ViewID::vLFO1;
+		graphicsProc->selectView(visibleView);
 		break;
 	case LFO2:
+		visibleView = ViewID::vLFO2;
+		graphicsProc->selectView(visibleView);
 		break;
 	case LFO3:
+		visibleView = ViewID::vLFO3;
+		graphicsProc->selectView(visibleView);
 		break;
 	case Osc1:
 		visibleView = alt() ? ViewID::vTune : ViewID::vMix1;

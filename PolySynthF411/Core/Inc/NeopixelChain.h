@@ -98,6 +98,12 @@ public:
 	void begin();
 	void txComplete(TIM_HandleTypeDef* tim);
 	void txHalfComplete(TIM_HandleTypeDef* tim);
+
+	// NOTE: the logic for the actual pixel colors goes here VVV
+	void updateForCutoff(uint16_t val);
+	void updateForRes(uint16_t val);
+	void updateForFold(uint16_t val);
+
 	// color getters/setters
 	void setMainPixel(uint8_t id, color32_t color);
 	void setMatrixPixel(uint8_t src, uint8_t dest, color32_t color);
