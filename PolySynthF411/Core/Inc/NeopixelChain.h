@@ -22,6 +22,23 @@ typedef enum {
 	pxMain
 }pxChan;
 
+typedef enum {
+	pEnv1,
+	pEnv2,
+	pLFO1,
+	pLFO2,
+	pLFO3,
+	pOsc1,
+	pOsc2,
+	pCutoff,
+	pRes,
+	pPulseWidth,
+	pFold,
+	pFilterMode,
+	pPWM1,
+	pPWM2,
+	pFoldFirst
+} pixelID;
 
 #ifdef __cplusplus
 #include "color.h"
@@ -51,13 +68,19 @@ public:
 	void transmitComplete();
 	//----------
 	void setPixel(uint8_t px, color32_t col);
-
-
 };
 
+//============================================================
 
 
+class PixelProcessor {
+private:
+	SK6812Chain mainPx;
+	SK6812Chain matrixPx;
+public:
+	PixelProcessor();
 
+};
 
 
 
