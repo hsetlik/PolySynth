@@ -109,6 +109,14 @@ void PixelProcessor::begin(){
 	matrixPx.begin();
 }
 
+void PixelProcessor::init(){
+	// 1. set colors for the voice parameters
+	updateForCutoff(CUTOFF_DEFAULT);
+	updateForRes(RES_DEFAULT);
+	updateForFold(FOLD_DEFAULT);
+	updateForPWM(PWM_DEFAULT);
+}
+
 void PixelProcessor::txHalfComplete(TIM_HandleTypeDef* tim){
 	if(tim == &htim2){
 		mainPx.transmitHalfComplete();
@@ -164,29 +172,34 @@ color32_t PixelProcessor::getSourceBankPixel(uint8_t right){
 //Color Business=========================================================
 
 void PixelProcessor::updateForCutoff(uint16_t val){
-	constexpr color24_t minColor = colors24[ColorID::AquaMarine];
-	constexpr color24_t maxColor = colors24[ColorID::OrangeRed];
-	color24_t color = color24_lerp16(minColor, maxColor, val, 4095);
-	color32_t c32 = ((uint32_t)color << 8) | 160;
-	mainPx.setPixel(pixelID::pxCutoff, c32);
+	static const color32_t minColor = color32_getWithBrightness(ColorID::AquaMarine, 160);
+	static const color32_t maxColor = color32_getWithBrightness(ColorID::OrangeRed, 160);
+	color32_t col = color32_blend16Bit(minColor, maxColor, val, 4095);
+	setMainPixel(pixelID::pxCutoff, col);
 }
 
 void PixelProcessor::updateForRes(uint16_t val){
-	constexpr color24_t minColor = colors24[ColorID::AquaMarine];
-	constexpr color24_t maxColor = colors24[ColorID::OrangeRed];
-	color24_t color = color24_lerp16(minColor, maxColor, val, 255);
-	color32_t c32 = ((uint32_t)color << 8) | 160;
-	mainPx.setPixel(pixelID::pxRes, c32);
+	static const color32_t minColor = color32_getWithBrightness(ColorID::AquaMarine, 160);
+	static const color32_t maxColor = color32_getWithBrightness(ColorID::OrangeRed, 160);
+	color32_t col = color32_blend16Bit(minColor, maxColor, val, 255);
+	setMainPixel(pixelID::pxRes, col);
 }
 
 void PixelProcessor::updateForFold(uint16_t val){
-	constexpr color24_t minColor = colors24[ColorID::AquaMarine];
-	constexpr color24_t maxColor = colors24[ColorID::OrangeRed];
-	color24_t color = color24_lerp16(minColor, maxColor, val, 4095);
-	color32_t c32 = ((uint32_t)color << 8) | 160;
-	mainPx.setPixel(pixelID::pxFold, c32);
+	static const color32_t minColor = color32_getWithBrightness(ColorID::AquaMarine, 160);
+	static const color32_t maxColor = color32_getWithBrightness(ColorID::OrangeRed, 160);
+	color32_t col = color32_blend16Bit(minColor, maxColor, val, 4095);
+	setMainPixel(pixelID::pxFold, col);
+}
+
+void PixelProcessor::updateForPWM(uint16_t val){
+	static const color32_t minColor = color32_getWithBrightness(ColorID::AquaMarine, 160);
+	static const color32_t maxColor = color32_getWithBrightness(ColorID::OrangeRed, 160);
+	color32_t col = color32_blend16Bit(minColor, maxColor, val, 4095);
+	setMainPixel(pixelID::pxPulseWidth, col);
 }
 //==================================================================
+
 pixel_processor_t create_pixel_processor(){
 	return new PixelProcessor();
 }
@@ -196,9 +209,9 @@ void tick_pixel_processor(pixel_processor_t proc){
 	ptr->tick();
 }
 
-void begin_pixels(pixel_processor_t proc){
+void init_pixels(pixel_processor_t proc){
 	PixelProcessor* ptr = static_cast<PixelProcessor*>(proc);
-	ptr->begin();
+	ptr->init();
 }
 
 void pixel_tx_complete(pixel_processor_t proc, TIM_HandleTypeDef* tim){

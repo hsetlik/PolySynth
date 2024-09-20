@@ -16,6 +16,7 @@
 
 #include "main.h"
 #include "stm32f4xx_hal.h"
+#include "patch.h"
 #include <string.h>
 // handle IDs for each channel
 #define PX_TIMER_MAIN htim2
@@ -94,6 +95,7 @@ private:
 public:
 	PixelProcessor();
 	// callbacks for main.c
+	void init();
 	void tick();
 	void begin();
 	void txComplete(TIM_HandleTypeDef* tim);
@@ -103,6 +105,7 @@ public:
 	void updateForCutoff(uint16_t val);
 	void updateForRes(uint16_t val);
 	void updateForFold(uint16_t val);
+	void updateForPWM(uint16_t val);
 
 	// color getters/setters
 	void setMainPixel(uint8_t id, color32_t color);
@@ -135,7 +138,7 @@ EXTERNC pixel_processor_t create_pixel_processor();
 EXTERNC void tick_pixel_processor(pixel_processor_t proc);
 EXTERNC void pixel_tx_half_complete(pixel_processor_t proc, TIM_HandleTypeDef* tim);
 EXTERNC void pixel_tx_complete(pixel_processor_t proc, TIM_HandleTypeDef* tim);
-EXTERNC void begin_pixels(pixel_processor_t proc);
+EXTERNC void init_pixels(pixel_processor_t proc);
 
 #undef EXTERNC
 

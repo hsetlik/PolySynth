@@ -71,6 +71,7 @@ color16_t color565_getColor16(uint8_t id);
 //NEOPIXEL RGBW STUFF====================================
 color32_t color32_getFullBrightness(uint8_t id);
 color32_t color32_getWithBrightness(uint8_t id, uint32_t b);
+color32_t color32_blend16Bit(color32_t a, color32_t b, uint16_t val, uint16_t max);
 
 #ifdef __cplusplus
 }

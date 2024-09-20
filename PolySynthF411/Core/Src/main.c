@@ -294,7 +294,7 @@ int main(void) {
 	pixelProc = create_pixel_processor();
 	synthProc = create_synth_processor(vClk, encoderProc, buttonProc,
 			graphicsProc, pixelProc);
-	begin_pixels(pixelProc);
+	init_pixels(pixelProc);
 
 	// initialize the MCP23S17 interrupts for the encoders
 	enc_init_interrupts(encoderProc);

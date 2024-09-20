@@ -93,6 +93,29 @@ color24_t color24_lerp16(color24_t a, color24_t b, uint16_t t, uint16_t max){
 	return col;
 }
 
+color32_t color32_blend16Bit(color32_t a, color32_t b, uint16_t val, uint16_t max){
+	// step 1: unpack the colors into bytes
+	uint8_t rA = (uint8_t)a >> 24;
+	uint8_t gA = (uint8_t)(a >> 16) & 0x00FF;
+	uint8_t bA = (uint8_t)(a >> 8) & 0x00FF;
+	uint8_t lA = (uint8_t)a & 0x00FF;
+
+	uint8_t rB = (uint8_t)b >> 24;
+	uint8_t gB = (uint8_t)(b >> 16) & 0x00FF;
+	uint8_t bB = (uint8_t)(b >> 8) & 0x00FF;
+	uint8_t lB = (uint8_t)b & 0x00FF;
+
+	//step 2: lerping math to calculate bytes for the return value
+	float fT = (float)val / (float)max;
+	uint8_t rOut = (uint8_t)((float)rA * (1.0f - fT)) + (uint8_t)((float)rB * fT);
+	uint8_t gOut = (uint8_t)((float)gA * (1.0f - fT)) + (uint8_t)((float)gB * fT);
+	uint8_t bOut = (uint8_t)((float)bA * (1.0f - fT)) + (uint8_t)((float)bB * fT);
+	uint8_t lOut = (uint8_t)((float)lA * (1.0f - fT)) + (uint8_t)((float)lB * fT);
+
+	// step 3: pack the return value
+	return (color32_t)((rOut << 24) | (gOut << 16) | (bOut << 8) | lOut);
+}
+
 
 //=====================================================
 
