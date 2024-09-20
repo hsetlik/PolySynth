@@ -7,11 +7,12 @@
 #include "SynthProcessor.h"
 
 SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
-		button_processor_t bp, graphics_processor_t gp) :
+		button_processor_t bp, graphics_processor_t gp, pixel_processor_t pp) :
 		voiceClock(static_cast<VoiceClock*>(vc)), encoderProc(
 				static_cast<EncoderProcessor*>(ep)), buttonProc(
 				static_cast<ButtonProcessor*>(bp)), graphicsProc(
-				static_cast<GraphicsProcessor*>(gp)), patch(getDefaultPatch()), voicesInUse(
+				static_cast<GraphicsProcessor*>(gp)), pixelProc(
+				static_cast<PixelProcessor*>(pp)), patch(getDefaultPatch()), voicesInUse(
 				0), sustainPedalDown(false), pitchWhlPos(0), modWhlPos(0) {
 	// give all the envelopes the correct pointer to the patch data
 	for (uint8_t v = 0; v < 6; v++) {
@@ -211,9 +212,10 @@ int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
 }
 //GUI------------
 
-void SynthProcessor::checkGUIUpdates(){
-	if(graphicsProc->needsLFOData()){
-		graphicsProc->updateLFOs(lfos[0].getCurrentValue(), lfos[1].getCurrentValue(), lfos[2].getCurrentValue());
+void SynthProcessor::checkGUIUpdates() {
+	if (graphicsProc->needsLFOData()) {
+		graphicsProc->updateLFOs(lfos[0].getCurrentValue(),
+				lfos[1].getCurrentValue(), lfos[2].getCurrentValue());
 	}
 	graphicsProc->checkGUIUpdates();
 }
@@ -296,33 +298,33 @@ uint8_t nudgeWaveLevel(uint8_t val, bool dir) {
 }
 
 // filter---------------
-uint16_t nudgeFilterCutoff(uint16_t val, bool dir){
+uint16_t nudgeFilterCutoff(uint16_t val, bool dir) {
 	constexpr float cutoffExp = 0.07f;
 	float fVal;
-	if(dir){
-		fVal = (float)val * (1.0f + cutoffExp);
-		return std::min<uint16_t>((uint16_t)fVal, CUTOFF_MAX);
+	if (dir) {
+		fVal = (float) val * (1.0f + cutoffExp);
+		return std::min<uint16_t>((uint16_t) fVal, CUTOFF_MAX);
 	}
-	fVal = (float)val * (1.0f - cutoffExp);
-	return std::max<uint16_t>((uint16_t)fVal, CUTOFF_MIN);
+	fVal = (float) val * (1.0f - cutoffExp);
+	return std::max<uint16_t>((uint16_t) fVal, CUTOFF_MIN);
 }
 
-uint16_t nudgeFilterRes(uint16_t val, bool dir){
-	if(dir)
+uint16_t nudgeFilterRes(uint16_t val, bool dir) {
+	if (dir)
 		return std::min<uint16_t>(val + 1, RES_MAX);
 	return std::min<uint16_t>(val - 1, RES_MIN);
 }
 
 // folder
-uint16_t nudgeFold(uint16_t val, bool dir){
+uint16_t nudgeFold(uint16_t val, bool dir) {
 	constexpr float foldNudge = 0.085f;
 	float fVal;
-	if(dir){
-		fVal = (float)val * (1.0f + foldNudge);
-		return std::min<uint16_t>((uint16_t)fVal, FOLD_MAX);
+	if (dir) {
+		fVal = (float) val * (1.0f + foldNudge);
+		return std::min<uint16_t>((uint16_t) fVal, FOLD_MAX);
 	}
-	fVal = (float)val * (1.0f - foldNudge);
-	return std::max<uint16_t>((uint16_t)fVal, FOLD_MIN);
+	fVal = (float) val * (1.0f - foldNudge);
+	return std::max<uint16_t>((uint16_t) fVal, FOLD_MIN);
 }
 
 void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
@@ -598,7 +600,9 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 		graphicsProc->selectView(visibleView);
 		break;
 	case PWMB: //TODO: some sort of modal component to indicate what this button is for
-		selectedPWM = (selectedPWM == ParamID::pOsc1PulseWidth) ? ParamID::pOsc2PulseWidth : ParamID::pOsc1PulseWidth;
+		selectedPWM =
+				(selectedPWM == ParamID::pOsc1PulseWidth) ?
+						ParamID::pOsc2PulseWidth : ParamID::pOsc1PulseWidth;
 		break;
 	case FilterMode:
 		patch.highPassMode = (patch.highPassMode > 0) ? 0 : 1;
@@ -837,8 +841,8 @@ void SynthProcessor::handleDuringPress(uint8_t button) {
 
 //==================================================================================
 synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep,
-		button_processor_t bp, graphics_processor_t gp) {
-	return new SynthProcessor(clk, ep, bp, gp);
+		button_processor_t bp, graphics_processor_t gp, pixel_processor_t pp) {
+	return new SynthProcessor(clk, ep, bp, gp, pp);
 }
 
 void update_dac_levels(synth_processor_t proc, dacLevels_t *levels) {
@@ -851,12 +855,10 @@ void process_midi_msg(synth_processor_t proc, midiMsg msg) {
 	ptr->processMidiMessage(msg);
 }
 
-
-void check_gui_updates(synth_processor_t proc){
+void check_gui_updates(synth_processor_t proc) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
 	ptr->checkGUIUpdates();
 }
-
 
 void handle_on_click(synth_processor_t synth, uint8_t button) {
 
