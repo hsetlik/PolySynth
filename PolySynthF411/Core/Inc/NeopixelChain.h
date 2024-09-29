@@ -16,7 +16,7 @@
 
 #include "main.h"
 #include "stm32f4xx_hal.h"
-#include "patch.h"
+#include "Patch.h"
 #include <string.h>
 // handle IDs for each channel
 #define PX_TIMER_MAIN htim2
@@ -106,6 +106,7 @@ public:
 	void updateForRes(uint16_t val);
 	void updateForFold(uint16_t val);
 	void updateForPWM(uint16_t val);
+	void updateForMod(mod_t m);
 
 	// color getters/setters
 	void setMainPixel(uint8_t id, color32_t color);
@@ -115,11 +116,6 @@ public:
 	color32_t getMatrixPixel(uint8_t src, uint8_t dest);
 	color32_t getSourceBankPixel(uint8_t right);
 };
-
-
-
-
-
 
 
 #endif

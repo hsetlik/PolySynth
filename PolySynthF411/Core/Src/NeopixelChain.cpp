@@ -5,6 +5,7 @@
  *      Author: hayden
  */
 #include "NeopixelChain.h"
+#include <cmath>
 
 void colorToPWM(uint16_t *buf, color32_t col) {
 	for (uint8_t i = 0; i < sizeof(color32_t) * 8; i++) {
@@ -198,6 +199,23 @@ void PixelProcessor::updateForPWM(uint16_t val){
 	color32_t col = color32_blend16Bit(minColor, maxColor, val, 4095);
 	setMainPixel(pixelID::pxPulseWidth, col);
 }
+ void PixelProcessor::updateForMod(mod_t m){
+	 static const color32_t minColor = color32_getWithBrightness(ColorID::Teal, 160);
+	 static const color32_t maxColor = color32_getWithBrightness(ColorID::LightPink, 160);
+	 static const color32_t offColor = color32_getWithBrightness(ColorID::LightYellow, 85);
+	 uint8_t src = get_mod_source(m);
+	 uint8_t dest = get_mod_dest(m);
+	 int8_t depth = get_mod_depth(m);
+	 color32_t col;
+	 if(depth == 0){
+		 col = offColor;
+	 } else if (depth > 0){
+		 col = color32_blend16Bit(offColor, maxColor, (uint8_t)depth,  128);
+	 } else {
+		 col = color32_blend16Bit(offColor, minColor, (uint8_t)std::abs(depth), 128);
+	 }
+	 setMatrixPixel(src, dest, col);
+ }
 //==================================================================
 
 pixel_processor_t create_pixel_processor(){
