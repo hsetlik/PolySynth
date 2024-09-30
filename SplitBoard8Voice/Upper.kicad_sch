@@ -8186,7 +8186,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(page "5")
 				)
@@ -8224,7 +8224,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/db382c1e-7a8e-4aae-96bd-96ec756a5476"
 					(page "6")
 				)

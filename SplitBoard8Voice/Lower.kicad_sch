@@ -3053,7 +3053,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "2")
 				)
@@ -3091,7 +3091,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "3")
 				)
@@ -3129,7 +3129,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "4")
 				)
@@ -3167,7 +3167,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "10")
 				)
@@ -3205,7 +3205,7 @@
 			)
 		)
 		(instances
-			(project "PolySynthSplitBoard"
+			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "7")
 				)
