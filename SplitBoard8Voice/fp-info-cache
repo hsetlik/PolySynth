@@ -1,4 +1,4 @@
-24200745780786178
+24204197540504528
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -67270,6 +67270,13 @@ Mousebite_1_5_mm
 0
 0
 NetTie
+NetTie-2_SMD_Pad0.2mm
+Net tie, 2 pin, 0.5mm square SMD pads
+net tie
+0
+2
+2
+NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
 net tie
@@ -76040,6 +76047,13 @@ TQFN NoLead
 0
 75
 49
+Package_DFN_QFN
+TXN_QFN15
+
+
+0
+15
+15
 Package_DFN_QFN
 Texas_B3QFN-14-1EP_5x5.5mm_P0.65mm
 Texas instruments QFN Package, datasheet: https://www.ti.com/lit/ds/symlink/tpsm53602.pdf
