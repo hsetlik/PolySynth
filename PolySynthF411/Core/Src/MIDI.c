@@ -7,10 +7,13 @@
 #include "MIDI.h"
 #include <math.h>
 
-enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte) {
+uint8_t isStatusByte(uint8_t byte){
+	return byte & 0x80;
+}
+
+MIDIMsgType getMsgType(uint8_t cmdByte) {
 	// right 4 bits store the channel so we clear them
-	uint8_t mask = 0xF0;
-	uint8_t left4 = cmdByte & mask;
+	uint8_t left4 = cmdByte & 0xF0;
 
 	if (left4 != 0xF0) {
 		switch (left4) {
@@ -38,8 +41,6 @@ enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte) {
 		case 0xF3:
 			return SongSelect;
 		case 0xF5:
-			return BusSelect;
-		case 0xF6:
 			return TuneRequest;
 		case 0xF8:
 			return TimingTick;
@@ -60,22 +61,91 @@ enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte) {
 	}
 }
 
-uint8_t MIDI_getMsgChannel(uint8_t cmdByte) {
-	uint8_t mask = 255 >> 4;
-	return cmdByte & mask;
+// the number of control bytes in each type of message
+uint8_t dataBytesForMessageType(uint8_t msg){
+	MIDIMsgType msgType = getMsgType(msg);
+	switch(msgType){
+	case NoteOff:
+		return 2;
+	case NoteOn:
+		return 2;
+	case KeyPressure:
+		return 2;
+	case ControlChange:
+		return 2;
+	case ProgramChange:
+		return 1;
+	case ChannelPressure:
+		return 1;
+	case PitchBend:
+		return 2;
+	case SongPosition:
+		return 2;
+	case SongSelect:
+		return 1;
+	case TuneRequest:
+		return 0;
+	case TimingTick:
+		return 0;
+	case StartSong:
+		return 0;
+	case ContinueSong:
+		return 0;
+	case StopSong:
+		return 0;
+	case ActiveSensing:
+		return 0;
+	case SystemReset:
+		return 0;
+	default:
+		return 1;
+	}
+
 }
 
-midiMsg MIDI_decodeMsg(uint8_t *ptr) {
-	midiMsg output;
-	output.msgType = (uint8_t) MIDI_getMsgType(ptr[0]);
-	// if the message applies to a specific channel
-	if (output.msgType < 0xF2) {
-		output.channel = MIDI_getMsgChannel(ptr[0]);
-	}
-	output.data[0] = ptr[1];
-	output.data[1] = ptr[2];
+uint8_t getStatusChannel(uint8_t cmdByte) {
 
-	return output;
+	return cmdByte & 0x0F;
+}
+
+// MIDI state machine======================================
+
+// state storage
+uint8_t statusByte = 0x00;
+uint8_t dataBytes[3];
+uint8_t dataBytesReceived = 0;
+uint8_t dataBytesExpected = 0;
+
+// helper for MIDI_receiveByte
+uint8_t isMessageComplete(){
+	if(!statusByte)
+		return 0;
+	return dataBytesReceived == dataBytesExpected;
+}
+
+uint8_t MIDI_receiveByte(uint8_t data){
+	if(isStatusByte(data)){ // new status byte
+		statusByte = data;
+		dataBytesReceived = 0;
+		dataBytesExpected = dataBytesForMessageType(statusByte);
+	} else { // a data byte
+		dataBytes[dataBytesReceived] = data;
+		++dataBytesReceived;
+	}
+	if(isMessageComplete()){
+		dataBytesReceived = 0;
+		return 1;
+	}
+	return 0;
+}
+
+midi_t MIDI_getLatestMessage(){
+	midi_t msg;
+	msg.msgType = getMsgType(statusByte);
+	msg.channel = getStatusChannel(statusByte);
+	msg.data[0] = dataBytes[0];
+	msg.data[1] = dataBytes[1];
+	return msg;
 }
 
 //=========================================================

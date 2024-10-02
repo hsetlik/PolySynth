@@ -57,7 +57,7 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 
 }
 
-void SynthProcessor::processMidiMessage(midiMsg msg) {
+void SynthProcessor::processMidiMessage(midi_t msg) {
 	MIDIMsgType msgType = (MIDIMsgType) msg.msgType;
 	switch (msgType) {
 	case NoteOn:
@@ -856,7 +856,7 @@ void update_dac_levels(synth_processor_t proc, dacLevels_t *levels) {
 	ptr->updateDacLevels(levels);
 }
 
-void process_midi_msg(synth_processor_t proc, midiMsg msg) {
+void process_midi_msg(synth_processor_t proc, midi_t msg) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
 	ptr->processMidiMessage(msg);
 }

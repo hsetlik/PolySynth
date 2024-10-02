@@ -13,7 +13,7 @@ extern "C" {
 #endif
 #include "main.h"
 // the possible message types
-enum MIDIMsgType{
+typedef enum {
 	NoteOff,
 	NoteOn,
 	KeyPressure,
@@ -23,7 +23,6 @@ enum MIDIMsgType{
 	PitchBend,
 	SongPosition,
 	SongSelect,
-	BusSelect,
 	TuneRequest,
 	TimingTick,
 	StartSong,
@@ -31,17 +30,20 @@ enum MIDIMsgType{
 	StopSong,
 	ActiveSensing,
 	SystemReset
-};
+}MIDIMsgType;
 
 typedef struct {
 	uint8_t msgType;
 	uint8_t channel;
 	uint8_t data[2];
-}midiMsg;
+}midi_t;
 
-enum MIDIMsgType MIDI_getMsgType(uint8_t cmdByte);
-uint8_t MIDI_getMsgChannel(uint8_t cmdByte);
-midiMsg MIDI_decodeMsg(uint8_t* ptr);
+// add a byte to the current midi message. returns true if there's
+// a complete message to process at the end of this byte
+uint8_t MIDI_receiveByte(uint8_t d);
+// parse the most recent message
+midi_t MIDI_getLatestMessage();
+
 
 // TUNING STUFF =======================================================================
 #define MAX_MIDI_NUM 120

@@ -63,7 +63,7 @@ public:
 	 * - Send updates to the display and the neopixels as I see fit
 	 */
 	void updateDacLevels(dacLevels_t* levels);
-	void processMidiMessage(midiMsg msg);
+	void processMidiMessage(midi_t msg);
 	//Control callbacks
 	// for encoder callbacks
 	void handleEncoderTurn(uint8_t id, uint8_t clockwise);
@@ -118,7 +118,7 @@ typedef void* synth_processor_t;
 
 EXTERNC synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep, button_processor_t bp, graphics_processor_t gp, pixel_processor_t pp);
 EXTERNC void update_dac_levels(synth_processor_t proc, dacLevels_t* levels);
-EXTERNC void process_midi_msg(synth_processor_t proc, midiMsg msg);
+EXTERNC void process_midi_msg(synth_processor_t proc, midi_t msg);
 // for setting up function pointers in main.c
 EXTERNC void handle_on_click(synth_processor_t synth, uint8_t button);
 EXTERNC void handle_on_press_start(synth_processor_t synth, uint8_t button);
