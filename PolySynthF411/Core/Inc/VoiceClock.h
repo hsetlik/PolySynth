@@ -7,14 +7,12 @@
 
 #ifndef INC_VOICECLOCK_H_
 #define INC_VOICECLOCK_H_
-
-#define NUM_OSCS 12
-#define MASTER_CLK 2625000
-
-#define VOICE_CLOCK_BUF_SIZE 256
-
 #include "main.h"
 #include "stm32f4xx_hal.h"
+
+#define NUM_OSCS 12
+#define VOICE_CLOCK_BUF_SIZE 256
+
 
 // protect the C++ stuff
 #ifdef __cplusplus
@@ -29,17 +27,22 @@ float getTickHz(uint32_t clkFreq, uint8_t dataWidth);
 class VoiceClock {
 private:
   // helper for timing math
-  const float tickHz;
+  float tickHz;
 
   // oscillator state stuff
+#ifndef FLOAT_VOICE_MODE
   voice_tick_t fullTicks[NUM_OSCS];
   voice_tick_t halfTicks[NUM_OSCS];
   voice_tick_t currentTicks[NUM_OSCS];
-  uint16_t oscState;
+#else
+  float phaseDelta[NUM_OSCS];
+  float phase[NUM_OSCS];
 
+#endif
+  uint16_t oscState;
+  uint16_t dmaBuf[VOICE_CLOCK_BUF_SIZE];
   // the heavy lifting
   void tick();
-  uint16_t dmaBuf[VOICE_CLOCK_BUF_SIZE];
   uint16_t getNext();
   // callback helpers
   void fillHalfBuffer(uint16_t* buf);

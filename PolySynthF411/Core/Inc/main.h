@@ -133,7 +133,21 @@ void Error_Handler(void);
 #define POT_SDA_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
+#define NUM_VOICES 6
+// the master clock used by APB2 peripherals (including our voice clocks)
+#define APB2_CLK 48000000 // 48MHz
 
+
+/* Comment out `#define FLOAT_VOICE_MODE` below
+ * to use the old integer code. Float mode
+ * is more CPU intensive but should mean
+ * far less tuning error at lower SPI clock
+ * frequencies
+ */
+
+#define FLOAT_VOICE_MODE
+
+extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi2;
 extern SPI_HandleTypeDef hspi3;
 extern display_queue_t mainDispQueue;

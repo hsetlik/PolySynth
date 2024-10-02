@@ -553,7 +553,6 @@ static void MX_SPI1_Init(void) {
 	/* USER CODE BEGIN SPI1_Init 2 */
 	//init our voice clock
 	vClk = create_voice_clock();
-
 	/* USER CODE END SPI1_Init 2 */
 
 }

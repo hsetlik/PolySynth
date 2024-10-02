@@ -3213,7 +3213,7 @@
 	)
 	(wire
 		(pts
-			(xy 85.09 99.314) (xy 87.376 99.314)
+			(xy 89.916 108.966) (xy 92.202 108.966)
 		)
 		(stroke
 			(width 0)
@@ -3473,7 +3473,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.768 75.946) (xy 51.562 75.946)
+			(xy 53.594 85.598) (xy 56.388 85.598)
 		)
 		(stroke
 			(width 0)
@@ -3633,7 +3633,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.802 75.946) (xy 69.596 75.946)
+			(xy 71.628 85.598) (xy 74.422 85.598)
 		)
 		(stroke
 			(width 0)
@@ -3923,7 +3923,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.022 99.314) (xy 51.816 99.314)
+			(xy 53.848 108.966) (xy 56.642 108.966)
 		)
 		(stroke
 			(width 0)
@@ -4173,7 +4173,7 @@
 	)
 	(wire
 		(pts
-			(xy 84.836 75.946) (xy 87.122 75.946)
+			(xy 89.662 85.598) (xy 91.948 85.598)
 		)
 		(stroke
 			(width 0)
@@ -4393,7 +4393,7 @@
 	)
 	(wire
 		(pts
-			(xy 32.766 99.314) (xy 33.782 99.314)
+			(xy 37.592 108.966) (xy 38.608 108.966)
 		)
 		(stroke
 			(width 0)
@@ -4533,7 +4533,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.616 99.314) (xy 104.14 99.314)
+			(xy 107.442 108.966) (xy 108.966 108.966)
 		)
 		(stroke
 			(width 0)
@@ -4603,7 +4603,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.056 99.314) (xy 69.85 99.314)
+			(xy 71.882 108.966) (xy 74.676 108.966)
 		)
 		(stroke
 			(width 0)
@@ -4643,7 +4643,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.362 75.946) (xy 104.648 75.946)
+			(xy 107.188 85.598) (xy 109.474 85.598)
 		)
 		(stroke
 			(width 0)
@@ -4773,7 +4773,7 @@
 	)
 	(wire
 		(pts
-			(xy 32.512 75.946) (xy 33.528 75.946)
+			(xy 37.338 85.598) (xy 38.354 85.598)
 		)
 		(stroke
 			(width 0)
@@ -5046,7 +5046,7 @@
 		(end 211.582 234.95)
 		(stroke
 			(width 0)
-			(type dash)
+			(type solid)
 		)
 		(fill
 			(type none)
@@ -5058,7 +5058,7 @@
 		(end 321.564 173.228)
 		(stroke
 			(width 0)
-			(type dash)
+			(type solid)
 		)
 		(fill
 			(type none)
@@ -5079,7 +5079,7 @@
 	)
 	(text "Note: the first rising edge on SCK should\nset all four flip-flops high, which means\nSR2_LATCH will be high for the first 8 bits"
 		(exclude_from_sim no)
-		(at 96.52 24.638 0)
+		(at 19.304 24.892 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5087,6 +5087,39 @@
 			(justify left)
 		)
 		(uuid "83251886-f406-4a7e-a998-0fa1c009e0d9")
+	)
+	(text "The complementary outputs of the last flip flop\ndrive each shift register's RCLK pins, casuing\nthe newly shifted in 8 bits of data to be latched\nto the outputs on the following rising clock edge."
+		(exclude_from_sim no)
+		(at 151.638 34.544 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a27fe04b-9c0b-40c7-a268-afb3c7024402")
+	)
+	(text "These AND gates direct the shared MOSI and \nSCK signals to the correct shift register \nbased on the state of the latch flip-flops\n"
+		(exclude_from_sim no)
+		(at 140.208 127.762 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a74e5f7d-40b2-4131-b513-f812dad3cf2b")
+	)
+	(text "These schmitt triggers compensate for the ~100ns of propagation delay \nintroduced by the flip flops above. Make sure U1001 and U1003 are from\nthe same logic series and manufacturer as U1006 and U1007."
+		(exclude_from_sim no)
+		(at 23.876 119.126 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bdad145c-f822-41dc-a6a7-e412a05621b3")
 	)
 	(text "Latch Pin driver/clock mux"
 		(exclude_from_sim no)
@@ -5454,7 +5487,7 @@
 	)
 	(global_label "PITCH_SCK_DEL"
 		(shape output)
-		(at 104.648 75.946 0)
+		(at 109.474 85.598 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5464,7 +5497,7 @@
 		)
 		(uuid "3fb76a6c-15aa-4d7c-bbaa-7d4e4d836244")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.2079 75.946 0)
+			(at 127.0339 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5498,7 +5531,7 @@
 	)
 	(global_label "PITCH_MOSI"
 		(shape input)
-		(at 32.766 99.314 180)
+		(at 37.592 108.966 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5508,7 +5541,7 @@
 		)
 		(uuid "41a8ffc7-576c-44e0-bbf1-266151db517f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 18.7741 99.314 0)
+			(at 23.6001 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5520,7 +5553,7 @@
 	)
 	(global_label "PITCH_MOSI_DEL"
 		(shape output)
-		(at 104.14 99.314 0)
+		(at 108.966 108.966 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5530,7 +5563,7 @@
 		)
 		(uuid "426df216-5076-4dbf-80de-5933b13b94d2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.5466 99.314 0)
+			(at 127.3726 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5938,7 +5971,7 @@
 	)
 	(global_label "PITCH_SCK"
 		(shape input)
-		(at 32.512 75.946 180)
+		(at 37.338 85.598 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5948,7 +5981,7 @@
 		)
 		(uuid "9f98ce78-af70-49a8-947b-21989bf4ee9e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 19.3668 75.946 0)
+			(at 24.1928 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6490,7 +6523,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 59.182 75.946 0)
+		(at 64.008 85.598 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6499,7 +6532,7 @@
 		(fields_autoplaced yes)
 		(uuid "129a2903-e4ca-4b50-bfc1-b1c687ec47a2")
 		(property "Reference" "U1006"
-			(at 59.182 67.31 0)
+			(at 64.008 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6507,7 +6540,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 59.182 69.85 0)
+			(at 64.008 79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6515,7 +6548,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.182 75.946 0)
+			(at 64.008 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6524,7 +6557,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 59.182 75.946 0)
+			(at 64.008 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6533,7 +6566,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 59.182 75.946 0)
+			(at 64.008 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8572,7 +8605,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 59.436 99.314 0)
+		(at 64.262 108.966 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8581,7 +8614,7 @@
 		(fields_autoplaced yes)
 		(uuid "4b0271b4-e262-4359-9f43-8aba62f58b4f")
 		(property "Reference" "U1007"
-			(at 59.436 90.678 0)
+			(at 64.262 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8589,7 +8622,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 59.436 93.218 0)
+			(at 64.262 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8597,7 +8630,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 59.436 99.314 0)
+			(at 64.262 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8606,7 +8639,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 59.436 99.314 0)
+			(at 64.262 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8615,7 +8648,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 59.436 99.314 0)
+			(at 64.262 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8676,7 +8709,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 77.47 99.314 0)
+		(at 82.296 108.966 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8685,7 +8718,7 @@
 		(fields_autoplaced yes)
 		(uuid "4ccb8f37-6205-4a31-83d4-630413acd7c7")
 		(property "Reference" "U1007"
-			(at 77.47 90.678 0)
+			(at 82.296 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8693,7 +8726,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 77.47 93.218 0)
+			(at 82.296 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8701,7 +8734,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 99.314 0)
+			(at 82.296 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8710,7 +8743,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 77.47 99.314 0)
+			(at 82.296 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8719,7 +8752,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 77.47 99.314 0)
+			(at 82.296 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8780,7 +8813,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 41.148 75.946 0)
+		(at 45.974 85.598 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8789,7 +8822,7 @@
 		(fields_autoplaced yes)
 		(uuid "4d287157-82c5-4109-8957-539287361c0f")
 		(property "Reference" "U1006"
-			(at 41.148 67.31 0)
+			(at 45.974 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8797,7 +8830,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 41.148 69.85 0)
+			(at 45.974 79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8805,7 +8838,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.148 75.946 0)
+			(at 45.974 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8814,7 +8847,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 41.148 75.946 0)
+			(at 45.974 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8823,7 +8856,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 41.148 75.946 0)
+			(at 45.974 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9464,7 +9497,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 41.402 99.314 0)
+		(at 46.228 108.966 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9473,7 +9506,7 @@
 		(fields_autoplaced yes)
 		(uuid "5ade7510-13ab-4b61-8ddc-fc00842a5f8d")
 		(property "Reference" "U1007"
-			(at 41.402 90.678 0)
+			(at 46.228 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9481,7 +9514,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 41.402 93.218 0)
+			(at 46.228 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9489,7 +9522,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.402 99.314 0)
+			(at 46.228 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9498,7 +9531,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 41.402 99.314 0)
+			(at 46.228 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9507,7 +9540,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 41.402 99.314 0)
+			(at 46.228 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11351,7 +11384,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 94.996 99.314 0)
+		(at 99.822 108.966 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11360,7 +11393,7 @@
 		(fields_autoplaced yes)
 		(uuid "9f1cd524-29ef-4bf6-87cf-ddb5b8c831d3")
 		(property "Reference" "U1007"
-			(at 94.996 90.678 0)
+			(at 99.822 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11368,7 +11401,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 94.996 93.218 0)
+			(at 99.822 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11376,7 +11409,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 94.996 99.314 0)
+			(at 99.822 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11385,7 +11418,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 94.996 99.314 0)
+			(at 99.822 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11394,7 +11427,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 94.996 99.314 0)
+			(at 99.822 108.966 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12097,7 +12130,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 77.216 75.946 0)
+		(at 82.042 85.598 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12106,7 +12139,7 @@
 		(fields_autoplaced yes)
 		(uuid "c4c01b79-0db8-4200-a166-a63e641f5204")
 		(property "Reference" "U1006"
-			(at 77.216 67.31 0)
+			(at 82.042 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12114,7 +12147,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 77.216 69.85 0)
+			(at 82.042 79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12122,7 +12155,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 77.216 75.946 0)
+			(at 82.042 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12131,7 +12164,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 77.216 75.946 0)
+			(at 82.042 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12140,7 +12173,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 77.216 75.946 0)
+			(at 82.042 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13023,7 +13056,7 @@
 	)
 	(symbol
 		(lib_id "74xx:74HC14")
-		(at 94.742 75.946 0)
+		(at 99.568 85.598 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13032,7 +13065,7 @@
 		(fields_autoplaced yes)
 		(uuid "ef2b1879-67de-44c4-8735-d7edd14a064c")
 		(property "Reference" "U1006"
-			(at 94.742 67.31 0)
+			(at 99.568 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13040,7 +13073,7 @@
 			)
 		)
 		(property "Value" "74HC14"
-			(at 94.742 69.85 0)
+			(at 99.568 79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13048,7 +13081,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 94.742 75.946 0)
+			(at 99.568 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13057,7 +13090,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/gpn/sn74HC14"
-			(at 94.742 75.946 0)
+			(at 99.568 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13066,7 +13099,7 @@
 			)
 		)
 		(property "Description" "Hex inverter schmitt trigger"
-			(at 94.742 75.946 0)
+			(at 99.568 85.598 0)
 			(effects
 				(font
 					(size 1.27 1.27)
