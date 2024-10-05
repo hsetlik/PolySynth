@@ -32,12 +32,12 @@ private:
 	patch_t patch;
 	//---STATE STUFF----
 	uint8_t voicesInUse; //bits represent a voice in use
-	uint8_t voiceVelocity[6];
-	uint8_t voiceNotes[6];
-	uint16_t ampComp1[6];
-	uint16_t ampComp2[6];
-	ADSRProcessor env1Voices[6];
-	ADSRProcessor env2Voices[6];
+	uint8_t voiceVelocity[NUM_VOICES];
+	uint8_t voiceNotes[NUM_VOICES];
+	uint16_t ampComp1[NUM_VOICES];
+	uint16_t ampComp2[NUM_VOICES];
+	ADSRProcessor env1Voices[NUM_VOICES];
+	ADSRProcessor env2Voices[NUM_VOICES];
 	LFOProcessor lfos[3];
 
 	// control change stuff

@@ -65,8 +65,7 @@ void VoiceClock::tick() {
 
 uint16_t VoiceClock::getNext() {
 	tick();
-	// shift left bc the last 4 bits are unused
-	return oscState << 4;
+	return oscState << (16 - NUM_OSCS);
 }
 
 void VoiceClock::fillHalfBuffer(uint16_t *buf) {

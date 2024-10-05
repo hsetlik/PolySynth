@@ -10,7 +10,7 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 
-#define NUM_OSCS 12
+#define NUM_OSCS NUM_VOICES * 2
 #define VOICE_CLOCK_BUF_SIZE 256
 
 

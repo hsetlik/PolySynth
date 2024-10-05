@@ -15,7 +15,7 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 				static_cast<PixelProcessor*>(pp)), patch(getDefaultPatch()), voicesInUse(
 				0), sustainPedalDown(false), pitchWhlPos(0), modWhlPos(0) {
 	// give all the envelopes the correct pointer to the patch data
-	for (uint8_t v = 0; v < 6; v++) {
+	for (uint8_t v = 0; v < NUM_VOICES; v++) {
 		env1Voices[v].setParams(&patch.envs[0]);
 		env2Voices[v].setParams(&patch.envs[1]);
 	}
@@ -35,7 +35,7 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	for (uint8_t i = 0; i < 3; i++) {
 		lfos[i].tick();
 	}
-	for (uint8_t v = 0; v < 6; v++) {
+	for (uint8_t v = 0; v < NUM_VOICES; v++) {
 		if (isVoiceActive(v)) {
 			env1Voices[v].tick();
 			env2Voices[v].tick();
@@ -88,7 +88,7 @@ void SynthProcessor::endVoice(uint8_t voice) {
 }
 
 int8_t SynthProcessor::getFreeVoice() {
-	for (int8_t v = 0; v < 6; v++) {
+	for (int8_t v = 0; v < NUM_VOICES; v++) {
 		if (!isVoiceActive(v))
 			return v;
 	}
@@ -98,7 +98,7 @@ int8_t SynthProcessor::getFreeVoice() {
 int8_t SynthProcessor::getVoiceForNote(uint8_t note) {
 
 	// first check if we're already playing the note
-	for (uint8_t v = 0; v < 6; v++) {
+	for (uint8_t v = 0; v < NUM_VOICES; v++) {
 		if (isVoiceActive(v) && voiceNotes[v] == note)
 			return (int8_t) v;
 	}
@@ -132,7 +132,7 @@ void SynthProcessor::startNote(uint8_t note, uint8_t vel) {
 }
 
 void SynthProcessor::endNote(uint8_t note) {
-	for (uint8_t v = 0; v < 6; v++) {
+	for (uint8_t v = 0; v < NUM_VOICES; v++) {
 		if (isVoiceActive(v) && voiceNotes[v] == note) {
 			env1Voices[v].gateOff();
 			env2Voices[v].gateOff();
