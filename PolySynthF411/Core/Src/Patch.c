@@ -18,9 +18,7 @@ uint8_t get_mod_dest(mod_t mod) {
 }
 
 int8_t get_mod_depth(mod_t mod) {
-	const uint16_t mask = 255;
-	uint16_t m = mod & mask;
-	return (int8_t)m;
+	return (int8_t)mod & 0x00FF;
 }
 
 mod_t createMod(uint8_t source, uint8_t dest, int8_t depth){
@@ -30,8 +28,15 @@ mod_t createMod(uint8_t source, uint8_t dest, int8_t depth){
 }
 
 
-mod_t get_mod(modmatrix_t mat, uint8_t src, uint8_t dest){
-	return mat.mods[(src * dest) + dest];
+void set_mod_depth(mod_t* mod, int8_t depth){
+	mod_t mask = *mod;
+	mask = mask | 0x00FF;
+	*mod = (mask & depth);
+}
+
+
+mod_t* get_mod(modmatrix_t* mat, uint8_t src, uint8_t dest){
+	return &mat->mods[(src * dest) + dest];
 }
 
 
@@ -40,7 +45,7 @@ mod_list_t get_mods_for_dest(modmatrix_t mat, uint8_t dest){
 	list.numMods = 0;
 	mod_t current;
 	for(uint8_t src = 0; src < NUM_MOD_SOURCES; src++){
-		current = get_mod(mat, src, dest);
+		current = *get_mod(&mat, src, dest);
 		if(current){
 			list.sources[list.numMods] = src;
 			++list.numMods;

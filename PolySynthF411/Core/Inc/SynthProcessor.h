@@ -50,6 +50,17 @@ private:
 	uint8_t visibleView = ViewID::vEnv1;
 	uint8_t selectedPWM = ParamID::pOsc1PulseWidth;
 
+	// mod matrix state stuff
+	mod_t* selectedMod = nullptr;
+	bool inBank2 = false;
+	uint8_t lastDestBtn = 0;
+	uint8_t lastSrcBtn = 0;
+	int8_t currentModPrevDepth = 0;
+	tick_t lastSrcClickAt = 0;
+	tick_t lastDestClickAt = 0;
+	void processSrcClick(uint8_t btn);
+	void processDestClick(uint8_t btn);
+	void handleModClick(uint8_t srcID, uint8_t destID);
 	// update the graphics processor as needed
 
 public:
@@ -98,6 +109,7 @@ private:
 
 	//CONTROL STUFF==============================
 	void nudgeParameter(uint8_t id, bool dir);
+	void nudgeModDepth(mod_t* mod, bool dir);
 	//  nudge the appropriate parameter for this encoder given the selected view
 	void handleViewEncoder(uint8_t enc, bool dir);
 

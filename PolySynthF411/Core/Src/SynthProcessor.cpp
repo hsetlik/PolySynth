@@ -206,9 +206,54 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 
 int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
 		uint8_t voice) {
-	mod_t mod = get_mod(patch.modMatrix, src, dest);
+	mod_t mod = *get_mod(&patch.modMatrix, src, dest);
 	float val = (float) modSourceValue(src, voice);
 	return (int16_t) (val * ((float) get_mod_depth(mod) / 127.0f));
+}
+
+
+void SynthProcessor::handleModClick(uint8_t src, uint8_t dest){
+	mod_t* m = get_mod(&patch.modMatrix, src, dest);
+	if(m != selectedMod){ // we've selected a new modulation
+		selectedMod = m;
+		currentModPrevDepth = 0;
+	} else { // we've clicked on the current mod, so toggle it
+		int8_t newDepth = get_mod_depth(*selectedMod);
+		if(newDepth != 0){ // toggle it off
+			currentModPrevDepth = newDepth;
+			set_mod_depth(m, 0);
+		} else { // toggle it on with the either the previous depth or some default 'on' depth
+			int8_t onDepth = (currentModPrevDepth != 0) ? currentModPrevDepth : 40;
+			set_mod_depth(m, onDepth);
+		}
+	}
+}
+
+//helper to tell if we've received a valid mod selection
+bool isValidClick(tick_t srcTime, tick_t destTime){
+	constexpr float maxMs = 4000.0f;
+	tick_t first = std::min(srcTime, destTime);
+	tick_t second = std::max(srcTime, destTime);
+	return TickTimer_tickDistanceMs(first, second) < maxMs;
+}
+
+
+void SynthProcessor::processSrcClick(uint8_t btn){
+	lastSrcClickAt = TickTimer_get();
+	lastSrcBtn = btn;
+	if(isValidClick(lastSrcClickAt, lastDestClickAt)){
+		uint8_t srcID = inBank2 ? lastSrcBtn + 6 : lastSrcBtn;
+		handleModClick(srcID, lastDestBtn);
+	}
+}
+
+void SynthProcessor::processDestClick(uint8_t btn){
+	lastDestClickAt = TickTimer_get();
+	lastDestBtn = btn;
+	if(isValidClick(lastSrcClickAt, lastDestClickAt)){
+		uint8_t srcID = inBank2 ? lastSrcBtn + 6 : lastSrcBtn;
+		handleModClick(srcID, lastDestBtn);
+	}
 }
 //GUI------------
 
@@ -444,6 +489,20 @@ void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
 	graphicsProc->paramUpdated(id);
 }
 
+
+// mod depth nudging
+
+
+void SynthProcessor::nudgeModDepth(mod_t* mod, bool dir){
+	int8_t depth = get_mod_depth(*mod);
+	if(dir){
+		depth = (depth < 127) ? depth + 1 : 127;
+	} else {
+		depth = (depth > -127) ? depth - 1 : -127;
+	}
+	set_mod_depth(mod, depth);
+}
+
 // Encoders---------------
 void SynthProcessor::handleViewEncoder(uint8_t enc, bool dir) {
 	if (visibleView == ViewID::vEnv1) {
@@ -553,6 +612,9 @@ void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise) {
 	case MenuEnc:
 		break;
 	case Depth:
+		if(selectedMod != nullptr){
+			nudgeModDepth(selectedMod, clockwise > 0);
+		}
 		break;
 	case Cutoff:
 		nudgeParameter(ParamID::pFilterCutoff, clockwise > 0);
@@ -621,34 +683,49 @@ void SynthProcessor::handleOnClick(uint8_t button) {
 	case Menu:
 		break;
 	case MS1:
+		processSrcClick(0);
 		break;
 	case MS2:
+		processSrcClick(1);
 		break;
 	case MS3:
+		processSrcClick(2);
 		break;
 	case MS4:
+		processSrcClick(3);
 		break;
 	case MS5:
+		processSrcClick(4);
 		break;
 	case MS6:
+		processSrcClick(5);
 		break;
 	case ModBank:
+		inBank2 = !inBank2;
 		break;
 	case MD1:
+		processDestClick(0);
 		break;
 	case MD2:
+		processDestClick(1);
 		break;
 	case MD3:
+		processDestClick(2);
 		break;
 	case MD4:
+		processDestClick(3);
 		break;
 	case MD5:
+		processDestClick(4);
 		break;
 	case MD6:
+		processDestClick(5);
 		break;
 	case MD7:
+		processDestClick(6);
 		break;
 	case MD8:
+		processDestClick(7);
 		break;
 	default:
 		break;

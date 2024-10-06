@@ -69,7 +69,7 @@ typedef struct {
 	mod_t mods[MAX_MODULATIONS];
 } modmatrix_t; // takes 144 bytes to store all this
 
-mod_t get_mod(modmatrix_t mat, uint8_t src, uint8_t dest);
+mod_t* get_mod(modmatrix_t* mat, uint8_t src, uint8_t dest);
 
 mod_list_t get_mods_for_dest(modmatrix_t mat, uint8_t dest);
 
@@ -80,6 +80,7 @@ uint16_t apply_mod_offset(uint8_t dest, uint16_t baseDacCode, int16_t modOffset)
 uint8_t get_mod_source(mod_t mod);
 uint8_t get_mod_dest(mod_t mod);
 int8_t get_mod_depth(mod_t mod);
+void set_mod_depth(mod_t* m, int8_t d);
 
 mod_t createMod(uint8_t source, uint8_t dest, int8_t depth);
 
