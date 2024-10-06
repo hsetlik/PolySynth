@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.3
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -181,11 +181,10 @@
       ],
       "track_widths": [
         0.0,
-        0.18,
-        0.2286,
+        0.1778,
         0.254,
-        0.35,
-        0.5
+        0.381,
+        0.508
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -480,7 +479,7 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.1778,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -497,7 +496,7 @@
         "name": "APWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.35,
+        "track_width": 0.3048,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -514,7 +513,7 @@
         "name": "Analog",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.22,
+        "track_width": 0.254,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -531,7 +530,7 @@
         "name": "DPWR",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
+        "track_width": 0.508,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -548,7 +547,7 @@
         "name": "Signal",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.18,
+        "track_width": 0.1778,
         "via_diameter": 0.65,
         "via_drill": 0.35,
         "wire_width": 6
@@ -1124,7 +1123,7 @@
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Value",
           "name": "Value",
           "show": true
