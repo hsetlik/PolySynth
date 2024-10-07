@@ -1082,6 +1082,10 @@
       {
         "netclass": "DPWR",
         "pattern": "-5*"
+      },
+      {
+        "netclass": "DPWR",
+        "pattern": "+12VA"
       }
     ]
   },
