@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -102,7 +103,7 @@ synth_processor_t synthProc;
 
 //Filesystem stuff-----------
 //FATFS fatFS;
-//uint8_t SD_INITIALIZED = 0;
+uint8_t SD_INITIALIZED = 0;
 
 //------------------------------------
 /* USER CODE END PV */
@@ -288,6 +289,7 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM4_Init();
   MX_TIM9_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 	//allocate the display queue
 	mainDispQueue = create_display_queue();
@@ -811,9 +813,9 @@ static void MX_TIM9_Init(void)
 
   /* USER CODE END TIM9_Init 1 */
   htim9.Instance = TIM9;
-  htim9.Init.Prescaler = 1000;
+  htim9.Init.Prescaler = 0;
   htim9.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim9.Init.Period = 65535;
+  htim9.Init.Period = 4799;
   htim9.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim9.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim9) != HAL_OK)
@@ -828,6 +830,9 @@ static void MX_TIM9_Init(void)
   /* USER CODE BEGIN TIM9_Init 2 */
 	// set up our TickTimer
 	TickTimer_setTickTime(&htim9.Init);
+	if(HAL_TIM_Base_Start_IT(&htim9) != HAL_OK){
+		Error_Handler();
+	}
 
   /* USER CODE END TIM9_Init 2 */
 

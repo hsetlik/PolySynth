@@ -25,7 +25,7 @@ void TickTimer_setTickTime(TIM_Base_InitTypeDef *timebase) {
 	 * https://www.st.com/resource/en/application_note/an4013-introduction-to-timers-for-stm32-mcus-stmicroelectronics.pdf
 	 *
 	 */
-	static const float timClk = 32000000.0f; // the base frequency for APB1 timers
+	static const float timClk = 48000000.0f; // the base frequency for APB1 timers
 	float psc = (float)timebase->Prescaler + 1;
 	float arp = (float)timebase->AutoReloadPreload + 1;
 	float rcr = (float)timebase->RepetitionCounter + 1;
