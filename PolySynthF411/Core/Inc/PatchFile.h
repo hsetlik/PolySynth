@@ -10,18 +10,41 @@
 #include "Patch.h"
 
 #define PATCH_NAME_MAX_LENGTH 16
+#define AUTHOR_NAME_MAX_LENGTH 16
 
 #ifdef __cplusplus
-#include <string.h>
-#include <string>
 
-namespace PatchFile {
-	bool isValidPatch(char* buf);
-	std::string getPatchName(char* buf);
-	uint16_t patchFileSizeBytes();
-	void writePatchToBuf(patch_t* patch, const std::string& name, char* buf);
-	void loadPatchFromBuf(patch_t*  patch, char* buf);
-}
+#include "fatfs.h"
+#include <cstring>
+#include <string>
+#include <vector>
+
+struct PatchMetadata {
+	std::string path;
+	std::string name;
+	std::string author;
+	uint8_t type;
+};
+
+class PatchBrowser {
+private:
+	FATFS fileSys;
+	std::vector<PatchMetadata> availablePatches;
+	bool validPatchAtPath(const std::string& path);
+	PatchMetadata metadataForPatch(const std::string& path);
+public:
+	PatchBrowser();
+	// attempts to mount the attached SD card. returns success or failure.
+	bool init();
+	// if a card is mounted, load the paths of all the valid patch files
+	void loadAvailablePatches();
+	bool attemptPatchWrite(PatchMetadata md, patch_t* patch);
+	bool attemptPatchLoad(const std::string& path, patch_t* patch);
+
+
+};
+
+
 
 #endif
 

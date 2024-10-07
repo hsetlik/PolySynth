@@ -170,7 +170,6 @@ uint8_t lfoType;
 #define FOLD_MIN 0
 #define FOLD_DEFAULT 0
 
-#define PATCH_SIZE_BYTES 216
 
 typedef struct {
 	// the below add up to 8 bytes VVV
@@ -191,7 +190,19 @@ typedef struct {
 
 } patch_t;
 
+
+
+#define PATCH_SIZE_BYTES 216
+
 patch_t getDefaultPatch();
+
+// keep track of categories
+typedef enum {
+	pBass,
+	bLead,
+	pKeys,
+	pPad
+} patch_category_t;
 
 
 // enum to assign IDs to every base parameter (ie not including modulations or depths)

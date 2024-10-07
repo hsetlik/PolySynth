@@ -18,7 +18,7 @@
 #include "Encoder.h"
 #include "Graphics.h"
 #include "NeopixelChain.h"
-#include "fatfs.h"
+#include "PatchFile.h"
 
 #ifdef __cplusplus
 
