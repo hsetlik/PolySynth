@@ -255,6 +255,12 @@ void SynthProcessor::processDestClick(uint8_t btn){
 		handleModClick(srcID, lastDestBtn);
 	}
 }
+
+void SynthProcessor::initFileSystem(){
+	if(pb.init()){
+		pb.loadAvailablePatches();
+	}
+}
 //GUI------------
 
 void SynthProcessor::checkGUIUpdates() {

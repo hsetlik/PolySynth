@@ -162,6 +162,11 @@ void PatchBrowser::loadAvailablePatches() {
 
 }
 
+
+uint16_t PatchBrowser::numPatchesAvailable(){
+	return (uint16_t)availablePatches.size();
+}
+
 bool PatchBrowser::attemptPatchWrite(PatchMetadata md, patch_t *patch) {
 	char fileBuf[patchFileSize()];
 	char *head = fileBuf;

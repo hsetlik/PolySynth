@@ -38,6 +38,7 @@ public:
 	bool init();
 	// if a card is mounted, load the paths of all the valid patch files
 	void loadAvailablePatches();
+	uint16_t numPatchesAvailable();
 	bool attemptPatchWrite(PatchMetadata md, patch_t* patch);
 	bool attemptPatchLoad(const std::string& path, patch_t* patch);
 

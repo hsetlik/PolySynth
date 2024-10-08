@@ -30,6 +30,7 @@ private:
 	ButtonProcessor* const buttonProc;
 	GraphicsProcessor* const graphicsProc;
 	PixelProcessor* const pixelProc;
+	PatchBrowser pb;
 	patch_t patch;
 	//---STATE STUFF----
 	uint8_t voicesInUse; //bits represent a voice in use
@@ -86,6 +87,8 @@ public:
 	void handleDuringPress(uint8_t button);
 	// main callback for keeping the display up to date
 	void checkGUIUpdates();
+	// call this to init the SD card
+	void initFileSystem();
 
 private:
 	bool alt() {
