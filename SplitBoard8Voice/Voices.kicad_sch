@@ -6222,7 +6222,7 @@
 			)
 		)
 	)
-	(global_label "V6_CLK1"
+	(global_label "V6_CLK2"
 		(shape input)
 		(at 223.012 120.904 180)
 		(fields_autoplaced yes)
@@ -6530,7 +6530,7 @@
 			)
 		)
 	)
-	(global_label "V6_CLK2"
+	(global_label "V6_CLK1"
 		(shape input)
 		(at 223.012 124.714 180)
 		(fields_autoplaced yes)
@@ -6860,7 +6860,7 @@
 			)
 		)
 	)
-	(global_label "V7_CLK2"
+	(global_label "V7_CLK1"
 		(shape input)
 		(at 293.624 124.714 180)
 		(fields_autoplaced yes)
@@ -6904,7 +6904,7 @@
 			)
 		)
 	)
-	(global_label "V1_CLK1"
+	(global_label "V1_CLK2"
 		(shape input)
 		(at 153.67 54.61 180)
 		(fields_autoplaced yes)
@@ -6970,7 +6970,7 @@
 			)
 		)
 	)
-	(global_label "V8_CLK2"
+	(global_label "V8_CLK1"
 		(shape input)
 		(at 364.49 124.968 180)
 		(fields_autoplaced yes)
@@ -7014,7 +7014,7 @@
 			)
 		)
 	)
-	(global_label "V8_CLK1"
+	(global_label "V8_CLK2"
 		(shape input)
 		(at 364.49 121.158 180)
 		(fields_autoplaced yes)
@@ -7102,7 +7102,7 @@
 			)
 		)
 	)
-	(global_label "V3_CLK1"
+	(global_label "V3_CLK2"
 		(shape input)
 		(at 299.466 54.102 180)
 		(fields_autoplaced yes)
@@ -7168,7 +7168,7 @@
 			)
 		)
 	)
-	(global_label "V5_CLK1"
+	(global_label "V5_CLK2"
 		(shape input)
 		(at 152.146 120.65 180)
 		(fields_autoplaced yes)
@@ -7256,7 +7256,7 @@
 			)
 		)
 	)
-	(global_label "V4_CLK1"
+	(global_label "V4_CLK2"
 		(shape input)
 		(at 366.776 54.102 180)
 		(fields_autoplaced yes)
@@ -7762,7 +7762,7 @@
 			)
 		)
 	)
-	(global_label "V2_CLK2"
+	(global_label "V2_CLK1"
 		(shape input)
 		(at 228.092 58.42 180)
 		(fields_autoplaced yes)
@@ -7828,7 +7828,7 @@
 			)
 		)
 	)
-	(global_label "V4_CLK2"
+	(global_label "V4_CLK1"
 		(shape input)
 		(at 366.776 57.912 180)
 		(fields_autoplaced yes)
@@ -7916,7 +7916,7 @@
 			)
 		)
 	)
-	(global_label "V3_CLK2"
+	(global_label "V3_CLK1"
 		(shape input)
 		(at 299.466 57.912 180)
 		(fields_autoplaced yes)
@@ -7960,7 +7960,7 @@
 			)
 		)
 	)
-	(global_label "V1_CLK2"
+	(global_label "V1_CLK1"
 		(shape input)
 		(at 153.67 58.42 180)
 		(fields_autoplaced yes)
@@ -8752,7 +8752,7 @@
 			)
 		)
 	)
-	(global_label "V7_CLK1"
+	(global_label "V7_CLK2"
 		(shape input)
 		(at 293.624 120.904 180)
 		(fields_autoplaced yes)
@@ -8818,7 +8818,7 @@
 			)
 		)
 	)
-	(global_label "V2_CLK1"
+	(global_label "V2_CLK2"
 		(shape input)
 		(at 228.092 54.61 180)
 		(fields_autoplaced yes)
@@ -9280,7 +9280,7 @@
 			)
 		)
 	)
-	(global_label "V5_CLK2"
+	(global_label "V5_CLK1"
 		(shape input)
 		(at 152.146 124.46 180)
 		(fields_autoplaced yes)

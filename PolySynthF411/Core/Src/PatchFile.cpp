@@ -207,8 +207,10 @@ bool PatchBrowser::attemptPatchLoad(const std::string& path, patch_t* patch){
 		f_close(&file);
 		if(res != FR_OK)
 			return false;
+	} else {
+		return false;
 	}
-	// now parse the file into the patch
+	// now copy the patch data into place
 	char* head = &fileBuf[defaultPatchHeader().length()];
 	memcpy(patch, head, PATCH_SIZE_BYTES);
 	return true;
