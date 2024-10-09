@@ -12,6 +12,17 @@
 #define PATCH_NAME_MAX_LENGTH 16
 #define AUTHOR_NAME_MAX_LENGTH 16
 
+// keep track of categories
+typedef enum {
+	pBass,
+	bLead,
+	pKeys,
+	pPad
+} patch_category_t;
+
+
+
+
 #ifdef __cplusplus
 
 #include "fatfs.h"
@@ -39,7 +50,7 @@ private:
 	bool validPatchAtPath(const std::string& path);
 	PatchMetadata metadataForPatch(const std::string& path);
 // helper for setting up defaults on a new SD card
-	void initNewCard();
+	void initNewCard(patch_t* destPatch);
 public:
 	PatchBrowser();
 	// attempts to mount the attached SD card. returns success or failure.

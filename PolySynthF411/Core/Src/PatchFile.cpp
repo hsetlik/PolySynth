@@ -80,8 +80,8 @@ SynthConfig decodeSynthConfig(char *buf, size_t size) {
 
 constexpr std::string emptySynthConfig(){
 	std::string str = "SYNTHCONFIG V0.1\n";
-	str += "DefaultPatch:****************\n";
-	str += "LastUsedPatch:****************\n";
+	str += "DefaultPatch:*************************************\n";
+	str += "LastUsedPatch:************************************\n";
 	str += "AuthorName:****************\n";
 	return str;
 }
@@ -222,10 +222,37 @@ void PatchBrowser::loadAvailablePatches() {
 	f_closedir(&patchDir);
 }
 
-void PatchBrowser::initNewCard() {
+void PatchBrowser::initNewCard(patch_t* destPatch) {
 	FIL file;
+	UINT br;
 	if(f_open(&file,".synthconfig", FA_CREATE_NEW | FA_WRITE | FA_READ) == FR_OK){
 
+		// 1. create .synthconfig file
+		SynthConfig conf;
+		conf.defaultPatchPath = "patches/default";
+		conf.lastUsedPatchPath = "patches/default";
+		conf.patchAuthorName = "USER";
+
+		std::string configStr = encodeSynthConfig(conf);
+		char* buf = (char*)configStr.c_str();
+
+		if(f_write(&file, buf, configStr.length(), &br) == FR_OK){
+			f_close(&file);
+		} else {
+			Error_Handler();
+		}
+
+		// 2. create default patch file
+		patch_t patch = getDefaultPatch();
+		PatchMetadata md;
+		md.author = conf.patchAuthorName;
+		md.path = conf.defaultPatchPath;
+		md.name = "Default";
+		md.type = patch_category_t::pKeys;
+		if(!attemptPatchWrite(md, &patch)){
+			Error_Handler();
+		}
+		attemptPatchLoad(conf.defaultPatchPath, destPatch);
 	} else {
 		Error_Handler();
 	}
@@ -249,7 +276,7 @@ void PatchBrowser::loadDefaultPatch(patch_t *dest) {
 		}
 
 	} else { // we need create the defaults
-		initNewCard();
+		initNewCard(dest);
 	}
 
 }

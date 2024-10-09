@@ -196,15 +196,6 @@ typedef struct {
 
 patch_t getDefaultPatch();
 
-// keep track of categories
-typedef enum {
-	pBass,
-	bLead,
-	pKeys,
-	pPad
-} patch_category_t;
-
-
 // enum to assign IDs to every base parameter (ie not including modulations or depths)
 #define NUM_PARAMS 33
 

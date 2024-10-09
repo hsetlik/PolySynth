@@ -259,6 +259,7 @@ void SynthProcessor::processDestClick(uint8_t btn){
 void SynthProcessor::initFileSystem(){
 	if(pb.init()){
 		pb.loadAvailablePatches();
+		pb.loadDefaultPatch(&patch);
 	}
 }
 //GUI------------
