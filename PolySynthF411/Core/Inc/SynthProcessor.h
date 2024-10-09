@@ -144,6 +144,7 @@ EXTERNC void handle_during_press(synth_processor_t synth, uint8_t button);
 EXTERNC void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir);
 
 EXTERNC void check_gui_updates(synth_processor_t proc);
+EXTERNC void init_file_system(synth_processor_t proc);
 
 #undef EXTERNC
 

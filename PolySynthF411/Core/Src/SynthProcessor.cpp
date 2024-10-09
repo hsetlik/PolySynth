@@ -972,6 +972,11 @@ void handle_during_press(synth_processor_t synth, uint8_t button) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleDuringPress(button);
 }
+
+void init_file_system(synth_processor_t synth){
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
+	ptr->initFileSystem();
+}
 //-----------------------
 void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
