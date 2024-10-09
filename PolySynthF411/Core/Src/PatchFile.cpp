@@ -50,6 +50,67 @@ void writeHeaderFor(char *buf, const std::string &name,
 	strcpy(buf, (char*) str.c_str());
 }
 
+SynthConfig decodeSynthConfig(char *buf, size_t size) {
+	SynthConfig conf;
+	std::string configStr(buf, size);
+	// to figure out the offset of the first byte
+	constexpr std::string leaderStr = "SYNTHCONFIG V0.1\nDefaultPatch:\n";
+	uint16_t idx = (uint16_t)leaderStr.length();
+	conf.defaultPatchPath = "";
+	while(configStr[idx] != '*'){
+		conf.defaultPatchPath += configStr[idx];
+		++idx;
+	}
+	constexpr std::string lastHeaderStr = "LastUsedPatch:";
+	idx += lastHeaderStr.length();
+	conf.lastUsedPatchPath = "";
+	while(configStr[idx] != '*'){
+		conf.lastUsedPatchPath += configStr[idx];
+		++idx;
+	}
+	constexpr std::string authHeaderStr = "AuthorName:";
+	idx += authHeaderStr.length();
+	conf.patchAuthorName = "";
+	while(configStr[idx] != '*'){
+		conf.patchAuthorName += configStr[idx];
+		++idx;
+	}
+	return conf;
+}
+
+constexpr std::string emptySynthConfig(){
+	std::string str = "SYNTHCONFIG V0.1\n";
+	str += "DefaultPatch:****************\n";
+	str += "LastUsedPatch:****************\n";
+	str += "AuthorName:****************\n";
+	return str;
+}
+
+std::string encodeSynthConfig(SynthConfig conf){
+	std::string str = emptySynthConfig();
+	constexpr std::string defaultHeaderStr = "DefaultPatch:";
+	size_t idx = str.find(defaultHeaderStr) + defaultHeaderStr.length();
+	for(auto& c : conf.defaultPatchPath){
+		str[idx] = c;
+		++idx;
+	}
+	constexpr std::string lastHeaderStr = "LastUsedPatch:";
+	idx = str.find(lastHeaderStr) + lastHeaderStr.length();
+	for(auto& c : conf.lastUsedPatchPath){
+		str[idx] = c;
+		++idx;
+	}
+
+	constexpr std::string authHeaderStr = "AuthorName:";
+	idx = str.find(authHeaderStr) + authHeaderStr.length();
+	for(auto& c : conf.patchAuthorName){
+		str[idx] = c;
+		++idx;
+	}
+	return str;
+
+}
+
 //================================
 
 PatchBrowser::PatchBroswer() {
@@ -57,7 +118,6 @@ PatchBrowser::PatchBroswer() {
 }
 
 bool PatchBrowser::init() {
-	MX_FATFS_Init();
 	return f_mount(&fileSys, "", 1) == FR_OK;
 }
 
@@ -158,13 +218,44 @@ void PatchBrowser::loadAvailablePatches() {
 			res = f_readdir(&patchDir, &info);
 		}
 	}
+
 	f_closedir(&patchDir);
+}
+
+void PatchBrowser::initNewCard() {
+	FIL file;
+	if(f_open(&file,".synthconfig", FA_CREATE_NEW | FA_WRITE | FA_READ) == FR_OK){
+
+	} else {
+		Error_Handler();
+	}
+}
+
+void PatchBrowser::loadDefaultPatch(patch_t *dest) {
+	FIL file;
+	FILINFO info;
+	if (f_stat(".synthconfig", &info) == FR_OK) { // we already have a config file
+		if (f_open(&file, ".synthconfig", FA_READ | FA_WRITE) == FR_OK) {
+			UINT bytesRead;
+			char buf[info.fsize];
+			f_read(&file, buf, info.fsize, &bytesRead);
+			f_close(&file);
+			SynthConfig conf = decodeSynthConfig(buf, info.fsize);
+			if(!attemptPatchLoad(conf.defaultPatchPath, dest)){
+				Error_Handler();
+			}
+		} else {
+			Error_Handler();
+		}
+
+	} else { // we need create the defaults
+		initNewCard();
+	}
 
 }
 
-
-uint16_t PatchBrowser::numPatchesAvailable(){
-	return (uint16_t)availablePatches.size();
+uint16_t PatchBrowser::numPatchesAvailable() {
+	return (uint16_t) availablePatches.size();
 }
 
 bool PatchBrowser::attemptPatchWrite(PatchMetadata md, patch_t *patch) {
@@ -191,8 +282,8 @@ bool PatchBrowser::attemptPatchWrite(PatchMetadata md, patch_t *patch) {
 			patchExists ?
 					f_open(&file, md.path.c_str(), FA_READ | FA_WRITE) :
 					f_open(&file, md.path.c_str(),
-							FA_CREATE_NEW | FA_WRITE | FA_READ);
-	if(res == FR_OK){
+					FA_CREATE_NEW | FA_WRITE | FA_READ);
+	if (res == FR_OK) {
 		res = f_write(&file, fileBuf, patchFileSize(), &bytesWritten);
 		f_close(&file);
 		return res == FR_OK;
@@ -200,23 +291,22 @@ bool PatchBrowser::attemptPatchWrite(PatchMetadata md, patch_t *patch) {
 	return false;
 }
 
-
-bool PatchBrowser::attemptPatchLoad(const std::string& path, patch_t* patch){
+bool PatchBrowser::attemptPatchLoad(const std::string &path, patch_t *patch) {
 	// assuming the path we've been passed is a valid patch file
 	char fileBuf[patchFileSize()];
 	FIL file;
 	UINT bytesRead = 0;
 	FRESULT res = f_open(&file, path.c_str(), FA_READ);
-	if(res == FR_OK){
+	if (res == FR_OK) {
 		res = f_read(&file, fileBuf, sizeof(fileBuf), &bytesRead);
 		f_close(&file);
-		if(res != FR_OK)
+		if (res != FR_OK)
 			return false;
 	} else {
 		return false;
 	}
 	// now copy the patch data into place
-	char* head = &fileBuf[defaultPatchHeader().length()];
+	char *head = &fileBuf[defaultPatchHeader().length()];
 	memcpy(patch, head, PATCH_SIZE_BYTES);
 	return true;
 }

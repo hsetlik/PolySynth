@@ -301,6 +301,8 @@ int main(void)
 	synthProc = create_synth_processor(vClk, encoderProc, buttonProc,
 			graphicsProc, pixelProc);
 	init_pixels(pixelProc);
+	// init the file system
+	init_file_system(synthProc);
 
 	// initialize the MCP23S17 interrupts for the encoders
 	enc_init_interrupts(encoderProc);
