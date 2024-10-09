@@ -12,16 +12,6 @@
 #define PATCH_NAME_MAX_LENGTH 16
 #define AUTHOR_NAME_MAX_LENGTH 16
 
-// keep track of categories
-typedef enum {
-	pBass,
-	bLead,
-	pKeys,
-	pPad
-} patch_category_t;
-
-
-
 
 #ifdef __cplusplus
 
@@ -34,8 +24,16 @@ struct PatchMetadata {
 	std::string path;
 	std::string name;
 	std::string author;
-	uint8_t type;
+	uint8_t category;
 };
+
+// keep track of categories
+typedef enum {
+	pBass,
+	bLead,
+	pKeys,
+	pPad
+} patch_category_t;
 
 struct SynthConfig {
 	std::string defaultPatchPath;
@@ -52,7 +50,9 @@ private:
 // helper for setting up defaults on a new SD card
 	void initNewCard(patch_t* destPatch);
 public:
-	PatchBrowser();
+	PatchBrowser(){
+
+	}
 	// attempts to mount the attached SD card. returns success or failure.
 	bool init();
 	// if a card is mounted, load the paths of all the valid patch files

@@ -110,6 +110,8 @@ private:
 
 	// convert the 7-bit MIDI velocity value to a 12 bit DAC-friendly value
 	uint16_t velocityValue12Bit(uint8_t voice);
+	// handle MIDI cc
+	void handleControlChange(uint8_t controller, uint8_t data);
 
 	//CONTROL STUFF==============================
 	void nudgeParameter(uint8_t id, bool dir);

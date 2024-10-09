@@ -5,7 +5,7 @@
  *      Author: hayden
  */
 #include "PatchFile.h"
-constexpr std::string defaultPatchHeader() {
+std::string defaultPatchHeader() {
 	std::string str = "SYNTHPATCH V0.1\n"; // 16 chars
 	str += "NAME:****************\n"; // 21 chars
 	str += "ATHR:****************\n"; // 21 chars
@@ -13,7 +13,7 @@ constexpr std::string defaultPatchHeader() {
 	return str;
 }
 
-constexpr uint16_t patchFileSize() {
+uint16_t patchFileSize() {
 	return PATCH_SIZE_BYTES + defaultPatchHeader().length();
 }
 
@@ -54,21 +54,21 @@ SynthConfig decodeSynthConfig(char *buf, size_t size) {
 	SynthConfig conf;
 	std::string configStr(buf, size);
 	// to figure out the offset of the first byte
-	constexpr std::string leaderStr = "SYNTHCONFIG V0.1\nDefaultPatch:\n";
+	const std::string leaderStr = "SYNTHCONFIG V0.1\nDefaultPatch:\n";
 	uint16_t idx = (uint16_t)leaderStr.length();
 	conf.defaultPatchPath = "";
 	while(configStr[idx] != '*'){
 		conf.defaultPatchPath += configStr[idx];
 		++idx;
 	}
-	constexpr std::string lastHeaderStr = "LastUsedPatch:";
+	const std::string lastHeaderStr = "LastUsedPatch:";
 	idx += lastHeaderStr.length();
 	conf.lastUsedPatchPath = "";
 	while(configStr[idx] != '*'){
 		conf.lastUsedPatchPath += configStr[idx];
 		++idx;
 	}
-	constexpr std::string authHeaderStr = "AuthorName:";
+	const std::string authHeaderStr = "AuthorName:";
 	idx += authHeaderStr.length();
 	conf.patchAuthorName = "";
 	while(configStr[idx] != '*'){
@@ -78,7 +78,7 @@ SynthConfig decodeSynthConfig(char *buf, size_t size) {
 	return conf;
 }
 
-constexpr std::string emptySynthConfig(){
+std::string emptySynthConfig(){
 	std::string str = "SYNTHCONFIG V0.1\n";
 	str += "DefaultPatch:*************************************\n";
 	str += "LastUsedPatch:************************************\n";
@@ -88,20 +88,20 @@ constexpr std::string emptySynthConfig(){
 
 std::string encodeSynthConfig(SynthConfig conf){
 	std::string str = emptySynthConfig();
-	constexpr std::string defaultHeaderStr = "DefaultPatch:";
+	const std::string defaultHeaderStr = "DefaultPatch:";
 	size_t idx = str.find(defaultHeaderStr) + defaultHeaderStr.length();
 	for(auto& c : conf.defaultPatchPath){
 		str[idx] = c;
 		++idx;
 	}
-	constexpr std::string lastHeaderStr = "LastUsedPatch:";
+	const std::string lastHeaderStr = "LastUsedPatch:";
 	idx = str.find(lastHeaderStr) + lastHeaderStr.length();
 	for(auto& c : conf.lastUsedPatchPath){
 		str[idx] = c;
 		++idx;
 	}
 
-	constexpr std::string authHeaderStr = "AuthorName:";
+	const std::string authHeaderStr = "AuthorName:";
 	idx = str.find(authHeaderStr) + authHeaderStr.length();
 	for(auto& c : conf.patchAuthorName){
 		str[idx] = c;
@@ -113,16 +113,13 @@ std::string encodeSynthConfig(SynthConfig conf){
 
 //================================
 
-PatchBrowser::PatchBroswer() {
-
-}
 
 bool PatchBrowser::init() {
 	return f_mount(&fileSys, "", 1) == FR_OK;
 }
 
 bool PatchBrowser::validPatchAtPath(const std::string &path) {
-	constexpr uint16_t headerBytes = (uint16_t) defaultPatchHeader().length();
+	const uint16_t headerBytes = (uint16_t) defaultPatchHeader().length();
 	char buffer[headerBytes];
 
 	FIL file;
@@ -165,7 +162,7 @@ PatchMetadata PatchBrowser::metadataForPatch(const std::string &path) {
 	md.path = path;
 	md.name = "";
 	md.author = "";
-	constexpr uint16_t headerBytes = (uint16_t) defaultPatchHeader().length();
+	const uint16_t headerBytes = (uint16_t) defaultPatchHeader().length();
 	char buffer[headerBytes];
 
 	FIL file;
@@ -248,7 +245,7 @@ void PatchBrowser::initNewCard(patch_t* destPatch) {
 		md.author = conf.patchAuthorName;
 		md.path = conf.defaultPatchPath;
 		md.name = "Default";
-		md.type = patch_category_t::pKeys;
+		md.category = patch_category_t::pKeys;
 		if(!attemptPatchWrite(md, &patch)){
 			Error_Handler();
 		}
@@ -288,7 +285,7 @@ uint16_t PatchBrowser::numPatchesAvailable() {
 bool PatchBrowser::attemptPatchWrite(PatchMetadata md, patch_t *patch) {
 	char fileBuf[patchFileSize()];
 	char *head = fileBuf;
-	writeHeaderFor(head, md.name, md.author, md.type);
+	writeHeaderFor(head, md.name, md.author, md.category);
 	head = &fileBuf[defaultPatchHeader().length()];
 	// no reason this shouldn't work right?
 	memcpy(head, patch, PATCH_SIZE_BYTES);

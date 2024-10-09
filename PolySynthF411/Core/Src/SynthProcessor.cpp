@@ -67,6 +67,7 @@ void SynthProcessor::processMidiMessage(midi_t msg) {
 		endNote(msg.data[0]);
 		break;
 	case ControlChange:
+		handleControlChange(msg.data[0], msg.data[1]);
 		break;
 	case PitchBend:
 		break;
@@ -140,6 +141,11 @@ void SynthProcessor::endNote(uint8_t note) {
 		}
 	}
 }
+
+
+void SynthProcessor::handleControlChange(uint8_t controller, uint8_t data){
+	//TODO: handle various cc messages here
+}
 //MOD MATRIX ==================================================================================
 
 uint16_t SynthProcessor::modDestValue(uint8_t dest, uint8_t voice) {
@@ -183,7 +189,7 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 	case ENV1:
 		return env1Voices[voice].prevDACCode();
 	case ENV2:
-		return env1Voices[voice].prevDACCode();
+		return env2Voices[voice].prevDACCode();
 		break;
 	case LFO1:
 		return lfos[0].getCurrentValue();
