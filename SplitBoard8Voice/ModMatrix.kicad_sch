@@ -5847,7 +5847,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 187.706 161.29 0)
 			(effects
 				(font
@@ -5873,7 +5873,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 187.706 165.862 0)
 			(effects
 				(font
@@ -6249,7 +6249,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 80.264 128.524 0)
 			(effects
 				(font
@@ -6275,7 +6275,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 80.264 133.096 0)
 			(effects
 				(font
@@ -7145,7 +7145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 187.452 29.21 0)
 			(effects
 				(font
@@ -7171,7 +7171,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 187.452 33.782 0)
 			(effects
 				(font
@@ -7634,7 +7634,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 187.706 128.524 0)
 			(effects
 				(font
@@ -7660,7 +7660,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 187.706 133.096 0)
 			(effects
 				(font
@@ -8040,7 +8040,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 166.624 64.262 0)
 			(effects
 				(font
@@ -8066,7 +8066,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 166.624 68.834 0)
 			(effects
 				(font
@@ -8386,7 +8386,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 123.698 64.262 0)
 			(effects
 				(font
@@ -8412,7 +8412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 123.698 68.834 0)
 			(effects
 				(font
@@ -8729,7 +8729,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 209.804 128.524 0)
 			(effects
 				(font
@@ -8755,7 +8755,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 209.804 133.096 0)
 			(effects
 				(font
@@ -9001,7 +9001,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 145.542 92.71 0)
 			(effects
 				(font
@@ -9027,7 +9027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 145.542 97.282 0)
 			(effects
 				(font
@@ -9067,7 +9067,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 101.092 29.21 0)
 			(effects
 				(font
@@ -9093,7 +9093,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 101.092 33.782 0)
 			(effects
 				(font
@@ -9133,7 +9133,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 59.182 96.774 0)
 			(effects
 				(font
@@ -9159,7 +9159,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 59.182 101.346 0)
 			(effects
 				(font
@@ -9407,7 +9407,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 123.698 96.774 0)
 			(effects
 				(font
@@ -9433,7 +9433,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 123.698 101.346 0)
 			(effects
 				(font
@@ -9549,7 +9549,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 58.674 194.564 0)
 			(effects
 				(font
@@ -9575,7 +9575,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 58.674 199.136 0)
 			(effects
 				(font
@@ -9615,7 +9615,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 187.96 96.774 0)
 			(effects
 				(font
@@ -9641,7 +9641,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 187.96 101.346 0)
 			(effects
 				(font
@@ -9681,7 +9681,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 101.346 161.29 0)
 			(effects
 				(font
@@ -9707,7 +9707,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 101.346 165.862 0)
 			(effects
 				(font
@@ -9884,7 +9884,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 209.55 194.564 0)
 			(effects
 				(font
@@ -9910,7 +9910,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 209.55 199.136 0)
 			(effects
 				(font
@@ -9950,7 +9950,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 216.408 234.696 0)
 			(effects
 				(font
@@ -9976,7 +9976,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 216.408 239.268 0)
 			(effects
 				(font
@@ -10083,7 +10083,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 80.01 29.21 0)
 			(effects
 				(font
@@ -10109,7 +10109,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 80.01 33.782 0)
 			(effects
 				(font
@@ -10359,7 +10359,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 194.056 230.632 0)
 			(effects
 				(font
@@ -10385,7 +10385,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 194.056 235.204 0)
 			(effects
 				(font
@@ -11051,7 +11051,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 58.928 29.21 0)
 			(effects
 				(font
@@ -11077,7 +11077,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 58.928 33.782 0)
 			(effects
 				(font
@@ -11330,7 +11330,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 123.444 128.524 0)
 			(effects
 				(font
@@ -11356,7 +11356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 123.444 133.096 0)
 			(effects
 				(font
@@ -11539,7 +11539,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 58.928 128.524 0)
 			(effects
 				(font
@@ -11565,7 +11565,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 58.928 133.096 0)
 			(effects
 				(font
@@ -11742,7 +11742,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 145.288 124.206 0)
 			(effects
 				(font
@@ -11768,7 +11768,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 145.288 128.778 0)
 			(effects
 				(font
@@ -11945,7 +11945,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 166.116 194.564 0)
 			(effects
 				(font
@@ -11971,7 +11971,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 166.116 199.136 0)
 			(effects
 				(font
@@ -12287,7 +12287,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 101.346 64.262 0)
 			(effects
 				(font
@@ -12313,7 +12313,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 101.346 68.834 0)
 			(effects
 				(font
@@ -12353,7 +12353,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 101.346 128.524 0)
 			(effects
 				(font
@@ -12379,7 +12379,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 101.346 133.096 0)
 			(effects
 				(font
@@ -12991,7 +12991,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 80.264 64.262 0)
 			(effects
 				(font
@@ -13017,7 +13017,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 80.264 68.834 0)
 			(effects
 				(font
@@ -13194,7 +13194,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 210.058 64.262 0)
 			(effects
 				(font
@@ -13220,7 +13220,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 210.058 68.834 0)
 			(effects
 				(font
@@ -13397,7 +13397,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 187.198 194.564 0)
 			(effects
 				(font
@@ -13423,7 +13423,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 187.198 199.136 0)
 			(effects
 				(font
@@ -13743,7 +13743,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 123.444 29.21 0)
 			(effects
 				(font
@@ -13769,7 +13769,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 123.444 33.782 0)
 			(effects
 				(font
@@ -13876,7 +13876,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 59.182 64.262 0)
 			(effects
 				(font
@@ -13902,7 +13902,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 59.182 68.834 0)
 			(effects
 				(font
@@ -14094,7 +14094,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 145.034 190.246 0)
 			(effects
 				(font
@@ -14120,7 +14120,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 145.034 194.818 0)
 			(effects
 				(font
@@ -14510,7 +14510,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 187.706 64.262 0)
 			(effects
 				(font
@@ -14536,7 +14536,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 187.706 68.834 0)
 			(effects
 				(font
@@ -14996,7 +14996,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 80.264 161.29 0)
 			(effects
 				(font
@@ -15022,7 +15022,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 80.264 165.862 0)
 			(effects
 				(font
@@ -15202,7 +15202,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 100.838 194.564 0)
 			(effects
 				(font
@@ -15228,7 +15228,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 100.838 199.136 0)
 			(effects
 				(font
@@ -15467,7 +15467,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 166.878 96.774 0)
 			(effects
 				(font
@@ -15493,7 +15493,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 166.878 101.346 0)
 			(effects
 				(font
@@ -15887,7 +15887,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 209.804 29.21 0)
 			(effects
 				(font
@@ -15913,7 +15913,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 209.804 33.782 0)
 			(effects
 				(font
@@ -17639,7 +17639,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 123.444 161.29 0)
 			(effects
 				(font
@@ -17665,7 +17665,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 123.444 165.862 0)
 			(effects
 				(font
@@ -18350,7 +18350,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 145.542 58.928 0)
 			(effects
 				(font
@@ -18376,7 +18376,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 145.542 63.5 0)
 			(effects
 				(font
@@ -18416,7 +18416,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 210.058 96.774 0)
 			(effects
 				(font
@@ -18442,7 +18442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 210.058 101.346 0)
 			(effects
 				(font
@@ -18759,7 +18759,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 123.19 194.564 0)
 			(effects
 				(font
@@ -18785,7 +18785,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 123.19 199.136 0)
 			(effects
 				(font
@@ -18825,7 +18825,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 166.37 29.21 0)
 			(effects
 				(font
@@ -18851,7 +18851,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 166.37 33.782 0)
 			(effects
 				(font
@@ -18891,7 +18891,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 58.928 160.528 0)
 			(effects
 				(font
@@ -18917,7 +18917,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 58.928 165.1 0)
 			(effects
 				(font
@@ -19378,7 +19378,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 145.288 21.59 0)
 			(effects
 				(font
@@ -19404,7 +19404,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 145.288 26.162 0)
 			(effects
 				(font
@@ -19510,7 +19510,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 79.756 194.564 0)
 			(effects
 				(font
@@ -19536,7 +19536,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 79.756 199.136 0)
 			(effects
 				(font
@@ -19576,7 +19576,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 80.518 96.774 0)
 			(effects
 				(font
@@ -19602,7 +19602,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 80.518 101.346 0)
 			(effects
 				(font
@@ -19846,7 +19846,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 166.624 161.29 0)
 			(effects
 				(font
@@ -19872,7 +19872,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 166.624 165.862 0)
 			(effects
 				(font
@@ -20469,7 +20469,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 145.288 155.956 0)
 			(effects
 				(font
@@ -20495,7 +20495,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 145.288 160.528 0)
 			(effects
 				(font
@@ -21177,7 +21177,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 166.624 128.524 0)
 			(effects
 				(font
@@ -21203,7 +21203,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 166.624 133.096 0)
 			(effects
 				(font
@@ -22164,7 +22164,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 209.804 161.29 0)
 			(effects
 				(font
@@ -22190,7 +22190,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 209.804 165.862 0)
 			(effects
 				(font
@@ -22430,7 +22430,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5VP"
+		(property "Value" "+3.3VP"
 			(at 101.6 96.774 0)
 			(effects
 				(font
@@ -22456,7 +22456,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
+		(property "Description" "Power symbol creates a global label with name \"+3.3VP\""
 			(at 101.6 101.346 0)
 			(effects
 				(font
