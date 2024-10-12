@@ -5202,7 +5202,7 @@
 			)
 		)
 	)
-	(global_label "PIXELS_MATRIX_5V"
+	(global_label "PIXELS_MATRIX_U"
 		(shape input)
 		(at 43.18 42.418 180)
 		(fields_autoplaced yes)
@@ -5214,7 +5214,7 @@
 		)
 		(uuid "574ea1d4-6636-409c-83f5-86e32cf99f3d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.8987 42.418 0)
+			(at 23.8663 42.418 0)
 			(effects
 				(font
 					(size 1.27 1.27)

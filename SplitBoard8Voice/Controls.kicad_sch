@@ -7354,7 +7354,7 @@
 			)
 		)
 	)
-	(global_label "PIXELS_MAIN_5V"
+	(global_label "PIXELS_MAIN_U"
 		(shape input)
 		(at 36.83 33.274 180)
 		(fields_autoplaced yes)
@@ -7366,7 +7366,7 @@
 		)
 		(uuid "69d9e75a-3d4b-47b3-945f-99e8c9e5af81")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 18.6653 33.274 0)
+			(at 19.6329 33.274 0)
 			(effects
 				(font
 					(size 1.27 1.27)
