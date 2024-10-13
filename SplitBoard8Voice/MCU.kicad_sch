@@ -6876,6 +6876,12 @@
 		(uuid "b6bcab04-cd35-4b86-ac0d-d3780f714e23")
 	)
 	(junction
+		(at 347.472 26.162)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b828ac8e-02f1-4027-bb6c-3675883a7511")
+	)
+	(junction
 		(at 104.902 38.354)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7961,7 +7967,7 @@
 	)
 	(wire
 		(pts
-			(xy 347.98 34.798) (xy 347.98 52.324)
+			(xy 347.472 25.146) (xy 347.472 26.162)
 		)
 		(stroke
 			(width 0)
@@ -8061,7 +8067,7 @@
 	)
 	(wire
 		(pts
-			(xy 347.98 52.324) (xy 343.408 52.324)
+			(xy 347.472 52.324) (xy 343.408 52.324)
 		)
 		(stroke
 			(width 0)
@@ -8191,6 +8197,16 @@
 	)
 	(wire
 		(pts
+			(xy 353.06 26.162) (xy 347.472 26.162)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "519a885b-2576-41db-a2ad-487eae566c5f")
+	)
+	(wire
+		(pts
 			(xy 66.294 113.538) (xy 92.202 113.538)
 		)
 		(stroke
@@ -8208,6 +8224,16 @@
 			(type default)
 		)
 		(uuid "51ea75b3-0e1e-4309-bdf1-cbfccaa280c6")
+	)
+	(wire
+		(pts
+			(xy 353.06 35.052) (xy 353.06 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52d1d06d-4818-4648-a0ca-c16906c1b00a")
 	)
 	(wire
 		(pts
@@ -8918,6 +8944,16 @@
 			(type default)
 		)
 		(uuid "7e0f6847-3b4c-45f6-a6c2-4da7ba0f8c30")
+	)
+	(wire
+		(pts
+			(xy 347.472 26.162) (xy 347.472 52.324)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e9ca482-1bd8-43c3-9015-ac3d209f20f0")
 	)
 	(wire
 		(pts
@@ -9808,6 +9844,16 @@
 			(type default)
 		)
 		(uuid "b7b22f9c-0620-48c9-a8fc-c3275be9f85e")
+	)
+	(wire
+		(pts
+			(xy 353.06 27.432) (xy 353.06 26.162)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8e2ce91-615a-4a3d-b02c-972c86ac5363")
 	)
 	(wire
 		(pts
@@ -10896,7 +10942,7 @@
 		(uuid 4d3eee40-000e-4039-9b26-b45428dd7f1d)
 	)
 	(rectangle
-		(start 290.449 21.59)
+		(start 290.449 14.986)
 		(end 386.08 73.025)
 		(stroke
 			(width 0)
@@ -11154,7 +11200,7 @@
 	)
 	(text "This SD card shares its SPI bus with the display"
 		(exclude_from_sim no)
-		(at 375.158 24.892 0)
+		(at 374.65 18.034 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13190,6 +13236,75 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/5768bcf0-b140-469b-9875-216e6a4fbfeb"
 					(reference "R443")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 353.06 31.242 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0331b07b-2e61-401f-bc17-e4d2d5ce0ed2")
+		(property "Reference" "C425"
+			(at 356.489 29.972 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 356.489 32.512 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 354.0252 35.052 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 353.06 31.242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 353.06 31.242 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cab5fcde-53a5-4f81-8978-239a44b138e8")
+		)
+		(pin "2"
+			(uuid "547f3540-be5f-4c0b-8772-c008884129c2")
+		)
+		(instances
+			(project "SplitBoard8Voice"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/5768bcf0-b140-469b-9875-216e6a4fbfeb"
+					(reference "C425")
 					(unit 1)
 				)
 			)
@@ -18217,7 +18332,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 347.98 34.798 0)
+		(at 347.472 25.146 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18226,7 +18341,7 @@
 		(fields_autoplaced yes)
 		(uuid "633af44b-9c58-4c8d-b786-d75afc9705ae")
 		(property "Reference" "#PWR0494"
-			(at 347.98 38.608 0)
+			(at 347.472 28.956 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18235,7 +18350,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 347.98 29.718 0)
+			(at 347.472 20.066 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18243,7 +18358,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 347.98 34.798 0)
+			(at 347.472 25.146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18252,7 +18367,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 347.98 34.798 0)
+			(at 347.472 25.146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18261,7 +18376,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 347.98 34.798 0)
+			(at 347.472 25.146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22323,6 +22438,73 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/5768bcf0-b140-469b-9875-216e6a4fbfeb"
 					(reference "#PWR0891")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 353.06 35.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c1e6d57a-32c2-4427-b446-f24762a1acad")
+		(property "Reference" "#PWR0840"
+			(at 353.06 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 353.06 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 353.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 353.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 353.06 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bc221fec-bbe4-45d9-8a47-004fac87074b")
+		)
+		(instances
+			(project "SplitBoard8Voice"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/5768bcf0-b140-469b-9875-216e6a4fbfeb"
+					(reference "#PWR0840")
 					(unit 1)
 				)
 			)
