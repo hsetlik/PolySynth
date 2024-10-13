@@ -3533,16 +3533,6 @@
 	)
 	(wire
 		(pts
-			(xy 70.866 238.506) (xy 70.866 240.792)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39c39c5f-1c30-49af-8235-7c73bbf44949")
-	)
-	(wire
-		(pts
 			(xy 336.55 46.99) (xy 338.074 46.99)
 		)
 		(stroke
@@ -3820,16 +3810,6 @@
 			(type default)
 		)
 		(uuid "589471db-f936-4de7-a3ab-f2a00daca371")
-	)
-	(wire
-		(pts
-			(xy 70.866 240.792) (xy 75.692 240.792)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58b92d43-e250-40b0-95c8-8ed3ac7acf70")
 	)
 	(wire
 		(pts
@@ -4233,16 +4213,6 @@
 	)
 	(wire
 		(pts
-			(xy 70.866 229.362) (xy 75.692 229.362)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b24e148-975f-4493-a42a-7d03bf262d71")
-	)
-	(wire
-		(pts
 			(xy 298.958 73.66) (xy 300.482 73.66)
 		)
 		(stroke
@@ -4550,16 +4520,6 @@
 			(type default)
 		)
 		(uuid "b7a497e9-d2cc-4929-90db-c2cde02d7b13")
-	)
-	(wire
-		(pts
-			(xy 70.866 227.076) (xy 70.866 229.362)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7d82951-4771-43de-8be1-fa03f07a3cab")
 	)
 	(wire
 		(pts
@@ -6182,28 +6142,6 @@
 			)
 		)
 	)
-	(global_label "PITCH_SCK"
-		(shape input)
-		(at 75.692 240.792 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ad090fbc-f509-4afd-8cb9-3e976a342cf6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.8372 240.792 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "V6_CLK2"
 		(shape output)
 		(at 338.836 62.992 0)
@@ -6402,35 +6340,13 @@
 			)
 		)
 	)
-	(global_label "PITCH_MOSI"
-		(shape input)
-		(at 75.692 229.362 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "fcd47bd1-679f-42f8-9524-781c238466a1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 89.6839 229.362 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 124.46 227.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "051c85dc-4d11-4cdb-9474-c67fa0999684")
@@ -7116,7 +7032,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b291bb7-5735-45d9-9406-03f5f176a272")
@@ -7647,73 +7563,6 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 70.866 227.076 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2c96eb65-cdf7-4b32-8e0d-ec3a9edd51f3")
-		(property "Reference" "TP1001"
-			(at 73.152 222.5039 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PITCH_MOSI"
-			(at 73.152 225.0439 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 75.946 227.076 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 75.946 227.076 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 70.866 227.076 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4325c388-78b6-4912-bbe1-e2d8b4c53f56")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "TP1001")
 					(unit 1)
 				)
 			)
@@ -10323,7 +10172,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "77f784b2-be05-4884-bf5d-2f772f320da4")
@@ -10457,7 +10306,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "826ccc77-049d-480c-a526-d495a056d95d")
@@ -10736,7 +10585,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "89806873-86bd-491b-b875-84e5fc560b4f")
@@ -11238,73 +11087,6 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 70.866 238.506 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ae3c03f-3ebe-4e15-82ab-eed45ffa0eff")
-		(property "Reference" "TP1003"
-			(at 72.39 233.9339 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PITCH_SCK"
-			(at 72.39 236.4739 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm_VAL"
-			(at 75.946 238.506 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 75.946 238.506 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 70.866 238.506 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d0ff2d1c-364e-4fea-be87-3746dd4960a6")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "TP1003")
 					(unit 1)
 				)
 			)
@@ -12674,7 +12456,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2026db2-5bff-425b-a9a9-8185187981b7")
@@ -12980,7 +12762,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e61c461d-f283-480a-bcb4-620099f33a34")
@@ -13263,7 +13045,7 @@
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board no)
+		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0677106-4d4d-442a-8b12-7175ab04748d")
