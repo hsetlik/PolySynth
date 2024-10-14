@@ -1094,7 +1094,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "SplitBoardGerber/",
+      "plot": "gerber/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
