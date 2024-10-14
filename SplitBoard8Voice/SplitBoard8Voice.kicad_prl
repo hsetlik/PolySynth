@@ -28,7 +28,6 @@
       "zones": true
     },
     "visible_items": [
-      0,
       1,
       2,
       3,
@@ -44,7 +43,6 @@
       16,
       17,
       18,
-      19,
       20,
       21,
       22,
@@ -56,13 +54,12 @@
       29,
       30,
       32,
-      33,
       34,
       35,
       36,
       40
     ],
-    "visible_layers": "fecffff_ffffffff",
+    "visible_layers": "feeffc3_7ffffff8",
     "zone_display_mode": 1
   },
   "git": {

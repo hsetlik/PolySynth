@@ -1098,7 +1098,7 @@
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
-      "svg": "Layout/",
+      "svg": "../PanelDesign/",
       "vrml": ""
     },
     "page_layout_descr_file": ""
