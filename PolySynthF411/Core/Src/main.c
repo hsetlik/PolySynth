@@ -74,12 +74,8 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 
 //Voice Clock Stuff------------------
 voice_clock_t vClk;
-uint16_t vBufA[VOICE_CLOCK_BUF_SIZE];
-uint16_t vBufB[VOICE_CLOCK_BUF_SIZE];
-uint16_t *currentVBuf = vBufA; // buffer currently being transmitted in DMA
-uint16_t *nextVBuf = vBufB;
-volatile uint8_t nextVBufNeeded = 0;
-
+volatile uint8_t vclkHalfNeeded = 0;
+volatile uint8_t vclkFullNeeded = 0;
 // DAC Stuff----------------------------------
 dacLevels_t voiceLevels[6];
 volatile uint8_t dacLevelsNeeded = 0;
@@ -153,9 +149,9 @@ uint8_t nextVoiceToUpdate() {
 //SPI DMA Callbacks and helpers ------------------
 
 void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi) {
-	// when we're half finished sending, request new data in nextVBuf
 	if (hspi == &hspi1) {
-		tx_half_complete(vClk);
+		vclkHalfNeeded = 1;
+		//tx_half_complete(vClk);
 	}
 
 }
@@ -163,7 +159,8 @@ void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi) {
 void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi) {
 	if (hspi == &hspi1) { // voices are done
 		//TODO: this should render the first half of the buffer
-		tx_complete(vClk);
+		vclkFullNeeded = 1;
+		//tx_complete(vClk);
 	} else if (hspi == &hspi3) {
 		// pull CS high again
 		ILI9341_Unselect();
@@ -352,6 +349,17 @@ int main(void)
 			process_midi_msg(synthProc, msg);
 			midiMsgReady = 0;
 		}
+
+		// calculate next pitch buffer if needed
+		if(vclkHalfNeeded){
+			tx_half_complete(vClk);
+			vclkHalfNeeded = 0;
+
+		} else if (vclkFullNeeded){
+			tx_complete(vClk);
+			vclkFullNeeded = 0;
+		}
+
 		if (dacLevelsNeeded) {
 			update_dac_levels(synthProc, voiceLevels);
 			dacLevelsNeeded = 0;

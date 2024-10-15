@@ -69,11 +69,13 @@ void SynthProcessor::processMidiMessage(midi_t msg) {
 	case ControlChange:
 		handleControlChange(msg.data[0], msg.data[1]);
 		break;
-	case PitchBend:
-		uint16_t fullVal = (uint16_t) (((uint16_t) msg.data[0] << 7)
+	case PitchBend: {
+		uint16_t fullVal = 0;
+		fullVal = (((uint16_t)msg.data[0] << 7)
 				| msg.data[1]);
 		currentPitchBend = ((float) (fullVal) - 8192.0f) / 8192.0f;
 		break;
+	}
 	default:
 		break;
 	}
