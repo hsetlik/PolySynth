@@ -142,10 +142,16 @@ void Error_Handler(void);
  * to use the old integer code. Float mode
  * is more CPU intensive but should mean
  * far less tuning error at lower SPI clock
- * frequencies
+ * frequencies. (as of 10/15 it's at 3MhZ)
  */
 
 #define FLOAT_VOICE_MODE
+
+/* This should save us a bunch of float math in the
+ * DAC/ CV updating code, comment it out if
+ * something is weird
+ */
+#define DAC_UPDATE_OPTIMIZE
 
 extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi2;

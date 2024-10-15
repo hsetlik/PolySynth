@@ -225,9 +225,9 @@ void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim) {
 
 // UART callbacks for MIDI stuff ---------
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+
+	// we receive MIDI messages one byte at a time
 	midiMsgReady = MIDI_receiveByte(currentMidiByte);
-
-
 	HAL_UART_Receive_IT(huart, &currentMidiByte, 1);
 }
 //-----------------------------------------------------------------
@@ -340,6 +340,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	tick_t lastButtonCheck = 0;
 	tick_t now = 0;
+#ifdef DAC_UPDATE_OPTIMIZE
+	tick_t lastDacUpdate = 0;
+	float deltaMs = 0.0f;
+#endif
 
 	while (1) {
 
@@ -354,14 +358,25 @@ int main(void)
 		if(vclkHalfNeeded){
 			tx_half_complete(vClk);
 			vclkHalfNeeded = 0;
-
+			// we can do else if bc only one of these flags
+			// will be true at any given time
 		} else if (vclkFullNeeded){
 			tx_complete(vClk);
 			vclkFullNeeded = 0;
 		}
+		//=====================================
+
+		now = TickTimer_get();
+
 
 		if (dacLevelsNeeded) {
+#ifndef DAC_UPDATE_OPTIMIZE
 			update_dac_levels(synthProc, voiceLevels);
+#else
+			deltaMs = TickTimer_tickDistanceMs(lastDacUpdate, now);
+			lastDacUpdate = now;
+			update_dac_levels(synthProc, voiceLevels, deltaMs);
+#endif
 			dacLevelsNeeded = 0;
 		}
 		// send the next DMA chunk to the display if needed
@@ -369,7 +384,6 @@ int main(void)
 		// see if we need pixel updates
 		tick_pixel_processor(pixelProc);
 		// see if it's time to check the buttons
-		now = TickTimer_get();
 		if (TickTimer_tickDistanceMs(lastButtonCheck,
 				now) > BUTTON_CHECK_INTERVAL) {
 			check_buttons(buttonProc);

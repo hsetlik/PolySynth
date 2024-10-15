@@ -38,6 +38,7 @@ public:
 	void gateOn();
 	void gateOff();
 	void tick();
+	void tickMs(float delta);
 	uint16_t prevDACCode() {return lastCode;}
 
 };

@@ -84,3 +84,44 @@ void ADSRProcessor::tick() {
 	}
 	lastCode = (uint16_t) level * 4096.0f;
 }
+
+void ADSRProcessor::tickMs(float delta){
+	msSinceStateChange += delta;
+		switch (state) {
+	case Idle:
+		return;
+	case Attack:
+		if (msSinceStateChange > params->attack) {
+			state = Decay;
+			msSinceStateChange -= params->attack;
+		} else {
+			level = msSinceStateChange / params->attack;
+		}
+		break;
+	case Decay:
+		if (msSinceStateChange > params->decay) {
+			state = Sustain;
+			msSinceStateChange -= params->decay;
+		} else {
+			float diff = (1.0f - params->sustain)
+					* (msSinceStateChange / params->decay);
+			level = 1.0f - diff;
+		}
+		break;
+	case Sustain:
+		level = params->sustain;
+		break;
+	case Release:
+		if (msSinceStateChange > params->release) {
+			state = Idle;
+			msSinceStateChange = 0.0f;
+		} else {
+			level = releaseStartLevel
+					* (1.0f - (msSinceStateChange / params->release));
+		}
+		break;
+	default:
+		break;
+	}
+	lastCode = (uint16_t) level * 4096.0f;
+}

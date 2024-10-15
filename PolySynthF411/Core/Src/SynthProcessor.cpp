@@ -29,7 +29,7 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 	graphicsProc->initViews();
 
 }
-
+#ifndef DAC_UPDATE_OPTIMIZE
 void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	//tick our LFOs
 	for (uint8_t i = 0; i < 3; i++) {
@@ -56,6 +56,35 @@ void SynthProcessor::updateDacLevels(dacLevels_t *levels) {
 	}
 
 }
+#else
+
+	void SynthProcessor::updateDacLevels(dacLevels_t* levels, float delta){
+		for (uint8_t i = 0; i < 3; i++) {
+		lfos[i].tickMs(delta);
+	}
+	for (uint8_t v = 0; v < NUM_VOICES; v++) {
+		if (isVoiceActive(v)) {
+			env1Voices[v].tickMs(delta);
+			env2Voices[v].tickMs(delta);
+			// REMEMBER the argument pointer is an array of dacLevels arranged PER VOICE
+			levels[v].currentData[DACChannel::VCA_CH] = modDestValue(
+					(uint8_t) ModDest::VCA, v);
+			levels[v].currentData[DACChannel::AC1_CH] = ampComp1[v];
+			levels[v].currentData[DACChannel::AC2_CH] = ampComp2[v];
+			levels[v].currentData[DACChannel::CUTOFF_CH] = modDestValue(
+					(uint8_t) ModDest::CUTOFF, v);
+			levels[v].currentData[DACChannel::FOLD_CH] = modDestValue(
+					(uint8_t) ModDest::FOLD, v);
+			levels[v].currentData[DACChannel::PWM1_CH] = modDestValue(
+					(uint8_t) ModDest::PWM1, v);
+			levels[v].currentData[DACChannel::PWM2_CH] = modDestValue(
+					(uint8_t) ModDest::PWM2, v);
+		}
+	}
+	}
+#endif
+
+
 
 void SynthProcessor::processMidiMessage(midi_t msg) {
 	MIDIMsgType msgType = (MIDIMsgType) msg.msgType;
@@ -978,10 +1007,18 @@ synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep,
 	return new SynthProcessor(clk, ep, bp, gp, pp);
 }
 
+#ifndef DAC_UPDATE_OPTIMIZE
 void update_dac_levels(synth_processor_t proc, dacLevels_t *levels) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
 	ptr->updateDacLevels(levels);
 }
+#else
+
+void update_dac_levels(synth_processor_t proc, dacLevels_t* levels, float delta){
+	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);
+	ptr->updateDacLevels(levels, delta);
+}
+#endif
 
 void process_midi_msg(synth_processor_t proc, midi_t msg) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(proc);

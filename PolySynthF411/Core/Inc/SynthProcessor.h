@@ -82,7 +82,12 @@ public:
 	 * - Update patch data based on button/encoder events
 	 * - Send updates to the display and the neopixels as I see fit
 	 */
+#ifndef DAC_UPDATE_OPTIMIZE
 	void updateDacLevels(dacLevels_t* levels);
+#else
+	void updateDacLevels(dacLevels_t* levels, float deltaMs);
+#endif
+
 	void processMidiMessage(midi_t msg);
 	//Control callbacks
 	// for encoder callbacks
@@ -141,7 +146,12 @@ private:
 typedef void* synth_processor_t;
 
 EXTERNC synth_processor_t create_synth_processor(voice_clock_t clk, enc_processor_t ep, button_processor_t bp, graphics_processor_t gp, pixel_processor_t pp);
+
+#ifndef DAC_UPDATE_OPTIMIZE
 EXTERNC void update_dac_levels(synth_processor_t proc, dacLevels_t* levels);
+#else
+EXTERNC void update_dac_levels(synth_processor_t proc, dacLevels_t* levels, float delta);
+#endif
 EXTERNC void process_midi_msg(synth_processor_t proc, midi_t msg);
 // for setting up function pointers in main.c
 EXTERNC void handle_on_click(synth_processor_t synth, uint8_t button);

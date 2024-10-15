@@ -21,11 +21,13 @@ private:
 	float phase;
 	uint16_t lastCode;
 	tick_t lastUpdateTick;
+	float lastUpdateMs = 0.0f;
 	PerlinGen perlin;
 public:
 	LFOProcessor();
 	void setParams(lfo_t* lfo);
 	void tick();
+	void tickMs(float delta);
 	uint16_t getCurrentValue();
 
 };
