@@ -442,6 +442,8 @@ public:
 
 };
 
+//Patch Save/Load interface==================
+
 
 
 
@@ -458,8 +460,6 @@ enum ViewID {
 	vMix2,
 	vTune
 };
-
-//TODO: only view(s) left to rough in are the LFOs
 
 class GraphicsProcessor {
 private:

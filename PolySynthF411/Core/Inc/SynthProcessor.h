@@ -43,9 +43,16 @@ private:
 	LFOProcessor lfos[3];
 
 	// control change stuff
-	bool sustainPedalDown;
-	uint16_t pitchWhlPos;
+	bool sustainPedalDown = false;
+	bool portamentoOn = false;
+	// pitch bend expressed as a float between -1 and 1
+	float currentPitchBend = 0.0f;
 	uint16_t modWhlPos;
+	uint8_t expressionLevel = 0;
+
+	// bitfield tokeep track of notes to switch off when the sustain
+	// pedal is lifted
+	uint8_t sustainedNotes = 0;
 
 	// device state stuff
 	bool inAltMode = false;
@@ -105,21 +112,20 @@ private:
 
 	// helper for calculating our mod matrix stuff
 	uint16_t modDestValue(uint8_t dest, uint8_t voice);
-	uint16_t modSourceValue(uint8_t src, uint8_t voice);
+	int16_t modSourceValue(uint8_t src, uint8_t voice);
 	int16_t modSourceOffset(uint16_t src, uint8_t dest, uint8_t voice);
 
 	// convert the 7-bit MIDI velocity value to a 12 bit DAC-friendly value
 	uint16_t velocityValue12Bit(uint8_t voice);
 	// handle MIDI cc
 	void handleControlChange(uint8_t controller, uint8_t data);
+	void handleSustainPedalEnd();
 
 	//CONTROL STUFF==============================
 	void nudgeParameter(uint8_t id, bool dir);
 	void nudgeModDepth(mod_t* mod, bool dir);
 	//  nudge the appropriate parameter for this encoder given the selected view
 	void handleViewEncoder(uint8_t enc, bool dir);
-
-
 
 };
 

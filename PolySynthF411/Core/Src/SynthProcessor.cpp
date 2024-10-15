@@ -13,7 +13,7 @@ SynthProcessor::SynthProcessor(voice_clock_t vc, enc_processor_t ep,
 				static_cast<ButtonProcessor*>(bp)), graphicsProc(
 				static_cast<GraphicsProcessor*>(gp)), pixelProc(
 				static_cast<PixelProcessor*>(pp)), patch(getDefaultPatch()), voicesInUse(
-				0), sustainPedalDown(false), pitchWhlPos(0), modWhlPos(0) {
+				0), sustainPedalDown(false), modWhlPos(0) {
 	// give all the envelopes the correct pointer to the patch data
 	for (uint8_t v = 0; v < NUM_VOICES; v++) {
 		env1Voices[v].setParams(&patch.envs[0]);
@@ -70,11 +70,16 @@ void SynthProcessor::processMidiMessage(midi_t msg) {
 		handleControlChange(msg.data[0], msg.data[1]);
 		break;
 	case PitchBend:
+		uint16_t fullVal = (uint16_t) (((uint16_t) msg.data[0] << 7)
+				| msg.data[1]);
+		currentPitchBend = ((float) (fullVal) - 8192.0f) / 8192.0f;
 		break;
 	default:
 		break;
 	}
 }
+
+
 //======================================================================
 bool SynthProcessor::isVoiceActive(uint8_t voice) {
 	return voicesInUse & (1 << voice);
@@ -135,16 +140,49 @@ void SynthProcessor::startNote(uint8_t note, uint8_t vel) {
 void SynthProcessor::endNote(uint8_t note) {
 	for (uint8_t v = 0; v < NUM_VOICES; v++) {
 		if (isVoiceActive(v) && voiceNotes[v] == note) {
-			env1Voices[v].gateOff();
-			env2Voices[v].gateOff();
+			if (!sustainPedalDown) {
+				env1Voices[v].gateOff();
+				env2Voices[v].gateOff();
+			} else {
+				sustainedNotes = sustainedNotes | (1 << v);
+			}
 			return;
 		}
 	}
 }
 
+void SynthProcessor::handleControlChange(uint8_t controller, uint8_t data) {
+	switch (controller) {
+	case 0: // BANK select
+		break;
+	case 1: // mod wheel
+		modWhlPos = (uint16_t) data;
+		break;
+	case 11: // expression level
+		expressionLevel = data;
+		break;
+	case 64: // sustain pedal
+		sustainPedalDown = (data > 63);
+		if (!sustainPedalDown) {
+			handleSustainPedalEnd();
+		}
+		break;
+	case 65: // portamento
+		portamentoOn = (data > 63);
+		break;
+	default:
+		break;
+	}
+}
 
-void SynthProcessor::handleControlChange(uint8_t controller, uint8_t data){
-	//TODO: handle various cc messages here
+void SynthProcessor::handleSustainPedalEnd() {
+	for (uint8_t v = 0; v < NUM_VOICES; v++) {
+		if (sustainedNotes & (1 << v)) {
+			env1Voices[v].gateOff();
+			env2Voices[v].gateOff();
+		}
+	}
+	sustainedNotes = 0;
 }
 //MOD MATRIX ==================================================================================
 
@@ -183,7 +221,7 @@ uint16_t SynthProcessor::velocityValue12Bit(uint8_t voice) {
 	return (uint16_t) fVel * 4096.0f;
 }
 
-uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
+int16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 	ModSource id = (ModSource) src;
 	switch (id) {
 	case ENV1:
@@ -200,7 +238,7 @@ uint16_t SynthProcessor::modSourceValue(uint8_t src, uint8_t voice) {
 	case MODWHL:
 		return modWhlPos;
 	case PITCHWHL:
-		return pitchWhlPos;
+		return (int16_t) (currentPitchBend * 8162.0f);
 	case VEL:
 		return velocityValue12Bit(voice);
 	default:
@@ -217,53 +255,52 @@ int16_t SynthProcessor::modSourceOffset(uint16_t src, uint8_t dest,
 	return (int16_t) (val * ((float) get_mod_depth(mod) / 127.0f));
 }
 
-
-void SynthProcessor::handleModClick(uint8_t src, uint8_t dest){
-	mod_t* m = get_mod(&patch.modMatrix, src, dest);
-	if(m != selectedMod){ // we've selected a new modulation
+void SynthProcessor::handleModClick(uint8_t src, uint8_t dest) {
+	mod_t *m = get_mod(&patch.modMatrix, src, dest);
+	if (m != selectedMod) { // we've selected a new modulation
 		selectedMod = m;
 		currentModPrevDepth = 0;
 	} else { // we've clicked on the current mod, so toggle it
 		int8_t newDepth = get_mod_depth(*selectedMod);
-		if(newDepth != 0){ // toggle it off
+		if (newDepth != 0) { // toggle it off
 			currentModPrevDepth = newDepth;
 			set_mod_depth(m, 0);
 		} else { // toggle it on with the either the previous depth or some default 'on' depth
-			int8_t onDepth = (currentModPrevDepth != 0) ? currentModPrevDepth : 40;
+			int8_t onDepth =
+					(currentModPrevDepth != 0) ? currentModPrevDepth : 40;
 			set_mod_depth(m, onDepth);
 		}
 	}
 }
 
 //helper to tell if we've received a valid mod selection
-bool isValidClick(tick_t srcTime, tick_t destTime){
+bool isValidClick(tick_t srcTime, tick_t destTime) {
 	constexpr float maxMs = 4000.0f;
 	tick_t first = std::min(srcTime, destTime);
 	tick_t second = std::max(srcTime, destTime);
 	return TickTimer_tickDistanceMs(first, second) < maxMs;
 }
 
-
-void SynthProcessor::processSrcClick(uint8_t btn){
+void SynthProcessor::processSrcClick(uint8_t btn) {
 	lastSrcClickAt = TickTimer_get();
 	lastSrcBtn = btn;
-	if(isValidClick(lastSrcClickAt, lastDestClickAt)){
+	if (isValidClick(lastSrcClickAt, lastDestClickAt)) {
 		uint8_t srcID = inBank2 ? lastSrcBtn + 6 : lastSrcBtn;
 		handleModClick(srcID, lastDestBtn);
 	}
 }
 
-void SynthProcessor::processDestClick(uint8_t btn){
+void SynthProcessor::processDestClick(uint8_t btn) {
 	lastDestClickAt = TickTimer_get();
 	lastDestBtn = btn;
-	if(isValidClick(lastSrcClickAt, lastDestClickAt)){
+	if (isValidClick(lastSrcClickAt, lastDestClickAt)) {
 		uint8_t srcID = inBank2 ? lastSrcBtn + 6 : lastSrcBtn;
 		handleModClick(srcID, lastDestBtn);
 	}
 }
 
-void SynthProcessor::initFileSystem(){
-	if(pb.init()){
+void SynthProcessor::initFileSystem() {
+	if (pb.init()) {
 		pb.loadAvailablePatches();
 		pb.loadDefaultPatch(&patch);
 	}
@@ -502,13 +539,11 @@ void SynthProcessor::nudgeParameter(uint8_t id, bool dir) {
 	graphicsProc->paramUpdated(id);
 }
 
-
 // mod depth nudging
 
-
-void SynthProcessor::nudgeModDepth(mod_t* mod, bool dir){
+void SynthProcessor::nudgeModDepth(mod_t *mod, bool dir) {
 	int8_t depth = get_mod_depth(*mod);
-	if(dir){
+	if (dir) {
 		depth = (depth < 127) ? depth + 1 : 127;
 	} else {
 		depth = (depth > -127) ? depth - 1 : -127;
@@ -625,7 +660,7 @@ void SynthProcessor::handleEncoderTurn(uint8_t num, uint8_t clockwise) {
 	case MenuEnc:
 		break;
 	case Depth:
-		if(selectedMod != nullptr){
+		if (selectedMod != nullptr) {
 			nudgeModDepth(selectedMod, clockwise > 0);
 		}
 		break;
@@ -980,11 +1015,11 @@ void handle_during_press(synth_processor_t synth, uint8_t button) {
 	ptr->handleDuringPress(button);
 }
 
-void init_file_system(synth_processor_t synth){
+void init_file_system(synth_processor_t synth) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->initFileSystem();
 }
-//-----------------------
+
 void handle_encoder_turn(synth_processor_t synth, uint8_t enc, uint8_t dir) {
 	SynthProcessor *ptr = static_cast<SynthProcessor*>(synth);
 	ptr->handleEncoderTurn(enc, dir);
