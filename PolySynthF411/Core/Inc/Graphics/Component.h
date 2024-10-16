@@ -34,12 +34,20 @@ typedef struct {
 	point_t b;
 } line_t;
 
+bool isOnLine(line_t line, point_t p);
+bool linesIntersect(line_t l1, line_t l2);
+bool isLineInChunk(line_t line, area_t area);
+void drawLineInChunk(line_t line, area_t chunk, uint16_t *buf, color16_t lineCol);
+
+
 // pixel access
 uint16_t* getPixel(uint16_t *buf, uint16_t width, uint16_t height, uint16_t x,
 		uint16_t y);
 uint16_t* pixelInChunk(uint16_t buf, area_t area);
 
 void fillChunk(uint16_t *buf, uint16_t w, uint16_t h, color16_t color);
+
+// line util
 
 #ifdef __cplusplus
 }
