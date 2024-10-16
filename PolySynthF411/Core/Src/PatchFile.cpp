@@ -7,9 +7,10 @@
 #include "PatchFile.h"
 std::string defaultPatchHeader() {
 	std::string str = "SYNTHPATCH V0.1\n"; // 16 chars
-	str += "NAME:****************\n"; // 21 chars
-	str += "ATHR:****************\n"; // 21 chars
-	str += "TYPE:****************\n"; // 21 chars
+	str += "NAME:****************\n"; // 22 chars
+	str += "ATHR:****************\n"; // 22 chars
+	str += "TYPE:****************\n"; // 22 chars
+	str += "BANK:****\n"; // 10 chars
 	return str;
 }
 
@@ -18,7 +19,7 @@ uint16_t patchFileSize() {
 }
 
 void writeHeaderFor(char *buf, const std::string &name,
-		const std::string &author, uint8_t category) {
+		const std::string &author, uint8_t category, uint8_t bank=0) {
 	std::string str = defaultPatchHeader();
 	// 1. update the name
 	uint16_t offset = 16 + 5;
@@ -45,6 +46,13 @@ void writeHeaderFor(char *buf, const std::string &name,
 	for (uint8_t i = 0; i < categStr.length(); i++) {
 		str[offset + i] = categStr[i];
 	}
+	// 5. set the bank
+	offset += 22;
+	std::string bankStr = std::to_string(bank);
+	for(uint8_t i = 0; i < bankStr.length(); i++){
+		str[offset + i] = bankStr[i];
+	}
+
 
 	//5. strcpy
 	strcpy(buf, (char*) str.c_str());
@@ -83,6 +91,8 @@ std::string emptySynthConfig(){
 	str += "DefaultPatch:*************************************\n";
 	str += "LastUsedPatch:************************************\n";
 	str += "AuthorName:****************\n";
+	str += "BankNames:[]\n";
+
 	return str;
 }
 
@@ -107,6 +117,19 @@ std::string encodeSynthConfig(SynthConfig conf){
 		str[idx] = c;
 		++idx;
 	}
+	const std::string bankHeaderStr = "BankNames:[";
+	idx = str.find(bankHeaderStr) + bankHeaderStr.length();
+	// split the string, insert the banks list, stick it back together
+	std::string restOfStr =  str.substr(idx + 1, str.length() - 1);
+	str = str.substr(0, idx);
+	// append all the bank names
+	std::string suf;
+	for(uint8_t i = 0; i < conf.bankNames.size(); i++){
+		suf = (i == conf.bankNames.size() - 1) ? "" : ", ";
+		str += conf.bankNames[i] + suf;
+	}
+	str += restOfStr;
+
 	return str;
 
 }
@@ -162,6 +185,7 @@ PatchMetadata PatchBrowser::metadataForPatch(const std::string &path) {
 	md.path = path;
 	md.name = "";
 	md.author = "";
+	md.bank = 0;
 	const uint16_t headerBytes = (uint16_t) defaultPatchHeader().length();
 	char buffer[headerBytes];
 
@@ -196,6 +220,16 @@ PatchMetadata PatchBrowser::metadataForPatch(const std::string &path) {
 			md.category = 2;
 		else
 			md.category = 3;
+
+		std::string bankFull = header.substr(16 + 5 + 22 + 22 + 22, 4);
+		std::string bankStr = "";
+		idx = 0;
+		while(bankFull[idx] != '*'){
+			bankStr += bankFull[idx];
+			++idx;
+		}
+		md.bank = (uint8_t)std::stoi(bankStr);
+
 		f_close(&file);
 	}
 	return md;
@@ -229,6 +263,7 @@ void PatchBrowser::initNewCard(patch_t* destPatch) {
 		conf.defaultPatchPath = "patches/default";
 		conf.lastUsedPatchPath = "patches/default";
 		conf.patchAuthorName = "USER";
+		conf.bankNames = {"Factory"};
 
 		std::string configStr = encodeSynthConfig(conf);
 		char* buf = (char*)configStr.c_str();

@@ -19,12 +19,14 @@
 #include <cstring>
 #include <string>
 #include <vector>
+#include <regex>
 
 struct PatchMetadata {
 	std::string path;
 	std::string name;
 	std::string author;
 	uint8_t category;
+	uint8_t bank;
 };
 
 // keep track of categories
@@ -39,6 +41,7 @@ struct SynthConfig {
 	std::string defaultPatchPath;
 	std::string lastUsedPatchPath;
 	std::string patchAuthorName;
+	std::vector<std::string> bankNames;
 };
 
 class PatchBrowser {
