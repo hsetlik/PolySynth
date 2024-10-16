@@ -83,6 +83,19 @@ SynthConfig decodeSynthConfig(char *buf, size_t size) {
 		conf.patchAuthorName += configStr[idx];
 		++idx;
 	}
+
+	size_t endIdx = configStr.find("\\]");
+	std::string bankList = configStr.substr(idx, endIdx);
+
+	// we can get these with a regex
+	std::regex listMatch("/\\w*(?=,|\\])/gm");
+	std::smatch matches;
+	std::regex_search(bankList, matches, listMatch);
+	for(auto m : matches){
+		if(m.length() > 0)
+			conf.bankNames.push_back(m);
+	}
+
 	return conf;
 }
 
@@ -234,6 +247,7 @@ PatchMetadata PatchBrowser::metadataForPatch(const std::string &path) {
 	}
 	return md;
 }
+
 
 void PatchBrowser::loadAvailablePatches() {
 	DIR patchDir;

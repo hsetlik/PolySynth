@@ -48,6 +48,7 @@ class PatchBrowser {
 private:
 	FATFS fileSys;
 	std::vector<PatchMetadata> availablePatches;
+	SynthConfig synthConf;
 	bool validPatchAtPath(const std::string& path);
 	PatchMetadata metadataForPatch(const std::string& path);
 // helper for setting up defaults on a new SD card
