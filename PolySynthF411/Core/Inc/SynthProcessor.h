@@ -16,7 +16,7 @@
 #include "LFO.h"
 #include "Button.h"
 #include "Encoder.h"
-#include "Graphics.h"
+#include "Graphics/Graphics.h"
 #include "NeopixelChain.h"
 #include "PatchFile.h"
 
