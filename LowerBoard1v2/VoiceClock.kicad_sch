@@ -2538,6 +2538,241 @@
 				)
 			)
 		)
+		(symbol "Device:R_Pack04_Split"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RN"
+				(at 1.8 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Value" "R_Pack04_Split"
+				(at -3.2 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left top)
+				)
+			)
+			(property "Footprint" ""
+				(at -2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "4 resistor network, parallel topology, split"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R network parallel topology isolated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "DIP* SOIC* R*Array*Concave* R*Array*Convex* MSOP*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Pack04_Split_0_1"
+				(rectangle
+					(start 1.016 2.54)
+					(end -1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Pack04_Split_1_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "R1.1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "R1.2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "R_Pack04_Split_2_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "R2.1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "R2.2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "R_Pack04_Split_3_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "R3.1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "R3.2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "R_Pack04_Split_4_1"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "R4.1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "R4.2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R_US"
 			(pin_numbers hide)
 			(pin_names
@@ -3203,7 +3438,7 @@
 	)
 	(wire
 		(pts
-			(xy 337.312 135.636) (xy 338.836 135.636)
+			(xy 337.058 136.144) (xy 338.582 136.144)
 		)
 		(stroke
 			(width 0)
@@ -3290,16 +3525,6 @@
 			(type default)
 		)
 		(uuid "13e7f8cd-bfb0-4a65-a5e1-3d6e324a136b")
-	)
-	(wire
-		(pts
-			(xy 329.184 141.224) (xy 329.184 144.018)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "17b364fa-87bd-4e9b-b913-7b30abad5475")
 	)
 	(wire
 		(pts
@@ -3393,7 +3618,7 @@
 	)
 	(wire
 		(pts
-			(xy 325.882 138.684) (xy 325.882 135.636)
+			(xy 325.882 138.684) (xy 325.882 136.144)
 		)
 		(stroke
 			(width 0)
@@ -3503,13 +3728,23 @@
 	)
 	(wire
 		(pts
-			(xy 325.882 135.636) (xy 329.692 135.636)
+			(xy 325.882 136.144) (xy 329.438 136.144)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "324aeb6b-10f6-4290-bacc-4d5ac188de33")
+	)
+	(wire
+		(pts
+			(xy 337.058 143.51) (xy 338.836 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3306a728-a6f5-47b9-9e60-02c5a3be0c8a")
 	)
 	(wire
 		(pts
@@ -3703,6 +3938,16 @@
 	)
 	(wire
 		(pts
+			(xy 328.93 141.224) (xy 328.93 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c8d47ea-affb-486b-9123-36b91599eaad")
+	)
+	(wire
+		(pts
 			(xy 57.658 176.53) (xy 57.658 177.8)
 		)
 		(stroke
@@ -3800,16 +4045,6 @@
 			(type default)
 		)
 		(uuid "582f1f7b-2f6d-4b19-97a0-22623530bffe")
-	)
-	(wire
-		(pts
-			(xy 337.566 144.018) (xy 338.836 144.018)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "589471db-f936-4de7-a3ab-f2a00daca371")
 	)
 	(wire
 		(pts
@@ -4090,16 +4325,6 @@
 			(type default)
 		)
 		(uuid "758382c8-898a-4dfb-a0f7-a494d877c0dd")
-	)
-	(wire
-		(pts
-			(xy 329.184 144.018) (xy 329.946 144.018)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7734810e-b918-4419-9789-d7286fe7e4bc")
 	)
 	(wire
 		(pts
@@ -4553,7 +4778,7 @@
 	)
 	(wire
 		(pts
-			(xy 321.31 141.224) (xy 329.184 141.224)
+			(xy 328.93 143.51) (xy 329.438 143.51)
 		)
 		(stroke
 			(width 0)
@@ -4860,6 +5085,16 @@
 			(type default)
 		)
 		(uuid "e2830834-2431-4570-8834-3acad4f432dd")
+	)
+	(wire
+		(pts
+			(xy 328.93 141.224) (xy 321.31 141.224)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2b4b8f0-8798-473d-b9da-d9823fda84bc")
 	)
 	(wire
 		(pts
@@ -5396,7 +5631,7 @@
 	)
 	(global_label "V2_CLK1"
 		(shape output)
-		(at 338.836 144.018 0)
+		(at 338.836 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5406,7 +5641,7 @@
 		)
 		(uuid "214cac74-4a8e-4c0d-bbe0-dd2cb9966c0a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 349.8645 144.018 0)
+			(at 349.8645 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5418,7 +5653,7 @@
 	)
 	(global_label "V2_CLK2"
 		(shape output)
-		(at 338.836 135.636 0)
+		(at 338.582 136.144 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5428,7 +5663,7 @@
 		)
 		(uuid "27f3d623-af7a-472f-9357-d98427b8438a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 349.8645 135.636 0)
+			(at 349.6105 136.144 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6474,73 +6709,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 334.01 179.07 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "072d6ce0-bec3-44a8-9be9-dd4ba534ed35")
-		(property "Reference" "R1009"
-			(at 334.01 182.118 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 334.01 184.658 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 334.264 178.054 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 334.01 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 334.01 179.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "93fc39a2-5f17-4a1e-920a-2971b3743497")
-		)
-		(pin "1"
-			(uuid "48f833cd-6773-4ce8-ac00-988ba77e7a85")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1009")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "74xx:74HC14")
 		(at 86.614 99.06 0)
 		(unit 2)
@@ -7200,140 +7368,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.756 152.654 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1eae8264-ea89-48a0-aa0d-8735c74c0ebc")
-		(property "Reference" "R1012"
-			(at 333.756 155.702 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.756 158.242 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 334.01 151.638 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.756 152.654 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.756 152.654 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "81790fbc-0aa1-49d5-aa6c-3c5b48284710")
-		)
-		(pin "1"
-			(uuid "2d009366-70d9-4e01-858b-170cd6c5f313")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 333.248 80.01 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1fbb55cd-af94-407a-8cff-5f02bd8e92c0")
-		(property "Reference" "R1004"
-			(at 333.248 83.058 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.248 85.598 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.502 78.994 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.248 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.248 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "49a5be1b-3776-46c2-a229-8ac60e0e25d8")
-		)
-		(pin "1"
-			(uuid "07c4cf2f-e69f-4fb1-bf42-46d0cbcfdfbd")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1004")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 79.248 176.276 0)
 		(unit 1)
@@ -7668,207 +7702,6 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "U1006")
 					(unit 6)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 332.74 46.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "341a08aa-2b41-4733-91c5-b187fb4ee365")
-		(property "Reference" "R1008"
-			(at 332.74 50.038 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 332.74 52.578 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 332.994 45.974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 332.74 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 332.74 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "56849ea5-046c-4434-814e-c2437d512bf9")
-		)
-		(pin "1"
-			(uuid "d571880c-1171-439d-a87c-934e0e442384")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1008")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 332.74 55.118 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3700713c-b5bc-4d92-8655-8b0c0b172947")
-		(property "Reference" "R1007"
-			(at 332.74 58.166 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 332.74 60.706 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 332.994 54.102 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 332.74 55.118 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 332.74 55.118 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b31764d6-4c03-4f2b-81ce-5556c99caa9a")
-		)
-		(pin "1"
-			(uuid "bd166a6f-3834-4995-840a-0f6386f59446")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1007")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 333.248 88.138 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "374ed6d7-a822-495b-bfe2-b2fa1eb09974")
-		(property "Reference" "R1003"
-			(at 333.248 91.186 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.248 93.726 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.502 87.122 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.248 88.138 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.248 88.138 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "799e0b7c-1efd-4f20-bba2-4cb5ef7d24f6")
-		)
-		(pin "1"
-			(uuid "58803878-8e77-47e7-9b81-0b8e4515aca6")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1003")
-					(unit 1)
 				)
 			)
 		)
@@ -8487,6 +8320,177 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.756 152.654 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4a259c10-161a-4229-bcc7-5772fbc8a382")
+		(property "Reference" "RN704"
+			(at 333.756 146.558 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.756 149.098 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.756 154.686 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.756 152.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.756 152.654 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "91483d6d-2a7a-4518-ba94-5a6d1b943eb4")
+		)
+		(pin "1"
+			(uuid "c5090cab-a3f8-4ad0-b590-fde981cb39db")
+		)
+		(pin "2"
+			(uuid "e0be58f7-65c0-4412-8b23-39e211826ea6")
+		)
+		(pin "8"
+			(uuid "b763e79a-5b31-4370-876d-9e015fbc63ab")
+		)
+		(pin "6"
+			(uuid "7b00253c-5dbb-418c-a863-368bd9568171")
+		)
+		(pin "4"
+			(uuid "8ef0ca16-ef4e-48f9-a6c3-1d7cc39937f0")
+		)
+		(pin "5"
+			(uuid "10e63944-59f9-4ac0-9c2e-9d8ecd8eaab4")
+		)
+		(pin "3"
+			(uuid "ca846df0-2e40-492c-82de-38af6e1a4f8f")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN704")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.756 160.782 90)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4af11357-93c5-45ef-8b01-ffb8ee464ad2")
+		(property "Reference" "RN704"
+			(at 333.756 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.756 157.48 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.756 162.814 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.756 160.782 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.756 160.782 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "91483d6d-2a7a-4518-ba94-5a6d1b943eb4")
+		)
+		(pin "1"
+			(uuid "c5090cab-a3f8-4ad0-b590-fde981cb39db")
+		)
+		(pin "2"
+			(uuid "e0be58f7-65c0-4412-8b23-39e211826ea6")
+		)
+		(pin "8"
+			(uuid "b763e79a-5b31-4370-876d-9e015fbc63ab")
+		)
+		(pin "6"
+			(uuid "7b00253c-5dbb-418c-a863-368bd9568171")
+		)
+		(pin "4"
+			(uuid "8ef0ca16-ef4e-48f9-a6c3-1d7cc39937f0")
+		)
+		(pin "5"
+			(uuid "10e63944-59f9-4ac0-9c2e-9d8ecd8eaab4")
+		)
+		(pin "3"
+			(uuid "ca846df0-2e40-492c-82de-38af6e1a4f8f")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN704")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74HC14")
 		(at 86.868 122.428 0)
 		(unit 2)
@@ -8999,6 +9003,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.502 97.536 90)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "553af7b0-8d02-4f2a-a979-99da5a4a3960")
+		(property "Reference" "RN702"
+			(at 333.502 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.502 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.502 99.568 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.502 97.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.502 97.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3b9cb73-3ed4-475b-b74a-a5433fb19330")
+		)
+		(pin "8"
+			(uuid "dfd72da1-c273-4d3d-bae8-f691fcba9c70")
+		)
+		(pin "2"
+			(uuid "cff3a8f4-738d-4d9f-a3d0-8c596c2cbd5c")
+		)
+		(pin "7"
+			(uuid "643024e9-0cca-4192-9d89-3c679734ba1e")
+		)
+		(pin "3"
+			(uuid "901fbff8-451d-467e-a7f0-e101490a95d9")
+		)
+		(pin "6"
+			(uuid "c3410433-33d4-4c74-9920-0904e95a3abc")
+		)
+		(pin "4"
+			(uuid "b4e375cd-bee4-42d1-9e48-555f93013bef")
+		)
+		(pin "5"
+			(uuid "6f7f65ea-f7d5-4c26-b92f-50fc11c69ab0")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN702")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 155.448 173.228 0)
 		(unit 1)
@@ -9060,6 +9150,91 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01030")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 143.51 90)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5771d683-a357-43b8-964f-a8a7e43c5c96")
+		(property "Reference" "RN703"
+			(at 333.248 138.684 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.248 141.224 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 145.542 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.248 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "bcfdac93-6f4d-4352-896b-3b728cefdcb0")
+		)
+		(pin "2"
+			(uuid "e4b79337-0e2d-4e46-86b8-cfc45ec6c427")
+		)
+		(pin "7"
+			(uuid "2d39d4c8-d54d-4506-9cd8-c5fc3f1830db")
+		)
+		(pin "1"
+			(uuid "dd27babe-c870-4db0-9b09-d7a773812954")
+		)
+		(pin "4"
+			(uuid "fd5f4c35-7552-482f-af22-d7f90fc9c52f")
+		)
+		(pin "5"
+			(uuid "6b624632-7ce9-45be-8613-e5d0e40b2460")
+		)
+		(pin "8"
+			(uuid "bc21e79d-5550-4e42-8332-e85ed8fb20d4")
+		)
+		(pin "3"
+			(uuid "ce787c0d-f58c-41ca-9f9b-3b6abc890927")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN703")
+					(unit 4)
 				)
 			)
 		)
@@ -9306,73 +9481,6 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 333.248 71.374 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5964436b-7a0a-4cb8-b8f9-14265c9c3dfd")
-		(property "Reference" "R1005"
-			(at 333.248 74.422 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.248 76.962 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.502 70.358 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.248 71.374 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.248 71.374 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1f9067d1-e441-4bd2-bc33-d6a11c74dcb6")
-		)
-		(pin "1"
-			(uuid "fa995cdb-12bd-4f63-ad43-fdf80f068fa0")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1005")
 					(unit 1)
 				)
 			)
@@ -9726,140 +9834,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.756 160.782 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5eeec416-e31d-4c75-a82b-caaa0e5cba8e")
-		(property "Reference" "R1011"
-			(at 333.756 163.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.756 166.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 334.01 159.766 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.756 160.782 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.756 160.782 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "57ec3894-d7ec-4123-9e4b-cbd999677386")
-		)
-		(pin "1"
-			(uuid "3f2a6303-2de2-4111-a49b-698d4ba2324f")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 334.01 170.18 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "652e4e8f-5577-4dda-b76d-9839ef1301ff")
-		(property "Reference" "R1010"
-			(at 334.01 173.228 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 334.01 175.768 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 334.264 169.164 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 334.01 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 334.01 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d42ba6db-121b-4a57-957c-76832a919505")
-		)
-		(pin "1"
-			(uuid "81ae3e8e-47a4-4c8f-a108-5e58b53961ec")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1010")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 307.848 52.578 0)
 		(unit 1)
@@ -9927,32 +9901,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.502 135.636 90)
-		(unit 1)
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 136.144 90)
+		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "71b00616-f851-445d-b656-588699c4e245")
-		(property "Reference" "R1014"
-			(at 333.502 138.684 90)
+		(uuid "6b51a02e-fe47-4139-b185-883d890e95a7")
+		(property "Reference" "RN703"
+			(at 333.248 130.556 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "22R"
-			(at 333.502 141.224 90)
+		(property "Value" "33R"
+			(at 333.248 133.096 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.756 134.62 90)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 138.176 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9961,7 +9935,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 333.502 135.636 0)
+			(at 333.248 136.144 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9969,57 +9943,76 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.502 135.636 0)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 136.144 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "6"
+			(uuid "bcfdac93-6f4d-4352-896b-3b728cefdcb0")
 		)
 		(pin "2"
-			(uuid "881c53c2-4ca2-4ecd-8c73-7c3bfedc30c2")
+			(uuid "e4b79337-0e2d-4e46-86b8-cfc45ec6c427")
+		)
+		(pin "7"
+			(uuid "2d39d4c8-d54d-4506-9cd8-c5fc3f1830db")
 		)
 		(pin "1"
-			(uuid "a61ce380-278a-4fab-9aec-df81e37d1a70")
+			(uuid "dd27babe-c870-4db0-9b09-d7a773812954")
+		)
+		(pin "4"
+			(uuid "fd5f4c35-7552-482f-af22-d7f90fc9c52f")
+		)
+		(pin "5"
+			(uuid "6b624632-7ce9-45be-8613-e5d0e40b2460")
+		)
+		(pin "8"
+			(uuid "bc21e79d-5550-4e42-8332-e85ed8fb20d4")
+		)
+		(pin "3"
+			(uuid "ce787c0d-f58c-41ca-9f9b-3b6abc890927")
 		)
 		(instances
-			(project "SplitBoard8Voice"
+			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1014")
-					(unit 1)
+					(reference "RN703")
+					(unit 3)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.756 144.018 90)
-		(unit 1)
+		(lib_id "Device:R_Pack04_Split")
+		(at 332.74 55.118 90)
+		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "747d42b4-8edc-497f-98e6-a44900cbf57f")
-		(property "Reference" "R1013"
-			(at 333.756 147.066 90)
+		(fields_autoplaced yes)
+		(uuid "6c1c6cb3-055f-4588-9cb0-e80303ae5d94")
+		(property "Reference" "RN701"
+			(at 332.74 49.53 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "22R"
-			(at 333.756 149.606 90)
+		(property "Value" "33R"
+			(at 332.74 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 334.01 143.002 90)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 332.74 57.15 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10028,7 +10021,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 333.756 144.018 0)
+			(at 332.74 55.118 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10036,26 +10029,44 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.756 144.018 0)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 332.74 55.118 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "3"
+			(uuid "74e979be-7e49-41bb-94e8-c1c01194f9e0")
 		)
 		(pin "2"
-			(uuid "6b5db208-57f5-4d9a-ba00-303843728e9d")
+			(uuid "edaf938b-9842-488b-b488-2dfcd24dc35c")
+		)
+		(pin "4"
+			(uuid "9a90d075-ec66-4eaa-95b7-9e2e55384d4a")
+		)
+		(pin "5"
+			(uuid "bafad9f3-6969-4908-9636-816e992aa9cb")
 		)
 		(pin "1"
-			(uuid "b323fbef-acb2-4cb7-913b-444d8dc66f64")
+			(uuid "4d070cbc-5398-46e9-949b-7631db8249d1")
+		)
+		(pin "8"
+			(uuid "2b9e48f5-3335-49ea-964e-d17912fa6d87")
+		)
+		(pin "7"
+			(uuid "bc788842-6fba-4a83-8f00-76e5ae73bbdb")
+		)
+		(pin "6"
+			(uuid "c82577c3-a846-42c5-b9da-fd06378cee4b")
 		)
 		(instances
-			(project "SplitBoard8Voice"
+			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1013")
-					(unit 1)
+					(reference "RN701")
+					(unit 2)
 				)
 			)
 		)
@@ -10234,73 +10245,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.248 127.762 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7eb4cf14-e592-4b24-8eed-006316ad6116")
-		(property "Reference" "R1015"
-			(at 333.248 130.81 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.248 133.35 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.502 126.746 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.248 127.762 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.248 127.762 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0f920538-531d-45f2-9f48-ed8a278b99a9")
-		)
-		(pin "1"
-			(uuid "a2431818-2cf1-4a39-8668-f955d207f2c5")
-		)
-		(instances
-			(project "SplitBoard8Voice"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 44.704 226.06 0)
 		(unit 1)
@@ -10469,6 +10413,92 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "U1006")
 					(unit 7)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 334.01 170.18 90)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "86503587-2953-46e3-969c-279954a64e99")
+		(property "Reference" "RN704"
+			(at 334.01 163.83 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 334.01 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 334.01 172.212 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 334.01 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 334.01 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "91483d6d-2a7a-4518-ba94-5a6d1b943eb4")
+		)
+		(pin "1"
+			(uuid "c5090cab-a3f8-4ad0-b590-fde981cb39db")
+		)
+		(pin "2"
+			(uuid "e0be58f7-65c0-4412-8b23-39e211826ea6")
+		)
+		(pin "8"
+			(uuid "b763e79a-5b31-4370-876d-9e015fbc63ab")
+		)
+		(pin "6"
+			(uuid "7b00253c-5dbb-418c-a863-368bd9568171")
+		)
+		(pin "4"
+			(uuid "8ef0ca16-ef4e-48f9-a6c3-1d7cc39937f0")
+		)
+		(pin "5"
+			(uuid "10e63944-59f9-4ac0-9c2e-9d8ecd8eaab4")
+		)
+		(pin "3"
+			(uuid "ca846df0-2e40-492c-82de-38af6e1a4f8f")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN704")
+					(unit 3)
 				)
 			)
 		)
@@ -10891,6 +10921,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 88.138 90)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "94a4d0b3-4c91-4466-99b2-fac7b2702ad1")
+		(property "Reference" "RN702"
+			(at 333.248 82.55 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.248 85.09 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 90.17 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.248 88.138 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 88.138 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3b9cb73-3ed4-475b-b74a-a5433fb19330")
+		)
+		(pin "8"
+			(uuid "dfd72da1-c273-4d3d-bae8-f691fcba9c70")
+		)
+		(pin "2"
+			(uuid "cff3a8f4-738d-4d9f-a3d0-8c596c2cbd5c")
+		)
+		(pin "7"
+			(uuid "643024e9-0cca-4192-9d89-3c679734ba1e")
+		)
+		(pin "3"
+			(uuid "901fbff8-451d-467e-a7f0-e101490a95d9")
+		)
+		(pin "6"
+			(uuid "c3410433-33d4-4c74-9920-0904e95a3abc")
+		)
+		(pin "4"
+			(uuid "b4e375cd-bee4-42d1-9e48-555f93013bef")
+		)
+		(pin "5"
+			(uuid "6f7f65ea-f7d5-4c26-b92f-50fc11c69ab0")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN702")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 94.742 224.79 90)
 		(unit 1)
@@ -11087,6 +11203,92 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 119.634 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "98650072-bcaf-48d8-8d27-50e5799e80e3")
+		(property "Reference" "RN703"
+			(at 333.248 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.248 115.57 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 121.666 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.248 119.634 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 119.634 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "bcfdac93-6f4d-4352-896b-3b728cefdcb0")
+		)
+		(pin "2"
+			(uuid "e4b79337-0e2d-4e46-86b8-cfc45ec6c427")
+		)
+		(pin "7"
+			(uuid "2d39d4c8-d54d-4506-9cd8-c5fc3f1830db")
+		)
+		(pin "1"
+			(uuid "dd27babe-c870-4db0-9b09-d7a773812954")
+		)
+		(pin "4"
+			(uuid "fd5f4c35-7552-482f-af22-d7f90fc9c52f")
+		)
+		(pin "5"
+			(uuid "6b624632-7ce9-45be-8613-e5d0e40b2460")
+		)
+		(pin "8"
+			(uuid "bc21e79d-5550-4e42-8332-e85ed8fb20d4")
+		)
+		(pin "3"
+			(uuid "ce787c0d-f58c-41ca-9f9b-3b6abc890927")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN703")
 					(unit 1)
 				)
 			)
@@ -11436,73 +11638,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 332.994 62.992 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a7e63bf2-f729-45ee-819d-4f7e1134d214")
-		(property "Reference" "R1006"
-			(at 332.994 66.04 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 332.994 68.58 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.248 61.976 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 332.994 62.992 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 332.994 62.992 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "fcf22bf3-ea15-4e10-a23f-92655e76b05d")
-		)
-		(pin "1"
-			(uuid "5c29c7de-60b4-4455-8d58-8696db03d7c1")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1006")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 82.55 50.8 0)
 		(unit 1)
@@ -11569,32 +11704,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.248 119.634 90)
-		(unit 1)
+		(lib_id "Device:R_Pack04_Split")
+		(at 334.01 179.07 90)
+		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b4ce4574-c923-431d-afa9-7991eff8dc1a")
-		(property "Reference" "R1016"
-			(at 333.248 122.682 90)
+		(uuid "a9b0f01d-5d6c-40e9-8efd-50073fd80a97")
+		(property "Reference" "RN704"
+			(at 334.01 173.736 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "22R"
-			(at 333.248 125.222 90)
+		(property "Value" "33R"
+			(at 334.01 176.276 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.502 118.618 90)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 334.01 181.102 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11603,7 +11738,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 333.248 119.634 0)
+			(at 334.01 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11611,8 +11746,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.248 119.634 0)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 334.01 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11620,17 +11755,206 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "6be34338-14cf-4110-b1ac-4bfb3e8a79e6")
+		(pin "7"
+			(uuid "91483d6d-2a7a-4518-ba94-5a6d1b943eb4")
 		)
 		(pin "1"
-			(uuid "deae2b3b-6288-4670-9222-48e11fbf96ab")
+			(uuid "c5090cab-a3f8-4ad0-b590-fde981cb39db")
+		)
+		(pin "2"
+			(uuid "e0be58f7-65c0-4412-8b23-39e211826ea6")
+		)
+		(pin "8"
+			(uuid "b763e79a-5b31-4370-876d-9e015fbc63ab")
+		)
+		(pin "6"
+			(uuid "7b00253c-5dbb-418c-a863-368bd9568171")
+		)
+		(pin "4"
+			(uuid "8ef0ca16-ef4e-48f9-a6c3-1d7cc39937f0")
+		)
+		(pin "5"
+			(uuid "10e63944-59f9-4ac0-9c2e-9d8ecd8eaab4")
+		)
+		(pin "3"
+			(uuid "ca846df0-2e40-492c-82de-38af6e1a4f8f")
 		)
 		(instances
-			(project "SplitBoard8Voice"
+			(project ""
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1016")
-					(unit 1)
+					(reference "RN704")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 127.762 90)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b717f0e2-355a-47c4-b1bd-d24e864bcab3")
+		(property "Reference" "RN703"
+			(at 333.248 122.428 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.248 124.968 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 129.794 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.248 127.762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 127.762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "bcfdac93-6f4d-4352-896b-3b728cefdcb0")
+		)
+		(pin "2"
+			(uuid "e4b79337-0e2d-4e46-86b8-cfc45ec6c427")
+		)
+		(pin "7"
+			(uuid "2d39d4c8-d54d-4506-9cd8-c5fc3f1830db")
+		)
+		(pin "1"
+			(uuid "dd27babe-c870-4db0-9b09-d7a773812954")
+		)
+		(pin "4"
+			(uuid "fd5f4c35-7552-482f-af22-d7f90fc9c52f")
+		)
+		(pin "5"
+			(uuid "6b624632-7ce9-45be-8613-e5d0e40b2460")
+		)
+		(pin "8"
+			(uuid "bc21e79d-5550-4e42-8332-e85ed8fb20d4")
+		)
+		(pin "3"
+			(uuid "ce787c0d-f58c-41ca-9f9b-3b6abc890927")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN703")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.502 106.426 90)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b75d5d10-6945-407c-ad5c-782f4957fc6a")
+		(property "Reference" "RN702"
+			(at 333.502 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.502 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.502 108.458 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.502 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.502 106.426 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3b9cb73-3ed4-475b-b74a-a5433fb19330")
+		)
+		(pin "8"
+			(uuid "dfd72da1-c273-4d3d-bae8-f691fcba9c70")
+		)
+		(pin "2"
+			(uuid "cff3a8f4-738d-4d9f-a3d0-8c596c2cbd5c")
+		)
+		(pin "7"
+			(uuid "643024e9-0cca-4192-9d89-3c679734ba1e")
+		)
+		(pin "3"
+			(uuid "901fbff8-451d-467e-a7f0-e101490a95d9")
+		)
+		(pin "6"
+			(uuid "c3410433-33d4-4c74-9920-0904e95a3abc")
+		)
+		(pin "4"
+			(uuid "b4e375cd-bee4-42d1-9e48-555f93013bef")
+		)
+		(pin "5"
+			(uuid "6f7f65ea-f7d5-4c26-b92f-50fc11c69ab0")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN702")
+					(unit 4)
 				)
 			)
 		)
@@ -11697,6 +12021,92 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01008")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 332.74 46.99 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bbebcf74-6e7c-4102-9855-cdec857bfc21")
+		(property "Reference" "RN701"
+			(at 332.74 40.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 332.74 43.18 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 332.74 49.022 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 332.74 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 332.74 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "74e979be-7e49-41bb-94e8-c1c01194f9e0")
+		)
+		(pin "2"
+			(uuid "edaf938b-9842-488b-b488-2dfcd24dc35c")
+		)
+		(pin "4"
+			(uuid "9a90d075-ec66-4eaa-95b7-9e2e55384d4a")
+		)
+		(pin "5"
+			(uuid "bafad9f3-6969-4908-9636-816e992aa9cb")
+		)
+		(pin "1"
+			(uuid "4d070cbc-5398-46e9-949b-7631db8249d1")
+		)
+		(pin "8"
+			(uuid "2b9e48f5-3335-49ea-964e-d17912fa6d87")
+		)
+		(pin "7"
+			(uuid "bc788842-6fba-4a83-8f00-76e5ae73bbdb")
+		)
+		(pin "6"
+			(uuid "c82577c3-a846-42c5-b9da-fd06378cee4b")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN701")
 					(unit 1)
 				)
 			)
@@ -11807,73 +12217,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 333.502 106.426 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bd6cf727-f771-4cb9-a493-71350fd18a36")
-		(property "Reference" "R1001"
-			(at 333.502 109.474 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.502 112.014 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.756 105.41 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.502 106.426 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.502 106.426 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c6016c29-aa17-4cc3-837d-b4cf3697cb44")
-		)
-		(pin "1"
-			(uuid "4802e6d9-c49b-405a-85e6-efd54850a431")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1001")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 307.848 47.752 0)
 		(unit 1)
@@ -11937,73 +12280,6 @@
 			(project "PolySynthSplitBoard"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "C1002")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 333.502 97.536 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c12b8dd3-c086-4785-b0b2-155c87554e2e")
-		(property "Reference" "R1002"
-			(at 333.502 100.584 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "22R"
-			(at 333.502 103.124 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 333.756 96.52 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 333.502 97.536 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 333.502 97.536 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "63c0549d-eae4-472b-b86e-800fbedf281d")
-		)
-		(pin "1"
-			(uuid "8b4b5cc3-4699-493d-8189-ac3600afc523")
-		)
-		(instances
-			(project "PolySynthSplitBoard"
-				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
-					(reference "R1002")
 					(unit 1)
 				)
 			)
@@ -12310,6 +12586,92 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "#PWR01023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cb86fc6b-9463-420e-928f-60fa78fac4eb")
+		(property "Reference" "RN702"
+			(at 333.248 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.248 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 82.042 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.248 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3b9cb73-3ed4-475b-b74a-a5433fb19330")
+		)
+		(pin "8"
+			(uuid "dfd72da1-c273-4d3d-bae8-f691fcba9c70")
+		)
+		(pin "2"
+			(uuid "cff3a8f4-738d-4d9f-a3d0-8c596c2cbd5c")
+		)
+		(pin "7"
+			(uuid "643024e9-0cca-4192-9d89-3c679734ba1e")
+		)
+		(pin "3"
+			(uuid "901fbff8-451d-467e-a7f0-e101490a95d9")
+		)
+		(pin "6"
+			(uuid "c3410433-33d4-4c74-9920-0904e95a3abc")
+		)
+		(pin "4"
+			(uuid "b4e375cd-bee4-42d1-9e48-555f93013bef")
+		)
+		(pin "5"
+			(uuid "6f7f65ea-f7d5-4c26-b92f-50fc11c69ab0")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN702")
 					(unit 1)
 				)
 			)
@@ -12757,6 +13119,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 333.248 71.374 90)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e435c46e-8020-4de3-849b-52326df37728")
+		(property "Reference" "RN701"
+			(at 333.248 66.294 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 333.248 68.834 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 333.248 73.406 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 333.248 71.374 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 333.248 71.374 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "74e979be-7e49-41bb-94e8-c1c01194f9e0")
+		)
+		(pin "2"
+			(uuid "edaf938b-9842-488b-b488-2dfcd24dc35c")
+		)
+		(pin "4"
+			(uuid "9a90d075-ec66-4eaa-95b7-9e2e55384d4a")
+		)
+		(pin "5"
+			(uuid "bafad9f3-6969-4908-9636-816e992aa9cb")
+		)
+		(pin "1"
+			(uuid "4d070cbc-5398-46e9-949b-7631db8249d1")
+		)
+		(pin "8"
+			(uuid "2b9e48f5-3335-49ea-964e-d17912fa6d87")
+		)
+		(pin "7"
+			(uuid "bc788842-6fba-4a83-8f00-76e5ae73bbdb")
+		)
+		(pin "6"
+			(uuid "c82577c3-a846-42c5-b9da-fd06378cee4b")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN701")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 103.378 239.522 0)
 		(unit 1)
@@ -12819,6 +13266,91 @@
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
 					(reference "TP1006")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Pack04_Split")
+		(at 332.994 62.992 90)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e821443e-6f87-4a12-9445-38c1df292ba1")
+		(property "Reference" "RN701"
+			(at 332.994 57.658 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "33R"
+			(at 332.994 60.198 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
+			(at 332.994 65.024 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 332.994 62.992 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4 resistor network, parallel topology, split"
+			(at 332.994 62.992 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "74e979be-7e49-41bb-94e8-c1c01194f9e0")
+		)
+		(pin "2"
+			(uuid "edaf938b-9842-488b-b488-2dfcd24dc35c")
+		)
+		(pin "4"
+			(uuid "9a90d075-ec66-4eaa-95b7-9e2e55384d4a")
+		)
+		(pin "5"
+			(uuid "bafad9f3-6969-4908-9636-816e992aa9cb")
+		)
+		(pin "1"
+			(uuid "4d070cbc-5398-46e9-949b-7631db8249d1")
+		)
+		(pin "8"
+			(uuid "2b9e48f5-3335-49ea-964e-d17912fa6d87")
+		)
+		(pin "7"
+			(uuid "bc788842-6fba-4a83-8f00-76e5ae73bbdb")
+		)
+		(pin "6"
+			(uuid "c82577c3-a846-42c5-b9da-fd06378cee4b")
+		)
+		(instances
+			(project ""
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a/c18fe030-c86d-45ba-9286-9b340d3ea677"
+					(reference "RN701")
+					(unit 3)
 				)
 			)
 		)

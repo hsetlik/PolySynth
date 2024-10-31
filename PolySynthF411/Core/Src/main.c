@@ -978,7 +978,8 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3|LED1_Pin
+                          |LED2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, PITCH_RST_Pin|LDAC_Pin|DISP_CS_Pin, GPIO_PIN_RESET);
@@ -990,8 +991,10 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SD_CS_GPIO_Port, SD_CS_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : HP_MODE_Pin FOLD_FIRST_Pin PC3 */
-  GPIO_InitStruct.Pin = HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3;
+  /*Configure GPIO pins : HP_MODE_Pin FOLD_FIRST_Pin PC3 LED1_Pin
+                           LED2_Pin */
+  GPIO_InitStruct.Pin = HP_MODE_Pin|FOLD_FIRST_Pin|GPIO_PIN_3|LED1_Pin
+                          |LED2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
