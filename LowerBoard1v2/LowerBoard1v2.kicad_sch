@@ -1,0 +1,51 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "22649217-9810-470f-bc7b-6f743ad2b90e")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 16.002 17.526)
+		(size 125.222 100.076)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3d9ecb3b-9556-42d6-955a-a32d9efd5d3a")
+		(property "Sheetname" "LowerBoard"
+			(at 16.002 16.8144 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Lower.kicad_sch"
+			(at 16.002 118.1866 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "LowerBoard1v2"
+				(path "/22649217-9810-470f-bc7b-6f743ad2b90e"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

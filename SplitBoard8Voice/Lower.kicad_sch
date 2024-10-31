@@ -3058,6 +3058,11 @@
 					(page "2")
 				)
 			)
+			(project "Lower"
+				(path "/fba8bcc8-f772-408b-a84b-989392f8ee64"
+					(page "4")
+				)
+			)
 		)
 	)
 	(sheet
@@ -3094,6 +3099,11 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "3")
+				)
+			)
+			(project "Lower"
+				(path "/fba8bcc8-f772-408b-a84b-989392f8ee64"
+					(page "5")
 				)
 			)
 		)
@@ -3134,6 +3144,11 @@
 					(page "4")
 				)
 			)
+			(project "Lower"
+				(path "/fba8bcc8-f772-408b-a84b-989392f8ee64"
+					(page "2")
+				)
+			)
 		)
 	)
 	(sheet
@@ -3170,6 +3185,11 @@
 			(project "SplitBoard8Voice"
 				(path "/22649217-9810-470f-bc7b-6f743ad2b90e/3d9ecb3b-9556-42d6-955a-a32d9efd5d3a"
 					(page "10")
+				)
+			)
+			(project "Lower"
+				(path "/fba8bcc8-f772-408b-a84b-989392f8ee64"
+					(page "6")
 				)
 			)
 		)
@@ -3210,6 +3230,16 @@
 					(page "7")
 				)
 			)
+			(project "Lower"
+				(path "/fba8bcc8-f772-408b-a84b-989392f8ee64"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
 		)
 	)
 )
