@@ -2804,7 +2804,7 @@
 		(uuid "56c14584-4a71-404b-bbc0-2535d12d6f4b")
 	)
 	(junction
-		(at 215.9 112.014)
+		(at 216.662 112.014)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6a783758-3549-42c5-b2a6-254fe276c9d9")
@@ -3227,7 +3227,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 112.014) (xy 228.346 112.014)
+			(xy 216.662 112.014) (xy 228.346 112.014)
 		)
 		(stroke
 			(width 0)
@@ -3317,7 +3317,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 108.966) (xy 215.9 112.014)
+			(xy 216.662 108.966) (xy 216.662 112.014)
 		)
 		(stroke
 			(width 0)
@@ -3937,7 +3937,7 @@
 	)
 	(wire
 		(pts
-			(xy 202.692 112.014) (xy 215.9 112.014)
+			(xy 202.692 112.014) (xy 216.662 112.014)
 		)
 		(stroke
 			(width 0)
@@ -5737,7 +5737,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.9 99.568) (xy 215.9 101.346)
+			(xy 216.662 99.568) (xy 216.662 101.346)
 		)
 		(stroke
 			(width 0)
@@ -6371,7 +6371,7 @@
 	)
 	(global_label "SCL_V7"
 		(shape output)
-		(at 87.122 98.552 0)
+		(at 87.122 103.632 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6381,7 +6381,7 @@
 		)
 		(uuid "05349cb4-b96f-4a81-8ab5-023d15700808")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.8805 98.552 0)
+			(at 96.8805 103.632 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6811,7 +6811,7 @@
 	)
 	(global_label "SCL_V5"
 		(shape output)
-		(at 87.122 108.712 0)
+		(at 87.122 93.472 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6821,7 +6821,7 @@
 		)
 		(uuid "1f117648-f706-47fe-841a-faf4be1580e6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.8805 108.712 0)
+			(at 96.8805 93.472 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7625,7 +7625,7 @@
 	)
 	(global_label "SDA_V7"
 		(shape output)
-		(at 87.122 101.092 0)
+		(at 87.122 106.172 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7635,7 +7635,7 @@
 		)
 		(uuid "6a0e5723-6f0d-4179-be9f-22ceb8df2751")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.941 101.092 0)
+			(at 96.941 106.172 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7999,7 +7999,7 @@
 	)
 	(global_label "SDA_V6"
 		(shape output)
-		(at 87.122 106.172 0)
+		(at 87.122 101.092 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8009,7 +8009,7 @@
 		)
 		(uuid "809fdbb6-c803-4e76-93ed-3282697c8da5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.941 106.172 0)
+			(at 96.941 101.092 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8197,7 +8197,7 @@
 	)
 	(global_label "SCL_V6"
 		(shape output)
-		(at 87.122 103.632 0)
+		(at 87.122 98.552 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8207,7 +8207,7 @@
 		)
 		(uuid "8cce52c5-e980-487f-99c5-8f210439da01")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.8805 103.632 0)
+			(at 96.8805 98.552 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8659,7 +8659,7 @@
 	)
 	(global_label "SDA_V5"
 		(shape output)
-		(at 87.122 111.252 0)
+		(at 87.122 96.012 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8669,7 +8669,7 @@
 		)
 		(uuid "b97dd89b-ea30-4a68-8b6e-2195536f7ea8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.941 111.252 0)
+			(at 96.941 96.012 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8967,7 +8967,7 @@
 	)
 	(global_label "SCL_V8"
 		(shape output)
-		(at 87.122 93.472 0)
+		(at 87.122 108.712 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8977,7 +8977,7 @@
 		)
 		(uuid "d264ad2d-ab5e-4ede-876d-8c39a3527ebc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.8805 93.472 0)
+			(at 96.8805 108.712 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9385,7 +9385,7 @@
 	)
 	(global_label "SDA_V8"
 		(shape output)
-		(at 87.122 96.012 0)
+		(at 87.122 111.252 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -9395,7 +9395,7 @@
 		)
 		(uuid "f41e68d0-c335-4d58-8afa-278a2eee2522")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.941 96.012 0)
+			(at 96.941 111.252 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10782,7 +10782,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 135.128 105.41 0)
+		(at 146.304 105.156 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10790,7 +10790,7 @@
 		(dnp no)
 		(uuid "29c9217f-72cc-465a-8dd3-2de10629feaf")
 		(property "Reference" "RN503"
-			(at 137.414 104.1399 0)
+			(at 144.018 106.4261 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10799,7 +10799,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 137.414 106.6799 0)
+			(at 144.018 103.8861 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10808,7 +10808,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 133.096 105.41 90)
+			(at 148.336 105.156 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10817,7 +10817,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 135.128 105.41 0)
+			(at 146.304 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10826,7 +10826,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 135.128 105.41 0)
+			(at 146.304 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11877,7 +11877,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 283.21 105.156 0)
+		(at 272.034 105.41 180)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11885,7 +11885,7 @@
 		(dnp no)
 		(uuid "3eeeedce-d3d1-49b2-8b78-b79654edc4e7")
 		(property "Reference" "RN504"
-			(at 285.75 103.8859 0)
+			(at 269.494 106.6801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11894,7 +11894,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 285.75 106.4259 0)
+			(at 269.494 104.1401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11903,7 +11903,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 281.178 105.156 90)
+			(at 274.066 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11912,7 +11912,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 283.21 105.156 0)
+			(at 272.034 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11921,7 +11921,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 283.21 105.156 0)
+			(at 272.034 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11964,7 +11964,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 215.9 99.568 0)
+		(at 216.662 99.568 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11973,7 +11973,7 @@
 		(fields_autoplaced yes)
 		(uuid "3f0ce753-2f30-4864-8217-0c9b76704aba")
 		(property "Reference" "#PWR0570"
-			(at 215.9 103.378 0)
+			(at 216.662 103.378 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11982,7 +11982,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 215.9 94.488 0)
+			(at 216.662 94.488 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11990,7 +11990,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 215.9 99.568 0)
+			(at 216.662 99.568 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11999,7 +11999,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.9 99.568 0)
+			(at 216.662 99.568 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12008,7 +12008,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 215.9 99.568 0)
+			(at 216.662 99.568 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14195,7 +14195,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 272.034 105.41 0)
+		(at 283.21 105.156 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14203,7 +14203,7 @@
 		(dnp no)
 		(uuid "797a3e13-634b-4f7c-ab03-77af1b74933d")
 		(property "Reference" "RN504"
-			(at 274.32 104.1399 0)
+			(at 280.924 106.4261 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14212,7 +14212,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 274.32 106.6799 0)
+			(at 280.924 103.8861 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14221,7 +14221,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 270.002 105.41 90)
+			(at 285.242 105.156 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14230,7 +14230,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 272.034 105.41 0)
+			(at 283.21 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14239,7 +14239,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 272.034 105.41 0)
+			(at 283.21 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15889,7 +15889,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 215.9 105.156 0)
+		(at 204.724 105.41 180)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15897,7 +15897,7 @@
 		(dnp no)
 		(uuid "97fa76d8-37f0-4866-b374-25faf3c59073")
 		(property "Reference" "RN503"
-			(at 218.44 103.8859 0)
+			(at 202.184 106.6801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15906,7 +15906,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 218.44 106.4259 0)
+			(at 202.184 104.1401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15915,7 +15915,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 213.868 105.156 90)
+			(at 206.756 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15924,7 +15924,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 215.9 105.156 0)
+			(at 204.724 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15933,7 +15933,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 215.9 105.156 0)
+			(at 204.724 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16106,7 +16106,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 146.304 105.156 0)
+		(at 135.128 105.41 180)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16114,7 +16114,7 @@
 		(dnp no)
 		(uuid "a71a73d2-7489-458d-935d-2baf539318fa")
 		(property "Reference" "RN503"
-			(at 148.844 103.8859 0)
+			(at 132.588 106.6801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16123,7 +16123,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 148.844 106.4259 0)
+			(at 132.588 104.1401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16132,7 +16132,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 144.272 105.156 90)
+			(at 137.16 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16141,7 +16141,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 146.304 105.156 0)
+			(at 135.128 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16150,7 +16150,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 146.304 105.156 0)
+			(at 135.128 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16750,7 +16750,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 351.536 105.156 0)
+		(at 340.36 105.41 180)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16758,7 +16758,7 @@
 		(dnp no)
 		(uuid "bed116ca-ab6e-45f9-83b8-78de6fdbf85c")
 		(property "Reference" "RN504"
-			(at 354.076 103.8859 0)
+			(at 337.82 106.6801 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16767,7 +16767,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 354.076 106.4259 0)
+			(at 337.82 104.1401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16776,7 +16776,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 349.504 105.156 90)
+			(at 342.392 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16785,7 +16785,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 351.536 105.156 0)
+			(at 340.36 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16794,7 +16794,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 351.536 105.156 0)
+			(at 340.36 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16904,7 +16904,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 204.724 105.41 0)
+		(at 216.662 105.156 180)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16912,7 +16912,7 @@
 		(dnp no)
 		(uuid "c13ce770-882b-424d-9772-0980ad68fa60")
 		(property "Reference" "RN503"
-			(at 207.01 104.1399 0)
+			(at 214.376 106.4261 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16921,7 +16921,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 207.01 106.6799 0)
+			(at 214.376 103.8861 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16930,7 +16930,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 202.692 105.41 90)
+			(at 218.694 105.156 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16939,7 +16939,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 204.724 105.41 0)
+			(at 216.662 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16948,7 +16948,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 204.724 105.41 0)
+			(at 216.662 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18819,7 +18819,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Pack04_Split")
-		(at 340.36 105.41 0)
+		(at 351.536 105.156 180)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18827,7 +18827,7 @@
 		(dnp no)
 		(uuid "fa807259-0b2e-4149-8570-2422cfbc04b9")
 		(property "Reference" "RN504"
-			(at 342.646 104.1399 0)
+			(at 349.25 106.4261 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18836,7 +18836,7 @@
 			)
 		)
 		(property "Value" "2k2"
-			(at 342.646 106.6799 0)
+			(at 349.25 103.8861 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18845,7 +18845,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Concave_4x0603"
-			(at 338.328 105.41 90)
+			(at 353.568 105.156 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18854,7 +18854,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 340.36 105.41 0)
+			(at 351.536 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18863,7 +18863,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 340.36 105.41 0)
+			(at 351.536 105.156 0)
 			(effects
 				(font
 					(size 1.27 1.27)
