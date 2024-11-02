@@ -59,6 +59,11 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
+extern void StatusLED_off(uint8_t led);
+extern void StatusLED_on(uint8_t led);
+extern void StatusLED_slowBlink(uint8_t led);
+extern void StatusLED_fastBlink(uint8_t led);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

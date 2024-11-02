@@ -8,8 +8,7 @@
 #ifndef INC_VOICECLOCK_H_
 #define INC_VOICECLOCK_H_
 #include "main.h"
-#include "stm32f4xx_hal.h"
-
+#include "StatusLED.h"
 #define NUM_OSCS NUM_VOICES * 2
 #define VOICE_CLOCK_BUF_SIZE 256
 
