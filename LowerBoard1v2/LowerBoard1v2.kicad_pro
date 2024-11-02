@@ -1086,6 +1086,18 @@
       {
         "netclass": "DPWR",
         "pattern": "+12VA"
+      },
+      {
+        "netclass": "DPWR",
+        "pattern": "/LowerBoard/MCU/V_SWD"
+      },
+      {
+        "netclass": "DPWR",
+        "pattern": "/LowerBoard/MCU/V_EURO"
+      },
+      {
+        "netclass": "DPWR",
+        "pattern": "VDD"
       }
     ]
   },
