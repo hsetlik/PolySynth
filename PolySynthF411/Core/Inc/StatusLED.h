@@ -1,7 +1,7 @@
 /*
  * StatusLED.h
  *
- *  Created on: Nov 2, 2024
+ *  Created on: Nov 5, 2024
  *      Author: hayden
  */
 
@@ -14,22 +14,13 @@ extern "C" {
 #endif
 
 #include "main.h"
+// proper declaration of this extern from main.c
+void StatusLED_setModes(uint8_t mode1, uint8_t mode2);
 
-
-
-typedef enum{
-	off,
-	solid,
-	slowBlink,
-	fastBlink
-}StatusLedMode;
-
-void StatusLED_off(uint8_t led);
-void StatusLED_on(uint8_t led);
-void StatusLED_slowBlink(uint8_t led);
-void StatusLED_fastBlink(uint8_t led);
-
+// call this in the main while loop
 void StatusLED_tick(tick_t now);
+
+
 
 #ifdef __cplusplus
 }
