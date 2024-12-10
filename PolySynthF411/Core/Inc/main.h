@@ -40,13 +40,6 @@ extern "C" {
 // this is used to access our display queue class
 typedef void* display_queue_t;
 
-// states for the LEDs
-typedef enum {
-	ledOff = 0,
-	ledOn,
-	slowBlink,
-	fastBlink
-} LED_Mode;
 
 /* USER CODE END ET */
 
@@ -67,7 +60,14 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
-extern void StatusLED_setModes(uint8_t mode1, uint8_t mode2);
+typedef enum {
+	ledOff,
+	ledOn,
+	ledSlow,
+	ledFast
+} led_mode_t;
+
+extern void StatusLED_setModes(uint8_t m1, uint8_t m2);
 
 
 /* USER CODE END EFP */
