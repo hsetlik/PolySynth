@@ -1,0 +1,84 @@
+* CD4520B dual 4-bit synchronous binary up-counter - behavioral ngspice model
+*
+* Unofficial mixed-signal (XSPICE) model for KiCad / ngspice.
+* Behavior, per section:
+*   - counts on CLOCK rising edge while ENABLE is high
+*   - also counts on ENABLE falling edge while CLOCK is low
+*     (internally: count on the rising edge of CLOCK OR NOT ENABLE)
+*   - RESET high asynchronously clears Q1..Q4 to 0
+*   - power-up state is 0000
+* Input thresholds track the supply: logic 1 above (VDD-VSS)*vth_hi,
+* logic 0 below (VDD-VSS)*vth_lo (default 45% / 55%, i.e. about half supply).
+* Outputs swing VSS..VDD through rout (default 400 ohm, roughly the
+* datasheet drive at 10-15 V) with trise/tfall edges.
+* Not modeled: propagation delay vs. supply, supply current, input
+* protection diodes, max clock frequency.
+*
+* Node order follows the package pin numbers 1..16:
+*   1=CLKA 2=ENA 3=Q1A 4=Q2A 5=Q3A 6=Q4A 7=RSTA 8=VSS
+*   9=CLKB 10=ENB 11=Q1B 12=Q2B 13=Q3B 14=Q4B 15=RSTB 16=VDD
+*
+* KiCad Sim.Pins field (map each symbol pin number to these names):
+*   1=CLKA 2=ENA 3=Q1A 4=Q2A 5=Q3A 6=Q4A 7=RSTA 8=VSS
+*   9=CLKB 10=ENB 11=Q1B 12=Q2B 13=Q3B 14=Q4B 15=RSTB 16=VDD
+
+.subckt CD4520B CLKA ENA Q1A Q2A Q3A Q4A RSTA VSS CLKB ENB Q1B Q2B Q3B Q4B RSTB VDD
++ params: rout=400 tdelay=100n trise=50n tfall=50n vth_lo=0.45 vth_hi=0.55
+
+X_A CLKA ENA RSTA Q1A Q2A Q3A Q4A VSS VDD CD4520B_HALF
++ rout={rout} tdelay={tdelay} trise={trise} tfall={tfall} vth_lo={vth_lo} vth_hi={vth_hi}
+X_B CLKB ENB RSTB Q1B Q2B Q3B Q4B VSS VDD CD4520B_HALF
++ rout={rout} tdelay={tdelay} trise={trise} tfall={tfall} vth_lo={vth_lo} vth_hi={vth_hi}
+
+.ends CD4520B
+
+
+* One counter section (internal helper)
+.subckt CD4520B_HALF CLK EN RST Q1 Q2 Q3 Q4 VSS VDD
++ params: rout=400 tdelay=100n trise=50n tfall=50n vth_lo=0.45 vth_hi=0.55
+
+* Keep unconnected inputs from floating (CMOS inputs are high-impedance)
+Rpc CLK VSS 1e12
+Rpe EN  VSS 1e12
+Rpr RST VSS 1e12
+
+* Normalize inputs to 0..1 of the supply span, then convert to digital
+Bnc nclk 0 V = V(CLK,VSS)/max(V(VDD,VSS),1m)
+Bne nen  0 V = V(EN,VSS) /max(V(VDD,VSS),1m)
+Bnr nrst 0 V = V(RST,VSS)/max(V(VDD,VSS),1m)
+Aadc [nclk nen nrst] [dclk den drst] adc4520
+.model adc4520 adc_bridge(in_low={vth_lo} in_high={vth_hi})
+
+* Count trigger = CLK OR NOT EN
+Ainv den den_n inv4520
+Aor  [dclk den_n] dtrig or4520
+.model inv4520 d_inverter(rise_delay=1n fall_delay=1n)
+.model or4520  d_or(rise_delay=1n fall_delay=1n)
+
+* Synchronous binary counter from toggle flip-flops
+Ahi  dhi pullup4520
+.model pullup4520 d_pullup
+Aa12 [dq1 dq2]     t3 and4520
+Aa13 [dq1 dq2 dq3] t4 and4520
+.model and4520 d_and(rise_delay=1n fall_delay=1n)
+Aff1 dhi dtrig NULL drst dq1 dq1n tff4520
+Aff2 dq1 dtrig NULL drst dq2 dq2n tff4520
+Aff3 t3  dtrig NULL drst dq3 dq3n tff4520
+Aff4 t4  dtrig NULL drst dq4 dq4n tff4520
+.model tff4520 d_tff(clk_delay={tdelay} reset_delay={tdelay} ic=0
++ rise_delay=1n fall_delay=1n)
+
+* Digital -> 0..1 V, then rail-tracking output stage with output resistance
+Adac [dq1 dq2 dq3 dq4] [o1 o2 o3 o4] dac4520
+.model dac4520 dac_bridge(out_low=0 out_high=1 out_undef=0.5
++ t_rise={trise} t_fall={tfall})
+Bo1 q1i 0 V = V(VSS) + V(o1)*V(VDD,VSS)
+Bo2 q2i 0 V = V(VSS) + V(o2)*V(VDD,VSS)
+Bo3 q3i 0 V = V(VSS) + V(o3)*V(VDD,VSS)
+Bo4 q4i 0 V = V(VSS) + V(o4)*V(VDD,VSS)
+Ro1 q1i Q1 {rout}
+Ro2 q2i Q2 {rout}
+Ro3 q3i Q3 {rout}
+Ro4 q4i Q4 {rout}
+
+.ends CD4520B_HALF

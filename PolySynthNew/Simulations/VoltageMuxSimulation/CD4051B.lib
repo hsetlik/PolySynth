@@ -1,0 +1,109 @@
+* CD4051B 8-channel analog multiplexer/demultiplexer - behavioral ngspice model
+*
+* Unofficial model for sample-and-hold / CV demux simulation in KiCad (ngspice).
+* It models what matters for S&H work:
+*   - address decode (A, B, C) and INH, thresholds at (VDD+VSS)/2
+*   - on-resistance (ron), off-resistance (roff)
+*   - off-channel leakage (ileak)
+*   - charge injection (qinj, total charge per edge at the given supply span)
+*   - channel and common capacitance (cx, ccom)
+* It does NOT model: Ron variation with signal level, switching delays,
+* supply current, ESD clamp diodes to VDD/VEE, or crosstalk.
+*
+* Datasheet Ron (typ/max, at 25 C): ~470/1050 ohm @5V, ~180/400 @10V,
+* ~125/240 @15V. The default ron=250 is a pessimistic value for a 12 V supply.
+* Charge injection is not specified in the CD4051B datasheet; qinj=5p is an
+* estimate, so check it on the bench if pitch accuracy depends on it.
+*
+* Node order follows the package pin numbers 1..16:
+*   1=X4 2=X6 3=X(common) 4=X7 5=X5 6=INH 7=VEE 8=VSS
+*   9=C 10=B 11=A 12=X3 13=X0 14=X1 15=X2 16=VDD
+*
+* KiCad Sim.Pins field:
+*   1=X4 2=X6 3=X 4=X7 5=X5 6=INH 7=VEE 8=VSS 9=C 10=B 11=A 12=X3 13=X0 14=X1 15=X2 16=VDD
+
+.subckt CD4051B X4 X6 X X7 X5 INH VEE VSS C B A X3 X0 X1 X2 VDD
++ params: ron=250 roff=1e10 ileak=10p qinj=5p cx=5p ccom=30p vspan=12
+
+* ---- Logic inputs: smooth thresholds at half supply (0..1 V logic nodes)
+Rpa A   VSS 1e12
+Rpb B   VSS 1e12
+Rpc C   VSS 1e12
+Rpi INH VSS 1e12
+Bla la 0 V = 0.5*(1 + tanh(20*(V(A,VSS)   - 0.5*V(VDD,VSS))))
+Blb lb 0 V = 0.5*(1 + tanh(20*(V(B,VSS)   - 0.5*V(VDD,VSS))))
+Blc lc 0 V = 0.5*(1 + tanh(20*(V(C,VSS)   - 0.5*V(VDD,VSS))))
+Bli li 0 V = 0.5*(1 + tanh(20*(V(INH,VSS) - 0.5*V(VDD,VSS))))
+
+* ---- Channel enables: en_k = (address == k) AND NOT INH, 0..1 V
+Be0 en0 0 V = (1-V(lc))*(1-V(lb))*(1-V(la))*(1-V(li))
+Be1 en1 0 V = (1-V(lc))*(1-V(lb))*(  V(la))*(1-V(li))
+Be2 en2 0 V = (1-V(lc))*(  V(lb))*(1-V(la))*(1-V(li))
+Be3 en3 0 V = (1-V(lc))*(  V(lb))*(  V(la))*(1-V(li))
+Be4 en4 0 V = (  V(lc))*(1-V(lb))*(1-V(la))*(1-V(li))
+Be5 en5 0 V = (  V(lc))*(1-V(lb))*(  V(la))*(1-V(li))
+Be6 en6 0 V = (  V(lc))*(  V(lb))*(1-V(la))*(1-V(li))
+Be7 en7 0 V = (  V(lc))*(  V(lb))*(  V(la))*(1-V(li))
+
+* ---- Internal gate drives swinging VEE..VDD, used for charge injection
+Bg0 g0 0 V = V(VEE) + V(en0)*V(VDD,VEE)
+Bg1 g1 0 V = V(VEE) + V(en1)*V(VDD,VEE)
+Bg2 g2 0 V = V(VEE) + V(en2)*V(VDD,VEE)
+Bg3 g3 0 V = V(VEE) + V(en3)*V(VDD,VEE)
+Bg4 g4 0 V = V(VEE) + V(en4)*V(VDD,VEE)
+Bg5 g5 0 V = V(VEE) + V(en5)*V(VDD,VEE)
+Bg6 g6 0 V = V(VEE) + V(en6)*V(VDD,VEE)
+Bg7 g7 0 V = V(VEE) + V(en7)*V(VDD,VEE)
+
+* ---- Switches
+S0 X X0 en0 0 swmod
+S1 X X1 en1 0 swmod
+S2 X X2 en2 0 swmod
+S3 X X3 en3 0 swmod
+S4 X X4 en4 0 swmod
+S5 X X5 en5 0 swmod
+S6 X X6 en6 0 swmod
+S7 X X7 en7 0 swmod
+.model swmod sw vt=0.5 vh=0.1 ron={ron} roff={roff}
+
+* ---- Charge injection: half of qinj into each side of the switch per edge.
+* Coupling cap = qinj / (2 * vspan). Set vspan to your VDD-VEE (default 12 V).
+.param cinj = {qinj/(2*vspan)}
+Ci0a g0 X0 {cinj}
+Ci1a g1 X1 {cinj}
+Ci2a g2 X2 {cinj}
+Ci3a g3 X3 {cinj}
+Ci4a g4 X4 {cinj}
+Ci5a g5 X5 {cinj}
+Ci6a g6 X6 {cinj}
+Ci7a g7 X7 {cinj}
+Ci0b g0 X {cinj}
+Ci1b g1 X {cinj}
+Ci2b g2 X {cinj}
+Ci3b g3 X {cinj}
+Ci4b g4 X {cinj}
+Ci5b g5 X {cinj}
+Ci6b g6 X {cinj}
+Ci7b g7 X {cinj}
+
+* ---- Leakage (toward VEE) and parasitic capacitance
+Il0 X0 VEE {ileak}
+Il1 X1 VEE {ileak}
+Il2 X2 VEE {ileak}
+Il3 X3 VEE {ileak}
+Il4 X4 VEE {ileak}
+Il5 X5 VEE {ileak}
+Il6 X6 VEE {ileak}
+Il7 X7 VEE {ileak}
+Cx0 X0 VSS {cx}
+Cx1 X1 VSS {cx}
+Cx2 X2 VSS {cx}
+Cx3 X3 VSS {cx}
+Cx4 X4 VSS {cx}
+Cx5 X5 VSS {cx}
+Cx6 X6 VSS {cx}
+Cx7 X7 VSS {cx}
+Ccom X VSS {ccom}
+
+.ends CD4051B
+
