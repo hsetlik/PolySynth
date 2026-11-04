@@ -17,4 +17,5 @@ Panel
 *.zip
 *-backups
 *.history
+*.lck
 

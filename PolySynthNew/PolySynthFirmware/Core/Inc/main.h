@@ -57,6 +57,16 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define DAC_CS_Pin GPIO_PIN_4
+#define DAC_CS_GPIO_Port GPIOA
+#define DAC_SCK_Pin GPIO_PIN_5
+#define DAC_SCK_GPIO_Port GPIOA
+#define DAC_MOSI_Pin GPIO_PIN_7
+#define DAC_MOSI_GPIO_Port GPIOA
+#define DAC_CLR_Pin GPIO_PIN_4
+#define DAC_CLR_GPIO_Port GPIOC
+#define COUNTER_RST_Pin GPIO_PIN_5
+#define COUNTER_RST_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
 
