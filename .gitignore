@@ -18,4 +18,7 @@ Panel
 *-backups
 *.history
 *.lck
+*check.log
+*.kicad_prl
+
 
