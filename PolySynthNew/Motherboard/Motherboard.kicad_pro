@@ -416,7 +416,7 @@
         "uuid": "b4391858-431b-4c52-814e-94e38b91ffd5"
       }
     ],
-    "used_designators": "U1-26,R1,C1-83,#PWR1-139",
+    "used_designators": "SW1,J1,C84-96,#PWR140-164,R2-3,R29,Y1,U27",
     "variants": []
   },
   "sheets": [
@@ -427,6 +427,10 @@
     [
       "558bbec4-8048-45c1-bf3b-3b71d78452c3",
       "CVGeneration"
+    ],
+    [
+      "e6978802-99f5-4fd5-b339-160e343f6f5f",
+      "MCU"
     ]
   ],
   "text_variables": {},
