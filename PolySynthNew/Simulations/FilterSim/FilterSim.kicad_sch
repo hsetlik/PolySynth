@@ -3162,7 +3162,7 @@
 	)
 	(text ".ic V(/LPin)=0"
 		(exclude_from_sim no)
-		(at 67.056 22.86 0)
+		(at -21.082 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3173,7 +3173,7 @@
 	)
 	(text ".param clockPeriod=3m"
 		(exclude_from_sim no)
-		(at 48.26 18.034 0)
+		(at -39.878 61.214 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3302,7 +3302,7 @@
 		(uuid "92f0055b-d4b3-461d-b425-f9731e481c87")
 	)
 	(junction
-		(at 29.21 73.66)
+		(at -90.932 107.188)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9f41a91d-4f30-4f2a-9653-2abcbb7d11a6")
@@ -3380,19 +3380,19 @@
 		(uuid "fb3ba882-d779-4d57-9fbe-5ae9fd138e13")
 	)
 	(no_connect
-		(at 33.02 256.54)
+		(at 228.6 171.45)
 		(uuid "4932df5f-1425-4bda-8cda-b621ccd441e9")
 	)
 	(no_connect
-		(at 27.94 246.38)
+		(at 223.52 161.29)
 		(uuid "64f4ec78-8f53-427e-9cb7-343dbd60eef2")
 	)
 	(no_connect
-		(at 43.18 259.08)
+		(at 238.76 173.99)
 		(uuid "7facd4b2-1523-4eb1-a6e9-2ab563070bd9")
 	)
 	(no_connect
-		(at 17.78 243.84)
+		(at 213.36 158.75)
 		(uuid "8cec987e-3331-47b8-bcc9-8f95c065b134")
 	)
 	(wire
@@ -3477,7 +3477,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 74.93) (xy 25.4 73.66)
+			(xy -94.742 108.458) (xy -94.742 107.188)
 		)
 		(stroke
 			(width 0)
@@ -3577,7 +3577,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 85.09) (xy 29.21 87.63)
+			(xy -90.932 118.618) (xy -90.932 121.158)
 		)
 		(stroke
 			(width 0)
@@ -3877,7 +3877,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 160.02) (xy 22.86 162.56)
+			(xy -97.282 193.548) (xy -97.282 196.088)
 		)
 		(stroke
 			(width 0)
@@ -4017,7 +4017,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 120.65) (xy 25.4 123.19)
+			(xy -94.742 154.178) (xy -94.742 156.718)
 		)
 		(stroke
 			(width 0)
@@ -4167,7 +4167,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 87.63) (xy 64.77 90.17)
+			(xy -43.942 149.098) (xy -43.942 151.638)
 		)
 		(stroke
 			(width 0)
@@ -4227,7 +4227,7 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 76.2) (xy 64.77 77.47)
+			(xy -43.942 137.668) (xy -43.942 138.938)
 		)
 		(stroke
 			(width 0)
@@ -4377,7 +4377,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 72.39) (xy 29.21 73.66)
+			(xy -90.932 105.918) (xy -90.932 107.188)
 		)
 		(stroke
 			(width 0)
@@ -4657,7 +4657,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 60.96) (xy 29.21 62.23)
+			(xy -90.932 94.488) (xy -90.932 95.758)
 		)
 		(stroke
 			(width 0)
@@ -4837,7 +4837,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 73.66) (xy 29.21 74.93)
+			(xy -90.932 107.188) (xy -90.932 108.458)
 		)
 		(stroke
 			(width 0)
@@ -4977,7 +4977,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 73.66) (xy 29.21 73.66)
+			(xy -94.742 107.188) (xy -90.932 107.188)
 		)
 		(stroke
 			(width 0)
@@ -5286,7 +5286,7 @@
 		(uuid "b11dbaa7-7c78-4110-a336-11414bf84b2d")
 	)
 	(label "Vsaw"
-		(at 64.77 76.2 0)
+		(at -43.942 137.668 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5316,7 +5316,7 @@
 		(uuid "c25cc99d-ddf1-412d-9f1a-b8d24c763a82")
 	)
 	(label "Vin"
-		(at 25.4 110.49 0)
+		(at -94.742 144.018 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5326,7 +5326,7 @@
 		(uuid "caef40dc-ff87-4d9d-8c9b-7842fe7e6f55")
 	)
 	(label "Vramp"
-		(at 22.86 149.86 0)
+		(at -97.282 183.388 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5447,7 +5447,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VDC")
-		(at 29.21 67.31 0)
+		(at -90.932 100.838 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5458,7 +5458,7 @@
 		(fields_autoplaced yes)
 		(uuid "03a0b937-58fe-4a19-80d9-ac8fd768e582")
 		(property "Reference" "V2"
-			(at 33.02 65.9101 0)
+			(at -87.122 99.4381 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5469,7 +5469,7 @@
 			)
 		)
 		(property "Value" "12"
-			(at 33.02 68.4501 0)
+			(at -87.122 101.9781 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5480,7 +5480,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 67.31 0)
+			(at -90.932 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5491,7 +5491,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 29.21 67.31 0)
+			(at -90.932 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5502,7 +5502,7 @@
 			)
 		)
 		(property "Description" "Voltage source, DC"
-			(at 29.21 67.31 0)
+			(at -90.932 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5513,7 +5513,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 29.21 67.31 0)
+			(at -90.932 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5524,7 +5524,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 29.21 67.31 0)
+			(at -90.932 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5535,7 +5535,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 29.21 67.31 0)
+			(at -90.932 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5797,7 +5797,7 @@
 	)
 	(symbol
 		(lib_id "power:-12V")
-		(at 29.21 87.63 180)
+		(at -90.932 121.158 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5808,7 +5808,7 @@
 		(fields_autoplaced yes)
 		(uuid "0b3fc034-d62a-4e96-baa6-39231b6fe7c5")
 		(property "Reference" "#PWR02"
-			(at 29.21 83.82 0)
+			(at -90.932 117.348 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5819,7 +5819,7 @@
 			)
 		)
 		(property "Value" "-12V"
-			(at 29.21 92.71 0)
+			(at -90.932 126.238 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5829,7 +5829,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 87.63 0)
+			(at -90.932 121.158 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5840,7 +5840,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 87.63 0)
+			(at -90.932 121.158 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5851,7 +5851,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"-12V\""
-			(at 29.21 87.63 0)
+			(at -90.932 121.158 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6256,7 +6256,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 64.77 90.17 0)
+		(at -43.942 151.638 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6267,7 +6267,7 @@
 		(fields_autoplaced yes)
 		(uuid "12fd2142-b0f2-4513-adf2-c178a79f69bb")
 		(property "Reference" "#PWR07"
-			(at 64.77 96.52 0)
+			(at -43.942 157.988 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6278,7 +6278,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 64.77 93.98 0)
+			(at -43.942 155.448 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6289,7 +6289,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 64.77 90.17 0)
+			(at -43.942 151.638 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6300,7 +6300,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 90.17 0)
+			(at -43.942 151.638 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6311,7 +6311,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 64.77 90.17 0)
+			(at -43.942 151.638 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6909,7 +6909,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VSIN")
-		(at 25.4 115.57 0)
+		(at -94.742 149.098 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6920,7 +6920,7 @@
 		(fields_autoplaced yes)
 		(uuid "216563b3-22cf-48ac-b933-1a2b86dd25b7")
 		(property "Reference" "V1"
-			(at 29.21 112.9001 0)
+			(at -90.932 146.4281 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6931,7 +6931,7 @@
 			)
 		)
 		(property "Value" "VSIN"
-			(at 29.21 115.4401 0)
+			(at -90.932 148.9681 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6942,7 +6942,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 115.57 0)
+			(at -94.742 149.098 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6953,7 +6953,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 25.4 115.57 0)
+			(at -94.742 149.098 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6964,7 +6964,7 @@
 			)
 		)
 		(property "Description" "Voltage source, sinusoidal"
-			(at 25.4 115.57 0)
+			(at -94.742 149.098 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6975,7 +6975,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 25.4 115.57 0)
+			(at -94.742 149.098 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6986,7 +6986,7 @@
 			)
 		)
 		(property "Sim.Params" "dc=1.65 ampl=1.65 f=330 td=0 theta=0 phase=0 ac=1"
-			(at 29.21 117.9801 0)
+			(at -90.932 151.5081 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6998,7 +6998,7 @@
 			)
 		)
 		(property "Sim.Type" "SIN"
-			(at 25.4 115.57 0)
+			(at -94.742 149.098 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7009,7 +7009,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 25.4 115.57 0)
+			(at -94.742 149.098 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7704,7 +7704,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VDC")
-		(at 29.21 80.01 0)
+		(at -90.932 113.538 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7715,7 +7715,7 @@
 		(fields_autoplaced yes)
 		(uuid "37c3aee6-a150-4b49-8e2d-7ca57b7fa710")
 		(property "Reference" "V3"
-			(at 33.02 78.6101 0)
+			(at -87.122 112.1381 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7726,7 +7726,7 @@
 			)
 		)
 		(property "Value" "12"
-			(at 33.02 81.1501 0)
+			(at -87.122 114.6781 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7737,7 +7737,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 80.01 0)
+			(at -90.932 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7748,7 +7748,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 29.21 80.01 0)
+			(at -90.932 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7759,7 +7759,7 @@
 			)
 		)
 		(property "Description" "Voltage source, DC"
-			(at 29.21 80.01 0)
+			(at -90.932 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7770,7 +7770,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 29.21 80.01 0)
+			(at -90.932 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7781,7 +7781,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 29.21 80.01 0)
+			(at -90.932 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7792,7 +7792,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 29.21 80.01 0)
+			(at -90.932 113.538 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8615,7 +8615,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VPULSE")
-		(at 64.77 82.55 0)
+		(at -43.942 144.018 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8626,7 +8626,7 @@
 		(fields_autoplaced yes)
 		(uuid "545c0b5b-7a94-46f4-82e1-f70fa58f0f5f")
 		(property "Reference" "V4"
-			(at 68.58 79.8801 0)
+			(at -40.132 141.3481 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8637,7 +8637,7 @@
 			)
 		)
 		(property "Value" "VPULSE"
-			(at 68.58 82.4201 0)
+			(at -40.132 143.8881 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8648,7 +8648,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 64.77 82.55 0)
+			(at -43.942 144.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8659,7 +8659,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 64.77 82.55 0)
+			(at -43.942 144.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8670,7 +8670,7 @@
 			)
 		)
 		(property "Description" "Voltage source, pulse"
-			(at 64.77 82.55 0)
+			(at -43.942 144.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8681,7 +8681,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 64.77 82.55 0)
+			(at -43.942 144.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8692,7 +8692,7 @@
 			)
 		)
 		(property "Sim.Type" "PULSE"
-			(at 64.77 82.55 0)
+			(at -43.942 144.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8703,7 +8703,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 64.77 82.55 0)
+			(at -43.942 144.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8715,7 +8715,7 @@
 			)
 		)
 		(property "Sim.Params" "y1=0 y2=3.3 td=2n tr={clockPeriod} tf=2n tw=2n per=\"{clockPeriod + 2n}\""
-			(at 68.58 84.9601 0)
+			(at -40.132 146.4281 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9372,7 +9372,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:LM13700")
-		(at 25.4 243.84 0)
+		(at 220.98 158.75 0)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9383,7 +9383,7 @@
 		(fields_autoplaced yes)
 		(uuid "638bd341-c84a-40eb-ad09-1080443a752b")
 		(property "Reference" "U2"
-			(at 22.86 233.68 0)
+			(at 218.44 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9393,7 +9393,7 @@
 			)
 		)
 		(property "Value" "LM13700"
-			(at 22.86 236.22 0)
+			(at 218.44 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9403,7 +9403,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 17.78 243.205 0)
+			(at 213.36 158.115 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9414,7 +9414,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm13700.pdf"
-			(at 17.78 243.205 0)
+			(at 213.36 158.115 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9425,7 +9425,7 @@
 			)
 		)
 		(property "Description" "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16"
-			(at 25.4 243.84 0)
+			(at 220.98 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9436,7 +9436,7 @@
 			)
 		)
 		(property "Sim.Library" "lm13700_dual.cir"
-			(at 25.4 243.84 0)
+			(at 220.98 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9447,7 +9447,7 @@
 			)
 		)
 		(property "Sim.Name" "LM13700_dual"
-			(at 25.4 243.84 0)
+			(at 220.98 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9458,7 +9458,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 25.4 243.84 0)
+			(at 220.98 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9469,7 +9469,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=1 2=2 3=3 4=4 5=5 6=6 7=7 8=8 9=9 10=10 11=11 12=12 13=13 14=14 15=15 16=16"
-			(at 25.4 243.84 0)
+			(at 220.98 158.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9858,7 +9858,7 @@
 	)
 	(symbol
 		(lib_id "Simulation_SPICE:VPULSE")
-		(at 22.86 154.94 0)
+		(at -97.282 188.468 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9869,7 +9869,7 @@
 		(fields_autoplaced yes)
 		(uuid "73089fa2-c4d3-4a8c-9e9b-9ed057afd6e3")
 		(property "Reference" "V5"
-			(at 26.67 152.2701 0)
+			(at -93.472 185.7981 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9880,7 +9880,7 @@
 			)
 		)
 		(property "Value" "VPULSE"
-			(at 26.67 154.8101 0)
+			(at -93.472 188.3381 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9891,7 +9891,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 154.94 0)
+			(at -97.282 188.468 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9902,7 +9902,7 @@
 			)
 		)
 		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
-			(at 22.86 154.94 0)
+			(at -97.282 188.468 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9913,7 +9913,7 @@
 			)
 		)
 		(property "Description" "Voltage source, pulse"
-			(at 22.86 154.94 0)
+			(at -97.282 188.468 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9924,7 +9924,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 22.86 154.94 0)
+			(at -97.282 188.468 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9935,7 +9935,7 @@
 			)
 		)
 		(property "Sim.Type" "PULSE"
-			(at 22.86 154.94 0)
+			(at -97.282 188.468 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9946,7 +9946,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 22.86 154.94 0)
+			(at -97.282 188.468 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9958,7 +9958,7 @@
 			)
 		)
 		(property "Sim.Params" "y1=0 y2=3.3 td=80m tr=60m tf=2n tw=20m per=80m np=1"
-			(at 26.67 157.3501 0)
+			(at -93.472 190.8781 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10093,7 +10093,7 @@
 			)
 		)
 		(pin "11"
-			(uuid "38533b75-4dcf-4e73-91fd-6347de926e61")
+			(uuid "38533b75-4dcf-4e73-91fd-6347de926e63")
 		)
 		(pin "12"
 			(uuid "599602bc-27b8-4a95-98a6-87ea563cf3c8")
@@ -10111,34 +10111,34 @@
 			(uuid "33364491-6102-4496-ab9d-7fd48d26fcd0")
 		)
 		(pin "9"
-			(uuid "231a5538-804b-41cd-8153-52783e37cd78")
+			(uuid "231a5538-804b-41cd-8153-52783e37cd7b")
 		)
 		(pin "10"
-			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3801")
+			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3804")
 		)
 		(pin "1"
-			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d2")
+			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d5")
 		)
 		(pin "2"
-			(uuid "3dac61b8-cd4d-4115-80a7-abaa9874403f")
+			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744042")
 		)
 		(pin "3"
-			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af55f")
+			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af562")
 		)
 		(pin "5"
-			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15eb")
+			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15ee")
 		)
 		(pin "4"
-			(uuid "1e32bd48-41f1-4723-9163-462540669efe")
+			(uuid "1e32bd48-41f1-4723-9163-462540669f01")
 		)
 		(pin "8"
-			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c75c")
+			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c75f")
 		)
 		(pin "7"
-			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef5")
+			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef8")
 		)
 		(pin "6"
-			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e2f")
+			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e31")
 		)
 		(instances
 			(project "FilterSim"
@@ -10501,22 +10501,22 @@
 			)
 		)
 		(pin "11"
-			(uuid "38533b75-4dcf-4e73-91fd-6347de926e62")
+			(uuid "38533b75-4dcf-4e73-91fd-6347de926e64")
 		)
 		(pin "12"
-			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990a")
+			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990c")
 		)
 		(pin "13"
-			(uuid "7a50d9e0-e2c8-46ee-b384-358392898577")
+			(uuid "7a50d9e0-e2c8-46ee-b384-358392898579")
 		)
 		(pin "14"
-			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e213")
+			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e215")
 		)
 		(pin "15"
-			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88f8")
+			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88fa")
 		)
 		(pin "16"
-			(uuid "50fb0c22-d05e-422c-850c-69d98763ce07")
+			(uuid "50fb0c22-d05e-422c-850c-69d98763ce09")
 		)
 		(pin "9"
 			(uuid "32e4cbe9-b8ad-4df8-893b-b4314132b622")
@@ -10525,28 +10525,28 @@
 			(uuid "6c54df0a-c891-4310-b049-e6e9d83713c2")
 		)
 		(pin "1"
-			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d3")
+			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d6")
 		)
 		(pin "2"
-			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744040")
+			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744043")
 		)
 		(pin "3"
-			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af560")
+			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af563")
 		)
 		(pin "5"
-			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15ec")
+			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15ef")
 		)
 		(pin "4"
-			(uuid "1e32bd48-41f1-4723-9163-462540669eff")
+			(uuid "1e32bd48-41f1-4723-9163-462540669f02")
 		)
 		(pin "8"
-			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c75d")
+			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c760")
 		)
 		(pin "7"
-			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef6")
+			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef9")
 		)
 		(pin "6"
-			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e30")
+			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e32")
 		)
 		(instances
 			(project "FilterSim"
@@ -11985,22 +11985,22 @@
 			)
 		)
 		(pin "7"
-			(uuid "315fadb0-91ca-4cc1-9741-4e61cba2b9cd")
+			(uuid "315fadb0-91ca-4cc1-9741-4e61cba2b9d2")
 		)
 		(pin "3"
-			(uuid "25553fd8-3292-4482-8987-d0c6d6f74d40")
+			(uuid "25553fd8-3292-4482-8987-d0c6d6f74d46")
 		)
 		(pin "5"
-			(uuid "8b8dcede-1629-4080-9882-ce94b3899601")
+			(uuid "8b8dcede-1629-4080-9882-ce94b3899606")
 		)
 		(pin "2"
-			(uuid "764e20f2-2535-4794-96a9-6576484019f4")
+			(uuid "764e20f2-2535-4794-96a9-6576484019fa")
 		)
 		(pin "6"
-			(uuid "b452e943-87a0-44ea-bea5-c7811ad0b9e4")
+			(uuid "b452e943-87a0-44ea-bea5-c7811ad0b9e9")
 		)
 		(pin "1"
-			(uuid "7a180b21-b674-434c-8e22-6e3f9ebf919e")
+			(uuid "7a180b21-b674-434c-8e22-6e3f9ebf91a4")
 		)
 		(pin "8"
 			(uuid "f08ca3e0-9f6f-4363-ab99-4eb8aefc652a")
@@ -12009,19 +12009,19 @@
 			(uuid "c70606bc-4ff5-4f53-b9e4-825ccda86057")
 		)
 		(pin "12"
-			(uuid "a2804b2c-2509-4840-8774-ec2992b18089")
+			(uuid "a2804b2c-2509-4840-8774-ec2992b1808f")
 		)
 		(pin "4"
-			(uuid "a01e1bb3-c302-4b7c-8096-b3a4b3b0722b")
+			(uuid "a01e1bb3-c302-4b7c-8096-b3a4b3b07231")
 		)
 		(pin "14"
-			(uuid "2f669630-2f40-4b3e-8dc6-af6406db5f65")
+			(uuid "2f669630-2f40-4b3e-8dc6-af6406db5f6b")
 		)
 		(pin "11"
-			(uuid "52112dc6-77ea-406f-b3cb-f996fbf78842")
+			(uuid "52112dc6-77ea-406f-b3cb-f996fbf78848")
 		)
 		(pin "13"
-			(uuid "1c068dd3-91c5-4c3b-afc4-4b477580eecb")
+			(uuid "1c068dd3-91c5-4c3b-afc4-4b477580eed1")
 		)
 		(pin "10"
 			(uuid "893d7cf4-3711-41c4-867f-5a9f22a8bd02")
@@ -12197,7 +12197,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 25.4 123.19 0)
+		(at -94.742 156.718 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12208,7 +12208,7 @@
 		(fields_autoplaced yes)
 		(uuid "a96f1f3d-e82c-48f3-b9ee-3ebf1f52170b")
 		(property "Reference" "#PWR012"
-			(at 25.4 129.54 0)
+			(at -94.742 163.068 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12219,7 +12219,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 25.4 127 0)
+			(at -94.742 160.528 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12230,7 +12230,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 123.19 0)
+			(at -94.742 156.718 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12241,7 +12241,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 123.19 0)
+			(at -94.742 156.718 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12252,7 +12252,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 25.4 123.19 0)
+			(at -94.742 156.718 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13068,52 +13068,52 @@
 			)
 		)
 		(pin "11"
-			(uuid "38533b75-4dcf-4e73-91fd-6347de926e63")
+			(uuid "38533b75-4dcf-4e73-91fd-6347de926e65")
 		)
 		(pin "12"
-			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990b")
+			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990d")
 		)
 		(pin "13"
-			(uuid "7a50d9e0-e2c8-46ee-b384-358392898578")
+			(uuid "7a50d9e0-e2c8-46ee-b384-35839289857a")
 		)
 		(pin "14"
-			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e214")
+			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e216")
 		)
 		(pin "15"
-			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88f9")
+			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88fb")
 		)
 		(pin "16"
-			(uuid "50fb0c22-d05e-422c-850c-69d98763ce08")
+			(uuid "50fb0c22-d05e-422c-850c-69d98763ce0a")
 		)
 		(pin "9"
-			(uuid "231a5538-804b-41cd-8153-52783e37cd7a")
+			(uuid "231a5538-804b-41cd-8153-52783e37cd7c")
 		)
 		(pin "10"
-			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3803")
+			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3805")
 		)
 		(pin "1"
-			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d4")
+			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d7")
 		)
 		(pin "2"
-			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744041")
+			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744044")
 		)
 		(pin "3"
-			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af561")
+			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af564")
 		)
 		(pin "5"
-			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15ed")
+			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15f0")
 		)
 		(pin "4"
-			(uuid "1e32bd48-41f1-4723-9163-462540669f00")
+			(uuid "1e32bd48-41f1-4723-9163-462540669f03")
 		)
 		(pin "8"
-			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c75e")
+			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c761")
 		)
 		(pin "7"
-			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef7")
+			(uuid "86fcf961-ab9d-45d8-ac29-e9792379befa")
 		)
 		(pin "6"
-			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e31")
+			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e33")
 		)
 		(instances
 			(project "FilterSim"
@@ -13126,7 +13126,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:LM13700")
-		(at 40.64 256.54 0)
+		(at 236.22 171.45 0)
 		(unit 4)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13137,7 +13137,7 @@
 		(fields_autoplaced yes)
 		(uuid "c2373687-9f8f-4747-8a8a-50430146084a")
 		(property "Reference" "U2"
-			(at 38.1 246.38 0)
+			(at 233.68 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13147,7 +13147,7 @@
 			)
 		)
 		(property "Value" "LM13700"
-			(at 38.1 248.92 0)
+			(at 233.68 163.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13157,7 +13157,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 33.02 255.905 0)
+			(at 228.6 170.815 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13168,7 +13168,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm13700.pdf"
-			(at 33.02 255.905 0)
+			(at 228.6 170.815 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13179,7 +13179,7 @@
 			)
 		)
 		(property "Description" "Dual Operational Transconductance Amplifiers with Linearizing Diodes and Buffers, DIP-16/SOIC-16"
-			(at 40.64 256.54 0)
+			(at 236.22 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13190,7 +13190,7 @@
 			)
 		)
 		(property "Sim.Library" "lm13700_dual.cir"
-			(at 40.64 256.54 0)
+			(at 236.22 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13201,7 +13201,7 @@
 			)
 		)
 		(property "Sim.Name" "LM13700_dual"
-			(at 40.64 256.54 0)
+			(at 236.22 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13212,7 +13212,7 @@
 			)
 		)
 		(property "Sim.Device" "SUBCKT"
-			(at 40.64 256.54 0)
+			(at 236.22 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13223,7 +13223,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=1 2=2 3=3 4=4 5=5 6=6 7=7 8=8 9=9 10=10 11=11 12=12 13=13 14=14 15=15 16=16"
-			(at 40.64 256.54 0)
+			(at 236.22 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13234,52 +13234,52 @@
 			)
 		)
 		(pin "11"
-			(uuid "38533b75-4dcf-4e73-91fd-6347de926e64")
+			(uuid "38533b75-4dcf-4e73-91fd-6347de926e66")
 		)
 		(pin "12"
-			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990c")
+			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990e")
 		)
 		(pin "13"
-			(uuid "7a50d9e0-e2c8-46ee-b384-358392898579")
+			(uuid "7a50d9e0-e2c8-46ee-b384-35839289857b")
 		)
 		(pin "14"
-			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e215")
+			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e217")
 		)
 		(pin "15"
-			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88fa")
+			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88fc")
 		)
 		(pin "16"
-			(uuid "50fb0c22-d05e-422c-850c-69d98763ce09")
+			(uuid "50fb0c22-d05e-422c-850c-69d98763ce0b")
 		)
 		(pin "9"
-			(uuid "231a5538-804b-41cd-8153-52783e37cd7b")
+			(uuid "231a5538-804b-41cd-8153-52783e37cd7d")
 		)
 		(pin "10"
-			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3804")
+			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3806")
 		)
 		(pin "1"
-			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d5")
+			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d8")
 		)
 		(pin "2"
-			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744042")
+			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744045")
 		)
 		(pin "3"
-			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af562")
+			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af565")
 		)
 		(pin "5"
-			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15ee")
+			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15f1")
 		)
 		(pin "4"
-			(uuid "1e32bd48-41f1-4723-9163-462540669f01")
+			(uuid "1e32bd48-41f1-4723-9163-462540669f04")
 		)
 		(pin "8"
-			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c75f")
+			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c762")
 		)
 		(pin "7"
-			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef8")
+			(uuid "86fcf961-ab9d-45d8-ac29-e9792379befb")
 		)
 		(pin "6"
-			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e32")
+			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e34")
 		)
 		(instances
 			(project "FilterSim"
@@ -13487,7 +13487,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 25.4 74.93 0)
+		(at -94.742 108.458 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13498,7 +13498,7 @@
 		(fields_autoplaced yes)
 		(uuid "c40d33b2-df34-42a7-9535-f7d1e94081a9")
 		(property "Reference" "#PWR03"
-			(at 25.4 81.28 0)
+			(at -94.742 114.808 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13509,7 +13509,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 25.4 78.74 0)
+			(at -94.742 112.268 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13520,7 +13520,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 25.4 74.93 0)
+			(at -94.742 108.458 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13531,7 +13531,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 25.4 74.93 0)
+			(at -94.742 108.458 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13542,7 +13542,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 25.4 74.93 0)
+			(at -94.742 108.458 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14137,7 +14137,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 29.21 60.96 0)
+		(at -90.932 94.488 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14148,7 +14148,7 @@
 		(fields_autoplaced yes)
 		(uuid "dccad291-5196-495a-90f0-53cae1055bde")
 		(property "Reference" "#PWR01"
-			(at 29.21 64.77 0)
+			(at -90.932 98.298 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14159,7 +14159,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 29.21 55.88 0)
+			(at -90.932 89.408 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14169,7 +14169,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 29.21 60.96 0)
+			(at -90.932 94.488 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14180,7 +14180,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 29.21 60.96 0)
+			(at -90.932 94.488 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14191,7 +14191,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 29.21 60.96 0)
+			(at -90.932 94.488 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14854,7 +14854,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 22.86 162.56 0)
+		(at -97.282 196.088 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14865,7 +14865,7 @@
 		(fields_autoplaced yes)
 		(uuid "ee7eed84-821f-41d6-9c06-2b10ff0414f1")
 		(property "Reference" "#PWR09"
-			(at 22.86 168.91 0)
+			(at -97.282 202.438 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14876,7 +14876,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 22.86 166.37 0)
+			(at -97.282 199.898 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14887,7 +14887,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 162.56 0)
+			(at -97.282 196.088 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14898,7 +14898,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 162.56 0)
+			(at -97.282 196.088 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14909,7 +14909,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 22.86 162.56 0)
+			(at -97.282 196.088 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15362,22 +15362,22 @@
 			)
 		)
 		(pin "7"
-			(uuid "315fadb0-91ca-4cc1-9741-4e61cba2b9d2")
+			(uuid "315fadb0-91ca-4cc1-9741-4e61cba2b9d3")
 		)
 		(pin "3"
-			(uuid "25553fd8-3292-4482-8987-d0c6d6f74d46")
+			(uuid "25553fd8-3292-4482-8987-d0c6d6f74d47")
 		)
 		(pin "5"
-			(uuid "8b8dcede-1629-4080-9882-ce94b3899606")
+			(uuid "8b8dcede-1629-4080-9882-ce94b3899607")
 		)
 		(pin "2"
-			(uuid "764e20f2-2535-4794-96a9-6576484019fa")
+			(uuid "764e20f2-2535-4794-96a9-6576484019fb")
 		)
 		(pin "6"
-			(uuid "b452e943-87a0-44ea-bea5-c7811ad0b9e9")
+			(uuid "b452e943-87a0-44ea-bea5-c7811ad0b9ea")
 		)
 		(pin "1"
-			(uuid "7a180b21-b674-434c-8e22-6e3f9ebf91a4")
+			(uuid "7a180b21-b674-434c-8e22-6e3f9ebf91a5")
 		)
 		(pin "8"
 			(uuid "706bb8d5-fa68-4054-af87-cc588fc57d00")
@@ -15386,19 +15386,19 @@
 			(uuid "a4daed1c-6e20-4210-b606-53117ff20352")
 		)
 		(pin "12"
-			(uuid "a2804b2c-2509-4840-8774-ec2992b1808f")
+			(uuid "a2804b2c-2509-4840-8774-ec2992b18090")
 		)
 		(pin "4"
 			(uuid "fc6a1f97-97e0-43bb-ba9e-23fa6e1f06a2")
 		)
 		(pin "14"
-			(uuid "2f669630-2f40-4b3e-8dc6-af6406db5f6b")
+			(uuid "2f669630-2f40-4b3e-8dc6-af6406db5f6c")
 		)
 		(pin "11"
 			(uuid "9be8839d-d3d9-45b7-9a32-89c5c16ead76")
 		)
 		(pin "13"
-			(uuid "1c068dd3-91c5-4c3b-afc4-4b477580eed1")
+			(uuid "1c068dd3-91c5-4c3b-afc4-4b477580eed2")
 		)
 		(pin "10"
 			(uuid "8a4f3f0f-4db8-4ed1-bc9a-7e2b8ac5773f")
@@ -15604,52 +15604,52 @@
 			)
 		)
 		(pin "11"
-			(uuid "38533b75-4dcf-4e73-91fd-6347de926e65")
+			(uuid "38533b75-4dcf-4e73-91fd-6347de926e67")
 		)
 		(pin "12"
-			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990d")
+			(uuid "cf15959c-2030-4fb3-b717-7bc0642d990f")
 		)
 		(pin "13"
-			(uuid "7a50d9e0-e2c8-46ee-b384-35839289857a")
+			(uuid "7a50d9e0-e2c8-46ee-b384-35839289857c")
 		)
 		(pin "14"
-			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e216")
+			(uuid "5b8b18f2-078b-454f-bc3c-c33b5155e218")
 		)
 		(pin "15"
-			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88fb")
+			(uuid "8a932c35-d4d4-44a0-ab9a-71bf467a88fd")
 		)
 		(pin "16"
-			(uuid "50fb0c22-d05e-422c-850c-69d98763ce0a")
+			(uuid "50fb0c22-d05e-422c-850c-69d98763ce0c")
 		)
 		(pin "9"
-			(uuid "231a5538-804b-41cd-8153-52783e37cd7c")
+			(uuid "231a5538-804b-41cd-8153-52783e37cd7e")
 		)
 		(pin "10"
-			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3805")
+			(uuid "f11b6178-7c18-4b48-9f99-0fd11fbd3807")
 		)
 		(pin "1"
-			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d6")
+			(uuid "6ab8cfff-bc21-42b8-be3d-7527165328d9")
 		)
 		(pin "2"
-			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744043")
+			(uuid "3dac61b8-cd4d-4115-80a7-abaa98744046")
 		)
 		(pin "3"
-			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af563")
+			(uuid "aa0e1eaf-d083-4bfa-9360-51a7d70af566")
 		)
 		(pin "5"
-			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15ef")
+			(uuid "ecd52ebc-198c-4315-8ec9-9a5b4f4c15f2")
 		)
 		(pin "4"
-			(uuid "1e32bd48-41f1-4723-9163-462540669f02")
+			(uuid "1e32bd48-41f1-4723-9163-462540669f05")
 		)
 		(pin "8"
-			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c760")
+			(uuid "534efe17-dcfa-4675-9e10-e8b229e9c763")
 		)
 		(pin "7"
-			(uuid "86fcf961-ab9d-45d8-ac29-e9792379bef9")
+			(uuid "86fcf961-ab9d-45d8-ac29-e9792379befc")
 		)
 		(pin "6"
-			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e33")
+			(uuid "4e5d4df4-6748-46ea-bff9-9613190c8e35")
 		)
 		(instances
 			(project "FilterSim"

@@ -416,7 +416,7 @@
         "uuid": "13e0b5b9-8087-44b1-9a4a-b13c05970192"
       }
     ],
-    "used_designators": "U5-7,#PWR10,#PWR17,#PWR23-50,C6-17,Q1-4,D1-4,R22-53",
+    "used_designators": "V6,U5-13,#PWR10,#PWR17,#PWR23-91,C6-31,Q1-12,D1-6,R22-86",
     "variants": []
   },
   "sheets": [
@@ -431,6 +431,10 @@
     [
       "58654464-71fb-4811-bac6-9c02cd569193",
       "DCOs"
+    ],
+    [
+      "548c013b-935b-4091-b7c0-a6eb640a913e",
+      "Filter"
     ]
   ],
   "text_variables": {},

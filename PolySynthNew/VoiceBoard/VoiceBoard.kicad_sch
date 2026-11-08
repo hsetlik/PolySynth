@@ -6,7 +6,53 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 15.748 15.24)
+		(at 69.85 18.288)
+		(size 57.404 42.418)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "548c013b-935b-4091-b7c0-a6eb640a913e")
+		(property "Sheetname" "Filter"
+			(at 69.85 17.5764 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Filter.kicad_sch"
+			(at 69.85 61.2906 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.494 18.542)
 		(size 42.672 36.068)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22,7 +68,7 @@
 		)
 		(uuid "58654464-71fb-4811-bac6-9c02cd569193")
 		(property "Sheetname" "DCOs"
-			(at 15.748 14.5284 0)
+			(at 15.494 17.8304 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33,7 +79,7 @@
 			)
 		)
 		(property "Sheetfile" "DCOs.kicad_sch"
-			(at 15.748 51.8926 0)
+			(at 15.494 55.1946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
