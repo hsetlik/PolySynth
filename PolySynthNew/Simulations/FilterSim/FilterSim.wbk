@@ -5,10 +5,9 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 10u 130m 80m 150u uic",
+        ".tran 50u 160m 80m 150u uic",
         ".kicad adjustpaths",
         ".save all",
-        ".probe alli",
         ".kicad esavenone"
       ],
       "dottedSecondary": true,
@@ -22,33 +21,18 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(166, 86, 40)",
-          "signal": "V(/CV)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(247, 129, 191)",
-          "signal": "V(/Iabc)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(255, 127, 0)",
-          "signal": "V(/Vfeedback)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(255, 255, 51)",
-          "signal": "V(/Vic)",
+          "color": "rgb(229, 196, 148)",
+          "signal": "V(/ResVCAIn)",
           "trace_type": 257
         },
         {
           "color": "rgb(77, 175, 74)",
-          "signal": "V(/Vout)",
+          "signal": "V(/VCA_out)",
           "trace_type": 257
         },
         {
-          "color": "rgb(141, 160, 203)",
-          "signal": "V(/Vsaw)",
+          "color": "rgb(228, 26, 28)",
+          "signal": "V(/Vout)",
           "trace_type": 257
         }
       ]
@@ -72,6 +56,16 @@
       "measurements": [],
       "showGrid": true,
       "traces": [
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "I(R21) (gain)",
+          "trace_type": 522
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "I(R21) (phase)",
+          "trace_type": 518
+        },
         {
           "color": "rgb(228, 26, 28)",
           "signal": "V(/Vout) (gain)",
