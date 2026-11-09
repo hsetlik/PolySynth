@@ -416,7 +416,7 @@
         "uuid": "b4391858-431b-4c52-814e-94e38b91ffd5"
       }
     ],
-    "used_designators": "SW1,J1,C84-96,#PWR140-164,R2-3,R29,Y1,U27",
+    "used_designators": "U1001-1003,U1005-1007,RN701-704,C1001-1003,C1005-1007,#PWR1001,#PWR1003-1014,#PWR1019-1023,#PWR1026-1031",
     "variants": []
   },
   "sheets": [
@@ -431,6 +431,10 @@
     [
       "e6978802-99f5-4fd5-b339-160e343f6f5f",
       "MCU"
+    ],
+    [
+      "7ab697d6-d397-4500-8bbf-4fd6e9e1e28e",
+      "ClockGeneration"
     ]
   ],
   "text_variables": {},

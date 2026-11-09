@@ -52,6 +52,52 @@
 		)
 	)
 	(sheet
+		(at 111.76 17.78)
+		(size 50.8 35.56)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7ab697d6-d397-4500-8bbf-4fd6e9e1e28e")
+		(property "Sheetname" "ClockGeneration"
+			(at 111.76 17.0684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ClockGeneration.kicad_sch"
+			(at 111.76 53.9246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 14.478 16.51)
 		(size 46.228 35.814)
 		(exclude_from_sim no)
