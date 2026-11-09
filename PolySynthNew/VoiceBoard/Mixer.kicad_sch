@@ -4320,7 +4320,7 @@
 			)
 		)
 	)
-	(global_label "DryMix"
+	(global_label "DRY_MIX"
 		(shape output)
 		(at 311.15 73.66 0)
 		(fields_autoplaced yes)
@@ -4333,7 +4333,7 @@
 		)
 		(uuid "b196a139-48e5-4034-8f44-575d1a124ddb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 320.2433 73.66 0)
+			(at 321.9971 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

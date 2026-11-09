@@ -5,278 +5,6 @@
 	(uuid "4c519259-6201-4178-96a5-32a748e3825a")
 	(paper "A3")
 	(lib_symbols
-		(symbol "Amplifier_Operational:TL082"
-			(pin_names
-				(offset 0.127)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "TL082"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "dual opamp"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* TO*99* OnSemi*Micro8* TSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm* MSOP*3x3mm*P0.65mm* SSOP*3.9x4.9mm*P0.635mm* LFCSP*2x2mm*P0.5mm* *SIP* SOIC*5.3x6.2mm*P1.27mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TL082_1_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "TL082_2_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "TL082_3_1"
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Amplifier_Operational:TL084"
 			(pin_names
 				(offset 0.127)
@@ -6953,106 +6681,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:TL082")
-		(at 321.056 100.076 0)
-		(unit 3)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5220a02f-949b-4cd3-9b7e-51b2979fd4f3")
-		(property "Reference" "U7"
-			(at 320.294 98.8059 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TL082"
-			(at 320.294 101.3459 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
-			(at 321.056 100.076 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 321.056 100.076 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-			(at 321.056 100.076 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "33c642c0-48a6-4969-81f0-f1de713f0265")
-		)
-		(pin "3"
-			(uuid "ebb20b41-8dc6-4671-b2bb-10f2d24e338c")
-		)
-		(pin "2"
-			(uuid "8d84e01d-349a-41b3-93cb-4c33b40291a3")
-		)
-		(pin "1"
-			(uuid "338d87c5-8b09-4efe-b085-e2049346e216")
-		)
-		(pin "8"
-			(uuid "66aa59ad-5cd1-41dc-b0f5-0c6b292c13b9")
-		)
-		(pin "7"
-			(uuid "b97e0b96-c2f3-4eae-a55c-06e091d16a28")
-		)
-		(pin "5"
-			(uuid "f9f9c195-2b41-4f50-b966-49bf8bdd246c")
-		)
-		(pin "6"
-			(uuid "21b0c095-4436-4108-b2b6-bbf51c1e9917")
-		)
-		(instances
-			(project "VoiceBoard"
-				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
-					(reference "U7")
-					(unit 3)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:TL084")
 		(at 196.85 99.568 0)
 		(mirror x)
@@ -7119,46 +6747,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "883adf04-dade-4788-b26d-739db0d89c9a")
+			(uuid "883adf04-dade-4788-b26d-739db0d89c9b")
 		)
 		(pin "2"
-			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc31")
+			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc32")
 		)
 		(pin "3"
-			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d2")
+			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d3")
 		)
 		(pin "5"
-			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031ce")
+			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031cf")
 		)
 		(pin "6"
-			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339a")
+			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339b")
 		)
 		(pin "7"
-			(uuid "7e8eb552-8f4f-458f-8467-2096a351c859")
+			(uuid "7e8eb552-8f4f-458f-8467-2096a351c85a")
 		)
 		(pin "8"
-			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328a")
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328b")
 		)
 		(pin "9"
-			(uuid "9eb8591b-fe0a-4958-9fea-def558310e51")
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e52")
 		)
 		(pin "10"
-			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b28")
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b29")
 		)
 		(pin "12"
-			(uuid "4065358b-2c00-4e25-a05e-299b4f288b16")
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b17")
 		)
 		(pin "14"
-			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e040")
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e041")
 		)
 		(pin "4"
-			(uuid "987a0e89-1509-4bb5-9935-75cdd8a3141f")
+			(uuid "987a0e89-1509-4bb5-9935-75cdd8a31420")
 		)
 		(pin "11"
-			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07904")
+			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07905")
 		)
 		(pin "13"
-			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fb")
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fc")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -7236,46 +6864,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "883adf04-dade-4788-b26d-739db0d89c9a")
+			(uuid "883adf04-dade-4788-b26d-739db0d89c9c")
 		)
 		(pin "2"
-			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc31")
+			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc33")
 		)
 		(pin "3"
-			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d2")
+			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d4")
 		)
 		(pin "5"
-			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031ce")
+			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031d0")
 		)
 		(pin "6"
-			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339a")
+			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339c")
 		)
 		(pin "7"
-			(uuid "7e8eb552-8f4f-458f-8467-2096a351c859")
+			(uuid "7e8eb552-8f4f-458f-8467-2096a351c85b")
 		)
 		(pin "8"
-			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328a")
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328c")
 		)
 		(pin "9"
-			(uuid "9eb8591b-fe0a-4958-9fea-def558310e51")
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e53")
 		)
 		(pin "10"
-			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b28")
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b2a")
 		)
 		(pin "12"
-			(uuid "4065358b-2c00-4e25-a05e-299b4f288b16")
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b18")
 		)
 		(pin "14"
-			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e040")
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e042")
 		)
 		(pin "4"
-			(uuid "987a0e89-1509-4bb5-9935-75cdd8a3141f")
+			(uuid "987a0e89-1509-4bb5-9935-75cdd8a31421")
 		)
 		(pin "11"
-			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07904")
+			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07906")
 		)
 		(pin "13"
-			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fb")
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fd")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -9042,46 +8670,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde808")
+			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde809")
 		)
 		(pin "2"
-			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981bc")
+			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981bd")
 		)
 		(pin "3"
-			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037b")
+			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037c")
 		)
 		(pin "5"
-			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3a7")
+			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3a8")
 		)
 		(pin "6"
-			(uuid "66deb937-a094-4d8a-81de-ad1b818e9504")
+			(uuid "66deb937-a094-4d8a-81de-ad1b818e9505")
 		)
 		(pin "7"
-			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f4d")
+			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f4e")
 		)
 		(pin "8"
-			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612033")
+			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612034")
 		)
 		(pin "9"
-			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f171")
+			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f172")
 		)
 		(pin "10"
-			(uuid "08a744e3-1ac5-4d1b-8303-da622b166123")
+			(uuid "08a744e3-1ac5-4d1b-8303-da622b166124")
 		)
 		(pin "12"
-			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7a")
+			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7b")
 		)
 		(pin "13"
-			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a4")
+			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a5")
 		)
 		(pin "14"
-			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b0")
+			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b1")
 		)
 		(pin "4"
-			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55d8")
+			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55d9")
 		)
 		(pin "11"
-			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc6")
+			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc7")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -9167,6 +8795,123 @@
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
 					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TL084")
+		(at 201.422 232.156 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d5ad8e9-b9ad-4c27-a796-bcbd3ee902d6")
+		(property "Reference" "U7"
+			(at 201.422 240.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TL084"
+			(at 201.422 242.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
+			(at 200.152 234.696 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
+			(at 202.692 237.236 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+			(at 201.422 232.156 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29f1a74a-8ed8-4535-bbdc-5104b88664d9")
+		)
+		(pin "2"
+			(uuid "1ae8e7c9-cb6b-4752-b34f-7102dc0e6f75")
+		)
+		(pin "3"
+			(uuid "638942e5-b4c5-4ca3-b4d3-0e096fe626ed")
+		)
+		(pin "5"
+			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031d1")
+		)
+		(pin "6"
+			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339d")
+		)
+		(pin "7"
+			(uuid "7e8eb552-8f4f-458f-8467-2096a351c85c")
+		)
+		(pin "8"
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328d")
+		)
+		(pin "9"
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e54")
+		)
+		(pin "10"
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b2b")
+		)
+		(pin "12"
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b19")
+		)
+		(pin "14"
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e043")
+		)
+		(pin "4"
+			(uuid "987a0e89-1509-4bb5-9935-75cdd8a31422")
+		)
+		(pin "11"
+			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07907")
+		)
+		(pin "13"
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fe")
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -9751,105 +9496,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:TL082")
-		(at 201.422 232.156 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d780a17-1f2a-4c31-b433-7239f43b02bb")
-		(property "Reference" "U7"
-			(at 201.422 221.996 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TL082"
-			(at 201.422 224.536 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
-			(at 201.422 232.156 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 201.422 232.156 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-			(at 201.422 232.156 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "33c642c0-48a6-4969-81f0-f1de713f0265")
-		)
-		(pin "3"
-			(uuid "ebb20b41-8dc6-4671-b2bb-10f2d24e338c")
-		)
-		(pin "2"
-			(uuid "8d84e01d-349a-41b3-93cb-4c33b40291a3")
-		)
-		(pin "1"
-			(uuid "338d87c5-8b09-4efe-b085-e2049346e216")
-		)
-		(pin "8"
-			(uuid "66aa59ad-5cd1-41dc-b0f5-0c6b292c13b9")
-		)
-		(pin "7"
-			(uuid "b97e0b96-c2f3-4eae-a55c-06e091d16a28")
-		)
-		(pin "5"
-			(uuid "f9f9c195-2b41-4f50-b966-49bf8bdd246c")
-		)
-		(pin "6"
-			(uuid "21b0c095-4436-4108-b2b6-bbf51c1e9917")
-		)
-		(instances
-			(project "VoiceBoard"
-				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:TL084")
 		(at 53.848 103.632 0)
 		(unit 1)
@@ -9915,46 +9561,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde808")
+			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde80a")
 		)
 		(pin "2"
-			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981bc")
+			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981be")
 		)
 		(pin "3"
-			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037b")
+			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037d")
 		)
 		(pin "5"
-			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3a7")
+			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3a9")
 		)
 		(pin "6"
-			(uuid "66deb937-a094-4d8a-81de-ad1b818e9504")
+			(uuid "66deb937-a094-4d8a-81de-ad1b818e9506")
 		)
 		(pin "7"
-			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f4d")
+			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f4f")
 		)
 		(pin "8"
-			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612033")
+			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612035")
 		)
 		(pin "9"
-			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f171")
+			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f173")
 		)
 		(pin "10"
-			(uuid "08a744e3-1ac5-4d1b-8303-da622b166123")
+			(uuid "08a744e3-1ac5-4d1b-8303-da622b166125")
 		)
 		(pin "12"
-			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7a")
+			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7c")
 		)
 		(pin "13"
-			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a4")
+			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a6")
 		)
 		(pin "14"
-			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b0")
+			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b2")
 		)
 		(pin "4"
-			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55d8")
+			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55da")
 		)
 		(pin "11"
-			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc6")
+			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc8")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -10300,46 +9946,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde808")
+			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde80b")
 		)
 		(pin "2"
-			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981bc")
+			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981bf")
 		)
 		(pin "3"
-			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037b")
+			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037e")
 		)
 		(pin "5"
-			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3a7")
+			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3aa")
 		)
 		(pin "6"
-			(uuid "66deb937-a094-4d8a-81de-ad1b818e9504")
+			(uuid "66deb937-a094-4d8a-81de-ad1b818e9507")
 		)
 		(pin "7"
-			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f4d")
+			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f50")
 		)
 		(pin "8"
-			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612033")
+			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612036")
 		)
 		(pin "9"
-			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f171")
+			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f174")
 		)
 		(pin "10"
-			(uuid "08a744e3-1ac5-4d1b-8303-da622b166123")
+			(uuid "08a744e3-1ac5-4d1b-8303-da622b166126")
 		)
 		(pin "12"
-			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7a")
+			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7d")
 		)
 		(pin "13"
-			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a4")
+			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a7")
 		)
 		(pin "14"
-			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b0")
+			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b3")
 		)
 		(pin "4"
-			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55d8")
+			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55db")
 		)
 		(pin "11"
-			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc6")
+			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc9")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -11976,104 +11622,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Operational:TL082")
-		(at 59.436 242.316 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dd643775-5947-4149-905a-a0f31030a379")
-		(property "Reference" "U7"
-			(at 59.436 231.648 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TL082"
-			(at 59.436 234.188 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:TSSOP-8_4.4x3mm_P0.65mm"
-			(at 59.436 242.316 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 59.436 242.316 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Dual JFET-Input Operational Amplifiers, DIP-8/SOIC-8/SSOP-8"
-			(at 59.436 242.316 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "4"
-			(uuid "33c642c0-48a6-4969-81f0-f1de713f0265")
-		)
-		(pin "3"
-			(uuid "ebb20b41-8dc6-4671-b2bb-10f2d24e338c")
-		)
-		(pin "2"
-			(uuid "8d84e01d-349a-41b3-93cb-4c33b40291a3")
-		)
-		(pin "1"
-			(uuid "338d87c5-8b09-4efe-b085-e2049346e216")
-		)
-		(pin "8"
-			(uuid "66aa59ad-5cd1-41dc-b0f5-0c6b292c13b9")
-		)
-		(pin "7"
-			(uuid "b97e0b96-c2f3-4eae-a55c-06e091d16a28")
-		)
-		(pin "5"
-			(uuid "f9f9c195-2b41-4f50-b966-49bf8bdd246c")
-		)
-		(pin "6"
-			(uuid "21b0c095-4436-4108-b2b6-bbf51c1e9917")
-		)
-		(instances
-			(project "VoiceBoard"
-				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
-					(reference "U7")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_US")
 		(at 128.27 55.118 90)
 		(unit 1)
@@ -12540,46 +12088,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "883adf04-dade-4788-b26d-739db0d89c9a")
+			(uuid "883adf04-dade-4788-b26d-739db0d89c9d")
 		)
 		(pin "2"
-			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc31")
+			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc34")
 		)
 		(pin "3"
-			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d2")
+			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d5")
 		)
 		(pin "5"
-			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031ce")
+			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031d2")
 		)
 		(pin "6"
-			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339a")
+			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339e")
 		)
 		(pin "7"
-			(uuid "7e8eb552-8f4f-458f-8467-2096a351c859")
+			(uuid "7e8eb552-8f4f-458f-8467-2096a351c85d")
 		)
 		(pin "8"
-			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328a")
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328e")
 		)
 		(pin "9"
-			(uuid "9eb8591b-fe0a-4958-9fea-def558310e51")
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e55")
 		)
 		(pin "10"
-			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b28")
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b2c")
 		)
 		(pin "12"
-			(uuid "4065358b-2c00-4e25-a05e-299b4f288b16")
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b1a")
 		)
 		(pin "14"
-			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e040")
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e044")
 		)
 		(pin "4"
-			(uuid "987a0e89-1509-4bb5-9935-75cdd8a3141f")
+			(uuid "987a0e89-1509-4bb5-9935-75cdd8a31423")
 		)
 		(pin "11"
-			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07904")
+			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07908")
 		)
 		(pin "13"
-			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fb")
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4ff")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -12668,6 +12216,242 @@
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
 					(reference "R48")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TL084")
+		(at 321.056 100.076 0)
+		(mirror x)
+		(unit 5)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eaeb773e-1886-481b-b822-dd3f6870f790")
+		(property "Reference" "U7"
+			(at 320.04 98.8059 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TL084"
+			(at 320.04 101.3459 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
+			(at 319.786 102.616 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
+			(at 322.326 105.156 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+			(at 321.056 100.076 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "883adf04-dade-4788-b26d-739db0d89c9e")
+		)
+		(pin "2"
+			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc35")
+		)
+		(pin "3"
+			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d6")
+		)
+		(pin "5"
+			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031d3")
+		)
+		(pin "6"
+			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339f")
+		)
+		(pin "7"
+			(uuid "7e8eb552-8f4f-458f-8467-2096a351c85e")
+		)
+		(pin "8"
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328f")
+		)
+		(pin "9"
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e56")
+		)
+		(pin "10"
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b2d")
+		)
+		(pin "12"
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b1b")
+		)
+		(pin "14"
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e045")
+		)
+		(pin "4"
+			(uuid "9daeb23e-4b8b-41b9-999c-5df125ef79d1")
+		)
+		(pin "11"
+			(uuid "f7fb6f52-d4f1-43b2-a693-d638248ec451")
+		)
+		(pin "13"
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad500")
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
+					(reference "U7")
+					(unit 5)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:TL084")
+		(at 59.436 242.316 0)
+		(mirror x)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb7d32ae-bf44-46ba-8e07-9271d9ef9335")
+		(property "Reference" "U7"
+			(at 59.436 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TL084"
+			(at 59.436 234.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
+			(at 58.166 244.856 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
+			(at 60.706 247.396 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
+			(at 59.436 242.316 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "883adf04-dade-4788-b26d-739db0d89c9f")
+		)
+		(pin "2"
+			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc36")
+		)
+		(pin "3"
+			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d7")
+		)
+		(pin "5"
+			(uuid "06c4a268-c7b2-4818-839c-b4c533620967")
+		)
+		(pin "6"
+			(uuid "a2d90c34-8573-4abd-b22c-71902f89058d")
+		)
+		(pin "7"
+			(uuid "36b93687-497c-48ea-bb76-772310f8964b")
+		)
+		(pin "8"
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab3290")
+		)
+		(pin "9"
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e57")
+		)
+		(pin "10"
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b2e")
+		)
+		(pin "12"
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b1c")
+		)
+		(pin "14"
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e046")
+		)
+		(pin "4"
+			(uuid "987a0e89-1509-4bb5-9935-75cdd8a31424")
+		)
+		(pin "11"
+			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07909")
+		)
+		(pin "13"
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad501")
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/58654464-71fb-4811-bac6-9c02cd569193"
+					(reference "U7")
+					(unit 2)
 				)
 			)
 		)
@@ -12899,46 +12683,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "883adf04-dade-4788-b26d-739db0d89c9a")
+			(uuid "883adf04-dade-4788-b26d-739db0d89ca0")
 		)
 		(pin "2"
-			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc31")
+			(uuid "7c00bb63-0aa0-4b30-9593-dca68de6bc37")
 		)
 		(pin "3"
-			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d2")
+			(uuid "e1b83871-baf3-4c69-b4fd-ff0bafd143d8")
 		)
 		(pin "5"
-			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031ce")
+			(uuid "2dad8d8e-c5ba-42ec-baf8-2b3e989031d4")
 		)
 		(pin "6"
-			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef339a")
+			(uuid "fff40ceb-dae0-447f-9cf3-15fc88ef33a0")
 		)
 		(pin "7"
-			(uuid "7e8eb552-8f4f-458f-8467-2096a351c859")
+			(uuid "7e8eb552-8f4f-458f-8467-2096a351c85f")
 		)
 		(pin "8"
-			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab328a")
+			(uuid "50b550fa-00b0-436b-ba97-3bdc3bab3291")
 		)
 		(pin "9"
-			(uuid "9eb8591b-fe0a-4958-9fea-def558310e51")
+			(uuid "9eb8591b-fe0a-4958-9fea-def558310e58")
 		)
 		(pin "10"
-			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b28")
+			(uuid "b51750b3-38d5-4ca7-963b-6d34b18d7b2f")
 		)
 		(pin "12"
-			(uuid "4065358b-2c00-4e25-a05e-299b4f288b16")
+			(uuid "4065358b-2c00-4e25-a05e-299b4f288b1d")
 		)
 		(pin "14"
-			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e040")
+			(uuid "3b7b5ba4-28c1-4199-b587-2b3eeb89e047")
 		)
 		(pin "4"
-			(uuid "987a0e89-1509-4bb5-9935-75cdd8a3141f")
+			(uuid "987a0e89-1509-4bb5-9935-75cdd8a31425")
 		)
 		(pin "11"
-			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb07904")
+			(uuid "fb07c136-2e8c-4d8f-8c94-96a2eeb0790a")
 		)
 		(pin "13"
-			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad4fb")
+			(uuid "40cbc864-db98-42e6-8c93-901a9d4ad502")
 		)
 		(instances
 			(project "VoiceBoard"
@@ -13176,46 +12960,46 @@
 			)
 		)
 		(pin "1"
-			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde808")
+			(uuid "abf16cd5-53cf-4e9d-a9db-7b48f0fde80c")
 		)
 		(pin "2"
-			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981bc")
+			(uuid "4742a9f1-598f-4ec4-8539-30bb4c9981c0")
 		)
 		(pin "3"
-			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037b")
+			(uuid "6ac4139c-3436-40dd-afc3-33bdfb41037f")
 		)
 		(pin "5"
-			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3a7")
+			(uuid "e7fe614e-6c6f-4c5a-a4ae-d9b4c2a0e3ab")
 		)
 		(pin "6"
-			(uuid "66deb937-a094-4d8a-81de-ad1b818e9504")
+			(uuid "66deb937-a094-4d8a-81de-ad1b818e9508")
 		)
 		(pin "7"
-			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f4d")
+			(uuid "188d1609-7573-4dd0-b2bd-3f6622023f51")
 		)
 		(pin "8"
-			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612033")
+			(uuid "ed7ccf8c-c712-47bb-8fba-50ea3e612037")
 		)
 		(pin "9"
-			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f171")
+			(uuid "3d0773d7-1ba5-4737-8e00-56b67d85f175")
 		)
 		(pin "10"
-			(uuid "08a744e3-1ac5-4d1b-8303-da622b166123")
+			(uuid "08a744e3-1ac5-4d1b-8303-da622b166127")
 		)
 		(pin "12"
-			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7a")
+			(uuid "380ad23b-2a68-4ed0-8b71-9f51b972ec7e")
 		)
 		(pin "13"
-			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a4")
+			(uuid "b6dd78e3-d8d8-438a-865e-398fd6c6f8a8")
 		)
 		(pin "14"
-			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b0")
+			(uuid "8560aa29-bcf8-4b0a-8c36-7dc97a12a7b4")
 		)
 		(pin "4"
-			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55d8")
+			(uuid "594637ad-7eb4-4b9f-a41e-4c2a2bfe55dc")
 		)
 		(pin "11"
-			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffc6")
+			(uuid "1048e647-1fe4-4f04-aff3-b1da1a59ffca")
 		)
 		(instances
 			(project "VoiceBoard"

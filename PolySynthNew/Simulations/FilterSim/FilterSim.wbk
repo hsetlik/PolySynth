@@ -21,18 +21,13 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(229, 196, 148)",
-          "signal": "V(/ResVCAIn)",
-          "trace_type": 257
-        },
-        {
-          "color": "rgb(255, 255, 51)",
-          "signal": "V(/VCAem)",
-          "trace_type": 257
-        },
-        {
           "color": "rgb(228, 26, 28)",
           "signal": "V(/Vout)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(/Vsaw)",
           "trace_type": 257
         },
         {
