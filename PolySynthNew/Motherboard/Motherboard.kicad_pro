@@ -416,7 +416,7 @@
         "uuid": "b4391858-431b-4c52-814e-94e38b91ffd5"
       }
     ],
-    "used_designators": "U1001-1003,U1005-1007,RN701-704,C1001-1003,C1005-1007,#PWR1001,#PWR1003-1014,#PWR1019-1023,#PWR1026-1031",
+    "used_designators": "#PWR186,U29",
     "variants": []
   },
   "sheets": [
@@ -435,6 +435,10 @@
     [
       "7ab697d6-d397-4500-8bbf-4fd6e9e1e28e",
       "ClockGeneration"
+    ],
+    [
+      "fbc5ccad-b69c-41ae-9171-117f004023e3",
+      "VoiceBoards"
     ]
   ],
   "text_variables": {},

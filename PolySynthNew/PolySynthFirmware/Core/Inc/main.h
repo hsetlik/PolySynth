@@ -67,6 +67,18 @@ void Error_Handler(void);
 #define DAC_CLR_GPIO_Port GPIOC
 #define COUNTER_RST_Pin GPIO_PIN_5
 #define COUNTER_RST_GPIO_Port GPIOC
+#define PITCH_RST_Pin GPIO_PIN_12
+#define PITCH_RST_GPIO_Port GPIOB
+#define PITCH_SCK_Pin GPIO_PIN_13
+#define PITCH_SCK_GPIO_Port GPIOB
+#define PITCH_MOSI_Pin GPIO_PIN_15
+#define PITCH_MOSI_GPIO_Port GPIOB
+#define POTS_RST_Pin GPIO_PIN_4
+#define POTS_RST_GPIO_Port GPIOB
+#define POTS_SCL_Pin GPIO_PIN_6
+#define POTS_SCL_GPIO_Port GPIOB
+#define POTS_SDA_Pin GPIO_PIN_7
+#define POTS_SDA_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

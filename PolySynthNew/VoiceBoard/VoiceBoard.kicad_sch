@@ -11,8 +11,8 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U103"
-				(at 9.906 55.626 0)
+			(property "Reference" "U1"
+				(at 39.116 16.5802 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -22,7 +22,7 @@
 				)
 			)
 			(property "Value" "VoiceBoardConn_20P_200P"
-				(at 9.906 53.086 0)
+				(at 39.116 14.0402 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
