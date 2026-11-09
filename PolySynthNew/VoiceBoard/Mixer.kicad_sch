@@ -2352,6 +2352,30 @@
 		(color 0 0 0 0)
 		(uuid "ff127941-6e16-47a1-b4f9-a020e4c79e07")
 	)
+	(no_connect
+		(at 233.426 33.274)
+		(uuid "0289d773-81e0-4c6e-89c7-bdfbadabe89e")
+	)
+	(no_connect
+		(at 233.426 45.212)
+		(uuid "5f5c1c80-3d27-44dd-80a5-57f36b815e15")
+	)
+	(no_connect
+		(at 233.426 42.672)
+		(uuid "7c733177-752c-47f4-8966-2d8a20594c0a")
+	)
+	(no_connect
+		(at 233.426 47.752)
+		(uuid "7ebcb0f8-c3d0-4b1e-a467-9d5cc8f50b8e")
+	)
+	(no_connect
+		(at 233.426 35.814)
+		(uuid "9682c205-6a6e-4a33-8959-fe66b212816d")
+	)
+	(no_connect
+		(at 233.426 30.734)
+		(uuid "b7eccf49-8c83-4652-9607-935d41a95f19")
+	)
 	(wire
 		(pts
 			(xy 189.23 175.26) (xy 201.93 175.26)
@@ -4597,7 +4621,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "08c5b18d-aa3c-495e-816b-6ab0d74466b5")
-		(property "Reference" "R9"
+		(property "Reference" "R5"
 			(at 119.38 220.98 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4659,7 +4683,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R9")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -4677,7 +4701,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15af3b96-d1cb-472c-9ef5-c45777bd2f6f")
-		(property "Reference" "R7"
+		(property "Reference" "R3"
 			(at 119.38 166.37 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4739,7 +4763,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R7")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -4757,7 +4781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1dcf6f23-7cd3-488d-9efc-72f22b98002c")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR07"
 			(at 26.67 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -4817,7 +4841,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR011")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -4835,7 +4859,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20b7ef2a-7c85-4840-a87a-0b83893c0e6c")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR016"
 			(at 49.53 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -4895,7 +4919,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR05")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -4913,7 +4937,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "211350cc-d5a2-41b0-a4a7-94d1848e03f0")
-		(property "Reference" "R11"
+		(property "Reference" "R15"
 			(at 218.44 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4977,7 +5001,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R11")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -4995,7 +5019,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2291f2ae-28b2-41b8-bdf0-06539b25578f")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR014"
 			(at 45.72 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -5055,7 +5079,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR012")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -5073,7 +5097,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "25c035df-c63b-49c6-9707-7e3df314383f")
-		(property "Reference" "R1"
+		(property "Reference" "R2"
 			(at 33.02 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5137,7 +5161,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R1")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -5155,7 +5179,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "277ac6be-ed83-464b-82ab-8e796933ffc5")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR022"
 			(at 234.95 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5215,7 +5239,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR020")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -5233,7 +5257,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2956084e-4ab7-4c36-ab97-6aa703e2869b")
-		(property "Reference" "U1"
+		(property "Reference" "U4"
 			(at 60.96 50.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5351,7 +5375,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U1")
+					(reference "U4")
 					(unit 5)
 				)
 			)
@@ -5369,7 +5393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c8eee0b-7454-4185-b12b-bbecd8e1d545")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR020"
 			(at 215.9 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -5429,7 +5453,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR018")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -5565,7 +5589,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38f69bc1-2c40-46cc-bfb7-9cbfa0af856f")
-		(property "Reference" "R4"
+		(property "Reference" "R8"
 			(at 123.19 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5627,7 +5651,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R4")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -5781,7 +5805,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "41379284-0255-4121-ab07-dc2191327854")
-		(property "Reference" "R13"
+		(property "Reference" "R12"
 			(at 205.74 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5843,7 +5867,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R13")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -5861,7 +5885,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46d1ac75-57b7-4c14-85e6-deb475d952cf")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR023"
 			(at 234.95 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -5922,7 +5946,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR021")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -6022,7 +6046,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c8bdc52-4e15-4412-8e77-64432783307f")
-		(property "Reference" "R19"
+		(property "Reference" "R18"
 			(at 276.86 96.52 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6084,7 +6108,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R19")
+					(reference "R18")
 					(unit 1)
 				)
 			)
@@ -6102,7 +6126,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "51b42184-aa01-4443-a24b-9b6951605bc3")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR018"
 			(at 50.8 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -6163,7 +6187,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR014")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -6181,7 +6205,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "51bde4e2-607d-4653-b232-16bf14d12d76")
-		(property "Reference" "C3"
+		(property "Reference" "C4"
 			(at 58.42 33.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6245,7 +6269,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "C3")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -6263,7 +6287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "589ec60e-55a3-4003-9b69-a1ffd9675889")
-		(property "Reference" "R2"
+		(property "Reference" "R6"
 			(at 123.19 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6325,7 +6349,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R2")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -6344,7 +6368,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d7de633-5c7f-4d00-9cf0-3d67c2cf931f")
-		(property "Reference" "U4"
+		(property "Reference" "U5"
 			(at 220.98 81.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6462,7 +6486,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U4")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -6617,7 +6641,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64718efe-9333-41b5-8a3a-7ca0aff2ab28")
-		(property "Reference" "R12"
+		(property "Reference" "R11"
 			(at 204.47 66.04 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6679,7 +6703,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R12")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -6813,7 +6837,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68fe9c82-5e0c-4203-969d-55b094aaa782")
-		(property "Reference" "R18"
+		(property "Reference" "R20"
 			(at 297.18 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6875,7 +6899,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R18")
+					(reference "R20")
 					(unit 1)
 				)
 			)
@@ -7030,7 +7054,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6e47be85-8cb5-4998-b796-016d7879ed6a")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR05"
 			(at 20.32 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -7090,7 +7114,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR016")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -7108,7 +7132,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "735d8c9c-96ec-412c-95c1-9ebc83941a4f")
-		(property "Reference" "R20"
+		(property "Reference" "R19"
 			(at 276.86 109.22 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7170,7 +7194,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R20")
+					(reference "R19")
 					(unit 1)
 				)
 			)
@@ -7188,7 +7212,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "761f58d3-0522-4639-ba3d-a2d58b23d79a")
-		(property "Reference" "R5"
+		(property "Reference" "R10"
 			(at 152.4 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7250,7 +7274,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R5")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -7268,7 +7292,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7db27aa5-1d41-425f-b673-ce463f147f11")
-		(property "Reference" "R16"
+		(property "Reference" "R17"
 			(at 276.86 64.77 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7330,7 +7354,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R16")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -7430,7 +7454,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "81126f33-0588-4bc8-8e96-a63d230185f9")
-		(property "Reference" "R6"
+		(property "Reference" "R1"
 			(at 29.21 196.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7494,8 +7518,144 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R6")
+					(reference "R1")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Potentiometer_Digital:MCP4451-xxxx-ST")
+		(at 225.806 33.274 0)
+		(mirror y)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "81278d7e-26c5-4cc7-9dd8-986ae818fc54")
+		(property "Reference" "U5"
+			(at 219.456 32.0039 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP4451-104E"
+			(at 219.456 34.5439 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
+			(at 222.3262 38.2016 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/22267A_MCP4431.pdf"
+			(at 222.3262 40.7416 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad 8 Bit Digital Potentiometer, I²C, Volatile Memory, TSSOP-20"
+			(at 225.806 33.274 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "14"
+			(uuid "7c8955bc-192c-4f96-9804-1b0d499b287b")
+		)
+		(pin "7"
+			(uuid "d519edf8-343a-4ef1-b0c5-1f1cb66ab66e")
+		)
+		(pin "16"
+			(uuid "c284d00c-6909-4a23-9cf3-533a01710cd8")
+		)
+		(pin "15"
+			(uuid "7657f630-911c-4825-ab33-1151b3728909")
+		)
+		(pin "17"
+			(uuid "e9646d49-0175-4e57-a2e0-c2bcf5fdb58b")
+		)
+		(pin "19"
+			(uuid "8fcf1c0d-7dad-482e-a003-2c083bce85e6")
+		)
+		(pin "20"
+			(uuid "1d3a4538-ed83-43ed-a73a-68bcc128948d")
+		)
+		(pin "5"
+			(uuid "2f5f8328-679a-409a-b018-39c751fb2a33")
+		)
+		(pin "6"
+			(uuid "13d11772-8c4f-45b0-8b5a-9768d2d4a604")
+		)
+		(pin "8"
+			(uuid "5230ac06-e4e0-4a0a-8203-ce7d57eece35")
+		)
+		(pin "1"
+			(uuid "c64190b0-86e6-4614-8c1b-ec9449c7a648")
+		)
+		(pin "9"
+			(uuid "19552d0d-ca77-447a-be72-4e7421b89a18")
+		)
+		(pin "12"
+			(uuid "bdac6b01-e38c-45e3-a440-64dfe991bba7")
+		)
+		(pin "2"
+			(uuid "2044e109-a24b-4b10-a404-e65f3985da78")
+		)
+		(pin "18"
+			(uuid "87c98304-8f61-41af-b7da-ddd83aa658a6")
+		)
+		(pin "3"
+			(uuid "6f6d1e01-36b3-4450-b67b-e4e9c5dfe892")
+		)
+		(pin "10"
+			(uuid "c70ac4b2-a26d-4969-a4df-5ad7ad03b907")
+		)
+		(pin "13"
+			(uuid "40b5e990-84b1-4871-a33e-071e41b558bd")
+		)
+		(pin "11"
+			(uuid "39d5dce4-7d96-43d5-91e2-6cf096748db0")
+		)
+		(pin "4"
+			(uuid "dab4b2db-c7a7-40b4-ba2b-febbcfedb91b")
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
+					(reference "U5")
+					(unit 3)
 				)
 			)
 		)
@@ -7512,7 +7672,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "81d7bcdf-e82e-4a2e-9be6-0343dfd51c98")
-		(property "Reference" "U4"
+		(property "Reference" "U5"
 			(at 246.38 133.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7630,7 +7790,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U4")
+					(reference "U5")
 					(unit 5)
 				)
 			)
@@ -7648,7 +7808,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "827eadf7-3c7d-46ac-ade6-c90ed956c0b0")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR024"
 			(at 240.03 127 0)
 			(hide yes)
 			(show_name no)
@@ -7709,7 +7869,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR022")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -7727,7 +7887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b10b6b7-c6ff-4c4a-8622-0ea80f8996e3")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR06"
 			(at 24.13 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -7787,7 +7947,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR08")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -7806,7 +7966,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bcc090f-e910-4712-8bdd-5832955c75e8")
-		(property "Reference" "U1"
+		(property "Reference" "U4"
 			(at 91.44 41.9099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7924,7 +8084,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U1")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -7943,7 +8103,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9157c3ad-84a1-4878-8cd6-354dbbc5fecc")
-		(property "Reference" "U4"
+		(property "Reference" "U5"
 			(at 222.25 184.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8061,7 +8221,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U4")
+					(reference "U5")
 					(unit 2)
 				)
 			)
@@ -8079,7 +8239,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "97556d92-c8f6-4b32-867a-32ba88f27573")
-		(property "Reference" "R14"
+		(property "Reference" "R13"
 			(at 205.74 168.91 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8141,7 +8301,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R14")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -8159,7 +8319,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9a0b627f-33d6-491c-b93c-8cd3f6648f26")
-		(property "Reference" "R17"
+		(property "Reference" "R16"
 			(at 276.86 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8221,7 +8381,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R17")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -8355,7 +8515,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a2500f53-46a0-4f96-b162-b97908a35096")
-		(property "Reference" "R8"
+		(property "Reference" "R4"
 			(at 119.38 196.85 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8417,7 +8577,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R8")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -8572,7 +8732,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab6ea1a9-7397-43ff-8037-12b0da121c7e")
-		(property "Reference" "R3"
+		(property "Reference" "R7"
 			(at 123.19 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8634,7 +8794,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R3")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -8653,7 +8813,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b398e8fa-47dc-4966-b459-bd0100d5d033")
-		(property "Reference" "U1"
+		(property "Reference" "U4"
 			(at 90.17 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8771,7 +8931,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U1")
+					(reference "U4")
 					(unit 2)
 				)
 			)
@@ -8905,7 +9065,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b5062234-c650-48ac-83ee-4ba779158c03")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR013"
 			(at 41.91 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -8965,7 +9125,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR02")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -8983,7 +9143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "baca5cbd-ee26-4f28-ad45-e841f50be78b")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR019"
 			(at 54.61 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -9044,7 +9204,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR06")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -9062,7 +9222,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb4eec96-88cd-43b8-8faa-8af25fc180e4")
-		(property "Reference" "R10"
+		(property "Reference" "R9"
 			(at 148.59 166.37 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9124,7 +9284,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R10")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -9142,7 +9302,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c091ff89-92e2-4651-afcb-8115fc45cf17")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR011"
 			(at 33.02 229.87 0)
 			(hide yes)
 			(show_name no)
@@ -9203,7 +9363,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR015")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -9417,7 +9577,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c87bf44a-6cd3-41a8-861b-f89594d20a23")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR09"
 			(at 29.21 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9478,7 +9638,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR04")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -9496,7 +9656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca4b4d2d-e598-4b68-bc5f-57cbd14376c8")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR08"
 			(at 29.21 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9557,7 +9717,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR03")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -9575,7 +9735,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ca508516-4a61-4ddf-9d6e-109626cf6fc0")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR010"
 			(at 30.48 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -9635,7 +9795,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR07")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -9653,7 +9813,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb6d1181-364f-44ac-b1bd-07179aafebe0")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR017"
 			(at 49.53 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -9714,7 +9874,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR09")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -9814,7 +9974,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d038e0f8-ff38-4a83-8fac-2e46d2db49d7")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR021"
 			(at 222.25 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -9875,7 +10035,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR019")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -9894,7 +10054,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d29eebe5-bcd6-40e4-b5c3-0086abad7360")
-		(property "Reference" "U1"
+		(property "Reference" "U4"
 			(at 90.17 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10012,7 +10172,144 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U1")
+					(reference "U4")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Potentiometer_Digital:MCP4451-xxxx-ST")
+		(at 225.806 45.212 0)
+		(mirror y)
+		(unit 4)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da6e5011-8839-4a9f-8439-79479efe69ba")
+		(property "Reference" "U5"
+			(at 219.456 43.9419 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MCP4451-104E"
+			(at 219.456 46.4819 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
+			(at 222.3262 50.1396 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://ww1.microchip.com/downloads/en/DeviceDoc/22267A_MCP4431.pdf"
+			(at 222.3262 52.6796 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Quad 8 Bit Digital Potentiometer, I²C, Volatile Memory, TSSOP-20"
+			(at 225.806 45.212 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "14"
+			(uuid "7c8955bc-192c-4f96-9804-1b0d499b287a")
+		)
+		(pin "7"
+			(uuid "d519edf8-343a-4ef1-b0c5-1f1cb66ab66d")
+		)
+		(pin "16"
+			(uuid "c284d00c-6909-4a23-9cf3-533a01710cd7")
+		)
+		(pin "15"
+			(uuid "7657f630-911c-4825-ab33-1151b3728908")
+		)
+		(pin "17"
+			(uuid "e9646d49-0175-4e57-a2e0-c2bcf5fdb58a")
+		)
+		(pin "19"
+			(uuid "22abef29-8b27-45e0-b12c-bfb570526840")
+		)
+		(pin "20"
+			(uuid "68c96d15-d4a2-44c0-aedf-9838779af7d9")
+		)
+		(pin "5"
+			(uuid "2f5f8328-679a-409a-b018-39c751fb2a32")
+		)
+		(pin "6"
+			(uuid "13d11772-8c4f-45b0-8b5a-9768d2d4a603")
+		)
+		(pin "8"
+			(uuid "5230ac06-e4e0-4a0a-8203-ce7d57eece34")
+		)
+		(pin "1"
+			(uuid "c3adf18d-7fdd-4507-962b-00456458f111")
+		)
+		(pin "9"
+			(uuid "19552d0d-ca77-447a-be72-4e7421b89a17")
+		)
+		(pin "12"
+			(uuid "bdac6b01-e38c-45e3-a440-64dfe991bba6")
+		)
+		(pin "2"
+			(uuid "0f8faa48-d043-4426-8582-b5de078873a7")
+		)
+		(pin "18"
+			(uuid "a9412cd6-2b1f-4a19-8dbf-ae711cf5332b")
+		)
+		(pin "3"
+			(uuid "749ce078-25b6-4d92-9449-35fb0646f2e8")
+		)
+		(pin "10"
+			(uuid "c70ac4b2-a26d-4969-a4df-5ad7ad03b906")
+		)
+		(pin "13"
+			(uuid "40b5e990-84b1-4871-a33e-071e41b558bc")
+		)
+		(pin "11"
+			(uuid "39d5dce4-7d96-43d5-91e2-6cf096748daf")
+		)
+		(pin "4"
+			(uuid "dab4b2db-c7a7-40b4-ba2b-febbcfedb91a")
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
+					(reference "U5")
 					(unit 4)
 				)
 			)
@@ -10030,7 +10327,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd3323ec-bb3b-4d25-b0de-0867fa28aa90")
-		(property "Reference" "C4"
+		(property "Reference" "C3"
 			(at 54.61 194.3099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10094,7 +10391,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "C4")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -10112,7 +10409,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e3600d78-ac89-4802-888e-4180d74703df")
-		(property "Reference" "R15"
+		(property "Reference" "R14"
 			(at 207.01 194.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10174,7 +10471,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "R15")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -10192,7 +10489,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f28fafe2-8e85-4325-9c78-57d6af8a39c0")
-		(property "Reference" "U1"
+		(property "Reference" "U4"
 			(at 149.86 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10310,7 +10607,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "U1")
+					(reference "U4")
 					(unit 3)
 				)
 			)
@@ -10464,7 +10761,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f9936414-8650-4fda-9f09-9abe3efaeee9")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR012"
 			(at 41.91 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -10524,7 +10821,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR01")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -10542,7 +10839,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff10cd3b-72d6-4a68-9bdb-c3663e741f10")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR015"
 			(at 45.72 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -10603,7 +10900,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/bffc2b70-2585-4978-8de5-1915ad383b59"
-					(reference "#PWR013")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)

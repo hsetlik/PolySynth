@@ -6428,7 +6428,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02f676ec-dbc1-4398-bda3-783ba7584893")
-		(property "Reference" "#PWR082"
+		(property "Reference" "#PWR061"
 			(at 48.006 152.146 0)
 			(hide yes)
 			(show_name no)
@@ -6489,7 +6489,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR082")
+					(reference "#PWR061")
 					(unit 1)
 				)
 			)
@@ -6508,7 +6508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "04bd4328-4b9e-4e03-88c0-19a05b838151")
-		(property "Reference" "R83"
+		(property "Reference" "R100"
 			(at 366.522 38.862 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6570,7 +6570,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R83")
+					(reference "R100")
 					(unit 1)
 				)
 			)
@@ -6588,7 +6588,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "04f0fad8-2673-4f43-828f-c2248f0c8cf2")
-		(property "Reference" "C18"
+		(property "Reference" "C20"
 			(at 39.624 63.246 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6650,7 +6650,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C18")
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -6668,7 +6668,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "05f34a1a-3dab-45ac-b4d0-a4fe4363b6f2")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR067"
 			(at 77.216 150.622 0)
 			(hide yes)
 			(show_name no)
@@ -6729,7 +6729,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR052")
+					(reference "#PWR067")
 					(unit 1)
 				)
 			)
@@ -6747,7 +6747,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0652bad5-390f-4875-b28b-c1da689f3e1c")
-		(property "Reference" "#PWR055"
+		(property "Reference" "#PWR070"
 			(at 84.328 133.096 0)
 			(hide yes)
 			(show_name no)
@@ -6807,7 +6807,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR055")
+					(reference "#PWR070")
 					(unit 1)
 				)
 			)
@@ -6825,7 +6825,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06f75eec-89f0-403e-95c3-dbed0d969f94")
-		(property "Reference" "#PWR059"
+		(property "Reference" "#PWR076"
 			(at 113.538 119.126 0)
 			(hide yes)
 			(show_name no)
@@ -6885,7 +6885,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR059")
+					(reference "#PWR076")
 					(unit 1)
 				)
 			)
@@ -6903,7 +6903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07267fcc-4b44-4f9d-954c-d92aa56d965e")
-		(property "Reference" "#PWR083"
+		(property "Reference" "#PWR062"
 			(at 48.26 135.382 0)
 			(hide yes)
 			(show_name no)
@@ -6964,7 +6964,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR083")
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -6982,7 +6982,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "09a3ca59-e5b7-40f2-9c26-7a0da8d854fe")
-		(property "Reference" "R102"
+		(property "Reference" "R84"
 			(at 218.186 260.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7046,7 +7046,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R102")
+					(reference "R84")
 					(unit 1)
 				)
 			)
@@ -7159,7 +7159,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ae6e5c1-7097-4552-ae05-6ff7260984a1")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR0101"
 			(at 291.338 94.742 0)
 			(hide yes)
 			(show_name no)
@@ -7219,7 +7219,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR078")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -7237,7 +7237,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0eadeafd-32ac-4c8e-8bc3-4409b174c0d1")
-		(property "Reference" "#PWR072"
+		(property "Reference" "#PWR095"
 			(at 237.998 139.446 0)
 			(hide yes)
 			(show_name no)
@@ -7298,7 +7298,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR072")
+					(reference "#PWR095")
 					(unit 1)
 				)
 			)
@@ -7316,7 +7316,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "10e50a71-3ba5-454e-8471-74a10ece2265")
-		(property "Reference" "C23"
+		(property "Reference" "C33"
 			(at 300.228 57.912 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7378,7 +7378,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C23")
+					(reference "C33")
 					(unit 1)
 				)
 			)
@@ -7396,7 +7396,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1337c81c-1652-466c-a2ed-763a41660f52")
-		(property "Reference" "R54"
+		(property "Reference" "R53"
 			(at 48.514 75.9459 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7460,7 +7460,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R54")
+					(reference "R53")
 					(unit 1)
 				)
 			)
@@ -7478,7 +7478,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1357f3d8-45d1-4257-8827-011fccbdfea8")
-		(property "Reference" "U9"
+		(property "Reference" "U11"
 			(at 85.598 125.4759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7628,7 +7628,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U9")
+					(reference "U11")
 					(unit 5)
 				)
 			)
@@ -7646,7 +7646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "13ddfa80-bb47-47c3-bea8-d2c19cfe27a1")
-		(property "Reference" "U9"
+		(property "Reference" "U11"
 			(at 127.508 65.786 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7794,7 +7794,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U9")
+					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -7812,7 +7812,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18dc6c2c-cd26-4a5b-af38-f3a5fe3eede7")
-		(property "Reference" "R74"
+		(property "Reference" "R89"
 			(at 258.572 107.6959 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7876,7 +7876,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R74")
+					(reference "R89")
 					(unit 1)
 				)
 			)
@@ -7894,7 +7894,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20187529-95ff-4659-a40b-cdc872e01e1c")
-		(property "Reference" "R85"
+		(property "Reference" "R55"
 			(at 72.136 264.6679 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7958,7 +7958,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R85")
+					(reference "R55")
 					(unit 1)
 				)
 			)
@@ -7976,7 +7976,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22f57d65-aaa5-4c39-b5ec-ae79de25600d")
-		(property "Reference" "R88"
+		(property "Reference" "R52"
 			(at 33.528 153.924 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7996,7 +7996,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 33.274 160.274 90)
 			(hide yes)
 			(show_name no)
@@ -8038,7 +8038,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R88")
+					(reference "R52")
 					(unit 1)
 				)
 			)
@@ -8056,7 +8056,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "279a3ba6-9f8c-4645-81d3-b5103f1e08f8")
-		(property "Reference" "U13"
+		(property "Reference" "U9"
 			(at 301.498 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8154,7 +8154,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U13")
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -8172,7 +8172,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27c5f573-b56d-4620-aaf3-64d430727e57")
-		(property "Reference" "C33"
+		(property "Reference" "C31"
 			(at 212.344 244.856 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8234,7 +8234,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C33")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -8252,7 +8252,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "29496c7a-eaac-482e-8b0c-cf3e36e8ad02")
-		(property "Reference" "R69"
+		(property "Reference" "R82"
 			(at 212.598 87.3759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8316,7 +8316,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R69")
+					(reference "R82")
 					(unit 1)
 				)
 			)
@@ -8334,7 +8334,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2cd3ccf2-53b2-4865-95fb-c4760eb60971")
-		(property "Reference" "#PWR0102"
+		(property "Reference" "#PWR083"
 			(at 175.006 272.034 0)
 			(hide yes)
 			(show_name no)
@@ -8395,7 +8395,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR0102")
+					(reference "#PWR083")
 					(unit 1)
 				)
 			)
@@ -8413,7 +8413,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2eed3df2-6434-49ff-b384-7157d0e5cbbd")
-		(property "Reference" "#PWR094"
+		(property "Reference" "#PWR059"
 			(at 44.958 176.784 0)
 			(hide yes)
 			(show_name no)
@@ -8474,7 +8474,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR094")
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -8492,7 +8492,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "307a6840-9a15-44c5-878b-5dfd12d4db90")
-		(property "Reference" "#PWR074"
+		(property "Reference" "#PWR098"
 			(at 256.032 139.446 0)
 			(hide yes)
 			(show_name no)
@@ -8553,7 +8553,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR074")
+					(reference "#PWR098")
 					(unit 1)
 				)
 			)
@@ -8571,7 +8571,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33f7a633-a247-4498-8d44-2730ad1a0f92")
-		(property "Reference" "R60"
+		(property "Reference" "R65"
 			(at 137.668 88.6459 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8635,7 +8635,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R60")
+					(reference "R65")
 					(unit 1)
 				)
 			)
@@ -8652,7 +8652,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3719df48-3be4-4ab8-82ac-8969b3ba55ce")
-		(property "Reference" "Q10"
+		(property "Reference" "Q6"
 			(at 66.294 232.9179 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8728,7 +8728,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "Q10")
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -8746,7 +8746,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3807585f-2ecd-457a-9b8e-ce495e59e6aa")
-		(property "Reference" "R100"
+		(property "Reference" "R70"
 			(at 177.546 258.8259 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8810,7 +8810,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R100")
+					(reference "R70")
 					(unit 1)
 				)
 			)
@@ -8828,7 +8828,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39973cd0-dd17-4d5b-befa-fbee395f8e4e")
-		(property "Reference" "R73"
+		(property "Reference" "R87"
 			(at 241.808 107.6959 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8892,7 +8892,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R73")
+					(reference "R87")
 					(unit 1)
 				)
 			)
@@ -8910,7 +8910,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b10e527-b1c2-4adc-b94c-f603efabc839")
-		(property "Reference" "#PWR095"
+		(property "Reference" "#PWR097"
 			(at 245.872 139.446 0)
 			(hide yes)
 			(show_name no)
@@ -8971,7 +8971,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR095")
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -8988,7 +8988,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3c6d6fa6-a224-482e-88fe-fa3a91edbf36")
-		(property "Reference" "U11"
+		(property "Reference" "U12"
 			(at 229.108 129.286 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9136,7 +9136,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U11")
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -9154,7 +9154,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3cb74d28-f3aa-4c8a-b863-3c4285ec9e5c")
-		(property "Reference" "R90"
+		(property "Reference" "R68"
 			(at 154.686 235.9659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9218,7 +9218,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R90")
+					(reference "R68")
 					(unit 1)
 				)
 			)
@@ -9237,7 +9237,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d97f203-016d-4b60-adee-6ca23057ffba")
-		(property "Reference" "U13"
+		(property "Reference" "U9"
 			(at 31.75 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9337,7 +9337,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U13")
+					(reference "U9")
 					(unit 5)
 				)
 			)
@@ -9355,7 +9355,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3dac8f98-77a4-4251-b8e2-2d9d7c424a0e")
-		(property "Reference" "R97"
+		(property "Reference" "R63"
 			(at 130.81 241.046 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9417,7 +9417,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R97")
+					(reference "R63")
 					(unit 1)
 				)
 			)
@@ -9435,7 +9435,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e333412-ac95-42f1-b5b3-a810b9728534")
-		(property "Reference" "R68"
+		(property "Reference" "R80"
 			(at 206.248 129.2859 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9499,7 +9499,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R68")
+					(reference "R80")
 					(unit 1)
 				)
 			)
@@ -9517,7 +9517,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40112dd6-ab31-4720-9c11-c76ecf36f672")
-		(property "Reference" "R67"
+		(property "Reference" "R78"
 			(at 197.358 88.6459 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9581,7 +9581,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R67")
+					(reference "R78")
 					(unit 1)
 				)
 			)
@@ -9681,7 +9681,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "407f19f9-045c-41ff-a754-e8472c7bcb1f")
-		(property "Reference" "R57"
+		(property "Reference" "R61"
 			(at 118.618 61.9759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9745,7 +9745,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R57")
+					(reference "R61")
 					(unit 1)
 				)
 			)
@@ -9763,7 +9763,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "415a3acd-cd49-4f2f-a7a7-b2e872484c07")
-		(property "Reference" "R71"
+		(property "Reference" "R85"
 			(at 218.948 129.2859 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9827,7 +9827,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R71")
+					(reference "R85")
 					(unit 1)
 				)
 			)
@@ -9845,7 +9845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4208fd61-3e3b-41fe-82b5-e10f42f50d44")
-		(property "Reference" "#PWR070"
+		(property "Reference" "#PWR093"
 			(at 216.408 143.256 0)
 			(hide yes)
 			(show_name no)
@@ -9906,7 +9906,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR070")
+					(reference "#PWR093")
 					(unit 1)
 				)
 			)
@@ -9924,7 +9924,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43c78a33-3704-4c1d-b715-7ad4a7af6873")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR073"
 			(at 107.95 150.622 0)
 			(hide yes)
 			(show_name no)
@@ -9985,7 +9985,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR056")
+					(reference "#PWR073")
 					(unit 1)
 				)
 			)
@@ -10003,7 +10003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47cedf7d-2411-4820-958b-9d2d9c66cb91")
-		(property "Reference" "U9"
+		(property "Reference" "U11"
 			(at 202.438 70.866 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10151,7 +10151,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U9")
+					(reference "U11")
 					(unit 3)
 				)
 			)
@@ -10380,7 +10380,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4bb6718b-925a-4788-9d26-17506660850f")
-		(property "Reference" "#PWR054"
+		(property "Reference" "#PWR069"
 			(at 84.328 120.396 0)
 			(hide yes)
 			(show_name no)
@@ -10440,7 +10440,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR054")
+					(reference "#PWR069")
 					(unit 1)
 				)
 			)
@@ -10458,7 +10458,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4e4be207-ee77-4054-b11e-6309b1c53dd6")
-		(property "Reference" "#PWR065"
+		(property "Reference" "#PWR086"
 			(at 187.198 141.986 0)
 			(hide yes)
 			(show_name no)
@@ -10519,7 +10519,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR065")
+					(reference "#PWR086")
 					(unit 1)
 				)
 			)
@@ -10537,7 +10537,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f0af52b-8e1c-44c1-82e1-ffc4deafa016")
-		(property "Reference" "#PWR079"
+		(property "Reference" "#PWR0102"
 			(at 293.878 88.392 0)
 			(hide yes)
 			(show_name no)
@@ -10598,7 +10598,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR079")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -10616,7 +10616,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4fc165bd-9e47-4b5f-a7f1-d1d6155e374f")
-		(property "Reference" "#PWR073"
+		(property "Reference" "#PWR078"
 			(at 116.078 61.976 0)
 			(hide yes)
 			(show_name no)
@@ -10676,7 +10676,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR073")
+					(reference "#PWR078")
 					(unit 1)
 				)
 			)
@@ -10694,7 +10694,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "515bc65f-0983-4b79-8332-ded04e454989")
-		(property "Reference" "#PWR091"
+		(property "Reference" "#PWR066"
 			(at 69.596 278.638 0)
 			(hide yes)
 			(show_name no)
@@ -10755,7 +10755,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR091")
+					(reference "#PWR066")
 					(unit 1)
 				)
 			)
@@ -10763,7 +10763,7 @@
 	)
 	(symbol
 		(lib_id "Transistor_BJT:BC857BDW1")
-		(at 96.266 234.188 0)
+		(at 355.092 135.636 0)
 		(mirror x)
 		(unit 2)
 		(body_style 1)
@@ -10774,7 +10774,7 @@
 		(dnp no)
 		(uuid "51f632c9-f1d1-486c-b15c-548808113c02")
 		(property "Reference" "Q9"
-			(at 102.108 232.9179 0)
+			(at 360.934 134.3659 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10785,7 +10785,7 @@
 			)
 		)
 		(property "Value" "BC857BDW1"
-			(at 102.108 235.4579 0)
+			(at 360.934 136.9059 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10796,7 +10796,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 101.346 236.728 0)
+			(at 360.172 138.176 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10807,7 +10807,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC856BDW1T1-D.PDF"
-			(at 96.266 234.188 0)
+			(at 355.092 135.636 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10818,7 +10818,7 @@
 			)
 		)
 		(property "Description" "100mA IC, 45V Vce, Dual PNP/PNP Transistors, SOT-363"
-			(at 96.266 234.188 0)
+			(at 355.092 135.636 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10984,7 +10984,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a8eddac-fc54-41f5-9cf4-f249fa049e74")
-		(property "Reference" "C22"
+		(property "Reference" "C28"
 			(at 120.396 239.776 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11046,7 +11046,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C22")
+					(reference "C28")
 					(unit 1)
 				)
 			)
@@ -11064,7 +11064,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5bf38578-8e1c-4907-86bb-3ec1e4a8a4aa")
-		(property "Reference" "C28"
+		(property "Reference" "C22"
 			(at 44.45 140.2079 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11128,7 +11128,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C28")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -11146,7 +11146,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5cdc946a-ffbf-4d25-a2ae-14a11574c87e")
-		(property "Reference" "R101"
+		(property "Reference" "R79"
 			(at 205.232 260.3499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11210,7 +11210,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R101")
+					(reference "R79")
 					(unit 1)
 				)
 			)
@@ -11310,7 +11310,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f4e8061-ed73-43d5-80f4-173df578497f")
-		(property "Reference" "U12"
+		(property "Reference" "U10"
 			(at 163.068 68.326 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11408,7 +11408,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U12")
+					(reference "U10")
 					(unit 2)
 				)
 			)
@@ -11528,7 +11528,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6109abf4-3d68-4f5a-b1fb-087c472fbf03")
-		(property "Reference" "Q6"
+		(property "Reference" "Q5"
 			(at 72.898 250.6979 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11620,7 +11620,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "Q6")
+					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -11638,7 +11638,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "62759fb8-d50d-4f87-b63b-3ced584e8c47")
-		(property "Reference" "R70"
+		(property "Reference" "R83"
 			(at 215.138 44.196 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11700,7 +11700,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R70")
+					(reference "R83")
 					(unit 1)
 				)
 			)
@@ -11718,7 +11718,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6461091a-3146-47f4-ab5d-c1ec392fc3d2")
-		(property "Reference" "#PWR085"
+		(property "Reference" "#PWR064"
 			(at 55.118 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -11778,7 +11778,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR085")
+					(reference "#PWR064")
 					(unit 1)
 				)
 			)
@@ -11796,7 +11796,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64a3d450-0007-440e-92cb-02b21ebb3888")
-		(property "Reference" "#PWR062"
+		(property "Reference" "#PWR079"
 			(at 119.888 96.266 0)
 			(hide yes)
 			(show_name no)
@@ -11857,7 +11857,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR062")
+					(reference "#PWR079")
 					(unit 1)
 				)
 			)
@@ -11875,7 +11875,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "659893fc-9586-4347-9e7a-2e8e6b32b266")
-		(property "Reference" "U12"
+		(property "Reference" "U10"
 			(at 237.998 73.914 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11973,7 +11973,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U12")
+					(reference "U10")
 					(unit 3)
 				)
 			)
@@ -11991,7 +11991,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67bee34b-48f0-4df2-8b64-aaaa50c51cdc")
-		(property "Reference" "#PWR096"
+		(property "Reference" "#PWR082"
 			(at 152.146 235.966 0)
 			(hide yes)
 			(show_name no)
@@ -12051,7 +12051,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR096")
+					(reference "#PWR082")
 					(unit 1)
 				)
 			)
@@ -12070,7 +12070,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68d08e34-f57f-4b93-9ce5-e7be24422c29")
-		(property "Reference" "#PWR080"
+		(property "Reference" "#PWR0105"
 			(at 358.902 59.182 0)
 			(hide yes)
 			(show_name no)
@@ -12131,7 +12131,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR080")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -12149,7 +12149,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69a13716-3b12-41fe-96bd-6a99be525d4c")
-		(property "Reference" "#PWR071"
+		(property "Reference" "#PWR094"
 			(at 218.948 103.886 0)
 			(hide yes)
 			(show_name no)
@@ -12210,7 +12210,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR071")
+					(reference "#PWR094")
 					(unit 1)
 				)
 			)
@@ -12228,7 +12228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b7259ea-eac9-48be-9b0f-7e4fc3cca9df")
-		(property "Reference" "R65"
+		(property "Reference" "R74"
 			(at 189.738 128.0159 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12292,7 +12292,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R65")
+					(reference "R74")
 					(unit 1)
 				)
 			)
@@ -12310,7 +12310,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "72cf9f1f-7ef7-4f0b-a185-54f9677d715e")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR072"
 			(at 101.854 96.266 0)
 			(hide yes)
 			(show_name no)
@@ -12371,7 +12371,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR058")
+					(reference "#PWR072")
 					(unit 1)
 				)
 			)
@@ -12389,7 +12389,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "72eeda51-7773-441c-9d3b-269ac4dd1f57")
-		(property "Reference" "U11"
+		(property "Reference" "U12"
 			(at 114.808 124.2059 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12539,7 +12539,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U11")
+					(reference "U12")
 					(unit 5)
 				)
 			)
@@ -12557,7 +12557,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74ca796b-8415-4423-8a13-1e3916638c18")
-		(property "Reference" "R72"
+		(property "Reference" "R86"
 			(at 240.538 125.4759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12621,7 +12621,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R72")
+					(reference "R86")
 					(unit 1)
 				)
 			)
@@ -12639,7 +12639,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74f1151f-081c-415e-8aab-a2c4485735a4")
-		(property "Reference" "U12"
+		(property "Reference" "U10"
 			(at 72.644 62.738 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12737,7 +12737,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U12")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -12755,7 +12755,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78d5cdf3-cbff-431e-b1e6-3626dccc72b3")
-		(property "Reference" "R92"
+		(property "Reference" "R91"
 			(at 272.796 121.92 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12817,7 +12817,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R92")
+					(reference "R91")
 					(unit 1)
 				)
 			)
@@ -12835,7 +12835,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "804f5b89-2de6-4eaf-850d-05e0f718daa5")
-		(property "Reference" "#PWR051"
+		(property "Reference" "#PWR060"
 			(at 45.974 88.646 0)
 			(hide yes)
 			(show_name no)
@@ -12896,7 +12896,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR051")
+					(reference "#PWR060")
 					(unit 1)
 				)
 			)
@@ -12996,7 +12996,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "86ade8c9-955f-44b4-b08b-6f29f37cbde1")
-		(property "Reference" "Q5"
+		(property "Reference" "Q8"
 			(at 331.724 152.1459 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13088,7 +13088,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "Q5")
+					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -13208,7 +13208,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8abdca62-b042-47c0-b7bb-832c774edcd4")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR081"
 			(at 150.876 268.732 0)
 			(hide yes)
 			(show_name no)
@@ -13269,7 +13269,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR0101")
+					(reference "#PWR081")
 					(unit 1)
 				)
 			)
@@ -13287,7 +13287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b625fab-3d8a-4645-ae0c-efc7c7781f22")
-		(property "Reference" "R76"
+		(property "Reference" "R95"
 			(at 330.962 121.6659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13351,7 +13351,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R76")
+					(reference "R95")
 					(unit 1)
 				)
 			)
@@ -13369,7 +13369,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c99990e-2324-4912-8f01-6be2bda5ac29")
-		(property "Reference" "U13"
+		(property "Reference" "U9"
 			(at 305.562 143.256 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13467,7 +13467,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U13")
+					(reference "U9")
 					(unit 2)
 				)
 			)
@@ -13485,7 +13485,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ed1cb90-d9a5-4cec-8e5c-e9c198875fa8")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR088"
 			(at 194.818 101.346 0)
 			(hide yes)
 			(show_name no)
@@ -13546,7 +13546,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR067")
+					(reference "#PWR088")
 					(unit 1)
 				)
 			)
@@ -13564,7 +13564,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90f27cc2-92d0-49b4-b65d-bae71f01778c")
-		(property "Reference" "C31"
+		(property "Reference" "C19"
 			(at 20.574 123.4439 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13628,7 +13628,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C31")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -13646,7 +13646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95dc3446-3889-4ef9-b1c6-efa850035e44")
-		(property "Reference" "C20"
+		(property "Reference" "C30"
 			(at 193.548 110.236 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13708,7 +13708,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C20")
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -13727,7 +13727,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9744567e-71b2-4973-a371-8d3bd2e2e647")
-		(property "Reference" "#PWR081"
+		(property "Reference" "#PWR0106"
 			(at 370.332 43.942 0)
 			(hide yes)
 			(show_name no)
@@ -13787,7 +13787,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR081")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -13805,7 +13805,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "987e02f6-3013-4f0c-a7e0-6cb4d6d5a079")
-		(property "Reference" "R77"
+		(property "Reference" "R96"
 			(at 330.962 166.1159 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13869,7 +13869,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R77")
+					(reference "R96")
 					(unit 1)
 				)
 			)
@@ -13887,7 +13887,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99f86f9d-427a-453d-839a-17472b8846f1")
-		(property "Reference" "C19"
+		(property "Reference" "C29"
 			(at 149.098 82.2959 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13951,7 +13951,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C19")
+					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -13969,7 +13969,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e95efb9-fbff-4da9-aa75-58b26daf7d20")
-		(property "Reference" "R59"
+		(property "Reference" "R64"
 			(at 132.588 44.196 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14031,7 +14031,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R59")
+					(reference "R64")
 					(unit 1)
 				)
 			)
@@ -14048,7 +14048,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9fc3749f-a300-42e0-ae74-7a40da26fb01")
-		(property "Reference" "U13"
+		(property "Reference" "U9"
 			(at 348.742 57.404 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14146,7 +14146,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U13")
+					(reference "U9")
 					(unit 3)
 				)
 			)
@@ -14164,7 +14164,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a07f81f8-1c8e-4492-a341-90d3c35bd58f")
-		(property "Reference" "C29"
+		(property "Reference" "C23"
 			(at 44.704 123.4439 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14228,7 +14228,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C29")
+					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -14246,7 +14246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0a2df44-96b6-46cc-858d-c1a2d61d2169")
-		(property "Reference" "R80"
+		(property "Reference" "R98"
 			(at 360.172 122.9359 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14310,7 +14310,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R80")
+					(reference "R98")
 					(unit 1)
 				)
 			)
@@ -14328,7 +14328,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1924de3-98a2-4c9b-b702-415708fa0391")
-		(property "Reference" "R87"
+		(property "Reference" "R60"
 			(at 114.3 83.3119 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14392,7 +14392,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R87")
+					(reference "R60")
 					(unit 1)
 				)
 			)
@@ -14410,7 +14410,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a3f92207-4c81-4d8b-bbaa-f27665353509")
-		(property "Reference" "R89"
+		(property "Reference" "R88"
 			(at 247.65 125.4759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14474,7 +14474,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R89")
+					(reference "R88")
 					(unit 1)
 				)
 			)
@@ -14492,7 +14492,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4d30ab6-95a7-4f7c-a8bb-77512a048bcb")
-		(property "Reference" "R58"
+		(property "Reference" "R62"
 			(at 122.428 83.5659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14556,7 +14556,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R58")
+					(reference "R62")
 					(unit 1)
 				)
 			)
@@ -14574,7 +14574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ab8d9aa1-0ee0-4018-96bd-4171d43f36d8")
-		(property "Reference" "R64"
+		(property "Reference" "R73"
 			(at 188.468 88.6459 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14638,7 +14638,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R64")
+					(reference "R73")
 					(unit 1)
 				)
 			)
@@ -14656,7 +14656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "abbc76dc-b4c1-4c67-8c17-12cf91deb9a1")
-		(property "Reference" "R75"
+		(property "Reference" "R90"
 			(at 258.572 125.4759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14720,7 +14720,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R75")
+					(reference "R90")
 					(unit 1)
 				)
 			)
@@ -14738,7 +14738,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aea81fc2-0e95-4a67-932c-4b9b25349736")
-		(property "Reference" "R63"
+		(property "Reference" "R72"
 			(at 179.578 77.216 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14800,7 +14800,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R63")
+					(reference "R72")
 					(unit 1)
 				)
 			)
@@ -14818,7 +14818,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af8f213c-3917-4935-84ac-131cca9e52dc")
-		(property "Reference" "U9"
+		(property "Reference" "U11"
 			(at 196.088 172.466 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14966,7 +14966,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U9")
+					(reference "U11")
 					(unit 2)
 				)
 			)
@@ -14984,7 +14984,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af9f804d-961e-4a8e-9ced-e53a0ad47849")
-		(property "Reference" "#PWR064"
+		(property "Reference" "#PWR085"
 			(at 185.928 101.346 0)
 			(hide yes)
 			(show_name no)
@@ -15045,7 +15045,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR064")
+					(reference "#PWR085")
 					(unit 1)
 				)
 			)
@@ -15063,7 +15063,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b07b8b6a-eeb0-4d43-96b6-ac8abe2667d3")
-		(property "Reference" "#PWR060"
+		(property "Reference" "#PWR077"
 			(at 113.538 131.826 0)
 			(hide yes)
 			(show_name no)
@@ -15123,7 +15123,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR060")
+					(reference "#PWR077")
 					(unit 1)
 				)
 			)
@@ -15141,7 +15141,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b07fe99c-6515-4238-9eb8-0ddbd50a1beb")
-		(property "Reference" "#PWR084"
+		(property "Reference" "#PWR063"
 			(at 55.118 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -15201,7 +15201,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR084")
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -15219,7 +15219,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b080b032-4e32-4a06-b877-5a784dea1ce8")
-		(property "Reference" "U11"
+		(property "Reference" "U12"
 			(at 208.788 108.966 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15367,7 +15367,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U11")
+					(reference "U12")
 					(unit 2)
 				)
 			)
@@ -15385,7 +15385,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b0fe90f5-eeec-4296-8c70-b6867526b1f2")
-		(property "Reference" "R55"
+		(property "Reference" "R57"
 			(at 95.504 67.056 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15447,7 +15447,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R55")
+					(reference "R57")
 					(unit 1)
 				)
 			)
@@ -15465,7 +15465,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b7c06f49-ee1e-4217-9efb-5f629b6304ad")
-		(property "Reference" "C21"
+		(property "Reference" "C32"
 			(at 222.758 87.3759 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15529,7 +15529,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C21")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -15548,7 +15548,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9583df4-3b79-457d-b8e7-1cc5c6c1c207")
-		(property "Reference" "U12"
+		(property "Reference" "U10"
 			(at 55.88 126.9999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15648,7 +15648,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U12")
+					(reference "U10")
 					(unit 5)
 				)
 			)
@@ -15666,7 +15666,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba6c41d9-a5fa-4182-90c5-440baad834ee")
-		(property "Reference" "R62"
+		(property "Reference" "R71"
 			(at 180.848 168.6559 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15730,7 +15730,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R62")
+					(reference "R71")
 					(unit 1)
 				)
 			)
@@ -15749,7 +15749,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb570128-6d65-4e93-8cde-cf602dd41a17")
-		(property "Reference" "R82"
+		(property "Reference" "R99"
 			(at 366.522 28.702 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15811,7 +15811,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R82")
+					(reference "R99")
 					(unit 1)
 				)
 			)
@@ -15829,7 +15829,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bfbadbe7-dfd7-4c7a-a691-65663ea23138")
-		(property "Reference" "#PWR097"
+		(property "Reference" "#PWR071"
 			(at 85.598 250.19 0)
 			(hide yes)
 			(show_name no)
@@ -15889,7 +15889,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR097")
+					(reference "#PWR071")
 					(unit 1)
 				)
 			)
@@ -15907,7 +15907,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c15baf82-e212-4ec7-8962-2728c6cfd9b3")
-		(property "Reference" "#PWR068"
+		(property "Reference" "#PWR091"
 			(at 203.708 134.366 0)
 			(hide yes)
 			(show_name no)
@@ -15967,7 +15967,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR068")
+					(reference "#PWR091")
 					(unit 1)
 				)
 			)
@@ -15985,7 +15985,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c17c9bb9-6955-4267-9f3a-f7425c85a634")
-		(property "Reference" "R56"
+		(property "Reference" "R59"
 			(at 104.394 83.5659 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16049,7 +16049,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R56")
+					(reference "R59")
 					(unit 1)
 				)
 			)
@@ -16067,7 +16067,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c2e1aa0e-7e78-4453-b084-88fb8ea0aeea")
-		(property "Reference" "#PWR0104"
+		(property "Reference" "#PWR092"
 			(at 216.154 273.558 0)
 			(hide yes)
 			(show_name no)
@@ -16128,7 +16128,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR0104")
+					(reference "#PWR092")
 					(unit 1)
 				)
 			)
@@ -16146,7 +16146,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3b2cd92-77c1-49c4-807c-ba3a07981860")
-		(property "Reference" "C32"
+		(property "Reference" "C21"
 			(at 49.022 163.4489 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16210,7 +16210,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C32")
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -16228,7 +16228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4194d20-d6e0-4ed1-b26b-64ec6fe686ed")
-		(property "Reference" "R94"
+		(property "Reference" "R75"
 			(at 187.706 213.106 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16290,7 +16290,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R94")
+					(reference "R75")
 					(unit 1)
 				)
 			)
@@ -16308,7 +16308,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4323b11-5af1-4bde-abb2-01ddcb77f84d")
-		(property "Reference" "#PWR092"
+		(property "Reference" "#PWR055"
 			(at 24.384 163.068 0)
 			(hide yes)
 			(show_name no)
@@ -16368,7 +16368,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR092")
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -16386,7 +16386,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c45c01d0-4094-4a93-8bb0-6a0697556775")
-		(property "Reference" "#PWR090"
+		(property "Reference" "#PWR065"
 			(at 69.596 217.678 0)
 			(hide yes)
 			(show_name no)
@@ -16446,7 +16446,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR090")
+					(reference "#PWR065")
 					(unit 1)
 				)
 			)
@@ -16464,7 +16464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c6f4bf69-73ba-4aa9-8278-0a6d49798bbb")
-		(property "Reference" "U9"
+		(property "Reference" "U11"
 			(at 211.582 171.704 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16612,7 +16612,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U9")
+					(reference "U11")
 					(unit 4)
 				)
 			)
@@ -16630,7 +16630,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c86eaafa-a401-4d24-8e21-03e07abe61ce")
-		(property "Reference" "#PWR089"
+		(property "Reference" "#PWR057"
 			(at 30.988 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -16690,7 +16690,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR089")
+					(reference "#PWR057")
 					(unit 1)
 				)
 			)
@@ -16708,7 +16708,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9501498-93f1-4d65-b9af-e32acb0280c9")
-		(property "Reference" "#PWR077"
+		(property "Reference" "#PWR0104"
 			(at 328.422 180.086 0)
 			(hide yes)
 			(show_name no)
@@ -16769,7 +16769,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR077")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -16787,7 +16787,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cab05216-891e-4408-92f3-ce17a5890970")
-		(property "Reference" "#PWR075"
+		(property "Reference" "#PWR0100"
 			(at 281.178 57.912 0)
 			(hide yes)
 			(show_name no)
@@ -16848,7 +16848,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR075")
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -16866,7 +16866,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cbf4e718-374c-442a-b93e-777a82afaaf9")
-		(property "Reference" "R84"
+		(property "Reference" "R54"
 			(at 72.136 220.2179 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16930,7 +16930,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R84")
+					(reference "R54")
 					(unit 1)
 				)
 			)
@@ -16947,7 +16947,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ccc54e3e-c04c-436a-868b-4a5dc520dfd1")
-		(property "Reference" "U13"
+		(property "Reference" "U9"
 			(at 51.816 241.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17045,7 +17045,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U13")
+					(reference "U9")
 					(unit 4)
 				)
 			)
@@ -17063,7 +17063,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d32ebca9-04da-4aae-a38f-551566a78b43")
-		(property "Reference" "U11"
+		(property "Reference" "U12"
 			(at 197.612 239.776 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17211,7 +17211,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U11")
+					(reference "U12")
 					(unit 4)
 				)
 			)
@@ -17229,7 +17229,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3c18ad9-d85e-4439-9eb3-1991670556b9")
-		(property "Reference" "R95"
+		(property "Reference" "R81"
 			(at 209.042 205.74 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17291,7 +17291,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R95")
+					(reference "R81")
 					(unit 1)
 				)
 			)
@@ -17309,7 +17309,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d60c0922-650b-409d-99b8-4932ff3fc671")
-		(property "Reference" "#PWR076"
+		(property "Reference" "#PWR0103"
 			(at 328.422 119.126 0)
 			(hide yes)
 			(show_name no)
@@ -17369,7 +17369,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR076")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -17387,7 +17387,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d69302e7-832d-450c-b7e2-e537ff868ff3")
-		(property "Reference" "#PWR066"
+		(property "Reference" "#PWR087"
 			(at 191.008 67.056 0)
 			(hide yes)
 			(show_name no)
@@ -17447,7 +17447,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR066")
+					(reference "#PWR087")
 					(unit 1)
 				)
 			)
@@ -17465,7 +17465,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d8584017-0f1b-4607-be43-9b79e12c56c2")
-		(property "Reference" "R99"
+		(property "Reference" "R67"
 			(at 152.908 255.5239 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17529,7 +17529,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R99")
+					(reference "R67")
 					(unit 1)
 				)
 			)
@@ -17618,6 +17618,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:BC857BDW1")
+		(at 96.266 234.188 0)
+		(mirror x)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d9b0615f-278f-4a43-a069-c2707fa8fea0")
+		(property "Reference" "Q6"
+			(at 102.108 232.9179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BC857BDW1"
+			(at 102.108 235.4579 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
+			(at 101.346 236.728 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC856BDW1T1-D.PDF"
+			(at 96.266 234.188 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "100mA IC, 45V Vce, Dual PNP/PNP Transistors, SOT-363"
+			(at 96.266 234.188 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02660331-25a8-4478-b012-fd685a5583bb")
+		)
+		(pin "6"
+			(uuid "a1854529-23f8-42b6-8313-285f5bb8f7b9")
+		)
+		(pin "4"
+			(uuid "1e7b7701-3597-44dd-95ea-21a76bd98fe9")
+		)
+		(pin "3"
+			(uuid "88ad3779-59cc-42bb-8033-22fcac615f90")
+		)
+		(pin "5"
+			(uuid "e7fffbc3-b485-4a8e-8ab8-1c154bccb60c")
+		)
+		(pin "2"
+			(uuid "34a3b17a-7729-4d7a-84d1-4b8f905f1934")
+		)
+		(instances
+			(project "VoiceBoard"
+				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
+					(reference "Q6")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 187.96 228.346 270)
 		(unit 1)
@@ -17629,7 +17723,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc8e1cb4-3e7f-45ee-8639-41207e4ea083")
-		(property "Reference" "R96"
+		(property "Reference" "R76"
 			(at 187.96 222.25 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17691,7 +17785,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R96")
+					(reference "R76")
 					(unit 1)
 				)
 			)
@@ -17709,7 +17803,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc90671e-2d06-4378-b912-26ac75fbd1ec")
-		(property "Reference" "R79"
+		(property "Reference" "R94"
 			(at 311.658 59.1819 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17773,7 +17867,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R79")
+					(reference "R94")
 					(unit 1)
 				)
 			)
@@ -17791,7 +17885,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0d3f56d-8bd3-4ffa-838b-c2274091cd4a")
-		(property "Reference" "#PWR063"
+		(property "Reference" "#PWR084"
 			(at 178.308 181.356 0)
 			(hide yes)
 			(show_name no)
@@ -17852,7 +17946,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR063")
+					(reference "#PWR084")
 					(unit 1)
 				)
 			)
@@ -17963,7 +18057,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0fcf953-dba4-4793-ad96-a32917be97f7")
-		(property "Reference" "#PWR088"
+		(property "Reference" "#PWR056"
 			(at 30.988 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -18023,7 +18117,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR088")
+					(reference "#PWR056")
 					(unit 1)
 				)
 			)
@@ -18041,7 +18135,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1821b8c-daaf-4691-ac77-ba67a4c43e11")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR054"
 			(at 24.13 135.382 0)
 			(hide yes)
 			(show_name no)
@@ -18102,7 +18196,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR087")
+					(reference "#PWR054")
 					(unit 1)
 				)
 			)
@@ -18121,7 +18215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1f27630-9f5d-463f-adcf-9fab8d48327d")
-		(property "Reference" "U12"
+		(property "Reference" "U10"
 			(at 166.878 109.728 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18219,7 +18313,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U12")
+					(reference "U10")
 					(unit 4)
 				)
 			)
@@ -18237,7 +18331,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e31e6392-e688-4fb3-bcb5-a9d6895584c5")
-		(property "Reference" "#PWR0103"
+		(property "Reference" "#PWR090"
 			(at 202.692 265.43 0)
 			(hide yes)
 			(show_name no)
@@ -18297,7 +18391,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR0103")
+					(reference "#PWR090")
 					(unit 1)
 				)
 			)
@@ -18315,7 +18409,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e404beb6-9fcb-4a36-bbb7-6078251d81ab")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR075"
 			(at 111.506 96.012 0)
 			(hide yes)
 			(show_name no)
@@ -18376,7 +18470,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR069")
+					(reference "#PWR075")
 					(unit 1)
 				)
 			)
@@ -18394,7 +18488,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e65c4680-4327-47f4-bc77-601258d93240")
-		(property "Reference" "R86"
+		(property "Reference" "R58"
 			(at 101.346 221.4879 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18458,7 +18552,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R86")
+					(reference "R58")
 					(unit 1)
 				)
 			)
@@ -18476,7 +18570,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e75e76fe-1515-4ea5-8428-1bf630d9aa0e")
-		(property "Reference" "#PWR093"
+		(property "Reference" "#PWR058"
 			(at 44.958 163.068 0)
 			(hide yes)
 			(show_name no)
@@ -18536,7 +18630,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR093")
+					(reference "#PWR058")
 					(unit 1)
 				)
 			)
@@ -18554,7 +18648,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9a45406-0cc4-4168-aa85-612875706396")
-		(property "Reference" "R91"
+		(property "Reference" "R56"
 			(at 87.63 252.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18618,7 +18712,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R91")
+					(reference "R56")
 					(unit 1)
 				)
 			)
@@ -18637,7 +18731,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec5557cc-b9d6-4d55-857d-e2b67d2c1360")
-		(property "Reference" "R81"
+		(property "Reference" "R97"
 			(at 348.742 28.702 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18699,102 +18793,8 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R81")
+					(reference "R97")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC857BDW1")
-		(at 355.092 135.636 0)
-		(mirror x)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ed0d1a55-fefe-4242-ab1d-41ea49beb7d4")
-		(property "Reference" "Q8"
-			(at 360.934 134.3659 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC857BDW1"
-			(at 360.934 136.9059 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
-			(at 360.172 138.176 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/BC856BDW1T1-D.PDF"
-			(at 355.092 135.636 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "100mA IC, 45V Vce, Dual PNP/PNP Transistors, SOT-363"
-			(at 355.092 135.636 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "02660331-25a8-4478-b012-fd685a5583bd")
-		)
-		(pin "6"
-			(uuid "a1854529-23f8-42b6-8313-285f5bb8f7bb")
-		)
-		(pin "4"
-			(uuid "d6ab20f4-832e-45f8-ab37-f77de3b31c0e")
-		)
-		(pin "3"
-			(uuid "85c44a16-5744-4564-9188-4f12a9269e99")
-		)
-		(pin "5"
-			(uuid "e150128d-f118-42f9-b22a-8111c8b79c8b")
-		)
-		(pin "2"
-			(uuid "34a3b17a-7729-4d7a-84d1-4b8f905f1936")
-		)
-		(instances
-			(project "VoiceBoard"
-				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "Q8")
-					(unit 2)
 				)
 			)
 		)
@@ -18811,7 +18811,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed92fb96-ba68-4a91-b5ba-990ca86e8af7")
-		(property "Reference" "#PWR086"
+		(property "Reference" "#PWR053"
 			(at 23.876 152.146 0)
 			(hide yes)
 			(show_name no)
@@ -18872,7 +18872,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR086")
+					(reference "#PWR053")
 					(unit 1)
 				)
 			)
@@ -18890,7 +18890,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eda3104f-4225-4b3b-8914-3e760f8957f6")
-		(property "Reference" "R78"
+		(property "Reference" "R93"
 			(at 293.878 88.3919 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18954,7 +18954,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R78")
+					(reference "R93")
 					(unit 1)
 				)
 			)
@@ -18972,7 +18972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "effa6fd5-5b28-4f28-85c8-43a7f170bbfe")
-		(property "Reference" "C30"
+		(property "Reference" "C18"
 			(at 20.32 140.2079 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19036,7 +19036,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "C30")
+					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -19054,7 +19054,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0101859-8b88-4f59-9f2e-7b0716c667cc")
-		(property "Reference" "R61"
+		(property "Reference" "R69"
 			(at 166.878 138.176 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19116,7 +19116,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R61")
+					(reference "R69")
 					(unit 1)
 				)
 			)
@@ -19134,7 +19134,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f015e723-871b-468a-8056-0cfb21205fc6")
-		(property "Reference" "R98"
+		(property "Reference" "R66"
 			(at 144.526 255.5239 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19198,7 +19198,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R98")
+					(reference "R66")
 					(unit 1)
 				)
 			)
@@ -19216,7 +19216,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f093d1cd-9985-41d8-9b8d-cc2859a984d0")
-		(property "Reference" "#PWR098"
+		(property "Reference" "#PWR099"
 			(at 277.876 140.462 0)
 			(hide yes)
 			(show_name no)
@@ -19277,7 +19277,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR098")
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
@@ -19295,7 +19295,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1d1a369-802b-416b-8a28-063c9204d516")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR074"
 			(at 108.204 133.858 0)
 			(hide yes)
 			(show_name no)
@@ -19356,7 +19356,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR057")
+					(reference "#PWR074")
 					(unit 1)
 				)
 			)
@@ -19374,7 +19374,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3017e90-f1d9-4f6a-84fe-0b5f0ef4f6a2")
-		(property "Reference" "U11"
+		(property "Reference" "U12"
 			(at 163.576 260.096 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19522,7 +19522,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "U11")
+					(reference "U12")
 					(unit 3)
 				)
 			)
@@ -19540,7 +19540,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f43d871c-0de7-4794-b743-6d2e8e3e7fc8")
-		(property "Reference" "#PWR099"
+		(property "Reference" "#PWR089"
 			(at 200.152 232.664 0)
 			(hide yes)
 			(show_name no)
@@ -19601,7 +19601,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR099")
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -19619,7 +19619,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4da2d59-32a5-4fe3-9d4e-6e0db8551f1b")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR068"
 			(at 77.47 133.858 0)
 			(hide yes)
 			(show_name no)
@@ -19680,7 +19680,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR053")
+					(reference "#PWR068")
 					(unit 1)
 				)
 			)
@@ -19698,7 +19698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f53bbd6e-0918-4b00-92c5-819dd2e58964")
-		(property "Reference" "R93"
+		(property "Reference" "R92"
 			(at 287.528 115.316 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19760,7 +19760,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R93")
+					(reference "R92")
 					(unit 1)
 				)
 			)
@@ -19778,7 +19778,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7b0c3ac-bdb8-4a1c-b154-d368733ecc22")
-		(property "Reference" "#PWR0100"
+		(property "Reference" "#PWR080"
 			(at 142.494 268.732 0)
 			(hide yes)
 			(show_name no)
@@ -19839,7 +19839,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR0100")
+					(reference "#PWR080")
 					(unit 1)
 				)
 			)
@@ -19857,7 +19857,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fed33823-7a1d-4528-a802-e28db7deda54")
-		(property "Reference" "R66"
+		(property "Reference" "R77"
 			(at 193.548 67.0559 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19921,7 +19921,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "R66")
+					(reference "R77")
 					(unit 1)
 				)
 			)
@@ -19939,7 +19939,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "feeee1b5-2c00-4bad-8eac-5ac0ccd51365")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR096"
 			(at 239.268 107.696 0)
 			(hide yes)
 			(show_name no)
@@ -19999,7 +19999,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192/548c013b-935b-4091-b7c0-a6eb640a913e"
-					(reference "#PWR061")
+					(reference "#PWR096")
 					(unit 1)
 				)
 			)

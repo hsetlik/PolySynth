@@ -1491,7 +1491,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "01b9b62a-cdd5-45c4-b4ed-6e598ed7dc22")
-		(property "Reference" "#PWR0107"
+		(property "Reference" "#PWR04"
 			(at 137.414 155.194 0)
 			(hide yes)
 			(show_name no)
@@ -1551,7 +1551,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192"
-					(reference "#PWR0107")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -1569,7 +1569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3af15684-289a-45fc-a0d4-42ca8fe52357")
-		(property "Reference" "#PWR0106"
+		(property "Reference" "#PWR02"
 			(at 124.714 101.854 0)
 			(hide yes)
 			(show_name no)
@@ -1629,7 +1629,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192"
-					(reference "#PWR0106")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -1647,7 +1647,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e24ff49-90c5-4ca3-a08e-17f594710aea")
-		(property "Reference" "U8"
+		(property "Reference" "U1"
 			(at 158.75 111.6898 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1763,7 +1763,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192"
-					(reference "U8")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -1781,7 +1781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "71a109d3-80bb-4e88-bd91-caf2bbb287d4")
-		(property "Reference" "#PWR0108"
+		(property "Reference" "#PWR01"
 			(at 117.094 165.608 0)
 			(hide yes)
 			(show_name no)
@@ -1842,7 +1842,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192"
-					(reference "#PWR0108")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -1860,7 +1860,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b20fc5b-de78-48f3-b899-e45265f96ed1")
-		(property "Reference" "#PWR0105"
+		(property "Reference" "#PWR03"
 			(at 132.334 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -1920,7 +1920,7 @@
 		(instances
 			(project "VoiceBoard"
 				(path "/13e0b5b9-8087-44b1-9a4a-b13c05970192"
-					(reference "#PWR0105")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
