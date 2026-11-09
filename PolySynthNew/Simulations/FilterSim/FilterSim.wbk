@@ -26,13 +26,18 @@
           "trace_type": 257
         },
         {
-          "color": "rgb(77, 175, 74)",
-          "signal": "V(/VCA_out)",
+          "color": "rgb(255, 255, 51)",
+          "signal": "V(/VCAem)",
           "trace_type": 257
         },
         {
           "color": "rgb(228, 26, 28)",
           "signal": "V(/Vout)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(Net-_U4C-+_)",
           "trace_type": 257
         }
       ]
