@@ -3705,7 +3705,7 @@
 		)
 		(uuid "fe77e6aa-b687-4640-af7e-8053c12820fe")
 	)
-	(label "NLatch"
+	(label "Latch"
 		(at 212.09 127 180)
 		(effects
 			(font
