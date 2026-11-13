@@ -680,7 +680,7 @@
         "uuid": "b4391858-431b-4c52-814e-94e38b91ffd5"
       }
     ],
-    "used_designators": "U38-39,RN1-3,D1,#PWR226-247,C100-102,Q3-6,R9-17,J2-5",
+    "used_designators": "U40-42,R144-146,L1,D2-3,C122-127,#PWR248-254,J6",
     "variants": []
   },
   "sheets": [
@@ -703,6 +703,10 @@
     [
       "fbc5ccad-b69c-41ae-9171-117f004023e3",
       "VoiceBoards"
+    ],
+    [
+      "8e102fa9-c916-4217-8996-c3860085c2c8",
+      "Power"
     ]
   ],
   "text_variables": {},
