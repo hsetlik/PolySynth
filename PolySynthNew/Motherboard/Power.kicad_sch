@@ -5168,7 +5168,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a5b9475-e51c-4dd5-ac7a-feddaa65b535")
-		(property "Reference" "U50"
+		(property "Reference" "U51"
 			(at 200.66 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5244,7 +5244,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "U50")
+					(reference "U51")
 					(unit 1)
 				)
 			)
@@ -5262,7 +5262,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12148d05-f25b-4c5c-ba19-48939f19f136")
-		(property "Reference" "#PWR0285"
+		(property "Reference" "#PWR0292"
 			(at 186.69 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -5322,7 +5322,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0285")
+					(reference "#PWR0292")
 					(unit 1)
 				)
 			)
@@ -5341,7 +5341,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "143e58f6-1052-461f-b11a-f287afd1fda6")
-		(property "Reference" "C122"
+		(property "Reference" "C123"
 			(at 177.8 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5405,7 +5405,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C122")
+					(reference "C123")
 					(unit 1)
 				)
 			)
@@ -5504,7 +5504,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1c4478f4-912f-4f57-9d39-74e94a03b878")
-		(property "Reference" "C124"
+		(property "Reference" "C125"
 			(at 214.63 31.75 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5566,7 +5566,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C124")
+					(reference "C125")
 					(unit 1)
 				)
 			)
@@ -5585,7 +5585,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ea9a59a-0091-4c1f-b1d6-7975f8db3794")
-		(property "Reference" "C121"
+		(property "Reference" "C122"
 			(at 161.29 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5649,7 +5649,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C121")
+					(reference "C122")
 					(unit 1)
 				)
 			)
@@ -5668,7 +5668,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "242e7664-625e-4c3a-92e5-5ac7a5f773e6")
-		(property "Reference" "C129"
+		(property "Reference" "C130"
 			(at 255.27 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5732,7 +5732,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C129")
+					(reference "C130")
 					(unit 1)
 				)
 			)
@@ -5750,7 +5750,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "29440731-b88b-4936-be78-81589a8b1345")
-		(property "Reference" "C109"
+		(property "Reference" "C110"
 			(at 32.512 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5814,7 +5814,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C109")
+					(reference "C110")
 					(unit 1)
 				)
 			)
@@ -5832,7 +5832,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "296efd03-82c1-42bd-adf8-a680da6afae3")
-		(property "Reference" "#PWR0279"
+		(property "Reference" "#PWR0286"
 			(at 88.138 37.592 0)
 			(hide yes)
 			(show_name no)
@@ -5892,7 +5892,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0279")
+					(reference "#PWR0286")
 					(unit 1)
 				)
 			)
@@ -5910,7 +5910,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2dc0a785-9dc3-4983-a1d8-f1dcfe9a430a")
-		(property "Reference" "U47"
+		(property "Reference" "U48"
 			(at 60.452 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5983,7 +5983,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "U47")
+					(reference "U48")
 					(unit 1)
 				)
 			)
@@ -6001,7 +6001,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "350999ab-fac2-48cf-8e81-59156041e6e5")
-		(property "Reference" "#PWR0296"
+		(property "Reference" "#PWR0303"
 			(at 266.7 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -6061,7 +6061,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0296")
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -6159,7 +6159,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "403ffc39-d2bb-4454-a1ee-eb4d9f197e31")
-		(property "Reference" "#PWR0284"
+		(property "Reference" "#PWR0291"
 			(at 181.61 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6220,7 +6220,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0284")
+					(reference "#PWR0291")
 					(unit 1)
 				)
 			)
@@ -6238,7 +6238,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "469a19d2-68d7-4c84-aca1-8aa6a96a6a60")
-		(property "Reference" "R21"
+		(property "Reference" "R25"
 			(at 67.31 139.7 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6300,7 +6300,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R21")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -6318,7 +6318,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b6ed5fc-a555-4b99-a58c-33f8f2ce0e0a")
-		(property "Reference" "#PWR0275"
+		(property "Reference" "#PWR0282"
 			(at 45.72 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -6378,7 +6378,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0275")
+					(reference "#PWR0282")
 					(unit 1)
 				)
 			)
@@ -6396,7 +6396,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5204d429-8c25-403b-b404-d36a13242e16")
-		(property "Reference" "C115"
+		(property "Reference" "C116"
 			(at 97.028 43.6879 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6460,7 +6460,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C115")
+					(reference "C116")
 					(unit 1)
 				)
 			)
@@ -6479,7 +6479,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "56b46415-a200-47d0-9182-27fc85174dc3")
-		(property "Reference" "C116"
+		(property "Reference" "C117"
 			(at 105.41 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6543,7 +6543,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C116")
+					(reference "C117")
 					(unit 1)
 				)
 			)
@@ -6560,7 +6560,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5842aaed-b749-43c8-96f0-3993da3b6697")
-		(property "Reference" "R19"
+		(property "Reference" "R23"
 			(at 48.26 56.896 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6622,7 +6622,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R19")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -6640,7 +6640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "58aefa93-89a7-426a-a3be-7cabb4613acf")
-		(property "Reference" "R27"
+		(property "Reference" "R31"
 			(at 231.14 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6662,7 +6662,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 229.616 120.904 90)
 			(hide yes)
 			(show_name no)
@@ -6704,7 +6704,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R27")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -6722,7 +6722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5c4dcb6a-6144-43f4-a3fd-2ccc1be9a396")
-		(property "Reference" "#PWR0282"
+		(property "Reference" "#PWR0289"
 			(at 157.48 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -6782,7 +6782,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0282")
+					(reference "#PWR0289")
 					(unit 1)
 				)
 			)
@@ -6801,7 +6801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5cd7fd5b-ee22-484e-98bd-89c5c7a2c31d")
-		(property "Reference" "C112"
+		(property "Reference" "C113"
 			(at 78.486 55.88 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6863,7 +6863,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C112")
+					(reference "C113")
 					(unit 1)
 				)
 			)
@@ -6882,7 +6882,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5fa63c03-9dad-4513-8e7f-bd85b5598b70")
-		(property "Reference" "C114"
+		(property "Reference" "C115"
 			(at 93.98 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6946,7 +6946,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C114")
+					(reference "C115")
 					(unit 1)
 				)
 			)
@@ -6964,7 +6964,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "650a8de5-3faa-4ea9-a052-35edad7a34f2")
-		(property "Reference" "R28"
+		(property "Reference" "R32"
 			(at 261.62 99.06 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7026,7 +7026,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R28")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -7044,7 +7044,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "672b286a-33d9-404c-a6cb-9e46876991f7")
-		(property "Reference" "#PWR0289"
+		(property "Reference" "#PWR0296"
 			(at 228.6 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7105,7 +7105,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0289")
+					(reference "#PWR0296")
 					(unit 1)
 				)
 			)
@@ -7123,7 +7123,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68e13063-1d36-4a45-9123-14ed7af05dcc")
-		(property "Reference" "U46"
+		(property "Reference" "U47"
 			(at 45.72 120.65 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7143,7 +7143,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:Texas_HTSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.95x4.9mm_Mask2.4x3.1mm_ThermalVias"
+		(property "Footprint" "Package_SO:Texas_HSOP-8-1EP_3.9x4.9mm_P1.27mm"
 			(at 45.72 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -7206,7 +7206,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "U46")
+					(reference "U47")
 					(unit 1)
 				)
 			)
@@ -7224,7 +7224,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "699e59f6-fd34-4ff0-b28f-69082e7371af")
-		(property "Reference" "#PWR0291"
+		(property "Reference" "#PWR0298"
 			(at 240.03 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -7285,7 +7285,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0291")
+					(reference "#PWR0298")
 					(unit 1)
 				)
 			)
@@ -7303,7 +7303,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b5aef0d-4cb1-4f92-ab4a-14d9b8bbe79a")
-		(property "Reference" "#PWR0290"
+		(property "Reference" "#PWR0297"
 			(at 228.6 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -7364,7 +7364,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0290")
+					(reference "#PWR0297")
 					(unit 1)
 				)
 			)
@@ -7382,7 +7382,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6eb91365-32e8-421d-82e5-de8d62f217b7")
-		(property "Reference" "C130"
+		(property "Reference" "C131"
 			(at 270.51 109.8549 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7446,7 +7446,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C130")
+					(reference "C131")
 					(unit 1)
 				)
 			)
@@ -7465,7 +7465,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a61f14a-9b21-4cb7-960d-ee7527cb75bf")
-		(property "Reference" "C123"
+		(property "Reference" "C124"
 			(at 177.8 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7529,7 +7529,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C123")
+					(reference "C124")
 					(unit 1)
 				)
 			)
@@ -7547,7 +7547,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85b6ede3-d6df-4c1b-86b9-891cde3dbc99")
-		(property "Reference" "#PWR0286"
+		(property "Reference" "#PWR0293"
 			(at 186.69 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7607,7 +7607,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0286")
+					(reference "#PWR0293")
 					(unit 1)
 				)
 			)
@@ -7625,7 +7625,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90099114-7b3e-4dc9-b23e-6177daeb6490")
-		(property "Reference" "C113"
+		(property "Reference" "C114"
 			(at 91.44 67.5639 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7689,7 +7689,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C113")
+					(reference "C114")
 					(unit 1)
 				)
 			)
@@ -7708,7 +7708,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9036bbe5-d6ff-490e-817c-2934f6517f57")
-		(property "Reference" "C119"
+		(property "Reference" "C120"
 			(at 134.112 41.4019 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7772,7 +7772,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C119")
+					(reference "C120")
 					(unit 1)
 				)
 			)
@@ -7791,7 +7791,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "918a2fd9-600e-4e4d-b678-fe38c502398d")
-		(property "Reference" "C127"
+		(property "Reference" "C128"
 			(at 243.84 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7855,7 +7855,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C127")
+					(reference "C128")
 					(unit 1)
 				)
 			)
@@ -7874,7 +7874,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "96198dab-5f13-4a9f-912e-120ebdbbde63")
-		(property "Reference" "U49"
+		(property "Reference" "U50"
 			(at 132.08 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7939,7 +7939,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "U49")
+					(reference "U50")
 					(unit 1)
 				)
 			)
@@ -7957,7 +7957,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99d1a2b7-9c38-42f4-aa7f-361bf18e476b")
-		(property "Reference" "#PWR0292"
+		(property "Reference" "#PWR0299"
 			(at 240.03 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -8018,7 +8018,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0292")
+					(reference "#PWR0299")
 					(unit 1)
 				)
 			)
@@ -8037,7 +8037,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b3437cf-b37c-4ea6-8330-7e3fed4b4a20")
-		(property "Reference" "C125"
+		(property "Reference" "C126"
 			(at 214.63 90.17 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8099,7 +8099,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C125")
+					(reference "C126")
 					(unit 1)
 				)
 			)
@@ -8117,7 +8117,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d4922ab-d9b4-423b-b2cd-afe2a2eb34be")
-		(property "Reference" "#PWR0288"
+		(property "Reference" "#PWR0295"
 			(at 200.66 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -8178,7 +8178,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0288")
+					(reference "#PWR0295")
 					(unit 1)
 				)
 			)
@@ -8196,7 +8196,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9f9c6236-fc7f-4464-8dd7-32fe76c6925b")
-		(property "Reference" "#PWR0272"
+		(property "Reference" "#PWR0279"
 			(at 24.13 130.048 0)
 			(hide yes)
 			(show_name no)
@@ -8256,7 +8256,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0272")
+					(reference "#PWR0279")
 					(unit 1)
 				)
 			)
@@ -8274,7 +8274,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0d48460-b43f-4d93-9394-6a5db274364d")
-		(property "Reference" "#PWR0274"
+		(property "Reference" "#PWR0281"
 			(at 41.402 40.894 0)
 			(hide yes)
 			(show_name no)
@@ -8334,7 +8334,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0274")
+					(reference "#PWR0281")
 					(unit 1)
 				)
 			)
@@ -8352,7 +8352,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a52d5648-79f2-46f2-bf85-be7647e75e15")
-		(property "Reference" "#PWR0276"
+		(property "Reference" "#PWR0283"
 			(at 68.58 82.296 0)
 			(hide yes)
 			(show_name no)
@@ -8413,7 +8413,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0276")
+					(reference "#PWR0283")
 					(unit 1)
 				)
 			)
@@ -8431,7 +8431,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a6be962c-6050-477d-a5c2-45dbba97a8a0")
-		(property "Reference" "#PWR0277"
+		(property "Reference" "#PWR0284"
 			(at 74.93 149.86 0)
 			(hide yes)
 			(show_name no)
@@ -8491,7 +8491,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0277")
+					(reference "#PWR0284")
 					(unit 1)
 				)
 			)
@@ -8509,7 +8509,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a74ef9b4-dd43-4dd4-9476-98fa7331dbe2")
-		(property "Reference" "#PWR0287"
+		(property "Reference" "#PWR0294"
 			(at 200.66 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -8570,7 +8570,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0287")
+					(reference "#PWR0294")
 					(unit 1)
 				)
 			)
@@ -8588,7 +8588,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a7a579f6-85b8-4a5a-b64b-87adb3f0b582")
-		(property "Reference" "C108"
+		(property "Reference" "C109"
 			(at 21.082 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8652,7 +8652,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C108")
+					(reference "C109")
 					(unit 1)
 				)
 			)
@@ -8670,7 +8670,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af4752ce-925c-4aae-ae11-72d103b17b0c")
-		(property "Reference" "C117"
+		(property "Reference" "C118"
 			(at 118.11 141.6049 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8734,7 +8734,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C117")
+					(reference "C118")
 					(unit 1)
 				)
 			)
@@ -8752,7 +8752,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b0069cf3-6970-452d-93f5-ccc0e27aa55a")
-		(property "Reference" "R24"
+		(property "Reference" "R28"
 			(at 231.14 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8774,7 +8774,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 229.616 53.594 90)
 			(hide yes)
 			(show_name no)
@@ -8816,7 +8816,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R24")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -8834,7 +8834,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4de2f09-5580-4c23-a6b9-f263b842671d")
-		(property "Reference" "R22"
+		(property "Reference" "R26"
 			(at 70.612 68.0719 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8898,7 +8898,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R22")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -8916,7 +8916,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6b6fa4a-93f0-4a0b-b300-5aac03b866fa")
-		(property "Reference" "#PWR0294"
+		(property "Reference" "#PWR0301"
 			(at 251.46 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -8977,7 +8977,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0294")
+					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -8995,7 +8995,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6df9e15-dc77-438a-9ab3-5a1fc2ab8e5c")
-		(property "Reference" "J6"
+		(property "Reference" "J7"
 			(at 27.432 31.242 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9060,7 +9060,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "J6")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -9078,7 +9078,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b70d4c66-0bb8-4fe7-b63f-fc38c2c769f7")
-		(property "Reference" "C111"
+		(property "Reference" "C112"
 			(at 66.04 116.84 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9098,7 +9098,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 69.85 123.4948 0)
 			(hide yes)
 			(show_name no)
@@ -9140,7 +9140,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C111")
+					(reference "C112")
 					(unit 1)
 				)
 			)
@@ -9241,7 +9241,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9df562b-5a97-4b07-812e-78744f897954")
-		(property "Reference" "#PWR0295"
+		(property "Reference" "#PWR0302"
 			(at 251.46 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -9302,7 +9302,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0295")
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)
@@ -9400,7 +9400,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c031ef0c-dc2b-4fda-977b-b718deeddfe8")
-		(property "Reference" "R23"
+		(property "Reference" "R27"
 			(at 78.74 47.244 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9462,7 +9462,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R23")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -9480,7 +9480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c398d3dc-381c-4e08-aa61-75d091fb8e09")
-		(property "Reference" "U51"
+		(property "Reference" "U52"
 			(at 200.66 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9556,7 +9556,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "U51")
+					(reference "U52")
 					(unit 1)
 				)
 			)
@@ -9574,7 +9574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c52d3aed-1895-46f6-90ad-fe32fca8dbc0")
-		(property "Reference" "C120"
+		(property "Reference" "C121"
 			(at 148.59 141.6049 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9638,7 +9638,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C120")
+					(reference "C121")
 					(unit 1)
 				)
 			)
@@ -9656,7 +9656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7db2441-7613-41da-bbc1-f8a2ab12f7d2")
-		(property "Reference" "#PWR0293"
+		(property "Reference" "#PWR0300"
 			(at 251.46 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -9716,7 +9716,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0293")
+					(reference "#PWR0300")
 					(unit 1)
 				)
 			)
@@ -9734,7 +9734,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9907c40-8d5b-4929-ae44-2b4fd23b610e")
-		(property "Reference" "#PWR0283"
+		(property "Reference" "#PWR0290"
 			(at 181.61 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -9795,7 +9795,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0283")
+					(reference "#PWR0290")
 					(unit 1)
 				)
 			)
@@ -9813,7 +9813,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c9f49476-725f-4f26-938e-3a146780c1fe")
-		(property "Reference" "R20"
+		(property "Reference" "R24"
 			(at 62.23 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9877,7 +9877,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R20")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -9895,7 +9895,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ccba9960-bf1c-422d-9b18-77ffda93077c")
-		(property "Reference" "U48"
+		(property "Reference" "U49"
 			(at 109.728 31.496 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9960,7 +9960,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "U48")
+					(reference "U49")
 					(unit 1)
 				)
 			)
@@ -9978,7 +9978,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d0cd14ac-c238-48f2-8f67-02a8c2dfd9a8")
-		(property "Reference" "#PWR0281"
+		(property "Reference" "#PWR0288"
 			(at 130.556 38.862 0)
 			(hide yes)
 			(show_name no)
@@ -10038,7 +10038,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0281")
+					(reference "#PWR0288")
 					(unit 1)
 				)
 			)
@@ -10056,7 +10056,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d2158454-eb97-4cdb-820d-827fe9b6b6ac")
-		(property "Reference" "R26"
+		(property "Reference" "R30"
 			(at 231.14 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10078,7 +10078,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 229.616 112.014 90)
 			(hide yes)
 			(show_name no)
@@ -10120,7 +10120,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R26")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -10139,7 +10139,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d48940b8-d1f0-47e2-af4d-43ddb1c39b72")
-		(property "Reference" "C126"
+		(property "Reference" "C127"
 			(at 243.84 50.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10203,7 +10203,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C126")
+					(reference "C127")
 					(unit 1)
 				)
 			)
@@ -10221,7 +10221,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d4a56186-f35c-4daf-9bec-c7e48f176c0f")
-		(property "Reference" "#PWR0280"
+		(property "Reference" "#PWR0287"
 			(at 109.728 56.388 0)
 			(hide yes)
 			(show_name no)
@@ -10282,7 +10282,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0280")
+					(reference "#PWR0287")
 					(unit 1)
 				)
 			)
@@ -10300,7 +10300,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d64b69db-398a-4f75-b2e1-6b6056e892bf")
-		(property "Reference" "#PWR0273"
+		(property "Reference" "#PWR0280"
 			(at 36.068 49.784 0)
 			(hide yes)
 			(show_name no)
@@ -10361,7 +10361,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0273")
+					(reference "#PWR0280")
 					(unit 1)
 				)
 			)
@@ -10379,7 +10379,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d712af60-75a5-4b91-8e22-61f8076272ec")
-		(property "Reference" "R25"
+		(property "Reference" "R29"
 			(at 231.14 60.9599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10401,7 +10401,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 229.616 62.484 90)
 			(hide yes)
 			(show_name no)
@@ -10443,7 +10443,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "R25")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -10461,7 +10461,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "deb7b07d-9cfb-421f-ab79-fc67b6aaf713")
-		(property "Reference" "#PWR0297"
+		(property "Reference" "#PWR0304"
 			(at 266.7 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -10522,7 +10522,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0297")
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -10541,7 +10541,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e34ef62b-a5ab-43eb-a265-2fba26a44bbc")
-		(property "Reference" "C118"
+		(property "Reference" "C119"
 			(at 122.682 41.4019 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10605,7 +10605,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C118")
+					(reference "C119")
 					(unit 1)
 				)
 			)
@@ -10624,7 +10624,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed57281b-2e96-419d-a3d7-9e973c924bc8")
-		(property "Reference" "C128"
+		(property "Reference" "C129"
 			(at 255.27 50.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10688,7 +10688,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C128")
+					(reference "C129")
 					(unit 1)
 				)
 			)
@@ -10706,7 +10706,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ef2d0292-8d2e-4bbb-8535-ed0d0f839b44")
-		(property "Reference" "#PWR0278"
+		(property "Reference" "#PWR0285"
 			(at 87.63 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -10767,7 +10767,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "#PWR0278")
+					(reference "#PWR0285")
 					(unit 1)
 				)
 			)
@@ -10785,7 +10785,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0907691-6b1d-4ff2-8b48-83cc00fab91e")
-		(property "Reference" "C110"
+		(property "Reference" "C111"
 			(at 44.45 63.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10849,7 +10849,7 @@
 		(instances
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
-					(reference "C110")
+					(reference "C111")
 					(unit 1)
 				)
 			)
