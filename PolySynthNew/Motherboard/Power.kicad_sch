@@ -243,6 +243,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3568,6 +3691,16 @@
 	)
 	(wire
 		(pts
+			(xy 269.748 100.838) (xy 269.748 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02578c42-e78b-4d02-afed-17d8ebda0202")
+	)
+	(wire
+		(pts
 			(xy 240.03 48.26) (xy 240.03 46.99)
 		)
 		(stroke
@@ -3765,6 +3898,16 @@
 			(type default)
 		)
 		(uuid "26cd1664-4f69-4635-9d49-807b8ff141cb")
+	)
+	(wire
+		(pts
+			(xy 112.014 64.516) (xy 115.316 64.516)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27b7832b-aeb4-4eab-9aec-85c95fbdafb4")
 	)
 	(wire
 		(pts
@@ -4018,6 +4161,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 62.484) (xy 125.73 63.246)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46d32e00-fd5f-48b0-bd2a-9334c388e027")
+	)
+	(wire
+		(pts
 			(xy 181.61 40.64) (xy 186.69 40.64)
 		)
 		(stroke
@@ -4088,6 +4241,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 125.73) (xy 157.48 127.254)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5760ed04-40f5-4387-bacb-f2f5aae56ab1")
+	)
+	(wire
+		(pts
 			(xy 101.6 147.32) (xy 101.6 151.13)
 		)
 		(stroke
@@ -4135,6 +4298,16 @@
 			(type default)
 		)
 		(uuid "5c30b200-6c4c-4886-8373-b03e23549b9b")
+	)
+	(wire
+		(pts
+			(xy 269.748 105.41) (xy 266.7 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e0dff42-ba8d-407e-9da8-966df0716d0a")
 	)
 	(wire
 		(pts
@@ -4468,6 +4641,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.048 45.212) (xy 257.048 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "915528e8-b9e1-4c21-850c-a47adbd54209")
+	)
+	(wire
+		(pts
 			(xy 71.12 135.89) (xy 87.63 135.89)
 		)
 		(stroke
@@ -4588,6 +4771,16 @@
 	)
 	(wire
 		(pts
+			(xy 99.06 65.024) (xy 102.616 65.024)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1d9d2cf-7fba-4e27-9459-cb25b0bf63c6")
+	)
+	(wire
+		(pts
 			(xy 130.556 38.862) (xy 130.556 37.846)
 		)
 		(stroke
@@ -4645,6 +4838,16 @@
 			(type default)
 		)
 		(uuid "a6643500-8981-4a8a-954f-6ec35c0fa13e")
+	)
+	(wire
+		(pts
+			(xy 62.738 156.972) (xy 62.738 158.496)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac56adef-f5ec-45c4-9669-dbb07f4e3c38")
 	)
 	(wire
 		(pts
@@ -4718,6 +4921,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 63.246) (xy 129.794 63.246)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beae5979-e83b-4531-9a91-ea86b4bc4562")
+	)
+	(wire
+		(pts
 			(xy 82.296 62.992) (xy 88.138 62.992)
 		)
 		(stroke
@@ -4768,6 +4981,16 @@
 	)
 	(wire
 		(pts
+			(xy 112.014 63.246) (xy 112.014 64.516)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2238185-20c6-47f0-99b7-305174581d63")
+	)
+	(wire
+		(pts
 			(xy 210.82 46.99) (xy 219.71 46.99)
 		)
 		(stroke
@@ -4775,6 +4998,16 @@
 			(type default)
 		)
 		(uuid "c2404120-4d0b-43e9-96ce-cf4425df94f3")
+	)
+	(wire
+		(pts
+			(xy 99.06 63.5) (xy 99.06 65.024)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5d7f23d-9a24-4e16-84f9-389082362081")
 	)
 	(wire
 		(pts
@@ -4875,6 +5108,16 @@
 			(type default)
 		)
 		(uuid "d1e2523e-eeab-4313-bc8e-706d0979ab9f")
+	)
+	(wire
+		(pts
+			(xy 257.048 46.99) (xy 251.46 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2af7be6-d63a-4f8b-b8de-ef9f40ee9796")
 	)
 	(wire
 		(pts
@@ -5155,6 +5398,16 @@
 			(type default)
 		)
 		(uuid "ffe618ae-f8cd-424d-ad16-94527760f8fb")
+	)
+	(label "5V_buck"
+		(at 230.886 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "86513142-d6b8-49ff-b6af-71662493eac8")
 	)
 	(symbol
 		(lib_id "Regulator_Switching:LMR51430")
@@ -5567,6 +5820,84 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "C125")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:-12V")
+		(at 157.48 127.254 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1e3a7964-866c-4cca-9437-16878e889bee")
+		(property "Reference" "#PWR0309"
+			(at 157.48 123.444 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "-12V"
+			(at 157.48 132.334 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 127.254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 127.254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"-12V\""
+			(at 157.48 127.254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d64ec2e1-33ae-4243-aa39-41cffeeced70")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "#PWR0309")
 					(unit 1)
 				)
 			)
@@ -6062,6 +6393,84 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "#PWR0303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:-15V")
+		(at 62.738 158.496 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3605ac5d-8943-4375-bed8-d6761701ac3a")
+		(property "Reference" "#PWR0308"
+			(at 62.738 154.686 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "-15V"
+			(at 62.738 163.576 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.738 158.496 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.738 158.496 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"-15V\""
+			(at 62.738 158.496 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d0c9066-c3be-4d3b-a8d6-fd869a0aa32c")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "#PWR0308")
 					(unit 1)
 				)
 			)
@@ -7536,6 +7945,164 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 129.794 63.246 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e2bbadf-9565-472b-abe5-87c3d8ce2656")
+		(property "Reference" "TP3"
+			(at 132.08 58.6739 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+12"
+			(at 132.08 61.2139 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 134.874 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.874 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 129.794 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38fc5110-997b-4a49-95b4-df106e6c9bc5")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 269.748 100.838 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e4bb0e9-7177-42e4-b62d-03e5d8ddbf98")
+		(property "Reference" "TP6"
+			(at 271.78 96.2659 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+5"
+			(at 271.78 98.8059 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 274.828 100.838 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 274.828 100.838 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 269.748 100.838 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fe9cdf9d-0c82-4cf2-bc52-df44c4992a68")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+15V")
 		(at 186.69 99.06 0)
 		(unit 1)
@@ -8025,6 +8592,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+15V")
+		(at 112.014 63.246 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9b1ac3a0-156f-49ca-b03c-855f1767ca33")
+		(property "Reference" "#PWR0306"
+			(at 112.014 67.056 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+15V"
+			(at 112.014 58.928 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 112.014 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 112.014 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+15V\""
+			(at 112.014 63.246 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d2f10ab-786c-4b52-b3b4-d687bada527d")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "#PWR0306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 214.63 97.79 90)
 		(mirror x)
@@ -8414,6 +9059,84 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "#PWR0283")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 99.06 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a5bd7367-12d8-4ed4-8842-f87349359aa7")
+		(property "Reference" "#PWR0305"
+			(at 99.06 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 99.06 58.674 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 99.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "758423d2-837a-4dea-b397-ee16735d9470")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "#PWR0305")
 					(unit 1)
 				)
 			)
@@ -8817,6 +9540,85 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 102.616 65.024 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b2d9ddff-7adc-48d1-a499-87b4773283b5")
+		(property "Reference" "TP1"
+			(at 104.14 60.4519 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "VCC"
+			(at 104.14 62.9919 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 107.696 65.024 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.696 65.024 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 102.616 65.024 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d91896b3-1771-4e65-bd5e-cde3527bd248")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -9303,6 +10105,85 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "#PWR0302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 62.738 156.972 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be0991df-54e6-474b-9813-ce9aadef523d")
+		(property "Reference" "TP4"
+			(at 64.77 152.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "-15"
+			(at 64.77 154.9399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 67.818 156.972 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.818 156.972 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 62.738 156.972 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ca487d73-7043-425e-ba0e-884c146b70b9")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -10450,6 +11331,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 257.048 45.212 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dbbd4530-9400-4544-a080-a16de61e7c9e")
+		(property "Reference" "TP7"
+			(at 259.08 40.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 259.08 43.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 262.128 45.212 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.128 45.212 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 257.048 45.212 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "40a5bbc4-9f79-4b8a-848f-81a89ee92cbd")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 266.7 116.84 0)
 		(unit 1)
@@ -10606,6 +11566,85 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "C119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 157.48 125.73 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e684d849-370d-4191-a4a8-e743a5689d25")
+		(property "Reference" "TP5"
+			(at 160.02 121.1579 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "-12"
+			(at 160.02 123.6979 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 162.56 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 157.48 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67046b17-8531-4ff0-904a-3608a00f194b")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -10856,6 +11895,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 115.316 64.516 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1e4604d-87fe-484f-a9ee-491431904767")
+		(property "Reference" "TP2"
+			(at 116.84 59.9439 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+15"
+			(at 116.84 62.4839 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm_VAL"
+			(at 120.396 64.516 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.396 64.516 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 115.316 64.516 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9eb5e088-0a0f-4706-aeb5-dc920029259b")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 77.978 37.846 0)
 		(mirror y)
@@ -11011,6 +12129,84 @@
 			(project "Motherboard"
 				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
 					(reference "L2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 125.73 62.484 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fe39001c-185b-42ef-8471-b23d269cc59e")
+		(property "Reference" "#PWR0307"
+			(at 125.73 66.294 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+12V"
+			(at 125.73 58.166 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 62.484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 62.484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 125.73 62.484 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "505c43a9-21dc-47a8-b516-b70e67b76849")
+		)
+		(instances
+			(project "Motherboard"
+				(path "/b4391858-431b-4c52-814e-94e38b91ffd5/8e102fa9-c916-4217-8996-c3860085c2c8"
+					(reference "#PWR0307")
 					(unit 1)
 				)
 			)
