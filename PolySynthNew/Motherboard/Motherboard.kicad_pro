@@ -734,7 +734,7 @@
         "uuid": "b4391858-431b-4c52-814e-94e38b91ffd5"
       }
     ],
-    "used_designators": "R33,#PWR305-310,C132,J8,RV1,TP2-7",
+    "used_designators": "R34,#PWR284,#PWR308",
     "variants": []
   },
   "sheets": [
