@@ -7213,7 +7213,7 @@
 		)
 		(uuid "236f89f1-099a-44e7-b4e1-d5cb2e53d559")
 	)
-	(label "V3_out"
+	(label "V4_out"
 		(at 188.468 281.686 180)
 		(effects
 			(font
@@ -10100,7 +10100,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "100n"
 			(at 86.36 170.6879 0)
 			(show_name no)
 			(do_not_autoplace no)
