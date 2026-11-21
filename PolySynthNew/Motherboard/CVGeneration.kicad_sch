@@ -2980,7 +2980,7 @@
 	)
 	(text "Voice 7"
 		(exclude_from_sim no)
-		(at 449.834 162.814 0)
+		(at 450.088 160.782 0)
 		(effects
 			(font
 				(size 3.81 3.81)

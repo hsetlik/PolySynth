@@ -10886,7 +10886,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 178.054 273.304 90)
+		(at 178.308 264.16 90)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10897,7 +10897,7 @@
 		(fields_autoplaced yes)
 		(uuid "26ea320b-581e-408b-923f-ff5b88abe2f5")
 		(property "Reference" "RN10"
-			(at 178.054 267.716 90)
+			(at 178.308 258.572 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10907,7 +10907,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 178.054 270.256 90)
+			(at 178.308 261.112 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10917,7 +10917,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 178.054 275.336 90)
+			(at 178.308 266.192 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10928,7 +10928,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 178.054 273.304 0)
+			(at 178.308 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10939,7 +10939,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 178.054 273.304 0)
+			(at 178.308 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11643,7 +11643,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 195.326 281.686 90)
+		(at 195.326 250.444 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11654,7 +11654,7 @@
 		(fields_autoplaced yes)
 		(uuid "393d0e59-c85c-44a1-9f0f-d2f2e6144bc8")
 		(property "Reference" "RN11"
-			(at 195.326 275.59 90)
+			(at 195.326 244.348 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11664,7 +11664,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 195.326 278.13 90)
+			(at 195.326 246.888 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11674,7 +11674,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 195.326 283.718 90)
+			(at 195.326 252.476 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11685,7 +11685,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.326 281.686 0)
+			(at 195.326 250.444 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11696,7 +11696,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 195.326 281.686 0)
+			(at 195.326 250.444 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12989,7 +12989,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 195.326 271.018 90)
+		(at 195.58 261.874 90)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13000,7 +13000,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a471322-7fcf-4f96-b831-328a3bbfd566")
 		(property "Reference" "RN11"
-			(at 195.326 265.43 90)
+			(at 195.58 256.286 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13010,7 +13010,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 195.326 267.97 90)
+			(at 195.58 258.826 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13020,7 +13020,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 195.326 273.05 90)
+			(at 195.58 263.906 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13031,7 +13031,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.326 271.018 0)
+			(at 195.58 261.874 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13042,7 +13042,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 195.326 271.018 0)
+			(at 195.58 261.874 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14746,7 +14746,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 195.58 261.874 90)
+		(at 195.326 271.018 90)
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14757,7 +14757,7 @@
 		(fields_autoplaced yes)
 		(uuid "892177f2-8868-4016-90aa-8cc2cddfa2bb")
 		(property "Reference" "RN11"
-			(at 195.58 255.27 90)
+			(at 195.326 265.43 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14767,7 +14767,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 195.58 257.81 90)
+			(at 195.326 267.97 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14777,7 +14777,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 195.58 263.906 90)
+			(at 195.326 273.05 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14788,7 +14788,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 261.874 0)
+			(at 195.326 271.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14799,7 +14799,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 195.58 261.874 0)
+			(at 195.326 271.018 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15002,7 +15002,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 178.054 283.972 90)
+		(at 178.054 252.73 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15013,7 +15013,7 @@
 		(fields_autoplaced yes)
 		(uuid "91b07bb5-03b3-4d12-b98e-511624ab6fb3")
 		(property "Reference" "RN10"
-			(at 178.054 277.876 90)
+			(at 178.054 246.634 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15023,7 +15023,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 178.054 280.416 90)
+			(at 178.054 249.174 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15033,7 +15033,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 178.054 286.004 90)
+			(at 178.054 254.762 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15044,7 +15044,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 178.054 283.972 0)
+			(at 178.054 252.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15055,7 +15055,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 178.054 283.972 0)
+			(at 178.054 252.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16838,7 +16838,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 178.054 252.73 90)
+		(at 178.054 283.972 90)
 		(unit 4)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16849,7 +16849,7 @@
 		(fields_autoplaced yes)
 		(uuid "ba4d68b5-46c8-455e-a56b-e4445755c210")
 		(property "Reference" "RN10"
-			(at 178.054 246.126 90)
+			(at 178.054 277.368 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16859,7 +16859,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 178.054 248.666 90)
+			(at 178.054 279.908 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16869,7 +16869,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 178.054 254.762 90)
+			(at 178.054 286.004 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16880,7 +16880,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 178.054 252.73 0)
+			(at 178.054 283.972 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16891,7 +16891,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 178.054 252.73 0)
+			(at 178.054 283.972 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16937,7 +16937,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 178.308 264.16 90)
+		(at 178.054 273.304 90)
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16948,7 +16948,7 @@
 		(fields_autoplaced yes)
 		(uuid "be6433ff-9063-459b-ab59-035915d2ce69")
 		(property "Reference" "RN10"
-			(at 178.308 257.556 90)
+			(at 178.054 266.7 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16958,7 +16958,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 178.308 260.096 90)
+			(at 178.054 269.24 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16968,7 +16968,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 178.308 266.192 90)
+			(at 178.054 275.336 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16979,7 +16979,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 178.308 264.16 0)
+			(at 178.054 273.304 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16990,7 +16990,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 178.308 264.16 0)
+			(at 178.054 273.304 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17425,7 +17425,7 @@
 	(symbol
 		(lib_name "R_Pack04_Split_1")
 		(lib_id "Device:R_Pack04_Split")
-		(at 195.326 250.444 90)
+		(at 195.326 281.686 90)
 		(unit 4)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17436,7 +17436,7 @@
 		(fields_autoplaced yes)
 		(uuid "c84ea5c2-1134-4faa-b7f1-a4d6ac301ebc")
 		(property "Reference" "RN11"
-			(at 195.326 243.84 90)
+			(at 195.326 275.082 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17446,7 +17446,7 @@
 			)
 		)
 		(property "Value" "470k"
-			(at 195.326 246.38 90)
+			(at 195.326 277.622 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17456,7 +17456,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_Array_Convex_4x0603"
-			(at 195.326 252.476 90)
+			(at 195.326 283.718 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17467,7 +17467,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.326 250.444 0)
+			(at 195.326 281.686 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17478,7 +17478,7 @@
 			)
 		)
 		(property "Description" "4 resistor network, parallel topology, split"
-			(at 195.326 250.444 0)
+			(at 195.326 281.686 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
