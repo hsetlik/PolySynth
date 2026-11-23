@@ -11634,7 +11634,7 @@
 	)
 	(global_label "USB_DATA-"
 		(shape input)
-		(at 213.36 62.23 180)
+		(at 213.36 57.15 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11644,7 +11644,7 @@
 		)
 		(uuid "549134d5-d5b3-454b-afac-97ef6a6b93a7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.61 62.23 0)
+			(at 199.61 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11898,7 +11898,7 @@
 	)
 	(global_label "USB_DATA+"
 		(shape input)
-		(at 213.36 57.15 180)
+		(at 213.36 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11908,7 +11908,7 @@
 		)
 		(uuid "b4eaf047-1000-4f50-b9be-728728cc332d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 199.61 57.15 0)
+			(at 199.61 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

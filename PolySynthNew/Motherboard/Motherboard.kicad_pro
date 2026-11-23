@@ -554,7 +554,7 @@
       },
       {
         "netclass": "Power",
-        "pattern": "VCC"
+        "pattern": "VCC*"
       }
     ]
   },
