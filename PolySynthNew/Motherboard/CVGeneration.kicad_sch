@@ -3082,6 +3082,12 @@
 		(uuid "155b95bf-1504-4b79-9bce-8eb49b9f49ed")
 	)
 	(junction
+		(at 391.16 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1c5d271f-b908-49ec-99c0-c9de845304f1")
+	)
+	(junction
 		(at 189.23 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3388,12 +3394,6 @@
 		(uuid "62cff747-416f-40bf-9622-3104efc5ead0")
 	)
 	(junction
-		(at 387.35 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6326a735-e504-4dbf-8925-a9e6a43e9afe")
-	)
-	(junction
 		(at 386.08 209.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3604,6 +3604,12 @@
 		(uuid "9807bc3c-c601-4f14-af72-f4430321f6bc")
 	)
 	(junction
+		(at 387.35 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9b40757b-4279-458c-a2c8-7dbe24b0bd60")
+	)
+	(junction
 		(at 408.94 199.39)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3668,12 +3674,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "af792168-1bfc-48cd-9752-2a79cbdac0ea")
-	)
-	(junction
-		(at 391.16 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "af909bc6-6c14-41a8-97bd-7ab0a5a2915e")
 	)
 	(junction
 		(at 152.4 349.25)
@@ -3832,6 +3832,12 @@
 		(uuid "e1adecc9-9e13-48e7-9d34-e1afdaf0c0bf")
 	)
 	(junction
+		(at 275.59 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e494fbe6-16d1-42e2-afd7-98d7ffa8363e")
+	)
+	(junction
 		(at 407.67 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3914,12 +3920,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f976623b-e6f9-487e-a408-806c65b4e1b7")
-	)
-	(junction
-		(at 275.59 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f9d95d6a-93c7-43a0-a44d-765f380746ae")
 	)
 	(junction
 		(at 297.18 303.53)
@@ -4909,6 +4909,16 @@
 	)
 	(wire
 		(pts
+			(xy 387.35 107.442) (xy 387.35 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cfbe924-2278-4034-ab2b-0147b744499e")
+	)
+	(wire
+		(pts
 			(xy 157.48 38.1) (xy 173.99 38.1)
 		)
 		(stroke
@@ -5026,6 +5036,16 @@
 			(type default)
 		)
 		(uuid "22048db1-0090-4270-9253-3598cc845309")
+	)
+	(wire
+		(pts
+			(xy 391.16 82.55) (xy 391.16 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "225cee52-f51e-4bf6-b47d-fda5e9f99a99")
 	)
 	(wire
 		(pts
@@ -8829,16 +8849,6 @@
 	)
 	(wire
 		(pts
-			(xy 387.35 99.06) (xy 392.43 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "969569b3-f0e4-40f5-8187-203c9966aa79")
-	)
-	(wire
-		(pts
 			(xy 486.41 193.04) (xy 486.41 182.88)
 		)
 		(stroke
@@ -9086,6 +9096,16 @@
 			(type default)
 		)
 		(uuid "9dc2ba75-30c2-4c17-9949-60edda11b180")
+	)
+	(wire
+		(pts
+			(xy 387.35 99.06) (xy 392.43 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e983450-1d57-4ba6-9aed-447556ba854b")
 	)
 	(wire
 		(pts
@@ -10399,6 +10419,16 @@
 	)
 	(wire
 		(pts
+			(xy 275.59 73.66) (xy 275.59 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8adcc12-3f65-418c-a6d8-7611772c313f")
+	)
+	(wire
+		(pts
 			(xy 156.21 316.23) (xy 156.21 323.85)
 		)
 		(stroke
@@ -11699,6 +11729,16 @@
 	)
 	(wire
 		(pts
+			(xy 275.59 82.55) (xy 275.59 83.566)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f14865da-f706-49f5-8f1b-321cef4c029a")
+	)
+	(wire
+		(pts
 			(xy 177.8 311.15) (xy 177.8 303.53)
 		)
 		(stroke
@@ -12126,6 +12166,16 @@
 			(type default)
 		)
 		(uuid "fd0ca71b-9545-4c29-88bd-e40eb096326f")
+	)
+	(wire
+		(pts
+			(xy 298.45 97.028) (xy 298.45 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd2ee832-9777-401c-98fc-0e6dc69a383e")
 	)
 	(wire
 		(pts
@@ -15173,7 +15223,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL084")
-		(at 309.88 90.17 0)
+		(at 287.02 76.2 0)
 		(unit 4)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15183,7 +15233,7 @@
 		(dnp no)
 		(uuid "0b531a2a-08c5-4671-8fa0-93d6903dc39b")
 		(property "Reference" "U13"
-			(at 309.88 82.55 0)
+			(at 287.02 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15193,7 +15243,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 309.88 80.01 0)
+			(at 287.02 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15203,7 +15253,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 308.61 87.63 0)
+			(at 285.75 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15214,7 +15264,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 311.15 85.09 0)
+			(at 288.29 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15225,7 +15275,7 @@
 			)
 		)
 		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 309.88 90.17 0)
+			(at 287.02 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17464,7 +17514,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 275.59 81.28 0)
+		(at 275.59 83.566 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17475,7 +17525,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f09058d-d2a5-4b13-914f-ea71fc250e89")
 		(property "Reference" "#PWR061"
-			(at 275.59 87.63 0)
+			(at 275.59 89.916 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17486,7 +17536,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 275.59 85.09 0)
+			(at 275.59 87.376 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17497,7 +17547,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 275.59 81.28 0)
+			(at 275.59 83.566 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17508,7 +17558,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 275.59 81.28 0)
+			(at 275.59 83.566 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17519,7 +17569,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 275.59 81.28 0)
+			(at 275.59 83.566 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19916,7 +19966,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 391.16 81.28 0)
+		(at 391.16 82.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19927,7 +19977,7 @@
 		(fields_autoplaced yes)
 		(uuid "33d2e040-a769-4e30-8c66-8a6912eacbb7")
 		(property "Reference" "#PWR0111"
-			(at 391.16 87.63 0)
+			(at 391.16 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19938,7 +19988,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 391.16 85.09 0)
+			(at 391.16 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19949,7 +19999,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 391.16 81.28 0)
+			(at 391.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19960,7 +20010,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 391.16 81.28 0)
+			(at 391.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19971,7 +20021,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 391.16 81.28 0)
+			(at 391.16 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22651,7 +22701,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 298.45 96.52 0)
+		(at 298.45 97.028 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -22662,7 +22712,7 @@
 		(fields_autoplaced yes)
 		(uuid "444e5674-0a7f-4817-89f7-0527d4f84143")
 		(property "Reference" "#PWR073"
-			(at 298.45 102.87 0)
+			(at 298.45 103.378 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22673,7 +22723,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 298.45 100.33 0)
+			(at 298.45 100.838 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22684,7 +22734,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 298.45 96.52 0)
+			(at 298.45 97.028 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22695,7 +22745,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 298.45 96.52 0)
+			(at 298.45 97.028 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22706,7 +22756,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 298.45 96.52 0)
+			(at 298.45 97.028 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23275,7 +23325,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 298.45 92.71 0)
+		(at 275.59 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -23286,7 +23336,7 @@
 		(fields_autoplaced yes)
 		(uuid "4b893d98-ba2d-4255-b65f-315cc1eceb6e")
 		(property "Reference" "C41"
-			(at 294.64 91.4399 0)
+			(at 271.78 77.4699 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23297,7 +23347,7 @@
 			)
 		)
 		(property "Value" "10n"
-			(at 294.64 93.9799 0)
+			(at 271.78 80.0099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -23308,7 +23358,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 299.4152 96.52 0)
+			(at 276.5552 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23319,7 +23369,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 298.45 92.71 0)
+			(at 275.59 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23330,7 +23380,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 298.45 92.71 0)
+			(at 275.59 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25682,7 +25732,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL084")
-		(at 402.59 76.2 0)
+		(at 400.05 101.6 0)
 		(unit 2)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25692,7 +25742,7 @@
 		(dnp no)
 		(uuid "67990b91-9ce2-4a6d-8b98-be36703fcd1a")
 		(property "Reference" "U17"
-			(at 402.59 68.58 0)
+			(at 400.05 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25702,7 +25752,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 402.59 66.04 0)
+			(at 400.05 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25712,7 +25762,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 401.32 73.66 0)
+			(at 398.78 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25723,7 +25773,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 403.86 71.12 0)
+			(at 401.32 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25734,7 +25784,7 @@
 			)
 		)
 		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 402.59 76.2 0)
+			(at 400.05 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28931,7 +28981,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL084")
-		(at 287.02 76.2 0)
+		(at 309.88 90.17 0)
 		(unit 3)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -28941,7 +28991,7 @@
 		(dnp no)
 		(uuid "84a9db95-70fb-4a69-8758-0c687c241a21")
 		(property "Reference" "U13"
-			(at 287.02 68.58 0)
+			(at 309.88 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28951,7 +29001,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 287.02 66.04 0)
+			(at 309.88 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28961,7 +29011,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 285.75 73.66 0)
+			(at 308.61 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28972,7 +29022,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 288.29 71.12 0)
+			(at 311.15 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28983,7 +29033,7 @@
 			)
 		)
 		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 287.02 76.2 0)
+			(at 309.88 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29482,7 +29532,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 387.35 102.87 0)
+		(at 391.16 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29493,7 +29543,7 @@
 		(fields_autoplaced yes)
 		(uuid "88831205-3d3f-43f4-8236-f6d2d6e9b79a")
 		(property "Reference" "C56"
-			(at 383.54 101.5999 0)
+			(at 387.35 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29504,7 +29554,7 @@
 			)
 		)
 		(property "Value" "10n"
-			(at 383.54 104.1399 0)
+			(at 387.35 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29515,7 +29565,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 388.3152 106.68 0)
+			(at 392.1252 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29526,7 +29576,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 387.35 102.87 0)
+			(at 391.16 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29537,7 +29587,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 387.35 102.87 0)
+			(at 391.16 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30602,7 +30652,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 275.59 77.47 0)
+		(at 298.45 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -30612,7 +30662,7 @@
 		(dnp no)
 		(uuid "91588442-8c71-4cbb-89a4-dba07e703845")
 		(property "Reference" "C33"
-			(at 272.796 76.2 0)
+			(at 295.656 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30623,7 +30673,7 @@
 			)
 		)
 		(property "Value" "10n"
-			(at 272.796 78.74 0)
+			(at 295.656 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30634,7 +30684,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 276.5552 81.28 0)
+			(at 299.4152 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30645,7 +30695,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 275.59 77.47 0)
+			(at 298.45 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30656,7 +30706,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 275.59 77.47 0)
+			(at 298.45 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37802,7 +37852,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 391.16 77.47 0)
+		(at 387.35 102.87 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -37812,7 +37862,7 @@
 		(dnp no)
 		(uuid "d541de7d-2fb4-4346-9176-c3145fb5fe9b")
 		(property "Reference" "C59"
-			(at 388.366 76.2 0)
+			(at 384.556 101.6 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -37823,7 +37873,7 @@
 			)
 		)
 		(property "Value" "10n"
-			(at 388.366 78.74 0)
+			(at 384.556 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -37834,7 +37884,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 392.1252 81.28 0)
+			(at 388.3152 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37845,7 +37895,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 391.16 77.47 0)
+			(at 387.35 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37856,7 +37906,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 391.16 77.47 0)
+			(at 387.35 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39357,7 +39407,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 387.35 106.68 0)
+		(at 387.35 107.442 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -39368,7 +39418,7 @@
 		(fields_autoplaced yes)
 		(uuid "e428e881-522a-4502-bebd-567372719224")
 		(property "Reference" "#PWR0104"
-			(at 387.35 113.03 0)
+			(at 387.35 113.792 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39379,7 +39429,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 387.35 110.49 0)
+			(at 387.35 111.252 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39390,7 +39440,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 387.35 106.68 0)
+			(at 387.35 107.442 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39401,7 +39451,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 387.35 106.68 0)
+			(at 387.35 107.442 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39412,7 +39462,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 387.35 106.68 0)
+			(at 387.35 107.442 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41431,7 +41481,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL084")
-		(at 400.05 101.6 0)
+		(at 402.59 76.2 0)
 		(unit 4)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -41441,7 +41491,7 @@
 		(dnp no)
 		(uuid "f5023fb1-c377-47d2-8050-8191a37162fc")
 		(property "Reference" "U17"
-			(at 400.05 93.98 0)
+			(at 402.59 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41451,7 +41501,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 400.05 91.44 0)
+			(at 402.59 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41461,7 +41511,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 398.78 99.06 0)
+			(at 401.32 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41472,7 +41522,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 401.32 96.52 0)
+			(at 403.86 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41483,7 +41533,7 @@
 			)
 		)
 		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 400.05 101.6 0)
+			(at 402.59 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -7417,7 +7417,7 @@
 			)
 		)
 	)
-	(global_label "V4_PWM1"
+	(global_label "V4_PWM2"
 		(shape input)
 		(at 486.41 73.66 180)
 		(fields_autoplaced yes)
@@ -7561,7 +7561,7 @@
 			)
 		)
 	)
-	(global_label "V8_PWM1"
+	(global_label "V8_PWM2"
 		(shape input)
 		(at 485.14 162.56 180)
 		(fields_autoplaced yes)
@@ -7945,7 +7945,7 @@
 			)
 		)
 	)
-	(global_label "V3_PWM1"
+	(global_label "V3_PWM2"
 		(shape input)
 		(at 414.02 73.66 180)
 		(fields_autoplaced yes)
@@ -8137,7 +8137,7 @@
 			)
 		)
 	)
-	(global_label "V5_PWM1"
+	(global_label "V5_PWM2"
 		(shape input)
 		(at 254 160.02 180)
 		(fields_autoplaced yes)
@@ -8449,7 +8449,7 @@
 			)
 		)
 	)
-	(global_label "V1_PWM1"
+	(global_label "V1_PWM2"
 		(shape input)
 		(at 255.27 71.12 180)
 		(fields_autoplaced yes)
@@ -8881,7 +8881,7 @@
 			)
 		)
 	)
-	(global_label "V7_PWM1"
+	(global_label "V7_PWM2"
 		(shape input)
 		(at 412.75 162.56 180)
 		(fields_autoplaced yes)
@@ -9073,7 +9073,7 @@
 			)
 		)
 	)
-	(global_label "V2_PWM1"
+	(global_label "V2_PWM2"
 		(shape input)
 		(at 332.74 73.66 180)
 		(fields_autoplaced yes)
@@ -9217,7 +9217,7 @@
 			)
 		)
 	)
-	(global_label "V6_PWM1"
+	(global_label "V6_PWM2"
 		(shape input)
 		(at 331.47 162.56 180)
 		(fields_autoplaced yes)
