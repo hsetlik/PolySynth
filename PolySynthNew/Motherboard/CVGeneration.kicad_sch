@@ -24495,7 +24495,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL084")
-		(at 124.46 63.5 0)
+		(at 111.76 46.99 0)
 		(mirror x)
 		(unit 1)
 		(body_style 1)
@@ -24507,7 +24507,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a727b6a-e188-43ee-b746-328fe39e2bf3")
 		(property "Reference" "U2"
-			(at 124.46 71.12 0)
+			(at 111.76 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24517,7 +24517,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 124.46 73.66 0)
+			(at 111.76 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24527,7 +24527,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 123.19 66.04 0)
+			(at 110.49 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24538,7 +24538,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 125.73 68.58 0)
+			(at 113.03 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24549,7 +24549,7 @@
 			)
 		)
 		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 124.46 63.5 0)
+			(at 111.76 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -35577,7 +35577,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:TL084")
-		(at 111.76 46.99 0)
+		(at 124.46 63.5 0)
 		(mirror x)
 		(unit 2)
 		(body_style 1)
@@ -35589,7 +35589,7 @@
 		(fields_autoplaced yes)
 		(uuid "c528d31a-b0ac-4cb8-a5d8-7d0bb725ebf5")
 		(property "Reference" "U2"
-			(at 111.76 54.61 0)
+			(at 124.46 71.12 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -35599,7 +35599,7 @@
 			)
 		)
 		(property "Value" "TL084"
-			(at 111.76 57.15 0)
+			(at 124.46 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -35609,7 +35609,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
-			(at 110.49 49.53 0)
+			(at 123.19 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -35620,7 +35620,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tl081.pdf"
-			(at 113.03 52.07 0)
+			(at 125.73 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -35631,7 +35631,7 @@
 			)
 		)
 		(property "Description" "Quad JFET-Input Operational Amplifiers, DIP-14/SOIC-14/SSOP-14"
-			(at 111.76 46.99 0)
+			(at 124.46 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -69,12 +69,12 @@ void Error_Handler(void);
 #define UI_BOOT0_GPIO_Port GPIOA
 #define UI_NRST_Pin GPIO_PIN_3
 #define UI_NRST_GPIO_Port GPIOA
-#define PITCH_RST_Pin GPIO_PIN_4
-#define PITCH_RST_GPIO_Port GPIOA
 #define PITCH_SCK_Pin GPIO_PIN_5
 #define PITCH_SCK_GPIO_Port GPIOA
 #define PITCH_MOSI_Pin GPIO_PIN_7
 #define PITCH_MOSI_GPIO_Port GPIOA
+#define PITCH_RST_Pin GPIO_PIN_4
+#define PITCH_RST_GPIO_Port GPIOC
 #define DAC_CS_Pin GPIO_PIN_12
 #define DAC_CS_GPIO_Port GPIOB
 #define DAC_SCK_Pin GPIO_PIN_13

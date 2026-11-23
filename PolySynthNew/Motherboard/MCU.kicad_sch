@@ -8513,6 +8513,10 @@
 		(uuid "061394d8-6fbb-410f-b718-7b8e6bdb3c09")
 	)
 	(no_connect
+		(at 125.73 78.74)
+		(uuid "07a465cf-17cd-4c54-89f1-477908b45f7b")
+	)
+	(no_connect
 		(at 80.01 137.16)
 		(uuid "07f1f47b-67a6-4526-9904-84b770d0ee73")
 	)
@@ -8703,10 +8707,6 @@
 	(no_connect
 		(at 80.01 147.32)
 		(uuid "e4706c01-2296-48dc-af37-9c515b0a2b21")
-	)
-	(no_connect
-		(at 125.73 165.1)
-		(uuid "e997c740-f68d-413f-8eaf-b23b752452cd")
 	)
 	(no_connect
 		(at 80.01 104.14)
@@ -9746,6 +9746,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 165.1) (xy 129.54 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73c803ec-6ff2-44c8-b46f-538392bc7d47")
+	)
+	(wire
+		(pts
 			(xy 313.69 59.69) (xy 314.96 59.69)
 		)
 		(stroke
@@ -10643,16 +10653,6 @@
 			(type default)
 		)
 		(uuid "d68c47eb-7f47-4af7-a6db-65d6d1b50bc3")
-	)
-	(wire
-		(pts
-			(xy 125.73 78.74) (xy 128.27 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d725c599-91ba-43eb-bcc7-ed90805d332c")
 	)
 	(wire
 		(pts
@@ -11682,7 +11682,7 @@
 	)
 	(global_label "PITCH_RST"
 		(shape output)
-		(at 128.27 78.74 0)
+		(at 129.54 165.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11692,7 +11692,7 @@
 		)
 		(uuid "59f0b3b2-5be2-4e97-aa68-860a777446ec")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 141.1128 78.74 0)
+			(at 142.3828 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
